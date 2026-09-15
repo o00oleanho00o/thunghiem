@@ -1,0 +1,7 @@
+{
+  "name": "@cnb-electrical-lab/cad-export",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "index.js"
+}

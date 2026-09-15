@@ -1,0 +1,14 @@
+{
+  "name": "cnb-electrical-lab",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Evidence-driven electrical CAD lab prototype",
+  "scripts": {
+    "demo": "python examples/run_core_demo.py",
+    "cad:test": "node scripts/test_cad_export.cjs",
+    "cad:evidence": "node scripts/generate_cad_evidence.cjs",
+    "api:test": "node scripts/test_web_api.cjs",
+    "ui:test": "node scripts/test_web_ui_behaviors.cjs",
+    "web": "node apps/web/server.js 4173"
+  }
+}

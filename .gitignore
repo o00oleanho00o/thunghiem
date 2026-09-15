@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+node_modules/
+.chrome-evidence-profile/
+dist/
+coverage/
+.mypy_cache/
+research/cloned-or-scripted-spikes/
+evidence/tmp/
+*.log
