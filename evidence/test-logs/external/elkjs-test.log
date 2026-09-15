@@ -1,0 +1,39 @@
+COMMAND: npm test
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs
+
+> elkjs@0.13.0 test
+> mocha test/mocha
+
+
+ Exception during run: Error: Cannot find module '../../lib/main.js'
+Require stack:
+- F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\test\mocha\test-bug-63.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\test\mocha\test-bug-63.js:20:13)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14)
+    at Object..js (node:internal/modules/cjs/loader:2003:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:372:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:244:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async formattedImport (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\node_modules\mocha\lib\nodejs\esm-utils.cjs:11:14)
+    at async Object.requireModule [as requireOrImport] (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\node_modules\mocha\lib\nodejs\esm-utils.cjs:106:30)
+    at async exports.loadFilesAsync (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\node_modules\mocha\lib\nodejs\esm-utils.cjs:175:20)
+    at async singleRun (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\node_modules\mocha\lib\cli\run-helpers.cjs:174:3)
+    at async exports.handler (F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\elkjs\node_modules\mocha\lib\cli\run.cjs:143:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\research\\cloned-or-scripted-spikes\\elkjs\\test\\mocha\\test-bug-63.js'
+  ]
+}
+EXIT_CODE: 1

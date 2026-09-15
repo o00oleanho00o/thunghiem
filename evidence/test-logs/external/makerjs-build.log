@@ -1,0 +1,39 @@
+COMMAND: npm run build
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\makerjs
+
+> makerjs-dev@1.0.0 build
+> npx -p typescript@4.1.3 -p typedoc@0.18.0 npm run build --workspaces --if-present
+
+npm warn exec The following packages were not found and will be installed: typedoc@0.18.0, typescript@4.1.3
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+> fonts@1.0.0 build
+> tsc -p .
+
+
+> makerjs@0.19.2 prebuild
+> npm run gen-cascades
+
+
+> makerjs@0.19.2 gen-cascades
+> npm run project && node ./target/cascadable.js > ./src/core/cascades.ts
+
+
+> makerjs@0.19.2 project
+> typedoc ./src --json ./dist/project.json
+
+
+Using TypeScript 4.1.3 from C:\Users\email\AppData\Local\npm-cache\_npx\5cf08f252b968ea3\node_modules\typescript\lib
+
+JSON written to F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\makerjs\packages\maker.js\dist\project.json
+
+
+> makerjs@0.19.2 build
+> tsc -p target && node ./target/build.js
+
+
+> playground@1.0.0 build
+> tsc -p . && tsc -p src/worker
+
+EXIT_CODE: 0

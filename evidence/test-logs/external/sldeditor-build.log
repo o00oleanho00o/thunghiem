@@ -1,0 +1,21 @@
+COMMAND: npm run build
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\sldeditor
+
+> sldeditor@0.24.0 build
+> vite build
+
+vite v6.4.2 building for production...
+transforming...
+✓ 1803 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.82 kB │ gzip:   0.45 kB
+dist/assets/index-jNOzW5zU.css   48.90 kB │ gzip:   8.66 kB
+dist/assets/index-l4EuCp2X.js   888.26 kB │ gzip: 247.10 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 13.66s
+EXIT_CODE: 0

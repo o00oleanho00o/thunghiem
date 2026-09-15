@@ -10,3 +10,5 @@ coverage/
 research/cloned-or-scripted-spikes/
 evidence/tmp/
 *.log
+!evidence/test-logs/*.log
+!evidence/test-logs/external/*.log
