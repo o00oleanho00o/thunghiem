@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": "eir-0.1",
+  "units": "mm",
+  "project": {
+    "id": "mcc-6-motor",
+    "name": "MCC 6 motor evidence",
+    "revision": "A"
+  },
+  "enclosure": {
+    "id": "enclosure-main",
+    "name": "Control cabinet",
+    "width": 800,
+    "height": 2000,
+    "depth": 300
+  },
+  "mountingPlate": {
+    "id": "plate-main",
+    "x": 50,
+    "y": 50,
+    "width": 700,
+    "height": 1900
+  },
+  "rails": [
+    {
+      "id": "rail-top",
+      "type": "DIN-rail-35",
+      "x": 90,
+      "y": 1780,
+      "length": 620,
+      "height": 7.5
+    },
+    {
+      "id": "rail-mid",
+      "type": "DIN-rail-35",
+      "x": 90,
+      "y": 1360,
+      "length": 620,
+      "height": 7.5
+    },
+    {
+      "id": "rail-low",
+      "type": "DIN-rail-35",
+      "x": 90,
+      "y": 950,
+      "length": 620,
+      "height": 7.5
+    },
+    {
+      "id": "rail-terminal",
+      "type": "DIN-rail-35",
+      "x": 90,
+      "y": 230,
+      "length": 620,
+      "height": 7.5
+    }
+  ],
+  "ducts": [
+    {
+      "id": "duct-left",
+      "x": 60,
+      "y": 120,
+      "width": 35,
+      "height": 1780,
+      "orientation": "vertical"
+    },
+    {
+      "id": "duct-right",
+      "x": 705,
+      "y": 120,
+      "width": 35,
+      "height": 1780,
+      "orientation": "vertical"
+    },
+    {
+      "id": "duct-mid",
+      "x": 90,
+      "y": 1660,
+      "width": 620,
+      "height": 35,
+      "orientation": "horizontal"
+    }
+  ],
+  "components": [
+    {
+      "id": "main",
+      "tag": "-QF1",
+      "name": "MCCB 250A",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Incoming",
+      "width": 90,
+      "height": 120,
+      "depth": 50,
+      "x": 110,
+      "y": 1760,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#2563eb",
+      "metadata": {}
+    },
+    {
+      "id": "f1-breaker",
+      "tag": "-Q2",
+      "name": "MCB 1",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 1",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 120,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f1-contactor",
+      "tag": "-K1",
+      "name": "Contactor 1",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 1",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 185,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f1-overload",
+      "tag": "-F1",
+      "name": "Overload 1",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 1",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 270,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "f2-breaker",
+      "tag": "-Q3",
+      "name": "MCB 2",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 2",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 330,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f2-contactor",
+      "tag": "-K2",
+      "name": "Contactor 2",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 2",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 395,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f2-overload",
+      "tag": "-F2",
+      "name": "Overload 2",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 2",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 480,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "f3-breaker",
+      "tag": "-Q4",
+      "name": "MCB 3",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 3",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 540,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f3-contactor",
+      "tag": "-K3",
+      "name": "Contactor 3",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 3",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 605,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f3-overload",
+      "tag": "-F3",
+      "name": "Overload 3",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 3",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 690,
+      "y": 1340,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "f4-breaker",
+      "tag": "-Q5",
+      "name": "MCB 4",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 4",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 120,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f4-contactor",
+      "tag": "-K4",
+      "name": "Contactor 4",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 4",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 185,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f4-overload",
+      "tag": "-F4",
+      "name": "Overload 4",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 4",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 270,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "f5-breaker",
+      "tag": "-Q6",
+      "name": "MCB 5",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 5",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 330,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f5-contactor",
+      "tag": "-K5",
+      "name": "Contactor 5",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 5",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 395,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f5-overload",
+      "tag": "-F5",
+      "name": "Overload 5",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 5",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 480,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "f6-breaker",
+      "tag": "-Q7",
+      "name": "MCB 6",
+      "kind": "breaker",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 6",
+      "width": 50,
+      "height": 80,
+      "depth": 50,
+      "x": 540,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#3b82f6",
+      "metadata": {}
+    },
+    {
+      "id": "f6-contactor",
+      "tag": "-K6",
+      "name": "Contactor 6",
+      "kind": "contactor",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 6",
+      "width": 70,
+      "height": 90,
+      "depth": 50,
+      "x": 605,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#0ea5e9",
+      "metadata": {}
+    },
+    {
+      "id": "f6-overload",
+      "tag": "-F6",
+      "name": "Overload 6",
+      "kind": "overload",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Feeder 6",
+      "width": 60,
+      "height": 80,
+      "depth": 50,
+      "x": 690,
+      "y": 1060,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#14b8a6",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-1",
+      "tag": "-X1:1",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 120,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-2",
+      "tag": "-X1:2",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 168,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-3",
+      "tag": "-X1:3",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 216,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-4",
+      "tag": "-X1:4",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 264,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-5",
+      "tag": "-X2:1",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 312,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-6",
+      "tag": "-X2:2",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 360,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-7",
+      "tag": "-X2:3",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 408,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-8",
+      "tag": "-X2:4",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 456,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-9",
+      "tag": "-X3:1",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 504,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-10",
+      "tag": "-X3:2",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 552,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-11",
+      "tag": "-X3:3",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 600,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    },
+    {
+      "id": "terminal-12",
+      "tag": "-X3:4",
+      "name": "Feed terminal",
+      "kind": "terminal",
+      "manufacturer": "",
+      "partNumber": "",
+      "group": "Terminals",
+      "width": 35,
+      "height": 45,
+      "depth": 50,
+      "x": 648,
+      "y": 180,
+      "rotation": 0,
+      "railId": null,
+      "terminals": [
+        {
+          "id": "L"
+        },
+        {
+          "id": "R"
+        }
+      ],
+      "mounting": "DIN",
+      "color": "#64748b",
+      "metadata": {}
+    }
+  ],
+  "connections": [
+    {
+      "id": "connection-1",
+      "from": "main",
+      "to": "f1-breaker",
+      "label": "L1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-2",
+      "from": "f1-breaker",
+      "to": "f1-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-3",
+      "from": "f1-contactor",
+      "to": "f1-overload",
+      "label": "T1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-4",
+      "from": "main",
+      "to": "f2-breaker",
+      "label": "L2",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-5",
+      "from": "f2-breaker",
+      "to": "f2-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-6",
+      "from": "f2-contactor",
+      "to": "f2-overload",
+      "label": "T1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-7",
+      "from": "main",
+      "to": "f3-breaker",
+      "label": "L3",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-8",
+      "from": "f3-breaker",
+      "to": "f3-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-9",
+      "from": "f3-contactor",
+      "to": "f3-overload",
+      "label": "T1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-10",
+      "from": "main",
+      "to": "f4-breaker",
+      "label": "L4",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-11",
+      "from": "f4-breaker",
+      "to": "f4-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-12",
+      "from": "f4-contactor",
+      "to": "f4-overload",
+      "label": "T1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-13",
+      "from": "main",
+      "to": "f5-breaker",
+      "label": "L5",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-14",
+      "from": "f5-breaker",
+      "to": "f5-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-15",
+      "from": "f5-contactor",
+      "to": "f5-overload",
+      "label": "T1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-16",
+      "from": "main",
+      "to": "f6-breaker",
+      "label": "L6",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-17",
+      "from": "f6-breaker",
+      "to": "f6-contactor",
+      "label": "A1",
+      "kind": "wire"
+    },
+    {
+      "id": "connection-18",
+      "from": "f6-contactor",
+      "to": "f6-overload",
+      "label": "T1",
+      "kind": "wire"
+    }
+  ],
+  "metadata": {}
+}

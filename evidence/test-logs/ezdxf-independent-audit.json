@@ -1,0 +1,17 @@
+{
+  "audit": "ezdxf.readfile + modelspace iteration succeeded",
+  "bounds": {
+    "max_x": 800.0,
+    "max_y": 2000.0,
+    "min_x": 0.0,
+    "min_y": 0.0
+  },
+  "dxf_version": "AC1009",
+  "entity_count": 274,
+  "entity_types": {
+    "LINE": 199,
+    "TEXT": 75
+  },
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.dxf",
+  "render": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\screenshots\\04-dxf-ezdxf-render.png"
+}

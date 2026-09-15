@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "clean": {
+    "components": 35,
+    "issues": 0
+  },
+  "snappedDrop": {
+    "railId": "rail-mid",
+    "x": 395,
+    "y": 1550,
+    "issues": 1
+  },
+  "beforePan": {
+    "x": 0,
+    "y": 0
+  },
+  "afterPan": {
+    "x": 80,
+    "y": 40
+  },
+  "viewportPanChanged": true
+}

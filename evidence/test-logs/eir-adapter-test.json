@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "schemaVersion": "eir.v1",
+  "component": {
+    "id": "dev-1",
+    "tag": "-Q1",
+    "name": "Test breaker",
+    "kind": "device",
+    "manufacturer": "CNB",
+    "partNumber": "TEST-BRK",
+    "group": "Power",
+    "width": 36,
+    "height": 72,
+    "depth": 50,
+    "x": 80,
+    "y": 580,
+    "rotation": 0,
+    "railId": "r1",
+    "terminals": [
+      {
+        "id": "1"
+      },
+      {
+        "id": "2"
+      }
+    ],
+    "mounting": "DIN",
+    "color": "#3b82f6",
+    "metadata": {
+      "sourceEirId": "dev-1",
+      "partId": "part-breaker"
+    }
+  },
+  "connection": {
+    "id": "net-1",
+    "from": "dev-1",
+    "to": "dev-1",
+    "label": "L1",
+    "kind": "wire"
+  }
+}
+{
+  "pythonEir": {
+    "components": 37,
+    "connections": 24,
+    "firstPart": "CNB-MCCB-250",
+    "plate": {
+      "id": "plate-main",
+      "x": 50,
+      "y": 50,
+      "width": 700,
+      "height": 1900
+    }
+  },
+  "ok": true
+}

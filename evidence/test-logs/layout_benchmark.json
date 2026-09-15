@@ -1,0 +1,38 @@
+[
+  {
+    "component_count": 13,
+    "error_count": 0,
+    "overlap_pairs": 0.0,
+    "requested_motors": 2,
+    "solver_engine": "ortools-cp-sat-optimal",
+    "timings": {
+      "heuristic_ms": 2.177,
+      "solver_ms": 22.206
+    },
+    "valid": true
+  },
+  {
+    "component_count": 61,
+    "error_count": 0,
+    "overlap_pairs": 0.0,
+    "requested_motors": 10,
+    "solver_engine": "ortools-cp-sat-feasible",
+    "timings": {
+      "heuristic_ms": 6.887,
+      "solver_ms": 1027.415
+    },
+    "valid": true
+  },
+  {
+    "component_count": 193,
+    "error_count": 0,
+    "overlap_pairs": 0.0,
+    "requested_motors": 32,
+    "solver_engine": "ortools-cp-sat-feasible",
+    "timings": {
+      "heuristic_ms": 26.859,
+      "solver_ms": 1110.158
+    },
+    "valid": true
+  }
+]

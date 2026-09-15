@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "sections": [
+    "HEADER",
+    "ENTITIES"
+  ],
+  "entityCount": 448,
+  "counts": {
+    "LINE": 208,
+    "TEXT": 84,
+    "CIRCLE": 156
+  },
+  "bounds": {
+    "minX": 0,
+    "minY": 0,
+    "maxX": 800,
+    "maxY": 2000
+  }
+}

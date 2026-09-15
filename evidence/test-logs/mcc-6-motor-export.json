@@ -1,0 +1,28 @@
+{
+  "scenario": "mcc-6-motor",
+  "jsonPath": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-json\\mcc-6-motor.canonical.json",
+  "dxfPath": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\mcc-6-motor.dxf",
+  "svgPath": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-svg\\mcc-6-motor.svg",
+  "componentCount": 31,
+  "audit": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "sections": [
+      "HEADER",
+      "ENTITIES"
+    ],
+    "entityCount": 325,
+    "counts": {
+      "LINE": 178,
+      "TEXT": 85,
+      "CIRCLE": 62
+    },
+    "bounds": {
+      "minX": 0,
+      "minY": 0,
+      "maxX": 800,
+      "maxY": 2000
+    }
+  }
+}
