@@ -1,3 +1,11 @@
+
+== Python tests ==
+....................                                                     [100%]
+20 passed in 0.89s
+
+== Python syntax ==
+
+== Core demos and layout benchmark ==
 {
   "benchmark": [
     {
@@ -241,3 +249,212 @@
     }
   ]
 }
+
+== JavaScript CAD exporter contract ==
+{
+  "ok": true,
+  "dxfBytes": 2670,
+  "svgBytes": 1241,
+  "entities": 36,
+  "counts": {
+    "LINE": 25,
+    "TEXT": 7,
+    "CIRCLE": 4
+  }
+}
+
+== Python EIR to browser adapter contract ==
+{
+  "ok": true,
+  "schemaVersion": "eir.v1",
+  "component": {
+    "id": "dev-1",
+    "tag": "-Q1",
+    "name": "Test breaker",
+    "kind": "device",
+    "manufacturer": "CNB",
+    "partNumber": "TEST-BRK",
+    "group": "Power",
+    "width": 36,
+    "height": 72,
+    "depth": 50,
+    "x": 80,
+    "y": 580,
+    "rotation": 0,
+    "railId": "r1",
+    "terminals": [
+      {
+        "id": "1"
+      },
+      {
+        "id": "2"
+      }
+    ],
+    "mounting": "DIN",
+    "color": "#3b82f6",
+    "metadata": {
+      "sourceEirId": "dev-1",
+      "partId": "part-breaker"
+    }
+  },
+  "connection": {
+    "id": "net-1",
+    "from": "dev-1",
+    "to": "dev-1",
+    "label": "L1",
+    "kind": "wire"
+  }
+}
+{
+  "pythonEir": {
+    "components": 37,
+    "connections": 24,
+    "firstPart": "CNB-MCCB-250",
+    "plate": {
+      "id": "plate-main",
+      "x": 50,
+      "y": 50,
+      "width": 700,
+      "height": 1900
+    }
+  },
+  "ok": true
+}
+
+== Raw Python EIR web API export contract ==
+{
+  "ok": true,
+  "rawPythonEir": true,
+  "deterministic": true,
+  "dxfBytes": 30741,
+  "entityCount": 448,
+  "counts": {
+    "LINE": 208,
+    "TEXT": 84,
+    "CIRCLE": 156
+  },
+  "bounds": {
+    "minX": 0,
+    "minY": 0,
+    "maxX": 800,
+    "maxY": 2000
+  },
+  "unsupportedFormatStatus": 400
+}
+
+== Browser editor interaction contract ==
+{
+  "ok": true,
+  "clean": {
+    "components": 35,
+    "issues": 0
+  },
+  "snappedDrop": {
+    "railId": "rail-mid",
+    "x": 395,
+    "y": 1550,
+    "issues": 1
+  },
+  "beforePan": {
+    "x": 0,
+    "y": 0
+  },
+  "afterPan": {
+    "x": 80,
+    "y": 40
+  },
+  "viewportPanChanged": true
+}
+
+== Independent ezdxf audit: canonical Python export ==
+{
+  "valid": true,
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.dxf",
+  "version": "AC1009",
+  "entityCount": 274,
+  "counts": {
+    "LINE": 199,
+    "TEXT": 75
+  },
+  "layers": [
+    "ANNOTATION",
+    "DEVICE",
+    "DEVICE_TAG",
+    "DIN_RAIL",
+    "ENCLOSURE",
+    "MOUNTING_PLATE",
+    "PART_REF",
+    "WIRE",
+    "WIRE_DUCT"
+  ],
+  "bounds": {
+    "minX": 0.0,
+    "minY": 0.0,
+    "maxX": 800.0,
+    "maxY": 2000.0
+  }
+}
+
+== Independent ezdxf audit: web API export ==
+{
+  "valid": true,
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\api-mcc-6-motor.dxf",
+  "version": "AC1009",
+  "entityCount": 448,
+  "counts": {
+    "LINE": 208,
+    "TEXT": 84,
+    "CIRCLE": 156
+  },
+  "layers": [
+    "COMPONENT",
+    "DIN_RAIL",
+    "ENCLOSURE",
+    "MOUNTING_PLATE",
+    "TAG",
+    "TERMINAL",
+    "TEXT",
+    "WIRE",
+    "WIRE_DUCT",
+    "WIRE_LABEL"
+  ],
+  "bounds": {
+    "minX": 0.0,
+    "minY": 0.0,
+    "maxX": 800.0,
+    "maxY": 2000.0
+  }
+}
+
+== Independent ezdxf render: web API export ==
+Rendered F:\BUL_Research\AICAD\cnb-electrical-lab\evidence\generated-dxf\api-mcc-6-motor.dxf -> F:\BUL_Research\AICAD\cnb-electrical-lab\evidence\screenshots\api-mcc-6-motor-ezdxf.png
+
+== JavaScript syntax: scripts\test_web_ui_behaviors.cjs ==
+
+== JavaScript syntax: scripts\test_web_api.cjs ==
+
+== JavaScript syntax: scripts\test_eir_adapter.cjs ==
+
+== JavaScript syntax: scripts\test_cad_export.cjs ==
+
+== JavaScript syntax: scripts\render_dxf.cjs ==
+
+== JavaScript syntax: scripts\generate_cad_evidence.cjs ==
+
+== JavaScript syntax: scripts\capture_web_evidence.cjs ==
+
+== JavaScript syntax: scripts\audit_dxf.cjs ==
+
+== JavaScript syntax: packages\cad_export\index.js ==
+
+== JavaScript syntax: packages\cad-export\index.js ==
+
+== JavaScript syntax: apps\web\cad-browser.js ==
+
+== JavaScript syntax: apps\web\app.js ==
+
+== JavaScript syntax: apps\web\eir-adapter.js ==
+
+== JavaScript syntax: apps\web\server.js ==
+
+RELEASE GATE PASS: 65 research rows, 14 required documents.
