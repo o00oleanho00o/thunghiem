@@ -88,6 +88,10 @@ def build_project(catalog: ComponentCatalog, products: list[dict]) -> Project:
 
 def main() -> None:
     catalog, products = load_catalog()
+    catalog_products_dir = ROOT / "catalog" / "r3" / "products"
+    catalog_products_dir.mkdir(parents=True, exist_ok=True)
+    for item in products:
+        (catalog_products_dir / f"{item['id']}.json").write_text(json.dumps(item, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     project = build_project(catalog, products)
     heuristic = heuristic_layout(project, catalog, LayoutConfig(solver_time_limit_s=5))
     solver = solver_layout(project, catalog, LayoutConfig(solver_time_limit_s=5))

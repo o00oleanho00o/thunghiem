@@ -7,7 +7,7 @@
   },
   "heuristic": {
     "component_count": 8.0,
-    "elapsed_ms": 5.642,
+    "elapsed_ms": 3.573,
     "engine": "heuristic",
     "overlap_pairs": 0.0,
     "plate_area_mm2": 770000.0,
@@ -36,7 +36,7 @@
   "manual_corrections": 1,
   "solver": {
     "component_count": 8.0,
-    "elapsed_ms": 25.906,
+    "elapsed_ms": 18.93,
     "engine": "ortools-cp-sat-optimal",
     "overlap_pairs": 0.0,
     "plate_area_mm2": 770000.0,
