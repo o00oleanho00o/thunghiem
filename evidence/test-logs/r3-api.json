@@ -1,6 +1,11 @@
 {
   "ok": true,
   "productCount": 8,
+  "verifiedTypeOrderChecks": [
+    "S201U-C6",
+    "S201U-C16",
+    "S201U-C63"
+  ],
   "validExportStatus": 200,
   "invalidExportStatus": 422,
   "blockedCodes": [
@@ -9,6 +14,6 @@
   ],
   "accessBlockedStatus": 422,
   "missingProvenanceStatus": 422,
-  "roundTripRevision": "r3-a8b34db3f88f",
+  "roundTripRevision": "r3-4f9f913b71f3",
   "lockedDevice": "device_034846ec7431"
 }

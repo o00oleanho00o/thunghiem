@@ -54,26 +54,30 @@ def load_catalog() -> tuple[ComponentCatalog, list[dict]]:
         part = PartDefinition(
             id=item["id"],
             manufacturer=item["manufacturer"],
-            manufacturer_part=item["manufacturer_part_number"],
+            manufacturer_part=item["manufacturer_order_code"],
             description=item["description"],
-            category="terminal" if "terminal" in item["description"].lower() else "power_supply" if "power supply" in item["description"].lower() else "control",
+            category=item.get("category", "protection"),
             footprint=Footprint(
                 width=fp["width_mm"], height=fp["height_mm"], depth=fp["depth_mm"], mounting=fp["mounting"],
                 rail_width=fp.get("rail_width_mm"), clearance_mm=clearance_value if clearance_value is not None else 5.0,
                 service_access_direction=fp.get("service_access_direction"), service_access_depth_mm=fp.get("service_access_depth_mm"),
+                vendor_mounting_position=fp.get("vendor_mounting_position"),
                 allowed_rotations=fp.get("allowed_rotations", [0]),
             ),
             terminals=terminals,
             product_identity=ProductIdentity(
-                manufacturer=item["manufacturer"], series=item["series"], manufacturer_part_number=item["manufacturer_part_number"],
+                manufacturer=item["manufacturer"], series=item["series"], type_designation=item["type_designation"],
+                manufacturer_order_code=item["manufacturer_order_code"], rated_current_a=item.get("rated_current_a"),
+                characteristic=item.get("characteristic"),
                 description=item["description"], source_url=item["source_url"], source_type=item["source_type"],
                 retrieved_at=item["retrieved_at"], verification_status=item["verification_status"],
             ),
             provenance={
                 **{
                     key: ProvenanceValue(value=value, status="document_verified", source=item["source_url"], source_artifact_id=item.get("source_artifact_id"), source_locator=item.get("provenance", {}).get(key, {}).get("source_locator"), reviewed_at=item.get("retrieved_at"), source_type="vendor_datasheet", confidence="document_verified")
-                    for key, value in {"width_mm": fp["width_mm"], "height_mm": fp["height_mm"], "depth_mm": fp["depth_mm"], "mounting": fp["mounting"], "service_access_direction": fp.get("service_access_direction")}.items()
+                    for key, value in {"width_mm": fp["width_mm"], "height_mm": fp["height_mm"], "depth_mm": fp["depth_mm"], "mounting": fp["mounting"]}.items()
                 },
+                **{key: ProvenanceValue.parse_obj(item["provenance"][key]) for key in ("vendor_mounting_position", "allowed_rotations", "service_access_direction", "service_access_depth_mm", "terminal_identifiers", "terminal_count", "type_designation", "manufacturer_order_code", "rated_current_a", "characteristic")},
                 "clearance_mm": clearance_provenance,
             },
             source_artifacts=[SourceArtifact.parse_obj(item["source_artifacts"][0])],
@@ -96,7 +100,7 @@ def build_project(catalog: ComponentCatalog, products: list[dict]) -> Project:
     # The source artifact explicitly leaves terminal identifiers unknown. Keep
     # the benchmark physical/topological-neutral instead of fabricating IDs.
     connections = []
-    return Project(id="r3-engineering-truth-cabinet", name="R3 Phoenix Contact control cabinet", enclosure=enclosure, parts=catalog.all(), devices=devices, connections=connections, metadata={"benchmark": "R3", "authoritative": True, "verification_policy": "review_verified only", "cad_policy": "no exact-product CAD available; engineering footprints are authoritative envelopes"})
+    return Project(id="r3-engineering-truth-cabinet", name="R3.1 ABB S200 U engineering-truth cabinet", enclosure=enclosure, parts=catalog.all(), devices=devices, connections=connections, metadata={"benchmark": "R3.1b", "authoritative": True, "release_level": "engineering_layout", "verification_policy": "document_verified reviewed extraction", "cad_policy": "no exact-product CAD available; engineering footprints are engineering envelopes", "manufacturing_ready": False})
 
 
 def main() -> None:
@@ -127,8 +131,8 @@ def main() -> None:
     bom_rows = []
     quantities = [4, 4, 3, 3, 3, 3, 2, 2]
     for item, quantity in zip(products, quantities):
-        bom_rows.append(f"ALL,{item['id']},{item['manufacturer']},{item['manufacturer_part_number']},{quantity}")
-    (OUT / "bom.csv").write_text("tag,product_id,manufacturer,mpn,quantity\n" + "\n".join(bom_rows) + "\n", encoding="utf-8")
+        bom_rows.append(f"ALL,{item['id']},{item['manufacturer']},{item['type_designation']},{item['manufacturer_order_code']},{quantity}")
+    (OUT / "bom.csv").write_text("tag,product_id,manufacturer,type_designation,manufacturer_order_code,quantity\n" + "\n".join(bom_rows) + "\n", encoding="utf-8")
     (OUT / "product-resolution.json").write_text(json.dumps(products, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "source-manifest.json").write_text(json.dumps({"catalog_source": str(CATALOG_PATH.relative_to(ROOT)), "catalog_sha256": sha256(CATALOG_PATH), "retrieved_at": datetime.now(timezone.utc).isoformat(), "product_count": len(products), "verification_statuses": {item["verification_status"] for item in products}}, indent=2, sort_keys=True, default=list) + "\n", encoding="utf-8")
     for item in products:

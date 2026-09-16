@@ -1,30 +1,35 @@
-# R3.1 Truth Closure Report
+# R3.1b Final Engineering Truth Closure
 
 ## Decision
 
-**R3.1 PASS WITH CONDITIONS — GO TO R4 LIMITED**
+**R3 CLOSED - GO TO R4 LIMITED**
 
-The authoritative dataset now uses locally cached official ABB documentation rather than dead Phoenix URLs. Eight exact ABB order codes are backed by one successfully retrieved official PDF artifact with SHA256 and page/table locators. The model deliberately leaves product-specific clearance, service access, terminal identifiers/count and exact CAD unknown. A separate 5 mm `CNB-CLEARANCE-DEFAULT-V1` engineering default is applied to layout; it is not represented as an ABB requirement.
+R3 proves an engineering-layout-grade truth pipeline, not manufacturing readiness.
 
-## Evidence
+## Identity and evidence
 
-- Source artifact: `catalog/r3/abb-s200-datasheet.pdf`
-- Artifact manifest: `catalog/r3/source-artifacts/manifest.json`
-- Artifact SHA256: `e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1`
-- Exact MPNs: S201U-C6, C10, C16, C20, C25, C32, C40 and C63.
-- Dimensions/mounting/rail width/order code provenance points to PDF pages 3 and 6.
-- All Phoenix records were removed from the R3.1 authoritative catalog; their blocked URLs are retained only in earlier R3 evidence.
+- Exact ABB type designations: 8 (`S201U-C6`, `C10`, `C16`, `C20`, `C25`, `C32`, `C40`, `C63`).
+- Exact ABB manufacturer order codes: 8 distinct codes, including C6 `2CDS271417R0064`, C16 `2CDS271417R0164` and C63 `2CDS271417R0634`.
+- Source artifacts: 1 official cached ABB PDF, verified byte-for-byte in the export chain.
+- `document_verified`: type designation, manufacturer order code, rated current, characteristic, width, height, depth, DIN rail mounting, rail width and vendor mounting position `any`.
+- `engineering_default`: 5 mm clearance (`CNB-CLEARANCE-DEFAULT-V1`) and layout rotation `[0]` (`CNB-LAYOUT-ROTATION-V1`).
+- `unknown`: product clearance, service-access direction/depth, terminal identifiers/count and exact-product CAD.
 
-## Truth boundaries
+The source review is a reviewed extraction from the official cached artifact, with page/table locators, not an automatically parsed vendor-data claim. See `ABB_SOURCE_REVIEW.md`.
 
-`width_mm`, `height_mm`, `depth_mm`, `mounting`, `rail_width_mm` and order code are `document_verified`. `clearance_mm`, service face/depth and terminal IDs/count are `unknown` in the product records. The benchmark EIR records the 5 mm company default as `engineering_default` with policy ID, never as vendor data. Terminal lists remain empty and topology is intentionally not fabricated.
+## Validation release levels
 
-## Cabinet and validation
+The 24-device ABB benchmark is **Engineering Layout Valid**: zero errors and explicit warnings for clearance policy, unknown terminal model and unknown service access. The regenerated layout is not Manufacturing Ready. Manufacturing release intentionally rejects unknown terminal model, service/install requirements and product-specific clearance.
 
-The regenerated cabinet contains 24 physical devices, multiple DIN rails and vertical/horizontal ducts. Heuristic and CP-SAT layouts pass authoritative validation. E004 evidence identifies `engineering_default` and `CNB-CLEARANCE-DEFAULT-V1`; E005 remains a warning when access metadata is unknown and an error when an access corridor is deliberately blocked. Missing mandatory provenance and unknown authoritative fields are rejected before export.
+The final validation report contains 72 warnings (24 devices x three explicit unknown/default classes) and zero errors. Unknown values are never promoted to `document_verified`.
 
-The final DXF reopens with ezdxf and has zero audit errors. The export chain includes catalog, source-artifact manifest, canonical EIR, validation policy, validation report and DXF hashes; `scripts/verify_export_chain.py` passes and detects tampering.
+## Independent integrity evidence
+
+- Source PDF bytes are resolved from `source-artifacts/manifest.json` and SHA256-compared by `scripts/verify_export_chain.py`.
+- Tampered bytes, changed manifest SHA and missing artifacts fail the verifier in tests.
+- Final DXF reopens with ezdxf as AC1009 with 311 modelspace entities and zero audit errors.
+- The benchmark metadata is ABB-only; stale Phoenix records and review-only semantics were removed from the R3.1 catalog/benchmark.
 
 ## R4 boundary
 
-Proceed only to a limited R4 experiment. Do not claim procurement/manufacturing truth until terminal identifiers, service clearances and product-specific installation evidence are cached for the selected parts. Full wire routing remains out of scope.
+Proceed only to a limited R4 experiment. Do not claim procurement or manufacturing truth until terminal identifiers, service clearances, product-specific installation evidence, accessories and exact CAD where required are cached and reviewed. Full wire routing remains out of scope.

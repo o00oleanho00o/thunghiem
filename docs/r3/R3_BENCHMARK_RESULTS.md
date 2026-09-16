@@ -1,9 +1,7 @@
-# R3 Benchmark Results
+# R3.1b Benchmark Results
 
-R3.1 supersedes the original Phoenix review-only run for authoritative data. The current regenerated artifact is ABB-backed and contains 24 physical device instances (8 exact MPNs), with product-specific unknowns and an explicit engineering-default policy.
+The ABB-backed benchmark contains 24 physical device instances across eight exact S201U-C type designations and eight distinct manufacturer order codes. The cabinet metadata is `R3.1 ABB S200 U engineering-truth cabinet`.
 
-The benchmark is `benchmarks/r3-engineering-truth-cabinet/` and contains eight review-verified Phoenix Contact products, BOM, product resolution, source manifest, canonical EIR, heuristic layout, CP-SAT layout, manual-review layout and regenerated layout.
+Heuristic and OR-Tools CP-SAT both produce zero overlap pairs and zero validation errors. The final validation is Engineering Layout Valid with explicit warnings for policy clearance, unknown terminal model and unknown service access. It is not Manufacturing Ready.
 
-On the recorded run, heuristic and OR-Tools CP-SAT both produced zero overlap pairs and passed Python validation. CP-SAT completed as `ortools-cp-sat-optimal`; heuristic completed in approximately 4 ms and CP-SAT in approximately 21 ms. One manual correction was made to PS1 and its lock survived regeneration exactly. The final DXF reopened with ezdxf (`AC1009`, 126 modelspace entities, zero audit errors).
-
-The comparison does not claim that CP-SAT is universally better: this small cabinet is already solved by the deterministic heuristic, while CP-SAT adds objective control and a measurable solve cost.
+The final DXF reopens with ezdxf as `AC1009`, with 311 modelspace entities (`262 LINE`, `49 TEXT`) and zero audit errors. One manual correction remains locked through regeneration. The comparison does not claim CP-SAT is universally better; this small cabinet is already solved by the deterministic heuristic.

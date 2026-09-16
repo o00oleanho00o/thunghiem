@@ -12,14 +12,14 @@ RETRIEVED_AT = "2026-09-16T00:00:00Z"
 URL = "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf"
 
 PRODUCTS = [
-    ("S201U-C6", "6"),
-    ("S201U-C10", "10"),
-    ("S201U-C16", "16"),
-    ("S201U-C20", "20"),
-    ("S201U-C25", "25"),
-    ("S201U-C32", "32"),
-    ("S201U-C40", "40"),
-    ("S201U-C63", "63"),
+    ("S201U-C6", "6", "2CDS271417R0064"),
+    ("S201U-C10", "10", "2CDS271417R0104"),
+    ("S201U-C16", "16", "2CDS271417R0164"),
+    ("S201U-C20", "20", "2CDS271417R0204"),
+    ("S201U-C25", "25", "2CDS271417R0254"),
+    ("S201U-C32", "32", "2CDS271417R0324"),
+    ("S201U-C40", "40", "2CDS271417R0404"),
+    ("S201U-C63", "63", "2CDS271417R0634"),
 ]
 
 
@@ -53,6 +53,20 @@ def unknown(notes: str):
     }
 
 
+def policy(value, locator: str, *, notes: str = ""):
+    """A CNB layout policy is not vendor evidence."""
+    return {
+        "value": value,
+        "status": "engineering_default",
+        "source_artifact_id": None,
+        "source_locator": locator,
+        "reviewed_at": RETRIEVED_AT,
+        "notes": notes,
+        "source_type": "engineering_default",
+        "confidence": "engineering_default",
+    }
+
+
 def main() -> None:
     if not ARTIFACT.exists():
         raise SystemExit(f"missing cached source artifact: {ARTIFACT}")
@@ -72,13 +86,18 @@ def main() -> None:
         "document_date": None,
     }
     products = []
-    for mpn, current in PRODUCTS:
+    for type_designation, current, order_code in PRODUCTS:
+        locator = f"PDF page 6, Ordering data characteristic C, 1 pole, {type_designation}, Order code {order_code}"
         products.append({
-            "id": "abb-" + mpn.lower().replace("-", "-"),
+            "id": "abb-" + type_designation.lower().replace("-", "-"),
             "manufacturer": "ABB",
             "series": "System pro M compact S 200 U",
-            "manufacturer_part_number": mpn,
+            "type_designation": type_designation,
+            "manufacturer_order_code": order_code,
+            "rated_current_a": float(current),
+            "characteristic": "C",
             "description": f"ABB S 201 U miniature circuit breaker, C characteristic, {current} A",
+            "category": "protection",
             "source_url": URL,
             "source_type": "official_datasheet",
             "retrieved_at": RETRIEVED_AT,
@@ -94,6 +113,7 @@ def main() -> None:
                 "clearance_mm": None,
                 "service_access_direction": None,
                 "service_access_depth_mm": None,
+                "vendor_mounting_position": "any",
                 "allowed_rotations": [0],
             },
             "provenance": {
@@ -102,13 +122,17 @@ def main() -> None:
                 "depth_mm": field(71.0, artifact_id, "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm"),
                 "mounting": field("din_rail", artifact_id, "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip"),
                 "rail_width_mm": field(35.0, artifact_id, "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip"),
-                "allowed_rotations": field([0], artifact_id, "PDF page 3, Technical data, Mounting position: any", notes="0 is the canonical panel orientation; source permits any mounting position."),
+                "vendor_mounting_position": field("any", artifact_id, "PDF page 3, Technical data, Mounting position: any"),
+                "allowed_rotations": policy([0], "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1", notes="Current 2D solver policy permits 0 degrees; this is not a vendor restriction."),
                 "clearance_mm": unknown("No product-specific clearance value in cached datasheet; do not use vendor truth."),
                 "service_access_direction": unknown("No service-face direction in cached datasheet."),
                 "service_access_depth_mm": unknown("No service-access depth in cached datasheet."),
                 "terminal_identifiers": unknown("Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs."),
                 "terminal_count": unknown("Terminal count is not stated as a canonical ID set in the cached artifact."),
-                "order_code": field(mpn, artifact_id, "PDF page 6, Ordering data characteristic C, S 201 U table"),
+                "type_designation": field(type_designation, artifact_id, locator),
+                "manufacturer_order_code": field(order_code, artifact_id, locator),
+                "rated_current_a": field(float(current), artifact_id, locator),
+                "characteristic": field("C", artifact_id, locator),
             },
             "terminals": [],
             "terminal_model_status": "unknown",
@@ -121,7 +145,7 @@ def main() -> None:
     (OUT / "source-artifacts" / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     catalog = {
         "schema_version": "r3.1-product-catalog.v1",
-        "verification_policy": "Only locally cached official source artifacts can produce document_verified fields. Unknown fields remain unknown.",
+        "verification_policy": "Only reviewed extraction from locally cached official source artifacts can produce document_verified fields. Unknown fields remain unknown; layout policies are explicit engineering defaults.",
         "products": products,
     }
     target = OUT / "products.json"

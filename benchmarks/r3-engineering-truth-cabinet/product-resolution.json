@@ -2,6 +2,8 @@
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
     "footprint": {
       "allowed_rotations": [
@@ -14,6 +16,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c6",
@@ -24,19 +27,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C6",
+    "manufacturer_order_code": "2CDS271417R0064",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C6, Order code 2CDS271417R0064",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -68,6 +81,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C6, Order code 2CDS271417R0064",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0064"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -78,16 +101,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C6"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -97,6 +110,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C6, Order code 2CDS271417R0064",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 6.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -138,6 +161,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C6, Order code 2CDS271417R0064",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C6"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -149,6 +192,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 6.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -171,11 +215,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C6",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
     "footprint": {
       "allowed_rotations": [
@@ -188,6 +235,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c10",
@@ -198,19 +246,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C10",
+    "manufacturer_order_code": "2CDS271417R0104",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C10, Order code 2CDS271417R0104",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -242,6 +300,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C10, Order code 2CDS271417R0104",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0104"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -252,16 +320,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C10"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -271,6 +329,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C10, Order code 2CDS271417R0104",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 10.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -312,6 +380,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C10, Order code 2CDS271417R0104",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C10"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -323,6 +411,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 10.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -345,11 +434,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C10",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
     "footprint": {
       "allowed_rotations": [
@@ -362,6 +454,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c16",
@@ -372,19 +465,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C16",
+    "manufacturer_order_code": "2CDS271417R0164",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C16, Order code 2CDS271417R0164",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -416,6 +519,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C16, Order code 2CDS271417R0164",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0164"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -426,16 +539,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C16"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -445,6 +548,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C16, Order code 2CDS271417R0164",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 16.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -486,6 +599,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C16, Order code 2CDS271417R0164",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C16"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -497,6 +630,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 16.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -519,11 +653,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C16",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
     "footprint": {
       "allowed_rotations": [
@@ -536,6 +673,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c20",
@@ -546,19 +684,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C20",
+    "manufacturer_order_code": "2CDS271417R0204",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C20, Order code 2CDS271417R0204",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -590,6 +738,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C20, Order code 2CDS271417R0204",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0204"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -600,16 +758,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C20"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -619,6 +767,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C20, Order code 2CDS271417R0204",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 20.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -660,6 +818,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C20, Order code 2CDS271417R0204",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C20"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -671,6 +849,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 20.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -693,11 +872,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C20",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
     "footprint": {
       "allowed_rotations": [
@@ -710,6 +892,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c25",
@@ -720,19 +903,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C25",
+    "manufacturer_order_code": "2CDS271417R0254",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C25, Order code 2CDS271417R0254",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -764,6 +957,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C25, Order code 2CDS271417R0254",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0254"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -774,16 +977,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C25"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -793,6 +986,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C25, Order code 2CDS271417R0254",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 25.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -834,6 +1037,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C25, Order code 2CDS271417R0254",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C25"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -845,6 +1068,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 25.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -867,11 +1091,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C25",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
     "footprint": {
       "allowed_rotations": [
@@ -884,6 +1111,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c32",
@@ -894,19 +1122,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C32",
+    "manufacturer_order_code": "2CDS271417R0324",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C32, Order code 2CDS271417R0324",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -938,6 +1176,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C32, Order code 2CDS271417R0324",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0324"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -948,16 +1196,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C32"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -967,6 +1205,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C32, Order code 2CDS271417R0324",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 32.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -1008,6 +1256,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C32, Order code 2CDS271417R0324",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C32"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -1019,6 +1287,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 32.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -1041,11 +1310,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C32",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
     "footprint": {
       "allowed_rotations": [
@@ -1058,6 +1330,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c40",
@@ -1068,19 +1341,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C40",
+    "manufacturer_order_code": "2CDS271417R0404",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C40, Order code 2CDS271417R0404",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -1112,6 +1395,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C40, Order code 2CDS271417R0404",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0404"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -1122,16 +1415,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C40"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -1141,6 +1424,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C40, Order code 2CDS271417R0404",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 40.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -1182,6 +1475,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C40, Order code 2CDS271417R0404",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C40"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -1193,6 +1506,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 40.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -1215,11 +1529,14 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C40",
     "verification_status": "document_verified"
   },
   {
     "cad_available": false,
     "cad_verified": false,
+    "category": "protection",
+    "characteristic": "C",
     "description": "ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
     "footprint": {
       "allowed_rotations": [
@@ -1232,6 +1549,7 @@
       "rail_width_mm": 35.0,
       "service_access_depth_mm": null,
       "service_access_direction": null,
+      "vendor_mounting_position": "any",
       "width_mm": 17.5
     },
     "id": "abb-s201u-c63",
@@ -1242,19 +1560,29 @@
       "exact-product CAD representation"
     ],
     "manufacturer": "ABB",
-    "manufacturer_part_number": "S201U-C63",
+    "manufacturer_order_code": "2CDS271417R0634",
     "provenance": {
       "allowed_rotations": {
-        "confidence": "document_verified",
-        "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+        "confidence": "engineering_default",
+        "notes": "Current 2D solver policy permits 0 degrees; this is not a vendor restriction.",
         "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 3, Technical data, Mounting position: any",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
+        "source_artifact_id": null,
+        "source_locator": "CNB-CLEARANCE-DEFAULT-V1 / CNB-LAYOUT-ROTATION-V1",
+        "source_type": "engineering_default",
+        "status": "engineering_default",
         "value": [
           0
         ]
+      },
+      "characteristic": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C63, Order code 2CDS271417R0634",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "C"
       },
       "clearance_mm": {
         "confidence": "unknown",
@@ -1286,6 +1614,16 @@
         "status": "document_verified",
         "value": 92.0
       },
+      "manufacturer_order_code": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C63, Order code 2CDS271417R0634",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "2CDS271417R0634"
+      },
       "mounting": {
         "confidence": "document_verified",
         "notes": "",
@@ -1296,16 +1634,6 @@
         "status": "document_verified",
         "value": "din_rail"
       },
-      "order_code": {
-        "confidence": "document_verified",
-        "notes": "",
-        "reviewed_at": "2026-09-16T00:00:00Z",
-        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
-        "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
-        "source_type": "vendor_datasheet",
-        "status": "document_verified",
-        "value": "S201U-C63"
-      },
       "rail_width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -1315,6 +1643,16 @@
         "source_type": "vendor_datasheet",
         "status": "document_verified",
         "value": 35.0
+      },
+      "rated_current_a": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C63, Order code 2CDS271417R0634",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": 63.0
       },
       "service_access_depth_mm": {
         "confidence": "unknown",
@@ -1356,6 +1694,26 @@
         "status": "unknown",
         "value": null
       },
+      "type_designation": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 6, Ordering data characteristic C, 1 pole, S201U-C63, Order code 2CDS271417R0634",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "S201U-C63"
+      },
+      "vendor_mounting_position": {
+        "confidence": "document_verified",
+        "notes": "",
+        "reviewed_at": "2026-09-16T00:00:00Z",
+        "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+        "source_locator": "PDF page 3, Technical data, Mounting position: any",
+        "source_type": "vendor_datasheet",
+        "status": "document_verified",
+        "value": "any"
+      },
       "width_mm": {
         "confidence": "document_verified",
         "notes": "",
@@ -1367,6 +1725,7 @@
         "value": 17.5
       }
     },
+    "rated_current_a": 63.0,
     "retrieved_at": "2026-09-16T00:00:00Z",
     "series": "System pro M compact S 200 U",
     "source_artifact_id": "source-abb-2cdc002168d0202-r1",
@@ -1389,6 +1748,7 @@
     "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
     "terminal_model_status": "unknown",
     "terminals": [],
+    "type_designation": "S201U-C63",
     "verification_status": "document_verified"
   }
 ]

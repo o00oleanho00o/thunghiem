@@ -1,7 +1,7 @@
-# R3 Provenance Model
+# R3.1b Provenance Model
 
-`ProductIdentity` is separate from `Footprint`, CAD representation and schematic symbol. Each `PartDefinition` may carry a `product_identity` plus a field-level `provenance` ledger. A ledger record contains `value`, `source`, `source_type` and `confidence`.
+`ProductIdentity` is separate from `Footprint`, CAD representation and schematic symbol. ABB identity has explicit `type_designation`, `manufacturer_order_code`, `rated_current_a` and `characteristic` fields. Each `PartDefinition` carries a field-level provenance ledger.
 
-Allowed confidence levels are `vendor_verified`, `review_verified`, `trusted_secondary`, `inferred`, and `unknown`. The R3 authoritative benchmark accepts only `review_verified` or `vendor_verified`. Unknown terminal pitch, accessory envelope, bend radius and installation clearances remain explicit in `known_unknowns` and are not silently promoted.
+Allowed statuses include `document_verified`, `engineering_default`, `unknown` and the other domain confidence levels. A null value is never `document_verified`. Vendor mounting position (`any`) is separate from the CNB layout policy (`allowed_rotations=[0]`).
 
-The benchmark manifest hashes `catalog/r3/products.json`, the source EIR, the validation report and the generated DXF so an export can be traced to one catalog snapshot.
+The engineering-layout release may pass with explicit warnings for unknown clearance, service access, terminal model and exact CAD. Manufacturing-ready release rejects those unknowns. The export manifest hashes the catalog, source-artifact manifest, canonical EIR, validation policy, validation report and generated DXF; the verifier also hashes every source-artifact byte.

@@ -1,6 +1,751 @@
 {
   "errors": 0,
-  "issues": [],
+  "issues": [
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_989eb3a3f5e2",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_ddcb250435c3",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_a8b29fc7c144",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_e7944dd47711",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_fd1e6d35d99a",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_034846ec7431",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_d0df8e5d4f1b",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_41dba75035b0",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_bb794f48c624",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_f5453bf74470",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_c41ac3424be1",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_4c24bb10504c",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_b8e9ceb94b60",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_7b52c20bb2a0",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_d9c1ed4965e1",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_8f798c6b227c",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_d6176475bd22",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_788155939800",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_93497a9f4aff",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_8407ff00d70f",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_a462ea303e0d",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_b0088c55b465",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_6974ff63e13a",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V004_UNVERIFIED_CLEARANCE",
+      "entity_id": "device_9b767cf2c307",
+      "evidence": {
+        "rule_source": "engineering_default"
+      },
+      "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+      "severity": "warning",
+      "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_989eb3a3f5e2",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_989eb3a3f5e2",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_ddcb250435c3",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_ddcb250435c3",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_a8b29fc7c144",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_a8b29fc7c144",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_e7944dd47711",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_e7944dd47711",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_fd1e6d35d99a",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_fd1e6d35d99a",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_034846ec7431",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_034846ec7431",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_d0df8e5d4f1b",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_d0df8e5d4f1b",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_41dba75035b0",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_41dba75035b0",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_bb794f48c624",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_bb794f48c624",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_f5453bf74470",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_f5453bf74470",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_c41ac3424be1",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_c41ac3424be1",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_4c24bb10504c",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_4c24bb10504c",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_b8e9ceb94b60",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_b8e9ceb94b60",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_7b52c20bb2a0",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_7b52c20bb2a0",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_d9c1ed4965e1",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_d9c1ed4965e1",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_8f798c6b227c",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_8f798c6b227c",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_d6176475bd22",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_d6176475bd22",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_788155939800",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_788155939800",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_93497a9f4aff",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_93497a9f4aff",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_8407ff00d70f",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_8407ff00d70f",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_a462ea303e0d",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_a462ea303e0d",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_b0088c55b465",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_b0088c55b465",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_6974ff63e13a",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_6974ff63e13a",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    },
+    {
+      "code": "V008_UNVERIFIED_TERMINAL_MODEL",
+      "entity_id": "device_9b767cf2c307",
+      "evidence": {
+        "terminal_model_status": "unknown"
+      },
+      "message": "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document terminal identifiers/count before manufacturing release."
+    },
+    {
+      "code": "V005_UNVERIFIED_SERVICE_ACCESS",
+      "entity_id": "device_9b767cf2c307",
+      "evidence": {
+        "access_depth_mm": null,
+        "access_direction": "unknown"
+      },
+      "message": "service access is unknown; corridor clearance is not manufacturing verified",
+      "severity": "warning",
+      "suggested_fix": "Document a service face and access depth before manufacturing release."
+    }
+  ],
   "valid": true,
-  "warnings": 0
+  "warnings": 72
 }

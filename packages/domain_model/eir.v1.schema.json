@@ -291,6 +291,16 @@
           "title": "Service Access Direction",
           "type": "string"
         },
+        "vendor_mounting_position": {
+          "enum": [
+            "any",
+            "vertical",
+            "horizontal",
+            "unknown"
+          ],
+          "title": "Vendor Mounting Position",
+          "type": "string"
+        },
         "width": {
           "exclusiveMinimum": 0,
           "title": "Width",
@@ -460,6 +470,10 @@
       "additionalProperties": false,
       "description": "Traceable commercial identity; deliberately separate from CAD geometry.",
       "properties": {
+        "characteristic": {
+          "title": "Characteristic",
+          "type": "string"
+        },
         "description": {
           "title": "Description",
           "type": "string"
@@ -468,9 +482,14 @@
           "title": "Manufacturer",
           "type": "string"
         },
-        "manufacturer_part_number": {
-          "title": "Manufacturer Part Number",
+        "manufacturer_order_code": {
+          "title": "Manufacturer Order Code",
           "type": "string"
+        },
+        "rated_current_a": {
+          "exclusiveMinimum": 0,
+          "title": "Rated Current A",
+          "type": "number"
         },
         "retrieved_at": {
           "title": "Retrieved At",
@@ -500,6 +519,10 @@
           "title": "Source Url",
           "type": "string"
         },
+        "type_designation": {
+          "title": "Type Designation",
+          "type": "string"
+        },
         "verification_status": {
           "enum": [
             "vendor_verified",
@@ -519,7 +542,8 @@
       "required": [
         "manufacturer",
         "series",
-        "manufacturer_part_number",
+        "type_designation",
+        "manufacturer_order_code",
         "description",
         "source_type",
         "retrieved_at",

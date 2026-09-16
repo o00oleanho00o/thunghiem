@@ -148,7 +148,8 @@ function authoritativeValidation(model) {
       const requiredProvenance = ['widthProvenance', 'heightProvenance', 'depthProvenance', 'mountingProvenance'];
       requiredProvenance.forEach((field) => { if (!metadata[field] || !['vendor_verified', 'document_verified', 'human_measured', 'trusted_secondary'].includes(metadata[field].status)) errors.push({ code: 'E010', entity_id: component.id, message: `${field} is missing authoritative provenance`, evidence: { field, provenance: metadata[field] || null } }); });
       if (metadata.clearanceStatus === 'unknown' || metadata.clearanceStatus == null) warnings.push({ code: 'V004_UNVERIFIED_CLEARANCE', entity_id: component.id, message: 'clearance is unknown; only a non-vendor engineering default may be used' });
-      if (metadata.terminalModelStatus === 'unknown' && component.terminals?.length) errors.push({ code: 'E010', entity_id: component.id, message: 'terminal identifiers are present without verified terminal provenance' });
+      if (metadata.terminalModelStatus === 'unknown') warnings.push({ code: 'V008_UNVERIFIED_TERMINAL_MODEL', entity_id: component.id, message: 'terminal model is unknown; topology and terminal identifiers are not manufacturing verified' });
+      if (!metadata.serviceAccessDirection || metadata.serviceAccessDirection === 'unknown' || Number(metadata.serviceAccessDepthMm || 0) <= 0) warnings.push({ code: 'V005_UNVERIFIED_SERVICE_ACCESS', entity_id: component.id, message: 'service access is unknown; corridor clearance is not manufacturing verified' });
     }
     const rect = rects.get(component.id);
     if (!rect || rect.width <= 0 || rect.height <= 0) errors.push({ code: 'E010', entity_id: component.id, message: 'missing physical footprint' });
@@ -171,7 +172,7 @@ function authoritativeValidation(model) {
   model.components.forEach((component) => {
     const direction = component.metadata?.serviceAccessDirection;
     const depth = Number(component.metadata?.serviceAccessDepthMm || 0);
-    if (!direction || direction === 'unknown' || !depth || !component.terminals?.length) { if (model.metadata && model.metadata.authoritative && component.terminals?.length) warnings.push({ code: 'E005', entity_id: component.id, message: 'terminal/service access is not verifiable' }); return; }
+    if (!direction || direction === 'unknown' || !depth || !component.terminals?.length) { return; }
     const rect = rects.get(component.id); let corridor;
     if (direction === 'left') corridor = { x: rect.x - depth, y: rect.y, width: depth, height: rect.height };
     else if (direction === 'right') corridor = { x: rect.x + rect.width, y: rect.y, width: depth, height: rect.height };

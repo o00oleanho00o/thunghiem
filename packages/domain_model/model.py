@@ -178,6 +178,9 @@ class Footprint(EIRBase):
     clearance_mm: Optional[float] = Field(default=0.0, ge=0)
     service_access_direction: Optional[Literal["left", "right", "top", "bottom", "front", "unknown"]] = None
     service_access_depth_mm: Optional[float] = Field(default=None, gt=0)
+    # Vendor mounting-position evidence is intentionally separate from the
+    # restricted orientation policy used by the current 2D layout solver.
+    vendor_mounting_position: Optional[Literal["any", "vertical", "horizontal", "unknown"]] = None
     allowed_rotations: List[int] = Field(default_factory=lambda: [0])
 
     @validator("allowed_rotations")
@@ -220,7 +223,10 @@ class ProductIdentity(EIRBase):
 
     manufacturer: str
     series: str
-    manufacturer_part_number: str
+    type_designation: str
+    manufacturer_order_code: str
+    rated_current_a: Optional[float] = Field(default=None, gt=0)
+    characteristic: Optional[str] = None
     description: str
     source_url: Optional[str] = None
     source_document: Optional[str] = None
@@ -228,7 +234,7 @@ class ProductIdentity(EIRBase):
     retrieved_at: str
     verification_status: Literal["vendor_verified", "document_verified", "human_measured", "trusted_secondary", "engineering_default", "inferred", "unknown", "needs_review", "review_verified"]
 
-    @validator("manufacturer", "series", "manufacturer_part_number", "description", "retrieved_at")
+    @validator("manufacturer", "series", "type_designation", "manufacturer_order_code", "description", "retrieved_at")
     def identity_text(cls, value: str) -> str:
         value = value.strip()
         if not value:

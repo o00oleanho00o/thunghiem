@@ -7,8 +7,8 @@
       "requested_motors": 2,
       "solver_engine": "ortools-cp-sat-optimal",
       "timings": {
-        "heuristic_ms": 1.942,
-        "solver_ms": 24.244
+        "heuristic_ms": 1.815,
+        "solver_ms": 21.949
       },
       "valid": true
     },
@@ -19,8 +19,8 @@
       "requested_motors": 10,
       "solver_engine": "ortools-cp-sat-feasible",
       "timings": {
-        "heuristic_ms": 7.153,
-        "solver_ms": 1026.426
+        "heuristic_ms": 6.121,
+        "solver_ms": 1029.188
       },
       "valid": true
     },
@@ -31,8 +31,8 @@
       "requested_motors": 32,
       "solver_engine": "ortools-cp-sat-feasible",
       "timings": {
-        "heuristic_ms": 29.375,
-        "solver_ms": 1099.54
+        "heuristic_ms": 31.233,
+        "solver_ms": 1096.388
       },
       "valid": true
     }
@@ -72,7 +72,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 15.0,
-          "elapsed_ms": 1.75,
+          "elapsed_ms": 2.294,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 450000.0,
           "space_utilization_percent": 9.44,
@@ -88,7 +88,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 15.0,
-          "elapsed_ms": 20.738,
+          "elapsed_ms": 21.579,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 450000.0,
           "solver_objective": 2686.0,
@@ -101,6 +101,156 @@
       "validation": {
         "errors": 0,
         "issues": [
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_ae1cc29dcd9e",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_28cf28fcddd4",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_9719c0a16532",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_519bf53cf168",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_7407c88dcf1d",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_1adecb98fbf4",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_ee6861f471ba",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_fad27c97b4b5",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_6965d6b74459",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_245a18c3ec9d",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_47491e1b9d5f",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_76a393d3bd3d",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_7bde2c6a018a",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_0654e1cc1e9f",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_39de058d8679",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
           {
             "code": "E005",
             "entity_id": "device_ae1cc29dcd9e",
@@ -253,7 +403,7 @@
           }
         ],
         "valid": true,
-        "warnings": 15
+        "warnings": 30
       }
     },
     {
@@ -290,7 +440,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 37.0,
-          "elapsed_ms": 2.805,
+          "elapsed_ms": 3.442,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 1330000.0,
           "space_utilization_percent": 6.907,
@@ -306,7 +456,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 37.0,
-          "elapsed_ms": 57.237,
+          "elapsed_ms": 67.332,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 1330000.0,
           "solver_objective": 17118.0,
@@ -319,6 +469,376 @@
       "validation": {
         "errors": 0,
         "issues": [
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_972499a49f42",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_858f3cb251ca",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_56217d0bc12f",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_8ff3b24f78b6",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_6c073c5b1c48",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_67c378c58f1f",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_397954c812d9",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_9b1facf64b92",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_21cf8f0b7508",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_3b5591498bfd",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_ec22e5a27f1a",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_927bf175a9e6",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_8197dce66ca5",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_3c8a451e9bd1",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_da3ea19eb7cf",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_d5eb79a6a651",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_09b37b7e300a",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_6aac3543d5f0",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_93e6dd6af6e7",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_1ab2ee507343",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_66906650c4ad",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_c2566a791fcd",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_bbb12ded76e0",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_928e228b85c5",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_5defd9fc2477",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_af8a00b0f674",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_07da0b84c8aa",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_de26bd5f33e8",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_50e95cdc7c7a",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_6f6aacfc578c",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_4752ebe75d4e",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_c3ff88e4ad3a",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_07d34a08c1d4",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_73bd09d9c7f7",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_d0a5c27660aa",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_8005957d9fde",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_09e4258028a8",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
           {
             "code": "E005",
             "entity_id": "device_972499a49f42",
@@ -691,7 +1211,7 @@
           }
         ],
         "valid": true,
-        "warnings": 37
+        "warnings": 74
       }
     },
     {
@@ -728,7 +1248,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 9.0,
-          "elapsed_ms": 1.307,
+          "elapsed_ms": 1.336,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 550000.0,
           "space_utilization_percent": 10.32,
@@ -744,7 +1264,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 9.0,
-          "elapsed_ms": 6.914,
+          "elapsed_ms": 8.022,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 550000.0,
           "solver_objective": 0.0,
@@ -757,6 +1277,96 @@
       "validation": {
         "errors": 0,
         "issues": [
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_a6fb254446f7",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_a68efeadd3b2",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_e31f877b1100",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_06aee16f8cbc",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_42a9a7d4040c",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_bf877bf3f2fc",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_2573819967f2",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_eeb1b7c48762",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
+          {
+            "code": "V004_UNVERIFIED_CLEARANCE",
+            "entity_id": "device_3fad345a44b9",
+            "evidence": {
+              "rule_source": "unknown"
+            },
+            "message": "clearance requirement is unknown; geometric clearance is not fully verifiable",
+            "severity": "warning",
+            "suggested_fix": "Apply a documented engineering default or add a source-artifact field value."
+          },
           {
             "code": "E005",
             "entity_id": "device_a6fb254446f7",
@@ -849,7 +1459,7 @@
           }
         ],
         "valid": true,
-        "warnings": 9
+        "warnings": 18
       }
     }
   ]

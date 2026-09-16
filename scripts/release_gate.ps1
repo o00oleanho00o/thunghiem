@@ -35,6 +35,7 @@ try {
     Invoke-Checked 'R3.1 canonical nested hash contract' 'node' @('scripts/test_canonical_json.cjs')
     Invoke-Checked 'R3.1 export chain verification' $python @('scripts/verify_export_chain.py')
     Invoke-Checked 'R3.1 API truth gate contract' 'node' @('scripts/test_r3_api.cjs')
+    Invoke-Checked 'R3.1b ABB identity/provenance/release-level tests' $python @('-m', 'pytest', 'tests/test_r31_truth_closure.py', '-q')
     Invoke-Checked 'Browser editor interaction contract' 'node' @('scripts/test_web_ui_behaviors.cjs')
     Invoke-Checked 'Independent ezdxf audit: canonical Python export' $python @('scripts/audit_dxf_ezdxf.py', 'evidence/generated-dxf/mcc-6-motor/mcc-6-motor.dxf')
     Invoke-Checked 'Independent ezdxf audit: web API export' $python @('scripts/audit_dxf_ezdxf.py', 'evidence/generated-dxf/api-mcc-6-motor.dxf')
@@ -60,6 +61,7 @@ try {
         'docs/FINAL_REPORT.md',
         'docs/NEXT_90_DAYS.md',
         'docs/DEFINITION_OF_DONE.md'
+        'docs/r3/ABB_SOURCE_REVIEW.md'
     )
     $missingDocs = @($requiredDocs | Where-Object { -not (Test-Path -LiteralPath $_) })
     if ($missingDocs.Count -gt 0) {

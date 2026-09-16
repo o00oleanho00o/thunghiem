@@ -51,6 +51,6 @@ interaction test, syntax checks, demo/benchmark generation, independent DXF
 audit/render, and required-document checks. It does not require an API key.
 # R3 engineering-truth gate
 
-R3 is not complete merely because a DXF parses. A release candidate requires traceable `ProductIdentity`, field-level provenance, E004/E005 validation, canonical EIR round-trip, deterministic lock/regenerate, an authoritative export gate, independent DXF audit and evidence screenshots. The current R3 run is explicitly marked **REPEAT R3** because exact-product CAD and directly retrievable vendor documents remain incomplete.
+R3 is not complete merely because a DXF parses. A release candidate requires traceable `ProductIdentity`, field-level provenance, E004/E005 validation, canonical EIR round-trip, deterministic lock/regenerate, an authoritative export gate, independent DXF audit and evidence screenshots. R3.1b closes the engineering-layout truth gate while explicitly retaining manufacturing blockers.
 
-R3.1 closure adds locally cached official source artifacts, artifact SHA256/locators, recursive canonical hashing, an export-chain verifier, explicit engineering-default policy and a 24-device benchmark. Product-specific clearance, service access and terminal identity remain unknown unless an artifact proves them.
+R3.1b adds distinct ABB type/order identity, reviewed source locators, byte-level artifact verification, recursive canonical hashing, explicit engineering-default policy, release levels and a 24-device benchmark. Product-specific clearance, service access and terminal identity remain unknown unless an artifact proves them.

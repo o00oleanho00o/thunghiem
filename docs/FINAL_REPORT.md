@@ -131,6 +131,6 @@ a broad "AI electrical CAD replacement" claim yet. Advance only through the
 drawings cannot be normalized or if engineers reject the generated handoff.
 # R3 checkpoint
 
-R3 added an eight-product Phoenix Contact review catalog, provenance ledger, E004 clearance and E005 service-access rules, a shared authoritative export gate, EIR revision commands, heuristic/CP-SAT comparison and independent DXF evidence. The benchmark passes its recorded engineering envelope checks, but this is not a vendor-verified procurement release: product pages were not reliably retrievable and exact-product CAD is absent. See `docs/r3/R3_ENGINEERING_TRUTH_REPORT.md`.
+R3.1b closes the engineering-truth correction pass with eight ABB S200 U type designations, eight distinct manufacturer order codes, a byte-verified official source artifact, explicit layout warnings and separate manufacturing-release blockers. It proves an engineering-layout-grade truth pipeline, not manufacturing readiness. See `docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md`.
 
-R3.1 replaces the authoritative slice with eight ABB S201U exact MPNs backed by one cached official PDF artifact and field-level page locators. See `docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md`.
+R3.1b replaces the authoritative slice with eight ABB S201U type designations and eight distinct manufacturer order codes backed by one cached official PDF artifact and field-level page locators. See `docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md`.

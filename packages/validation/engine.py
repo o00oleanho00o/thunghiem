@@ -88,7 +88,15 @@ def _access_rect(rect: Rect, direction: str, depth: float) -> Rect:
     return Rect(x=rect.x, y=rect.y - depth, width=rect.width, height=depth)
 
 
-def validate_project(project: Project, *, clearance_mm: float = 0.0, authoritative: bool = False) -> ValidationReport:
+def validate_project(
+    project: Project,
+    *,
+    clearance_mm: float = 0.0,
+    authoritative: bool = False,
+    release_level: str = "engineering_layout",
+) -> ValidationReport:
+    if release_level not in {"engineering_layout", "manufacturing_ready"}:
+        raise ValueError("release_level must be engineering_layout or manufacturing_ready")
     report = ValidationReport()
     parts = project.part_index()
     devices = project.device_index()
@@ -119,7 +127,9 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0, authoritati
                 if not part.source_artifacts or any(artifact.retrieval_status != "success" or not artifact.sha256 for artifact in part.source_artifacts):
                     _issue(report, "E010", "error", device.id, "successful source artifact with SHA256 is required", "Cache the official document and record its digest.", source_artifacts=[artifact.id for artifact in part.source_artifacts])
             declared = {terminal.id for terminal in parts[device.part_id].terminals}
-            if parts[device.part_id].footprint.clearance_mm is None:
+            part = parts[device.part_id]
+            clearance_evidence = part.provenance.get("clearance_mm")
+            if clearance_evidence is None or clearance_evidence.status not in {"vendor_verified", "document_verified", "human_measured", "trusted_secondary"}:
                 _issue(
                     report,
                     "V004_UNVERIFIED_CLEARANCE",
@@ -127,8 +137,18 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0, authoritati
                     device.id,
                     "clearance requirement is unknown; geometric clearance is not fully verifiable",
                     "Apply a documented engineering default or add a source-artifact field value.",
-                    rule_source="unknown",
+                    rule_source=clearance_evidence.status if clearance_evidence else "unknown",
                 )
+                if release_level == "manufacturing_ready":
+                    _issue(
+                        report,
+                        "M003_UNVERIFIED_CLEARANCE",
+                        "error",
+                        device.id,
+                        "manufacturing release requires product-specific clearance evidence",
+                        "Attach a product-specific installation or clearance document.",
+                        rule_source=clearance_evidence.status if clearance_evidence else "unknown",
+                    )
             unknown_terminals = sorted(set(device.terminal_ids) - declared)
             if unknown_terminals:
                 _issue(
@@ -222,10 +242,54 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0, authoritati
         device = devices[device_id]
         part = parts.get(device.part_id)
         footprint = part.footprint if part else None
-        if not footprint or not device.terminal_ids:
+        if not footprint:
             continue
+        if authoritative and part and part.terminal_model_status == "unknown":
+            _issue(
+                report,
+                "V008_UNVERIFIED_TERMINAL_MODEL",
+                "warning",
+                device_id,
+                "terminal model is unknown; topology and terminal identifiers are not manufacturing verified",
+                "Document terminal identifiers/count before manufacturing release.",
+                terminal_model_status=part.terminal_model_status,
+            )
+            if release_level == "manufacturing_ready":
+                _issue(
+                    report,
+                    "M001_UNVERIFIED_TERMINAL_MODEL",
+                    "error",
+                    device_id,
+                    "manufacturing release requires verified terminal model",
+                    "Attach terminal identifiers/count and map device terminals.",
+                    terminal_model_status=part.terminal_model_status,
+                )
         direction = footprint.service_access_direction
         depth = footprint.service_access_depth_mm
+        if authoritative and (not direction or direction == "unknown" or not depth):
+            _issue(
+                report,
+                "V005_UNVERIFIED_SERVICE_ACCESS",
+                "warning",
+                device_id,
+                "service access is unknown; corridor clearance is not manufacturing verified",
+                "Document a service face and access depth before manufacturing release.",
+                access_direction=direction or "unknown",
+                access_depth_mm=depth,
+            )
+            if release_level == "manufacturing_ready":
+                _issue(
+                    report,
+                    "M002_UNVERIFIED_SERVICE_ACCESS",
+                    "error",
+                    device_id,
+                    "manufacturing release requires verified service access requirements",
+                    "Attach an installation/service-access document.",
+                    access_direction=direction or "unknown",
+                    access_depth_mm=depth,
+                )
+        if not device.terminal_ids:
+            continue
         if not direction or direction == "unknown" or not depth:
             _issue(
                 report,

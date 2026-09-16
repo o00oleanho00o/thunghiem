@@ -1,8 +1,51 @@
 {
-  "id": "CNB-R31-VALIDATION-POLICY-V1",
-  "mandatory_provenance": ["width_mm", "height_mm", "depth_mm", "mounting"],
-  "clearance_default": {"value_mm": 5, "policy_id": "CNB-CLEARANCE-DEFAULT-V1", "status": "engineering_default", "vendor_requirement": false},
-  "unknown_clearance": "warning_when_default_is_explicit",
-  "unknown_service_access": "warning_and_not_vendor_verified",
-  "authoritative_export": "reject_missing_mandatory_provenance"
+  "id": "CNB-R31B-VALIDATION-POLICY-V1",
+  "mandatory_for_engineering_layout": [
+    "product_identity",
+    "width_mm",
+    "height_mm",
+    "depth_mm",
+    "mounting",
+    "source_artifact"
+  ],
+  "mandatory_for_manufacturing_release": [
+    "terminal_model",
+    "service_install_requirements",
+    "product_clearance",
+    "applicable_accessories"
+  ],
+  "engineering_defaults": {
+    "clearance_mm": {
+      "value_mm": 5,
+      "policy_id": "CNB-CLEARANCE-DEFAULT-V1",
+      "status": "engineering_default",
+      "vendor_requirement": false
+    },
+    "allowed_rotations": {
+      "value": [0],
+      "policy_id": "CNB-LAYOUT-ROTATION-V1",
+      "status": "engineering_default",
+      "vendor_requirement": false
+    }
+  },
+  "allowed_unknowns_at_layout_stage": [
+    "clearance_mm",
+    "service_access_direction",
+    "service_access_depth_mm",
+    "terminal_identifiers",
+    "terminal_count",
+    "exact_cad"
+  ],
+  "blocking_unknowns_at_manufacturing_stage": [
+    "terminal_model",
+    "service_install_requirements",
+    "product_clearance",
+    "applicable_accessories",
+    "exact_cad_when_required"
+  ],
+  "release_levels": {
+    "engineering_layout_valid": "physical layout and envelope DXF may pass with explicit warnings",
+    "manufacturing_ready": "requires product-specific installation, service, terminal and clearance evidence"
+  },
+  "authoritative_export": "reject_missing_engineering_layout_provenance"
 }
