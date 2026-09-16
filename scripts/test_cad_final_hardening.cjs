@@ -2,6 +2,8 @@
 
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const os = require('node:os');
+const crypto = require('node:crypto');
 const net = require('node:net');
 const path = require('node:path');
 const { chromium } = require('playwright');
@@ -36,7 +38,10 @@ function componentBoundsFromDxf(text) {
 
 (async () => {
   const port = await reservePort(); const base = `http://127.0.0.1:${port}`;
-  const child = spawn(process.execPath, [path.join(root, 'apps/web/server.js'), String(port)], { cwd: root, windowsHide: true, stdio: 'ignore' });
+  const productionReviewPath = path.join(root, 'catalog', 'review', 'catalog-review.json');
+  const productionReviewHash = fs.existsSync(productionReviewPath) ? crypto.createHash('sha256').update(fs.readFileSync(productionReviewPath)).digest('hex') : null;
+  const tempReviewDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cnb-cad-review-')); const tempReviewPath = path.join(tempReviewDir, 'catalog-review.json');
+  const child = spawn(process.execPath, [path.join(root, 'apps/web/server.js'), String(port)], { cwd: root, windowsHide: true, stdio: 'ignore', env: { ...process.env, CNB_CATALOG_REVIEW_PATH: tempReviewPath } });
   const browser = await chromium.launch({ headless: true });
   const evidence = {};
   try {
@@ -82,7 +87,7 @@ function componentBoundsFromDxf(text) {
     assert.ok(preview);
     const previewResponse = await fetch(`${base}/api/catalog/reviews`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ source_asset_id: preview.source_asset_id, representation_id: preview.representation_id, confirmed_view: 'front', physical_width_mm: 23.8125, physical_height_mm: 95.25, reviewed_at: '2026-09-16T00:00:00.000Z' }) });
     assert.equal(previewResponse.status, 200); const approved = await previewResponse.json(); const footprintId = approved.review.physical_footprint_id; assert.ok(footprintId);
-    const revisionResponse = await fetch(`${base}/api/catalog/reviews`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ source_asset_id: preview.source_asset_id, representation_id: preview.representation_id, confirmed_view: 'front', physical_width_mm: 23.8125, physical_height_mm: 95.25, reviewed_at: '2026-09-16T00:00:00.000Z' }) }); const revised = await revisionResponse.json(); assert.equal(revised.review.review_provenance.review_revision, 2); assert.equal(revised.catalog.review_history.length, 1); evidence.review_revision_history_preserved = true;
+    const revisionResponse = await fetch(`${base}/api/catalog/reviews`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ source_asset_id: preview.source_asset_id, representation_id: preview.representation_id, confirmed_view: 'front', physical_width_mm: 23.8125, physical_height_mm: 95.25, reviewed_at: '2026-09-16T00:00:00.000Z' }) }); const revised = await revisionResponse.json(); assert.equal(revised.idempotent, true); assert.equal(revised.review.review_provenance.review_revision, 1); assert.equal(revised.catalog.review_history.length, 0); evidence.review_idempotent_when_unchanged = true;
     const reload = await (await fetch(`${base}/api/catalog`)).json(); assert.equal(reload.records.find((record) => record.source_asset_id === preview.source_asset_id).physical_footprint_id, footprintId); evidence.review_persisted_after_reload = true;
     const audit = spawnSync('python', ['scripts/audit_catalog.py', 'catalog'], { cwd: root, encoding: 'utf8', timeout: 180000 }); assert.equal(audit.status, 0, audit.stderr); const afterAudit = await (await fetch(`${base}/api/catalog`)).json(); assert.equal(afterAudit.records.find((record) => record.source_asset_id === preview.source_asset_id).physical_footprint_id, footprintId); evidence.review_survives_catalog_regeneration = true; evidence.physical_footprint_id_stable = true;
 
@@ -91,8 +96,9 @@ function componentBoundsFromDxf(text) {
     const model = normalizeModel({ enclosure: { width: 400, height: 700 }, mountingPlate: { x: 20, y: 20, width: 360, height: 660 }, components: [{ id: 'approved', tag: '-PLC1', name: 'Review-approved test footprint', x: 123, y: 456, width: 23.8125, height: 95.25, mounting: 'Plate' }] });
     const exportBounds = componentBoundsFromDxf(exportDxf(model)); assert.equal(exportBounds.minX, 123); assert.equal(exportBounds.minY, 456); assert.equal(exportBounds.maxX, 146.8125); assert.equal(exportBounds.maxY, 551.25); evidence.approved_dxf_bounds_correct = true;
     const blocked = await page.evaluate(() => { const c = window.CNB_APP.state.model.components[0]; c.assetId = 'preview-only'; window.CNB_APP.exportFormat('dxf'); return document.querySelector('#toast').textContent; }); assert.match(blocked, /Export blocked/); evidence.preview_export_blocked = true;
-    const approvedToast = await page.evaluate((id) => { window.CNB_APP.loadModel(window.CNB_APP.scenarios.starter(), 'approved export'); const c = window.CNB_APP.state.model.components[0]; c.assetId = id; c.footprintRef = window.CNB_APP.state.assetCatalog.find((record) => (record.source_asset_id || record.id) === id).physical_footprint_id; c.width = 23.8125; c.height = 95.25; window.CNB_APP.render(); window.CNB_APP.exportFormat('dxf'); return document.querySelector('#toast').textContent; }, preview.source_asset_id); assert.match(approvedToast, /DXF exported/); evidence.approved_export_allowed = true; evidence.zoom_roundtrips = zoomRoundtrips;
+    const approvedToast = await page.evaluate((id) => { window.CNB_APP.loadModel(window.CNB_APP.scenarios.starter(), 'approved export'); const c = window.CNB_APP.state.model.components[0]; c.assetId = id; c.footprintRef = window.CNB_APP.state.assetCatalog.find((record) => (record.source_asset_id || record.id) === id).physical_footprint_id; c.width = 23.8125; c.height = 95.25; window.CNB_APP.render(); window.CNB_APP.exportFormat('dxf'); return document.querySelector('#toast').textContent; }, preview.source_asset_id); assert.match(approvedToast, /DXF exported/); evidence.approved_export_allowed = true;
+    const productionHashAfter = fs.existsSync(productionReviewPath) ? crypto.createHash('sha256').update(fs.readFileSync(productionReviewPath)).digest('hex') : null; assert.equal(productionHashAfter, productionReviewHash); evidence.production_review_store_unchanged_by_tests = true; evidence.zoom_roundtrips = zoomRoundtrips;
     fs.mkdirSync(path.join(root, 'evidence', 'test-logs'), { recursive: true }); fs.writeFileSync(path.join(root, 'evidence', 'test-logs', 'cad-final-hardening.json'), `${JSON.stringify({ ok: true, ...evidence }, null, 2)}\n`);
     console.log(JSON.stringify({ ok: true, ...evidence }, null, 2));
-  } finally { await browser.close(); child.kill(); }
+  } finally { await browser.close(); child.kill(); fs.rmSync(tempReviewDir, { recursive: true, force: true }); }
 })().catch((error) => { console.error(error.stack || error.message); process.exitCode = 1; });

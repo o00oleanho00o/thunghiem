@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "invalid_review_does_not_mutate_store": true,
+  "source_to_physical_numeric": true,
+  "source_to_physical_non_unit_scale_tested": true,
+  "review_idempotent_when_unchanged": true,
+  "review_revision_increments_when_changed": true,
+  "backend_blocks_unapproved_export": true,
+  "backend_blocks_fake_footprint_ref": true,
+  "backend_allows_approved_export": true,
+  "persisted_footprint_to_dxf_bounds_correct": true,
+  "generic_component_export_still_works": true,
+  "generated_manifest_remains_review_free": true,
+  "production_review_store_unchanged_by_tests": true
+}

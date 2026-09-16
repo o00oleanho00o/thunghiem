@@ -88,6 +88,10 @@ function normalizeModel(input = {}) {
       terminals: Array.isArray(component.terminals) ? component.terminals : [],
       mounting: component.mounting || 'DIN',
       color: component.color || '#3b82f6',
+      assetId: component.assetId || component.source_asset_id || null,
+      source_asset_id: component.source_asset_id || component.assetId || null,
+      footprintRef: component.footprintRef || component.footprint_ref || null,
+      footprint_ref: component.footprint_ref || component.footprintRef || null,
       metadata: component.metadata || {},
     };
   });

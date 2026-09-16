@@ -47,6 +47,12 @@ authoritative layout, collision checks and manufacturing DXF/SVG export.
 Reviewer decisions are stored in a separate review overlay; generated audit
 output is never mutated by a browser approval.
 
+The source-to-physical mapping is numeric: `scale_x` and `scale_y` are
+physical dimensions divided by source bbox dimensions, while
+`translate_x_mm` and `translate_y_mm` normalize the source bbox minimum to the
+physical origin. Therefore source bbox min/max map to `(0, 0)` and
+`(width_mm, height_mm)` within tolerance.
+
 ## Transform contract
 
 The ingestion renderer computes a source-space bounds box and derives a vector

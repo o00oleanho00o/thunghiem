@@ -54,6 +54,10 @@
         terminals: terminalIds.map((terminal) => typeof terminal === 'string' ? { id: terminal } : terminal),
         mounting: first(device.mounting, part.mounting, 'DIN'),
         color: first(device.color, part.color, '#3b82f6'),
+        assetId: first(device.assetId, device.source_asset_id, part.assetId, part.source_asset_id, null),
+        source_asset_id: first(device.source_asset_id, device.assetId, part.source_asset_id, part.assetId, null),
+        footprintRef: first(device.footprintRef, device.footprint_ref, part.footprintRef, part.footprint_ref, null),
+        footprint_ref: first(device.footprint_ref, device.footprintRef, part.footprint_ref, part.footprintRef, null),
         metadata: { sourceEirId: deviceId, partId: first(device.partId, part.id, null) },
       };
     });

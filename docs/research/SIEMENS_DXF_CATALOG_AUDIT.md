@@ -87,10 +87,11 @@ forensic output and survives audit regeneration.
   footprint.
 - Needs cleanup/review: annotation-bearing files, INSERT-heavy files, all
   unknown-view assets, and any unitless/undeclared asset used for manufacturing.
-- Approved footprints in this snapshot: one manually review-approved test
-  footprint in the separate review overlay. Approval requires reviewer-
-  supplied mm bounds and a view, with provenance recorded. It is not an
-  externally verified Siemens vendor footprint.
+- Approved footprints in the committed production snapshot: none. Synthetic
+  review-approved test footprints are created only in temporary test stores.
+  Approval requires reviewer-supplied mm bounds and a view, with provenance
+  recorded. Such test data is not an externally verified Siemens vendor
+  footprint.
 
 Initial workflow states are `needs-unit-review` for 48 files and
 `needs-product-review` for the 10 declared-mm drawing sheets. The 46-file

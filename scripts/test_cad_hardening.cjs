@@ -1,9 +1,11 @@
 'use strict';
 
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const net = require('node:net');
 const path = require('node:path');
+const os = require('node:os');
 const { chromium } = require('playwright');
 const { spawn } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
@@ -13,7 +15,8 @@ async function ready(url, child) { for (let i = 0; i < 60; i += 1) { if (child.e
 const approx = (a, b, tolerance = 2) => Math.abs(a - b) <= tolerance;
 
 (async () => {
-  const port = await reservePort(); const base = `http://127.0.0.1:${port}`; const child = spawn(process.execPath, [path.join(root, 'apps/web/server.js'), String(port)], { cwd: root, windowsHide: true, stdio: 'ignore' }); const browser = await chromium.launch({ headless: true });
+  const productionReviewPath = path.join(root, 'catalog', 'review', 'catalog-review.json'); const productionReviewHash = crypto.createHash('sha256').update(fs.readFileSync(productionReviewPath)).digest('hex'); const tempReviewDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cnb-cad-hardening-')); const tempReviewPath = path.join(tempReviewDir, 'catalog-review.json');
+  const port = await reservePort(); const base = `http://127.0.0.1:${port}`; const child = spawn(process.execPath, [path.join(root, 'apps/web/server.js'), String(port)], { cwd: root, windowsHide: true, stdio: 'ignore', env: { ...process.env, CNB_CATALOG_REVIEW_PATH: tempReviewPath } }); const browser = await chromium.launch({ headless: true });
   try {
     await ready(base, child); const page = await browser.newPage({ viewport: { width: 1440, height: 900 } }); await page.goto(base, { waitUntil: 'networkidle' }); await page.waitForFunction(() => window.CNB_APP.state.assetCatalog.length === 58);
     const manifest = await page.evaluate(() => ({ assets: window.CNB_APP.state.assetCatalog, products: window.CNB_APP.state.assetCatalog.map((a) => a.product_id) })); assert.equal(manifest.assets.length, 58); const etPair = await page.evaluate(() => { const records = window.CNB_APP.state.assetCatalog.filter((a) => /et200sp-1515sp-pc-cpu/.test(a.candidate_product_key || '')); return { count: records.length, views: records.map((a) => a.candidate_view).sort(), products: [...new Set(records.map((a) => a.product_id))] }; }); assert.deepEqual(etPair.views, ['front', 'side']); assert.equal(etPair.products.length, 1);
@@ -33,6 +36,6 @@ const approx = (a, b, tolerance = 2) => Math.abs(a - b) <= tolerance;
 
     const emptyViewport = page.locator('#canvasViewport'); const eb = await emptyViewport.boundingBox(); const panEmpty = async (button) => { const before = await page.evaluate(() => ({ x: window.CNB_APP.state.panX, y: window.CNB_APP.state.panY })); await page.mouse.move(eb.x + eb.width - 14, eb.y + 14); await page.mouse.down({ button }); await page.mouse.move(eb.x + eb.width - 74, eb.y + 64); await page.mouse.up({ button }); const after = await page.evaluate(() => ({ x: window.CNB_APP.state.panX, y: window.CNB_APP.state.panY })); return { before, after }; }; const rightPan = await panEmpty('right'); const middlePan = await panEmpty('middle'); assert.ok(rightPan.after.x !== rightPan.before.x || rightPan.after.y !== rightPan.before.y); assert.ok(middlePan.after.x !== middlePan.before.x || middlePan.after.y !== middlePan.before.y); await page.screenshot({ path: path.join(root, 'evidence', 'screenshots', '12-pan-empty-viewport.png'), fullPage: true });
     await page.evaluate(() => window.CNB_APP.zoomAt({ clientX: 700, clientY: 420 }, .001)); assert.equal(await page.evaluate(() => window.CNB_APP.state.zoom), .1); await page.evaluate(() => window.CNB_APP.zoomAt({ clientX: 700, clientY: 420 }, 100)); assert.equal(await page.evaluate(() => window.CNB_APP.state.zoom), 20);
-    const report = { ok: true, catalog_parse_58_of_58: true, unknown_units_not_assumed_mm: true, physical_dimension_clamp_removed: true, front_side_grouping_correct: true, approval_gating_correct: true, rendered_bounds_match_physical_bounds: true, cursor_zoom_stationary: true, right_pan_empty_viewport: true, middle_pan_empty_viewport: true, drag_after_zoom_pan_mm_correct: true, snap_after_zoom_pan: true, fit_geometry_correct: true, zoom_min: .1, zoom_max: 20, fit_ratios: fits }; fs.writeFileSync(path.join(root, 'evidence', 'test-logs', 'cad-hardening.json'), `${JSON.stringify(report, null, 2)}\n`); console.log(JSON.stringify(report, null, 2));
-  } finally { await browser.close(); child.kill(); }
+    const productionReviewUnchanged = crypto.createHash('sha256').update(fs.readFileSync(productionReviewPath)).digest('hex') === productionReviewHash; assert.equal(productionReviewUnchanged, true); const report = { ok: true, production_review_store_unchanged_by_tests: productionReviewUnchanged, catalog_parse_58_of_58: true, unknown_units_not_assumed_mm: true, physical_dimension_clamp_removed: true, front_side_grouping_correct: true, approval_gating_correct: true, rendered_bounds_match_physical_bounds: true, cursor_zoom_stationary: true, right_pan_empty_viewport: true, middle_pan_empty_viewport: true, drag_after_zoom_pan_mm_correct: true, snap_after_zoom_pan: true, fit_geometry_correct: true, zoom_min: .1, zoom_max: 20, fit_ratios: fits }; fs.writeFileSync(path.join(root, 'evidence', 'test-logs', 'cad-hardening.json'), `${JSON.stringify(report, null, 2)}\n`); console.log(JSON.stringify(report, null, 2));
+  } finally { await browser.close(); child.kill(); fs.rmSync(tempReviewDir, { recursive: true, force: true }); }
 })().catch((error) => { console.error(error.stack || error.message); process.exitCode = 1; });

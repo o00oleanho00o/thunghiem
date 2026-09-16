@@ -1,44 +1,5 @@
 {
   "schema_version": "catalog-review.v1",
-  "reviews": [
-    {
-      "source_asset_id": "source-3397e94e14141cf2",
-      "representation_id": "representation-eab616904f51f2a4",
-      "review_state": "approved-footprint",
-      "confirmed_view": "front",
-      "physical_width_mm": 23.8125,
-      "physical_height_mm": 95.25,
-      "physical_depth_mm": null,
-      "unit_confidence": "confirmed-by-review",
-      "unit_source": "reviewer",
-      "source_units": "millimetres",
-      "product_identity_id": null,
-      "physical_footprint_id": "footprint-a666223d35eb5a45",
-      "physical_footprint": {
-        "physical_footprint_id": "footprint-a666223d35eb5a45",
-        "source_asset_id": "source-3397e94e14141cf2",
-        "representation_id": "representation-eab616904f51f2a4",
-        "view": "front",
-        "width_mm": 23.8125,
-        "height_mm": 95.25,
-        "depth_mm": null,
-        "source_to_physical": {
-          "scale_x": "reviewer-confirmed",
-          "scale_y": "reviewer-confirmed",
-          "translation_x": 0,
-          "translation_y": 0
-        },
-        "provenance": {
-          "unit_source": "reviewer",
-          "review_source": "manual-web-review"
-        }
-      },
-      "review_provenance": {
-        "review_source": "manual-web-review",
-        "reviewed_at": "2026-09-16T00:00:00.000Z",
-        "review_revision": 1
-      }
-    }
-  ],
+  "reviews": [],
   "history": []
 }

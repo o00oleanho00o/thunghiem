@@ -10,7 +10,9 @@ const root = __dirname;
 const catalogRoot = path.resolve(__dirname, '../../catalog');
 const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
 const catalogReviewDir = path.join(catalogRoot, 'review');
-const catalogReviewPath = path.join(catalogReviewDir, 'catalog-review.json');
+const catalogReviewPath = process.env.CNB_CATALOG_REVIEW_PATH
+  ? path.resolve(process.env.CNB_CATALOG_REVIEW_PATH)
+  : path.join(catalogReviewDir, 'catalog-review.json');
 const port = Number(process.env.CNB_WEB_PORT || process.argv[2] || 4173);
 const mime = {
   '.html': 'text/html; charset=utf-8',
@@ -48,7 +50,7 @@ function readReviews() {
 }
 
 function writeReviews(store) {
-  fs.mkdirSync(catalogReviewDir, { recursive: true });
+  fs.mkdirSync(path.dirname(catalogReviewPath), { recursive: true });
   const temporary = `${catalogReviewPath}.${process.pid}.tmp`;
   fs.writeFileSync(temporary, `${JSON.stringify(store, null, 2)}\n`, 'utf8');
   fs.renameSync(temporary, catalogReviewPath);
@@ -82,6 +84,7 @@ function readEffectiveCatalog() {
 }
 
 function validateReview(payload, manifest) {
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return { error: 'review payload must be an object' };
   const sourceAssetId = payload.source_asset_id;
   const record = manifest.records.find((item) => (item.source_asset_id || item.id) === sourceAssetId);
   if (!record) return { error: 'unknown source_asset_id' };
@@ -89,8 +92,35 @@ function validateReview(payload, manifest) {
   if (!['front', 'side', 'top'].includes(payload.confirmed_view)) return { error: 'approval requires front, side, or top view' };
   const width = Number(payload.physical_width_mm); const height = Number(payload.physical_height_mm);
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return { error: 'physical_width_mm and physical_height_mm must be greater than zero' };
+  const depth = payload.physical_depth_mm == null || payload.physical_depth_mm === '' ? null : Number(payload.physical_depth_mm);
+  if (depth !== null && (!Number.isFinite(depth) || depth <= 0)) return { error: 'physical_depth_mm must be greater than zero when provided' };
   if (record.drawing_sheet) return { error: 'drawing-sheet assets require manual extraction before approval' };
-  return { record, width, height };
+  return { record, width, height, depth };
+}
+
+function effectiveRecordForAsset(sourceAssetId, catalog) {
+  return catalog.records.find((record) => (record.source_asset_id || record.id) === sourceAssetId) || null;
+}
+
+function enforceCadApproval(model, catalog) {
+  for (const component of model.components) {
+    const sourceAssetId = component.assetId || component.source_asset_id || null;
+    const footprintRef = component.footprintRef || component.footprint_ref || null;
+    // Legacy/internal catalog refs such as `footprints/MCB_3P_16A` are not
+    // imported CAD assets. A persisted physical footprint must carry its
+    // source asset ID so the server can verify both sides of the reference.
+    if (!sourceAssetId && (!footprintRef || !String(footprintRef).startsWith('footprint-'))) continue;
+    const record = effectiveRecordForAsset(sourceAssetId, catalog);
+    if (!record || record.review_state !== 'approved-footprint' || !record.physical_footprint_id || footprintRef !== record.physical_footprint_id) {
+      return { error: 'unapproved CAD asset in authoritative export', component_id: component.id, source_asset_id: sourceAssetId, footprint_ref: footprintRef };
+    }
+    // Authoritative export uses persisted physical dimensions, never client dimensions.
+    component.assetId = sourceAssetId;
+    component.footprintRef = record.physical_footprint_id;
+    component.width = Number(record.physical_width_mm);
+    component.height = Number(record.physical_height_mm);
+  }
+  return null;
 }
 
 const server = http.createServer(async (request, response) => {
@@ -106,9 +136,16 @@ const server = http.createServer(async (request, response) => {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing' }), mime['.json']);
       const payload = JSON.parse(await bodyFrom(request)); const manifest = JSON.parse(fs.readFileSync(catalogManifestPath, 'utf8')); const checked = validateReview(payload, manifest);
       if (checked.error) return send(response, 400, JSON.stringify({ error: checked.error }), mime['.json']);
-      const store = readReviews(); const existingIndex = store.reviews.findIndex((review) => review.source_asset_id === payload.source_asset_id); const existing = existingIndex >= 0 ? store.reviews[existingIndex] : null; const revision = (existing?.review_provenance?.review_revision || 0) + 1;
-      const footprintId = existing && existing.physical_footprint && existing.physical_footprint.width_mm === checked.width && existing.physical_footprint.height_mm === checked.height && existing.confirmed_view === payload.confirmed_view ? existing.physical_footprint_id : stableId('footprint', payload.source_asset_id, payload.representation_id, payload.confirmed_view, checked.width, checked.height, payload.physical_depth_mm ?? '');
-      const review = { source_asset_id: payload.source_asset_id, representation_id: payload.representation_id, review_state: 'approved-footprint', confirmed_view: payload.confirmed_view, physical_width_mm: checked.width, physical_height_mm: checked.height, physical_depth_mm: payload.physical_depth_mm == null || payload.physical_depth_mm === '' ? null : Number(payload.physical_depth_mm), unit_confidence: 'confirmed-by-review', unit_source: 'reviewer', source_units: 'millimetres', product_identity_id: payload.product_identity_id || null, physical_footprint_id: footprintId, physical_footprint: { physical_footprint_id: footprintId, source_asset_id: payload.source_asset_id, representation_id: payload.representation_id, view: payload.confirmed_view, width_mm: checked.width, height_mm: checked.height, depth_mm: payload.physical_depth_mm == null || payload.physical_depth_mm === '' ? null : Number(payload.physical_depth_mm), source_to_physical: { scale_x: 'reviewer-confirmed', scale_y: 'reviewer-confirmed', translation_x: 0, translation_y: 0 }, provenance: { unit_source: 'reviewer', review_source: 'manual-web-review' } }, review_provenance: { review_source: 'manual-web-review', reviewed_at: payload.reviewed_at || new Date().toISOString(), review_revision: revision } };
+      const store = readReviews(); const existingIndex = store.reviews.findIndex((review) => review.source_asset_id === payload.source_asset_id); const existing = existingIndex >= 0 ? store.reviews[existingIndex] : null;
+      const sameValues = existing && existing.representation_id === payload.representation_id && existing.confirmed_view === payload.confirmed_view && existing.physical_width_mm === checked.width && existing.physical_height_mm === checked.height && (existing.physical_depth_mm ?? null) === checked.depth;
+      if (sameValues) return send(response, 200, JSON.stringify({ ok: true, idempotent: true, review: existing, catalog: readEffectiveCatalog() }), mime['.json']);
+      const revision = (existing?.review_provenance?.review_revision || 0) + 1;
+      const sourceBounds = checked.record.source_bbox || checked.record.bbox || {};
+      const scaleX = Number(sourceBounds.width) > 0 ? checked.width / Number(sourceBounds.width) : null;
+      const scaleY = Number(sourceBounds.height) > 0 ? checked.height / Number(sourceBounds.height) : null;
+      if (!Number.isFinite(scaleX) || !Number.isFinite(scaleY)) return send(response, 400, JSON.stringify({ error: 'source bbox is not suitable for a physical transform' }), mime['.json']);
+      const footprintId = stableId('footprint', payload.source_asset_id, payload.representation_id, payload.confirmed_view, checked.width, checked.height, checked.depth ?? '');
+      const review = { source_asset_id: payload.source_asset_id, representation_id: payload.representation_id, review_state: 'approved-footprint', confirmed_view: payload.confirmed_view, physical_width_mm: checked.width, physical_height_mm: checked.height, physical_depth_mm: checked.depth, unit_confidence: 'confirmed-by-review', unit_source: 'reviewer', source_units: 'millimetres', product_identity_id: payload.product_identity_id || null, physical_footprint_id: footprintId, physical_footprint: { physical_footprint_id: footprintId, source_asset_id: payload.source_asset_id, representation_id: payload.representation_id, view: payload.confirmed_view, width_mm: checked.width, height_mm: checked.height, depth_mm: checked.depth, source_to_physical: { scale_x: scaleX, scale_y: scaleY, translate_x_mm: -Number(sourceBounds.min_x || 0) * scaleX, translate_y_mm: -Number(sourceBounds.min_y || 0) * scaleY, source_bbox: { min_x: Number(sourceBounds.min_x || 0), min_y: Number(sourceBounds.min_y || 0), width: Number(sourceBounds.width), height: Number(sourceBounds.height) } }, provenance: { unit_source: 'reviewer', review_source: 'manual-web-review' } }, review_provenance: { review_source: 'manual-web-review', reviewed_at: payload.reviewed_at || new Date().toISOString(), review_revision: revision } };
       if (existing) store.history.push(existing);
       if (existingIndex >= 0) store.reviews[existingIndex] = review; else store.reviews.push(review);
       store.reviews.sort((a, b) => a.source_asset_id.localeCompare(b.source_asset_id)); store.history.sort((a, b) => a.source_asset_id.localeCompare(b.source_asset_id) || (a.review_provenance?.review_revision || 0) - (b.review_provenance?.review_revision || 0)); writeReviews(store);
@@ -129,6 +166,10 @@ const server = http.createServer(async (request, response) => {
       const candidate = payload.model || payload;
       const model = normalizeModel(candidate && (candidate.devices || candidate.schema_version || candidate.schemaVersion === 'eir.v1') ? adaptEir(candidate) : candidate);
       const format = payload.format || 'dxf';
+      if (format === 'dxf' || format === 'svg' || format === 'audit') {
+        const gate = enforceCadApproval(model, readEffectiveCatalog());
+        if (gate) return send(response, 400, JSON.stringify(gate), mime['.json']);
+      }
       if (format === 'dxf') return send(response, 200, exportDxf(model), mime['.dxf']);
       if (format === 'svg') return send(response, 200, exportSvg(model), mime['.svg']);
       if (format === 'audit') return send(response, 200, JSON.stringify(auditDxf(exportDxf(model)), null, 2), mime['.json']);

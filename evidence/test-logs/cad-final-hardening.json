@@ -6,13 +6,14 @@
   "screen_model_roundtrip_correct": true,
   "drag_after_zoom_pan_expected_mm_correct": true,
   "snap_after_zoom_pan": true,
-  "review_revision_history_preserved": true,
+  "review_idempotent_when_unchanged": true,
   "review_persisted_after_reload": true,
   "review_survives_catalog_regeneration": true,
   "physical_footprint_id_stable": true,
   "approved_dxf_bounds_correct": true,
   "preview_export_blocked": true,
   "approved_export_allowed": true,
+  "production_review_store_unchanged_by_tests": true,
   "zoom_roundtrips": [
     {
       "dx": 0,
