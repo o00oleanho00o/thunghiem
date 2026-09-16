@@ -1,0 +1,25 @@
+COMMAND: npm install --ignore-scripts
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\dxf-writer
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: @tarikjabiri/dxf@3.0.0-alpha.13
+npm error Found: eslint@9.39.5
+npm error node_modules/eslint
+npm error   dev eslint@"^9.26.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer eslint@"^7.0.0 || ^8.0.0" from @typescript-eslint/parser@6.21.0
+npm error node_modules/@typescript-eslint/parser
+npm error   dev @typescript-eslint/parser@"^6.4.1" from the root project
+npm error   peer @typescript-eslint/parser@"^6.0.0 || ^6.0.0-alpha" from @typescript-eslint/eslint-plugin@6.21.0
+npm error   node_modules/@typescript-eslint/eslint-plugin
+npm error     dev @typescript-eslint/eslint-plugin@"^6.4.1" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\email\AppData\Local\npm-cache\_logs\2026-09-15T15_50_24_348Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\email\AppData\Local\npm-cache\_logs\2026-09-15T15_50_24_348Z-debug-0.log
+EXIT_CODE: 1

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-15T17:20:55.738Z",
+  "beforeDrop": 35,
+  "afterDrop": 36,
+  "dragAdded": true,
+  "afterLayout": {
+    "issues": 0,
+    "components": 35,
+    "issueCodes": [],
+    "first": [
+      {
+        "id": "device-001",
+        "x": 104,
+        "y": 1784,
+        "w": 90,
+        "h": 120
+      },
+      {
+        "id": "device-002",
+        "x": 316,
+        "y": 1804,
+        "w": 45,
+        "h": 80
+      },
+      {
+        "id": "device-003",
+        "x": 200,
+        "y": 1799,
+        "w": 55,
+        "h": 90
+      }
+    ]
+  },
+  "afterMove": {
+    "selected": "device-001",
+    "components": 36,
+    "issues": 2,
+    "emptyHidden": true,
+    "formHidden": false
+  },
+  "url": "http://127.0.0.1:4173/"
+}

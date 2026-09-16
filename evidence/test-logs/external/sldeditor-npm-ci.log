@@ -1,0 +1,18 @@
+COMMAND: npm ci --ignore-scripts
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\sldeditor
+
+added 468 packages, and audited 469 packages in 28s
+
+91 packages are looking for funding
+  run `npm fund` for details
+
+13 vulnerabilities (1 low, 4 moderate, 7 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+EXIT_CODE: 0

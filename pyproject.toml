@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnb-electrical-lab"
+version = "0.1.0"
+description = "Evidence-driven electrical CAD and control cabinet design prototype"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=1.10,<3",
+  "ezdxf>=1.3",
+  "ortools>=9.10",
+  "jsonschema>=4.20",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pillow>=10", "matplotlib>=3.8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "rawPythonEir": true,
+  "deterministic": true,
+  "dxfBytes": 30741,
+  "entityCount": 448,
+  "counts": {
+    "LINE": 208,
+    "TEXT": 84,
+    "CIRCLE": 156
+  },
+  "bounds": {
+    "minX": 0,
+    "minY": 0,
+    "maxX": 800,
+    "maxY": 2000
+  },
+  "unsupportedFormatStatus": 400
+}

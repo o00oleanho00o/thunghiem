@@ -1,0 +1,575 @@
+{
+  "$id": "https://cnb-electrical-lab.local/schema/eir.v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "definitions": {
+    "Connection": {
+      "additionalProperties": false,
+      "properties": {
+        "color": {
+          "title": "Color",
+          "type": "string"
+        },
+        "from_device": {
+          "title": "From Device",
+          "type": "string"
+        },
+        "from_terminal": {
+          "title": "From Terminal",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "default": "wire",
+          "enum": [
+            "wire",
+            "bus",
+            "cable",
+            "potential"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "to_device": {
+          "title": "To Device",
+          "type": "string"
+        },
+        "to_terminal": {
+          "title": "To Terminal",
+          "type": "string"
+        },
+        "wire_size_mm2": {
+          "exclusiveMinimum": 0,
+          "title": "Wire Size Mm2",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "from_device",
+        "from_terminal",
+        "to_device",
+        "to_terminal"
+      ],
+      "title": "Connection",
+      "type": "object"
+    },
+    "Device": {
+      "additionalProperties": false,
+      "description": "Project-level logical/physical device instance.",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "function": {
+          "default": "general",
+          "title": "Function",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "location": {
+          "default": "cabinet",
+          "title": "Location",
+          "type": "string"
+        },
+        "part_id": {
+          "title": "Part Id",
+          "type": "string"
+        },
+        "properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Properties",
+          "type": "object"
+        },
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "terminal_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terminal Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "tag",
+        "part_id"
+      ],
+      "title": "Device",
+      "type": "object"
+    },
+    "Duct": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "exclusiveMinimum": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "default": "wire_duct",
+          "enum": [
+            "wire_duct",
+            "busbar",
+            "reserved"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "width": {
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "minimum": 0,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "minimum": 0,
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "title": "Duct",
+      "type": "object"
+    },
+    "Enclosure": {
+      "additionalProperties": false,
+      "properties": {
+        "depth": {
+          "exclusiveMinimum": 0,
+          "title": "Depth",
+          "type": "number"
+        },
+        "height": {
+          "exclusiveMinimum": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "id": {
+          "default": "enclosure",
+          "title": "Id",
+          "type": "string"
+        },
+        "plate_margin": {
+          "default": 50.0,
+          "minimum": 0,
+          "title": "Plate Margin",
+          "type": "number"
+        },
+        "reserve_percent": {
+          "default": 20.0,
+          "exclusiveMaximum": 100,
+          "minimum": 0,
+          "title": "Reserve Percent",
+          "type": "number"
+        },
+        "width": {
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "number"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "title": "Enclosure",
+      "type": "object"
+    },
+    "Footprint": {
+      "additionalProperties": false,
+      "description": "Physical footprint and mounting metadata for a manufacturer part.",
+      "properties": {
+        "allowed_rotations": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Allowed Rotations",
+          "type": "array"
+        },
+        "depth": {
+          "exclusiveMinimum": 0,
+          "title": "Depth",
+          "type": "number"
+        },
+        "height": {
+          "exclusiveMinimum": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "keepout_bottom": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Keepout Bottom",
+          "type": "number"
+        },
+        "keepout_left": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Keepout Left",
+          "type": "number"
+        },
+        "keepout_right": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Keepout Right",
+          "type": "number"
+        },
+        "keepout_top": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Keepout Top",
+          "type": "number"
+        },
+        "mounting": {
+          "default": "free",
+          "enum": [
+            "din_rail",
+            "backplate",
+            "free",
+            "terminal_rail"
+          ],
+          "title": "Mounting",
+          "type": "string"
+        },
+        "rail_width": {
+          "exclusiveMinimum": 0,
+          "title": "Rail Width",
+          "type": "number"
+        },
+        "width": {
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "number"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "title": "Footprint",
+      "type": "object"
+    },
+    "PartDefinition": {
+      "additionalProperties": false,
+      "description": "Catalog-level part; it has no project-specific tag or placement.",
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "footprint": {
+          "$ref": "#/definitions/Footprint"
+        },
+        "footprint_ref": {
+          "title": "Footprint Ref",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "type": "string"
+        },
+        "manufacturer_part": {
+          "title": "Manufacturer Part",
+          "type": "string"
+        },
+        "model_3d_ref": {
+          "title": "Model 3D Ref",
+          "type": "string"
+        },
+        "ratings": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Ratings",
+          "type": "object"
+        },
+        "symbol_ref": {
+          "title": "Symbol Ref",
+          "type": "string"
+        },
+        "terminals": {
+          "items": {
+            "$ref": "#/definitions/Terminal"
+          },
+          "title": "Terminals",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "manufacturer",
+        "manufacturer_part",
+        "description",
+        "category",
+        "footprint"
+      ],
+      "title": "PartDefinition",
+      "type": "object"
+    },
+    "Placement": {
+      "additionalProperties": false,
+      "description": "Physical placement of a device, separate from its semantics.",
+      "properties": {
+        "device_id": {
+          "title": "Device Id",
+          "type": "string"
+        },
+        "locked": {
+          "default": false,
+          "title": "Locked",
+          "type": "boolean"
+        },
+        "rail_id": {
+          "title": "Rail Id",
+          "type": "string"
+        },
+        "rotation": {
+          "default": 0,
+          "title": "Rotation",
+          "type": "integer"
+        },
+        "x": {
+          "minimum": 0,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "minimum": 0,
+          "title": "Y",
+          "type": "number"
+        },
+        "zone": {
+          "title": "Zone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "device_id",
+        "x",
+        "y"
+      ],
+      "title": "Placement",
+      "type": "object"
+    },
+    "Rail": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "length": {
+          "exclusiveMinimum": 0,
+          "title": "Length",
+          "type": "number"
+        },
+        "orientation": {
+          "default": "horizontal",
+          "enum": [
+            "horizontal",
+            "vertical"
+          ],
+          "title": "Orientation",
+          "type": "string"
+        },
+        "width": {
+          "default": 35.0,
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "minimum": 0,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "minimum": 0,
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "x",
+        "y",
+        "length"
+      ],
+      "title": "Rail",
+      "type": "object"
+    },
+    "Terminal": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "index": {
+          "title": "Index",
+          "type": "integer"
+        },
+        "kind": {
+          "default": "generic",
+          "enum": [
+            "power",
+            "control",
+            "signal",
+            "protective_earth",
+            "generic"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "Terminal",
+      "type": "object"
+    }
+  },
+  "description": "Canonical EIR document. Dimensions and coordinates are millimetres; semantics, topology, placement, and CAD geometry are separate.",
+  "properties": {
+    "connections": {
+      "items": {
+        "$ref": "#/definitions/Connection"
+      },
+      "title": "Connections",
+      "type": "array"
+    },
+    "devices": {
+      "items": {
+        "$ref": "#/definitions/Device"
+      },
+      "title": "Devices",
+      "type": "array"
+    },
+    "ducts": {
+      "items": {
+        "$ref": "#/definitions/Duct"
+      },
+      "title": "Ducts",
+      "type": "array"
+    },
+    "enclosure": {
+      "$ref": "#/definitions/Enclosure"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "metadata": {
+      "title": "Metadata",
+      "type": "object"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "parts": {
+      "items": {
+        "$ref": "#/definitions/PartDefinition"
+      },
+      "title": "Parts",
+      "type": "array"
+    },
+    "placements": {
+      "items": {
+        "$ref": "#/definitions/Placement"
+      },
+      "title": "Placements",
+      "type": "array"
+    },
+    "rails": {
+      "items": {
+        "$ref": "#/definitions/Rail"
+      },
+      "title": "Rails",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "eir.v1",
+      "enum": [
+        "eir.v1"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "units": {
+      "default": "mm",
+      "enum": [
+        "mm"
+      ],
+      "title": "Units",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "enclosure"
+  ],
+  "title": "CNB Electrical Intermediate Representation",
+  "type": "object",
+  "x-eir-runtime-rules": [
+    "IDs are unique within each top-level entity collection.",
+    "Connection device/terminal references must resolve to declared entities.",
+    "Placements must be inside the enclosure plate and must not overlap.",
+    "DIN-mounted devices must attach to a compatible rail and ducts must not collide."
+  ],
+  "x-eir-schema-version": "eir.v1"
+}

@@ -1,0 +1,243 @@
+{
+  "benchmark": [
+    {
+      "component_count": 13,
+      "error_count": 0,
+      "overlap_pairs": 0.0,
+      "requested_motors": 2,
+      "solver_engine": "ortools-cp-sat-optimal",
+      "timings": {
+        "heuristic_ms": 2.558,
+        "solver_ms": 25.412
+      },
+      "valid": true
+    },
+    {
+      "component_count": 61,
+      "error_count": 0,
+      "overlap_pairs": 0.0,
+      "requested_motors": 10,
+      "solver_engine": "ortools-cp-sat-feasible",
+      "timings": {
+        "heuristic_ms": 7.962,
+        "solver_ms": 1030.555
+      },
+      "valid": true
+    },
+    {
+      "component_count": 193,
+      "error_count": 0,
+      "overlap_pairs": 0.0,
+      "requested_motors": 32,
+      "solver_engine": "ortools-cp-sat-feasible",
+      "timings": {
+        "heuristic_ms": 31.947,
+        "solver_ms": 1109.64
+      },
+      "valid": true
+    }
+  ],
+  "scenarios": [
+    {
+      "artifacts": {
+        "audit": "evidence\\generated-dxf\\starter-panel\\starter-panel.dxf.audit.json",
+        "dxf": "evidence\\generated-dxf\\starter-panel\\starter-panel.dxf",
+        "json": "evidence\\generated-dxf\\starter-panel\\starter-panel.json",
+        "svg": "evidence\\generated-dxf\\starter-panel\\starter-panel.svg"
+      },
+      "dxf_audit": {
+        "ezdxf": {
+          "audit_error_count": 0,
+          "available": true,
+          "dxfversion": "AC1009",
+          "entity_types": {
+            "LINE": 90,
+            "TEXT": 31
+          },
+          "modelspace_entity_count": 121,
+          "valid": true
+        },
+        "internal": {
+          "entity_count": 121,
+          "entity_types": {
+            "LINE": 90,
+            "TEXT": 31
+          },
+          "errors": [],
+          "valid": true,
+          "warnings": []
+        }
+      },
+      "heuristic": {
+        "engine": "heuristic",
+        "metrics": {
+          "component_count": 15.0,
+          "elapsed_ms": 2.146,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 450000.0,
+          "space_utilization_percent": 9.44,
+          "used_area_mm2": 42480.0
+        },
+        "valid": true
+      },
+      "input_components": 15,
+      "name": "starter-panel",
+      "schematic_edges": 8,
+      "schematic_nodes": 15,
+      "solver": {
+        "engine": "ortools-cp-sat-optimal",
+        "metrics": {
+          "component_count": 15.0,
+          "elapsed_ms": 22.626,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 450000.0,
+          "solver_objective": 2686.0,
+          "space_utilization_percent": 9.44,
+          "used_area_mm2": 42480.0
+        },
+        "valid": true,
+        "warnings": []
+      },
+      "validation": {
+        "errors": 0,
+        "issues": [],
+        "valid": true,
+        "warnings": 0
+      }
+    },
+    {
+      "artifacts": {
+        "audit": "evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.dxf.audit.json",
+        "dxf": "evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.dxf",
+        "json": "evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.json",
+        "svg": "evidence\\generated-dxf\\mcc-6-motor\\mcc-6-motor.svg"
+      },
+      "dxf_audit": {
+        "ezdxf": {
+          "audit_error_count": 0,
+          "available": true,
+          "dxfversion": "AC1009",
+          "entity_types": {
+            "LINE": 199,
+            "TEXT": 75
+          },
+          "modelspace_entity_count": 274,
+          "valid": true
+        },
+        "internal": {
+          "entity_count": 274,
+          "entity_types": {
+            "LINE": 199,
+            "TEXT": 75
+          },
+          "errors": [],
+          "valid": true,
+          "warnings": []
+        }
+      },
+      "heuristic": {
+        "engine": "heuristic",
+        "metrics": {
+          "component_count": 37.0,
+          "elapsed_ms": 3.632,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 1330000.0,
+          "space_utilization_percent": 6.907,
+          "used_area_mm2": 91860.0
+        },
+        "valid": true
+      },
+      "input_components": 37,
+      "name": "mcc-6-motor",
+      "schematic_edges": 24,
+      "schematic_nodes": 37,
+      "solver": {
+        "engine": "ortools-cp-sat-optimal",
+        "metrics": {
+          "component_count": 37.0,
+          "elapsed_ms": 66.299,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 1330000.0,
+          "solver_objective": 17118.0,
+          "space_utilization_percent": 6.907,
+          "used_area_mm2": 91860.0
+        },
+        "valid": true,
+        "warnings": []
+      },
+      "validation": {
+        "errors": 0,
+        "issues": [],
+        "valid": true,
+        "warnings": 0
+      }
+    },
+    {
+      "artifacts": {
+        "audit": "evidence\\generated-dxf\\plc-panel\\plc-panel.dxf.audit.json",
+        "dxf": "evidence\\generated-dxf\\plc-panel\\plc-panel.dxf",
+        "json": "evidence\\generated-dxf\\plc-panel\\plc-panel.json",
+        "svg": "evidence\\generated-dxf\\plc-panel\\plc-panel.svg"
+      },
+      "dxf_audit": {
+        "ezdxf": {
+          "audit_error_count": 0,
+          "available": true,
+          "dxfversion": "AC1009",
+          "entity_types": {
+            "LINE": 58,
+            "TEXT": 19
+          },
+          "modelspace_entity_count": 77,
+          "valid": true
+        },
+        "internal": {
+          "entity_count": 77,
+          "entity_types": {
+            "LINE": 58,
+            "TEXT": 19
+          },
+          "errors": [],
+          "valid": true,
+          "warnings": []
+        }
+      },
+      "heuristic": {
+        "engine": "heuristic",
+        "metrics": {
+          "component_count": 9.0,
+          "elapsed_ms": 1.288,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 550000.0,
+          "space_utilization_percent": 10.32,
+          "used_area_mm2": 56760.0
+        },
+        "valid": true
+      },
+      "input_components": 9,
+      "name": "plc-panel",
+      "schematic_edges": 0,
+      "schematic_nodes": 9,
+      "solver": {
+        "engine": "ortools-cp-sat-optimal",
+        "metrics": {
+          "component_count": 9.0,
+          "elapsed_ms": 7.906,
+          "overlap_pairs": 0.0,
+          "plate_area_mm2": 550000.0,
+          "solver_objective": 0.0,
+          "space_utilization_percent": 10.32,
+          "used_area_mm2": 56760.0
+        },
+        "valid": true,
+        "warnings": []
+      },
+      "validation": {
+        "errors": 0,
+        "issues": [],
+        "valid": true,
+        "warnings": 0
+      }
+    }
+  ]
+}

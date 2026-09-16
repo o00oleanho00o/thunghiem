@@ -1,0 +1,17 @@
+{
+  "audit": "ezdxf.readfile + modelspace iteration succeeded",
+  "bounds": {
+    "max_x": 600.0,
+    "max_y": 1200.0,
+    "min_x": 0.0,
+    "min_y": 0.0
+  },
+  "dxf_version": "AC1009",
+  "entity_count": 77,
+  "entity_types": {
+    "LINE": 58,
+    "TEXT": 19
+  },
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\plc-panel\\plc-panel.dxf",
+  "render": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\screenshots\\plc-panel.ezdxf.png"
+}

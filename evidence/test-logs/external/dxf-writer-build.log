@@ -1,0 +1,9 @@
+COMMAND: npm run build
+DIR: F:\BUL_Research\AICAD\cnb-electrical-lab\research\cloned-or-scripted-spikes\dxf-writer
+
+> @tarikjabiri/dxf@3.0.0-alpha.13 build
+> tsc --noEmit && tsup
+
+'tsc' is not recognized as an internal or external command,
+operable program or batch file.
+EXIT_CODE: 1

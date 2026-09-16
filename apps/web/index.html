@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CNB Electrical Lab panel layout editor">
+  <title>CNB Electrical Lab · Panel Composer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="CNB Electrical Lab">
+      <span class="brand-mark">CNB</span>
+      <span class="brand-copy"><strong>Electrical Lab</strong><small>Panel composer</small></span>
+    </div>
+    <div class="project-state">
+      <span id="projectName">MCC 6 motor</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span id="projectRevision">REV A</span>
+      <span class="unit-chip">MM</span>
+    </div>
+    <div class="top-actions">
+      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option></select></label>
+      <button class="button subtle" id="loadScenario" type="button">Load</button>
+      <label class="button subtle file-button" for="jsonInput">Import JSON<input id="jsonInput" type="file" accept="application/json,.json"></label>
+      <button class="button primary" id="autoLayout" type="button"><span class="button-icon">✦</span>Auto layout</button>
+      <div class="export-menu">
+        <button class="button export" id="exportMenu" type="button" aria-expanded="false">Export <span aria-hidden="true">⌄</span></button>
+        <div class="menu" id="exportMenuItems" hidden>
+          <button type="button" data-export="dxf">Download DXF</button>
+          <button type="button" data-export="svg">Download SVG</button>
+          <button type="button" data-export="json">Download JSON</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="left-panel">
+      <div class="panel-heading"><div><span class="eyebrow">LIBRARY</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
+      <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Filter components</span><input id="librarySearch" type="search" placeholder="Filter components"></label>
+      <div class="library-list" id="libraryList" aria-label="Component library"></div>
+      <div class="library-foot"><span class="status-dot green"></span><span>Catalog synced</span><span class="foot-meta">v0.1</span></div>
+    </aside>
+
+    <section class="canvas-section" aria-label="Panel canvas">
+      <div class="canvas-toolbar">
+        <div class="canvas-title"><span class="eyebrow">PHYSICAL VIEW</span><strong id="canvasTitle">MCC 6 motor</strong></div>
+        <div class="canvas-tools">
+          <button class="icon-button" id="zoomOut" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+          <span class="zoom-value" id="zoomValue">100%</span>
+          <button class="icon-button" id="zoomIn" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+          <span class="toolbar-divider"></span>
+          <button class="button subtle compact" id="fitCanvas" type="button">Fit</button>
+          <button class="button subtle compact" id="toggleGrid" type="button" aria-pressed="true">Grid</button>
+        </div>
+      </div>
+      <div class="canvas-frame" id="canvasFrame">
+        <div class="canvas-ruler ruler-top" id="rulerTop"></div>
+        <div class="canvas-ruler ruler-left" id="rulerLeft"></div>
+        <div class="canvas-viewport" id="canvasViewport">
+          <svg id="panelSvg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panel layout" tabindex="0"></svg>
+          <div class="drop-hint" id="dropHint">Drag a component from the library onto the plate</div>
+        </div>
+      </div>
+      <div class="canvas-footer">
+        <div class="legend"><span><i class="legend-swatch blue"></i>Device</span><span><i class="legend-swatch rail"></i>DIN rail</span><span><i class="legend-swatch duct"></i>Wire duct</span><span><i class="legend-swatch wire"></i>Connection</span></div>
+        <div class="cursor-readout" id="cursorReadout">X 0 · Y 0</div>
+      </div>
+    </section>
+
+    <aside class="right-panel">
+      <section class="inspector-section">
+        <div class="panel-heading"><div><span class="eyebrow">INSPECTOR</span><h2 id="selectionTitle">No selection</h2></div><span class="selection-tag" id="selectionTag">—</span></div>
+        <div id="inspectorEmpty" class="empty-state"><span class="empty-glyph">⌖</span><p>Select a device on the plate</p></div>
+        <form id="inspectorForm" class="inspector-form" hidden>
+          <label>Tag<input name="tag" type="text"></label>
+          <label>Name<input name="name" type="text"></label>
+          <div class="form-grid"><label>X <span class="input-unit">mm</span><input name="x" type="number" step="1"></label><label>Y <span class="input-unit">mm</span><input name="y" type="number" step="1"></label></div>
+          <div class="form-grid"><label>Width <span class="input-unit">mm</span><input name="width" type="number" min="1" step="1"></label><label>Height <span class="input-unit">mm</span><input name="height" type="number" min="1" step="1"></label></div>
+          <label>Rotation<select name="rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
+          <div class="inspector-meta"><span id="selectionKind">device</span><span id="selectionGroup">General</span></div>
+          <button class="button danger outline" id="deleteComponent" type="button">Remove component</button>
+        </form>
+      </section>
+
+      <section class="validation-section">
+        <div class="section-title-row"><div><span class="eyebrow">RULE CHECK</span><h2>Validation</h2></div><span class="issue-count" id="issueCount">0</span></div>
+        <div class="validation-list" id="validationList"><div class="all-clear"><span>✓</span><div><strong>Layout is clear</strong><small>No blocking issues</small></div></div></div>
+      </section>
+
+      <section class="bom-section">
+        <div class="section-title-row"><div><span class="eyebrow">MATERIALS</span><h2>BOM</h2></div><span class="count-pill" id="bomCount">0</span></div>
+        <div class="bom-table-wrap"><table class="bom-table"><thead><tr><th>Tag</th><th>Part</th><th>Qty</th></tr></thead><tbody id="bomBody"></tbody></table></div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/cad-browser.js"></script>
+  <script src="/eir-adapter.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "audit": "ezdxf.readfile + modelspace iteration succeeded",
+  "bounds": {
+    "max_x": 600.0,
+    "max_y": 1000.0,
+    "min_x": 0.0,
+    "min_y": 0.0
+  },
+  "dxf_version": "AC1009",
+  "entity_count": 121,
+  "entity_types": {
+    "LINE": 90,
+    "TEXT": 31
+  },
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\generated-dxf\\starter-panel\\starter-panel.dxf",
+  "render": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\screenshots\\starter-panel.ezdxf.png"
+}
