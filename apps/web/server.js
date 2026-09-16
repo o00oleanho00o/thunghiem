@@ -209,6 +209,12 @@ const server = http.createServer(async (request, response) => {
     if (requestUrl.pathname === '/api/eir/revisions' && request.method === 'GET') {
       return send(response, 200, JSON.stringify({ revisions: [...eirRevisions.values()] }), mime['.json']);
     }
+    const revisionMatch = requestUrl.pathname.match(/^\/api\/eir\/revisions\/([A-Za-z0-9-]+)$/);
+    if (revisionMatch && request.method === 'GET') {
+      const record = eirRevisions.get(revisionMatch[1]);
+      if (!record) return send(response, 404, JSON.stringify({ error: 'revision not found' }), mime['.json']);
+      return send(response, 200, JSON.stringify(record), mime['.json']);
+    }
     if (requestUrl.pathname === '/api/eir/revisions' && request.method === 'POST') {
       const payload = JSON.parse(await bodyFrom(request)); const source = payload.eir || payload.model;
       if (!source || typeof source !== 'object') return send(response, 400, JSON.stringify({ error: 'eir object is required' }), mime['.json']);
