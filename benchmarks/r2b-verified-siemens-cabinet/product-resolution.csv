@@ -1,0 +1,9 @@
+source_asset_id,candidate_identity,verification_status,verification_level,order_number,dimensions_status,cad_match_class
+source-a0a9c0419df569bb,siemens simatic s7 1200 plc 1211c cpu dc rly 6i 4o 2ai,unresolved,test,,unverified,scaled-layout-symbol
+source-67d0e317f239396c,siemens simatic s7 1200 pm1207 1p ac 24v 25a,unresolved,test,,unverified,scaled-layout-symbol
+source-33c324f4df97c631,siemens simatic s7 1200 sm 1221 dio 24vdc 105ma 8i,unresolved,test,,unverified,scaled-layout-symbol
+source-e2454df537a9505c,siemens simatic s7 1500 cpu 1511 1 pn,unresolved,test,,unverified,scaled-layout-symbol
+source-fe6d18f6b8ce400b,siemens simatic s7 1500 sm531 16l ba analog i o module 16i,unresolved,test,,unverified,scaled-layout-symbol
+source-66748a98dbbdcf49,sirius contactor cad asset siemens bilddb,unresolved,test,,unverified,scaled-layout-symbol
+source-7ab1640d1d97df20,sitop psu cad asset siemens bilddb,unresolved,test,,unverified,scaled-layout-symbol
+source-a0a9f79675c3f78e,sinamics g120c vfd cad asset siemens bilddb,unresolved,test,,unverified,scaled-layout-symbol

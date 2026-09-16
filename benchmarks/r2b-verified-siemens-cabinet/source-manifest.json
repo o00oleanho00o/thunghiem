@@ -1,0 +1,85 @@
+{
+  "records": [
+    {
+      "candidate_identity": "siemens simatic s7 1200 plc 1211c cpu dc rly 6i 4o 2ai",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-plc-1211c-cpu-dc-rly-6i-4o-2ai-cc0016d5de-dxf",
+      "sha256": "a8120cb4d1fef92658ae634b666dfdf7f471668a0a45b27b6c3df1da78b0b60f",
+      "source_asset_id": "source-a0a9c0419df569bb",
+      "source_group": "radica-dxf",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-a0a9c0419df569bb.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "siemens simatic s7 1200 pm1207 1p ac 24v 25a",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-pm1207-1p-ac-24v-25a-9b3c45cb8f-dxf",
+      "sha256": "6689d7bfa34a7c447dcad2e2f5a91f5a82786dca9387343463c4df11c440e3f9",
+      "source_asset_id": "source-67d0e317f239396c",
+      "source_group": "radica-dxf",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-67d0e317f239396c.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "siemens simatic s7 1200 sm 1221 dio 24vdc 105ma 8i",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-sm-1221-dio-24vdc-105ma-8i-2f94caaed2-dxf",
+      "sha256": "ee9f654c57605ea109f4fb626aa6120dc57b2bbc14da190c2f7cb05c3127098f",
+      "source_asset_id": "source-33c324f4df97c631",
+      "source_group": "radica-dxf",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-33c324f4df97c631.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "siemens simatic s7 1500 cpu 1511 1 pn",
+      "relative_path": "radica-dxf/1-siemens-simatic-s7-1500-cpu-1511-1-pn-7deea3b07d-dxf",
+      "sha256": "b236f9e82d6a6f2e1afae96b6a3f960a8a9dba61e63471a6a0de9906c88868e9",
+      "source_asset_id": "source-e2454df537a9505c",
+      "source_group": "radica-dxf",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-e2454df537a9505c.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "siemens simatic s7 1500 sm531 16l ba analog i o module 16i",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1500-sm531-16l-ba-analog-i-o-module-16i-af987867f6-dxf",
+      "sha256": "f9f9d015c5f1ac10baf58a21d237ff6836bd2597725e5212bc5f4f5dc2d814bb",
+      "source_asset_id": "source-fe6d18f6b8ce400b",
+      "source_group": "radica-dxf",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-fe6d18f6b8ce400b.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "sirius contactor cad asset siemens bilddb",
+      "relative_path": "siemens-batch-w33/sirius-contactor-cad-asset-siemens-bilddb-7b0bf205ff36ab88.dxf",
+      "sha256": "7b0bf205ff36ab88464f50eaf121e48c67c8d2ac35d2361b847ca156a46795eb",
+      "source_asset_id": "source-66748a98dbbdcf49",
+      "source_group": "siemens-batch-w33",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-66748a98dbbdcf49.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "sitop psu cad asset siemens bilddb",
+      "relative_path": "siemens-batch-w33/sitop-psu-cad-asset-siemens-bilddb-7836a4a9372aeb88.dxf",
+      "sha256": "7836a4a9372aeb88ae795398bc9f6340ef67f74e1b56c787c7450354e519566f",
+      "source_asset_id": "source-7ab1640d1d97df20",
+      "source_group": "siemens-batch-w33",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-7ab1640d1d97df20.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    },
+    {
+      "candidate_identity": "sinamics g120c vfd cad asset siemens bilddb",
+      "relative_path": "siemens-batch-w33/sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
+      "sha256": "e2ea283cb57674d65ac3ac101730c88307804bb94e6f78693ea797fdf6d5d15d",
+      "source_asset_id": "source-a0a9f79675c3f78e",
+      "source_group": "siemens-batch-w33",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-a0a9f79675c3f78e.json",
+      "verification_level": "test",
+      "verification_status": "unresolved"
+    }
+  ],
+  "source_root": "catalog"
+}

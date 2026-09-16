@@ -1,0 +1,58 @@
+{
+  "connections": [
+    {
+      "id": "connection_2e0e7f1aa96a",
+      "from_device": "device_271a2188cecd",
+      "from_terminal": "1",
+      "to_device": "device_d51159dfc3c6",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "24VDC"
+    },
+    {
+      "id": "connection_c6aef6b65f3f",
+      "from_device": "device_d51159dfc3c6",
+      "from_terminal": "1",
+      "to_device": "device_59be9ce11ea4",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "DI/DO"
+    },
+    {
+      "id": "connection_f5f5afa29b91",
+      "from_device": "device_d51159dfc3c6",
+      "from_terminal": "1",
+      "to_device": "device_88b1316e8db2",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "PROFINET"
+    },
+    {
+      "id": "connection_569e93af3bc8",
+      "from_device": "device_d51159dfc3c6",
+      "from_terminal": "1",
+      "to_device": "device_e32154ba168c",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "drive-control"
+    },
+    {
+      "id": "connection_dffe803a85ad",
+      "from_device": "device_59be9ce11ea4",
+      "from_terminal": "1",
+      "to_device": "device_c9c4e9db3e3f",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "field-signals"
+    },
+    {
+      "id": "connection_e01a5db36af5",
+      "from_device": "device_d51159dfc3c6",
+      "from_terminal": "1",
+      "to_device": "device_4db31c23ed61",
+      "to_terminal": "1",
+      "kind": "wire",
+      "label": "DO1"
+    }
+  ]
+}

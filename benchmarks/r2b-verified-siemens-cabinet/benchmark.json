@@ -1,0 +1,74 @@
+{
+  "artifacts": {
+    "audit": "benchmarks\\r2b-verified-siemens-cabinet\\exports\\r2b-verified-cabinet.dxf.audit.json",
+    "dxf": "benchmarks\\r2b-verified-siemens-cabinet\\exports\\r2b-verified-cabinet.dxf",
+    "json": "benchmarks\\r2b-verified-siemens-cabinet\\exports\\r2b-verified-cabinet.json",
+    "svg": "benchmarks\\r2b-verified-siemens-cabinet\\exports\\r2b-verified-cabinet.svg"
+  },
+  "benchmark_id": "r2b-verified-siemens-cabinet",
+  "cad_audit": {
+    "audit_error_count": 0,
+    "available": true,
+    "dxfversion": "AC1009",
+    "entity_types": {
+      "ARC": 7051,
+      "CIRCLE": 27,
+      "LINE": 5752,
+      "TEXT": 17
+    },
+    "modelspace_entity_count": 12847,
+    "valid": true
+  },
+  "catalog_assets_researched": 8,
+  "device_count": 8,
+  "duct_count": 2,
+  "exact_siemens_products_identified": 0,
+  "generic_count": 0,
+  "heuristic": {
+    "metrics": {
+      "component_count": 8.0,
+      "elapsed_ms": 3.193,
+      "overlap_pairs": 0.0,
+      "plate_area_mm2": 1170000.0,
+      "space_utilization_percent": 6.033,
+      "used_area_mm2": 70591.443
+    },
+    "valid": true
+  },
+  "lock_regenerate": {
+    "locked_exact": true
+  },
+  "rail_count": 1,
+  "rejected_or_mismatched_assets": 0,
+  "solver": {
+    "engine": "ortools-cp-sat-optimal",
+    "metrics": {
+      "component_count": 8.0,
+      "elapsed_ms": 48.963,
+      "overlap_pairs": 0.0,
+      "plate_area_mm2": 1170000.0,
+      "solver_objective": 1860.0,
+      "space_utilization_percent": 6.033,
+      "used_area_mm2": 70591.443
+    },
+    "valid": true,
+    "warnings": []
+  },
+  "status": "INCOMPLETE: VENDOR VERIFICATION BLOCKED BY NETWORK",
+  "topology": {
+    "connections": 6,
+    "functional_groups": [
+      "24VDC Power",
+      "Communication",
+      "Control Relays",
+      "Drives",
+      "Field Terminals",
+      "PLC CPU",
+      "PLC I/O"
+    ]
+  },
+  "unresolved": 8,
+  "usable_cad_representations": 8,
+  "vendor_verified_dimensions": 0,
+  "verified_siemens_count": 0
+}

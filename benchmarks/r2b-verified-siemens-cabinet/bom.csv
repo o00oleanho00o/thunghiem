@@ -1,0 +1,9 @@
+line,source_asset_id,quantity,resolution_status,verification_level
+1,source-a0a9c0419df569bb,1,needs-review,test
+2,source-67d0e317f239396c,1,needs-review,test
+3,source-33c324f4df97c631,1,needs-review,test
+4,source-e2454df537a9505c,1,needs-review,test
+5,source-fe6d18f6b8ce400b,1,needs-review,test
+6,source-66748a98dbbdcf49,1,needs-review,test
+7,source-7ab1640d1d97df20,1,needs-review,test
+8,source-a0a9f79675c3f78e,1,needs-review,test
