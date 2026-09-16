@@ -133,7 +133,7 @@ def _build_rails_and_ducts(
         bins = 1
         cursor = 0.0
         for _, part in groups[group]:
-            item_width = part.footprint.width + config.grid_mm
+            item_width = part.footprint.width + config.grid_mm + part.footprint.clearance_mm
             if cursor and cursor + item_width > rail_length:
                 bins += 1
                 cursor = 0.0
@@ -232,7 +232,7 @@ def heuristic_layout(project: Project, catalog: Optional[object] = None, config:
             x = cursor_x[group]
         placement_y = _snap(rail.y + rail.width, config.grid_mm)
         placements.append(Placement(device_id=device.id, x=_snap(x, config.grid_mm), y=placement_y, rail_id=rail.id, zone=group))
-        cursor_x[group] = x + width + config.grid_mm
+        cursor_x[group] = x + width + config.grid_mm + part.footprint.clearance_mm
 
     # Backplate parts are placed at the top-left, descending in columns.
     plate = result.enclosure.plate

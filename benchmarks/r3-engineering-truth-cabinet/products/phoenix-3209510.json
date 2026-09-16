@@ -1,0 +1,32 @@
+{
+  "cad_available": false,
+  "cad_verified": false,
+  "description": "UK 5 N feed-through terminal block",
+  "footprint": {
+    "allowed_rotations": [
+      0
+    ],
+    "clearance_mm": 3.0,
+    "depth_mm": 42.5,
+    "height_mm": 42.5,
+    "mounting": "din_rail",
+    "rail_width_mm": 35.0,
+    "service_access_depth_mm": 20.0,
+    "service_access_direction": "front",
+    "width_mm": 5.2
+  },
+  "id": "phoenix-3209510",
+  "known_unknowns": [
+    "end-stop and marker accessories excluded"
+  ],
+  "manufacturer": "Phoenix Contact",
+  "manufacturer_part_number": "3209510",
+  "retrieved_at": "2026-09-16",
+  "series": "CLIPLINE complete",
+  "source_type": "official_product_page",
+  "source_url": "https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
+  "terminals": [
+    "1"
+  ],
+  "verification_status": "review_verified"
+}

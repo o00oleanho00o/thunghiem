@@ -342,6 +342,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":80.0,
         "height":85.0,
         "keepout_bottom":3.0,
@@ -356,6 +357,7 @@
       "id":"CONTACTOR_15KW",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-CON-15KW",
+      "provenance":{},
       "ratings":{
         "power":"15kW"
       },
@@ -411,6 +413,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":72.0,
         "height":80.0,
         "keepout_bottom":3.0,
@@ -425,6 +428,7 @@
       "id":"MCB_3P_16A",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-MCB-3P-16",
+      "provenance":{},
       "ratings":{
         "current":"16A",
         "poles":"3"
@@ -471,6 +475,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":90.0,
         "height":160.0,
         "keepout_bottom":3.0,
@@ -484,6 +489,7 @@
       "id":"MCCB_MAIN_250A",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-MCCB-250",
+      "provenance":{},
       "ratings":{
         "current":"250A",
         "poles":"3"
@@ -530,6 +536,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":70.0,
         "height":75.0,
         "keepout_bottom":3.0,
@@ -544,6 +551,7 @@
       "id":"OVERLOAD_15KW",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-OL-15KW",
+      "provenance":{},
       "ratings":{
         "power":"15kW"
       },
@@ -599,6 +607,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":42.0,
         "height":55.0,
         "keepout_bottom":3.0,
@@ -613,6 +622,7 @@
       "id":"TERMINAL_4MM",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-TERM-4",
+      "provenance":{},
       "ratings":{},
       "symbol_ref":"symbols/terminal/TERMINAL_4MM",
       "terminals":[

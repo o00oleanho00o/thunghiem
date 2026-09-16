@@ -29,3 +29,9 @@
 Proceed beyond pilot only if permitted data can be normalized, 30-part layouts
 remain valid within a practical bound, engineers accept the DXF/BOM handoff,
 and browser changes round-trip to one canonical EIR without semantic drift.
+# R3 follow-up priorities
+
+1. Retrieve and archive official datasheet/manual PDFs for at least five R3 MPNs with document hashes.
+2. Cross-check terminal pitch, bend radius, installation clearance and mounting orientation against those documents.
+3. Obtain exact-product CAD or document an approved engineering-envelope representation for each product.
+4. Add terminal points and duct nodes before starting R4 wire routing.

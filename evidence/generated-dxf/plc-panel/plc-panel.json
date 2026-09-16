@@ -190,6 +190,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":90.0,
         "height":160.0,
         "keepout_bottom":3.0,
@@ -203,6 +204,7 @@
       "id":"MCCB_MAIN_250A",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-MCCB-250",
+      "provenance":{},
       "ratings":{
         "current":"250A",
         "poles":"3"
@@ -249,6 +251,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":80.0,
         "height":100.0,
         "keepout_bottom":3.0,
@@ -263,6 +266,7 @@
       "id":"PLC_CPU",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-PLC-CPU",
+      "provenance":{},
       "ratings":{},
       "symbol_ref":"symbols/plc/PLC_CPU",
       "terminals":[
@@ -296,6 +300,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":80.0,
         "height":100.0,
         "keepout_bottom":3.0,
@@ -310,6 +315,7 @@
       "id":"PLC_IO_16",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-PLC-IO16",
+      "provenance":{},
       "ratings":{},
       "symbol_ref":"symbols/plc/PLC_IO_16",
       "terminals":[
@@ -343,6 +349,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":90.0,
         "height":100.0,
         "keepout_bottom":3.0,
@@ -357,6 +364,7 @@
       "id":"PSU_24V_120W",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-PSU-24-120",
+      "provenance":{},
       "ratings":{
         "output":"24VDC 5A"
       },
@@ -397,6 +405,7 @@
         "allowed_rotations":[
           0
         ],
+        "clearance_mm":0.0,
         "depth":70.0,
         "height":80.0,
         "keepout_bottom":3.0,
@@ -411,6 +420,7 @@
       "id":"RELAY_4CO",
       "manufacturer":"CNB-GENERIC",
       "manufacturer_part":"CNB-RELAY-4CO",
+      "provenance":{},
       "ratings":{},
       "symbol_ref":"symbols/relay/RELAY_4CO",
       "terminals":[

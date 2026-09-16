@@ -123,6 +123,61 @@ function enforceCadApproval(model, catalog) {
   return null;
 }
 
+function rectFor(component) {
+  const rotated = [90, 270].includes(Number(component.rotation));
+  return { x: Number(component.x), y: Number(component.y), width: rotated ? Number(component.height) : Number(component.width), height: rotated ? Number(component.width) : Number(component.height) };
+}
+
+function intersects(a, b, clearance = 0) {
+  return !(a.x + a.width + clearance <= b.x || b.x + b.width + clearance <= a.x || a.y + a.height + clearance <= b.y || b.y + b.height + clearance <= a.y);
+}
+
+function authoritativeValidation(model) {
+  const errors = []; const warnings = [];
+  const plate = model.mountingPlate;
+  const rails = new Map(model.rails.map((rail) => [rail.id, rail]));
+  const rects = new Map(model.components.map((component) => [component.id, rectFor(component)]));
+  const tags = new Map();
+  model.components.forEach((component) => {
+    if (tags.has(component.tag)) errors.push({ code: 'E007', entity_id: component.id, message: `duplicate device tag ${component.tag}` });
+    tags.set(component.tag, component.id);
+    if (!component.partNumber && model.metadata && model.metadata.authoritative) errors.push({ code: 'E009', entity_id: component.id, message: 'authoritative component has unknown manufacturer part number' });
+    const rect = rects.get(component.id);
+    if (!rect || rect.width <= 0 || rect.height <= 0) errors.push({ code: 'E010', entity_id: component.id, message: 'missing physical footprint' });
+    else if (rect.x < plate.x || rect.y < plate.y || rect.x + rect.width > plate.x + plate.width || rect.y + rect.height > plate.y + plate.height) errors.push({ code: 'E001', entity_id: component.id, message: 'component lies outside mounting plate', evidence: { rect, plate } });
+    if ((component.mounting || '').toLowerCase().includes('din')) {
+      if (!component.railId || !rails.has(component.railId)) errors.push({ code: 'E003', entity_id: component.id, message: 'DIN component is not attached to a rail' });
+      else { const rail = rails.get(component.railId); if (rect.x < rail.x || rect.x + rect.width > rail.x + rail.length) errors.push({ code: 'E003', entity_id: component.id, message: 'component extends beyond DIN rail' }); }
+    }
+    if (component.assetId && (!component.footprintRef || !String(component.footprintRef).startsWith('footprint-'))) errors.push({ code: 'E010', entity_id: component.id, message: 'CAD asset has no approved physical footprint' });
+  });
+  const entries = [...rects.entries()];
+  for (let i = 0; i < entries.length; i += 1) for (let j = i + 1; j < entries.length; j += 1) {
+    const [leftId, left] = entries[i]; const [rightId, right] = entries[j];
+    if (intersects(left, right)) errors.push({ code: 'E002', entity_id: leftId, message: `component overlaps ${rightId}`, evidence: { left, right } });
+    const leftComponent = model.components.find((item) => item.id === leftId); const rightComponent = model.components.find((item) => item.id === rightId);
+    const clearance = Math.max(Number(leftComponent?.metadata?.clearanceMm || 0), Number(rightComponent?.metadata?.clearanceMm || 0));
+    if (clearance > 0 && intersects(left, right, clearance)) errors.push({ code: 'E004', entity_id: leftId, message: `required clearance to ${rightId} is insufficient`, evidence: { clearance, left, right } });
+  }
+  model.ducts.forEach((duct) => entries.forEach(([id, rect]) => { const d = { x: duct.x, y: duct.y, width: duct.width, height: duct.height }; if (intersects(d, rect)) errors.push({ code: 'E006', entity_id: duct.id, message: `duct collides with ${id}` }); }));
+  model.components.forEach((component) => {
+    const direction = component.metadata?.serviceAccessDirection;
+    const depth = Number(component.metadata?.serviceAccessDepthMm || 0);
+    if (!direction || direction === 'unknown' || !depth || !component.terminals?.length) { if (model.metadata && model.metadata.authoritative && component.terminals?.length) warnings.push({ code: 'E005', entity_id: component.id, message: 'terminal/service access is not verifiable' }); return; }
+    const rect = rects.get(component.id); let corridor;
+    if (direction === 'left') corridor = { x: rect.x - depth, y: rect.y, width: depth, height: rect.height };
+    else if (direction === 'right') corridor = { x: rect.x + rect.width, y: rect.y, width: depth, height: rect.height };
+    else if (direction === 'top') corridor = { x: rect.x, y: rect.y + rect.height, width: rect.width, height: depth };
+    else corridor = { x: rect.x, y: rect.y - depth, width: rect.width, height: depth };
+    entries.forEach(([otherId, other]) => { if (otherId !== component.id && intersects(corridor, other)) errors.push({ code: 'E005', entity_id: component.id, message: `service access corridor is blocked by ${otherId}`, evidence: { corridor, other } }); });
+    model.ducts.forEach((duct) => { const d = { x: duct.x, y: duct.y, width: duct.width, height: duct.height }; if (intersects(corridor, d)) errors.push({ code: 'E005', entity_id: component.id, message: `service access corridor is blocked by duct ${duct.id}`, evidence: { corridor, duct: d } }); });
+  });
+  model.connections.forEach((connection) => { if (!rects.has(connection.from) || !rects.has(connection.to)) errors.push({ code: 'E008', entity_id: connection.id, message: 'connection references an unknown device' }); });
+  return { valid: errors.length === 0, errors, warnings };
+}
+
+const eirRevisions = new Map();
+
 const server = http.createServer(async (request, response) => {
   try {
     const requestUrl = new URL(request.url, `http://${request.headers.host || 'localhost'}`);
@@ -140,6 +195,33 @@ const server = http.createServer(async (request, response) => {
       const benchmarkPath = path.resolve(root, '../../benchmarks/r2b-verified-siemens-cabinet/exports/r2b-verified-cabinet.json');
       if (!benchmarkPath.startsWith(path.resolve(root, '../..') + path.sep) || !fs.existsSync(benchmarkPath)) return send(response, 404, JSON.stringify({ error: 'R2B benchmark not generated; run scripts/build_r2b_benchmark.py' }), mime['.json']);
       return send(response, 200, fs.readFileSync(benchmarkPath), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/benchmark/r3' && request.method === 'GET') {
+      const benchmarkPath = path.resolve(root, '../../benchmarks/r3-engineering-truth-cabinet/regenerated-layout.json');
+      if (!fs.existsSync(benchmarkPath)) return send(response, 404, JSON.stringify({ error: 'R3 benchmark not generated' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(benchmarkPath), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/r3/products' && request.method === 'GET') {
+      const productPath = path.resolve(root, '../../catalog/r3/products.json');
+      if (!fs.existsSync(productPath)) return send(response, 404, JSON.stringify({ error: 'R3 product catalog missing' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(productPath), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/eir/revisions' && request.method === 'GET') {
+      return send(response, 200, JSON.stringify({ revisions: [...eirRevisions.values()] }), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/eir/revisions' && request.method === 'POST') {
+      const payload = JSON.parse(await bodyFrom(request)); const source = payload.eir || payload.model;
+      if (!source || typeof source !== 'object') return send(response, 400, JSON.stringify({ error: 'eir object is required' }), mime['.json']);
+      const next = JSON.parse(JSON.stringify(source)); const command = payload.command || {};
+      const placements = Array.isArray(next.placements) ? next.placements : [];
+      const placement = placements.find((item) => item.device_id === command.device_id);
+      if (command.type === 'move' && placement) { placement.x = Number(command.x); placement.y = Number(command.y); if (command.rotation != null) placement.rotation = Number(command.rotation); }
+      if (command.type === 'lock' && placement) placement.locked = Boolean(command.locked ?? true);
+      const device = Array.isArray(next.devices) ? next.devices.find((item) => item.id === command.device_id) : null;
+      if (command.type === 'set-tag' && device && command.tag) device.tag = String(command.tag);
+      const crypto = require('node:crypto'); const canonical = JSON.stringify(next, Object.keys(next).sort()); const revision = `r3-${crypto.createHash('sha256').update(JSON.stringify(next)).digest('hex').slice(0, 12)}`;
+      const record = { revision, saved_at: new Date().toISOString(), eir: next, command, canonical_hash: crypto.createHash('sha256').update(canonical).digest('hex') };
+      eirRevisions.set(revision, record); return send(response, 200, JSON.stringify(record), mime['.json']);
     }
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'GET') return send(response, 200, JSON.stringify(readReviews()), mime['.json']);
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'POST') {
@@ -179,6 +261,8 @@ const server = http.createServer(async (request, response) => {
       if (format === 'dxf' || format === 'svg' || format === 'audit') {
         const gate = enforceCadApproval(model, readEffectiveCatalog());
         if (gate) return send(response, 400, JSON.stringify(gate), mime['.json']);
+        const validation = authoritativeValidation(model);
+        if (!validation.valid) return send(response, 422, JSON.stringify({ error: 'authoritative export blocked by engineering validation', validation }), mime['.json']);
       }
       if (format === 'dxf') return send(response, 200, exportDxf(model), mime['.dxf']);
       if (format === 'svg') return send(response, 200, exportSvg(model), mime['.svg']);

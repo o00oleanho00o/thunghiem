@@ -20,7 +20,7 @@
       <span class="unit-chip">MM</span>
     </div>
     <div class="top-actions">
-      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option><option value="r2">R2 reference cabinet</option><option value="r2b">R2B Siemens geometry (unresolved)</option></select></label>
+      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option><option value="r2">R2 reference cabinet</option><option value="r2b">R2B Siemens geometry (unresolved)</option><option value="r3">R3 engineering truth cabinet</option></select></label>
       <button class="button subtle" id="loadScenario" type="button">Load</button>
       <label class="button subtle file-button" for="jsonInput">Import JSON<input id="jsonInput" type="file" accept="application/json,.json"></label>
       <button class="button primary" id="autoLayout" type="button"><span class="button-icon">✦</span>Auto layout</button>
@@ -38,10 +38,11 @@
   <main class="workspace">
     <aside class="left-panel">
       <div class="panel-heading"><div><span class="eyebrow">LIBRARY</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
-      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">CAD assets</button></div>
+      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">CAD assets</button><button class="library-tab" id="productTab" type="button" aria-selected="false">R3 products</button></div>
       <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Filter components</span><input id="librarySearch" type="search" placeholder="Filter components"></label>
       <div class="library-list" id="libraryList" aria-label="Component library"></div>
       <div class="asset-list" id="assetList" aria-label="Imported CAD asset library" hidden></div>
+      <div class="asset-list" id="productList" aria-label="R3 verified product library" hidden></div>
       <section class="asset-detail" id="assetDetail" hidden aria-live="polite"></section>
       <div class="library-foot"><span class="status-dot green"></span><span>Catalog synced</span><span class="foot-meta">v0.1</span></div>
     </aside>

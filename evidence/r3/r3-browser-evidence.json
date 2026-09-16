@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "base": "http://127.0.0.1:4176",
+  "screenshots": [
+    "01-r3-verified-product-library.png",
+    "02-product-detail-provenance.png",
+    "03-bom-product-resolution.png",
+    "04-cabinet-before-auto-layout.png",
+    "05-heuristic-layout.png",
+    "06-pan-after-deep-zoom.png",
+    "07-clearance-overlap-highlight.png",
+    "08-accessibility-violation-highlight.png",
+    "09-invalid-export-blocked.png",
+    "10-final-valid-cabinet.png",
+    "11-canonical-eir-reload.png",
+    "14-deep-zoom-verified-envelope.png"
+  ],
+  "productCards": 8,
+  "componentCount": 8
+}

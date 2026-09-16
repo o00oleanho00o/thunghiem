@@ -52,13 +52,13 @@
         rotation: finite(first(placement.rotation, device.rotation), 0),
         railId: first(placement.railId, placement.rail_id, device.railId, device.rail_id, null),
         terminals: terminalIds.map((terminal) => typeof terminal === 'string' ? { id: terminal } : terminal),
-        mounting: first(device.mounting, part.mounting, 'DIN'),
+        mounting: first(device.mounting, part.mounting, part.footprint?.mounting, 'DIN'),
         color: first(device.color, part.color, '#3b82f6'),
         assetId: first(device.assetId, device.source_asset_id, part.assetId, part.source_asset_id, part.cad_asset_id, null),
         source_asset_id: first(device.source_asset_id, device.assetId, part.source_asset_id, part.assetId, part.cad_asset_id, null),
         footprintRef: first(device.footprintRef, device.footprint_ref, part.footprintRef, part.footprint_ref, null),
         footprint_ref: first(device.footprint_ref, device.footprintRef, part.footprint_ref, part.footprintRef, null),
-        metadata: { sourceEirId: deviceId, partId: first(device.partId, part.id, null) },
+        metadata: { sourceEirId: deviceId, partId: first(device.partId, part.id, null), productIdentity: first(device.productIdentity, part.productIdentity, part.product_identity, null), clearanceMm: first(device.clearanceMm, part.clearanceMm, part.footprint?.clearance_mm, part.footprint?.clearanceMm, 0), serviceAccessDirection: first(device.serviceAccessDirection, part.serviceAccessDirection, part.footprint?.service_access_direction, part.footprint?.serviceAccessDirection, null), serviceAccessDepthMm: first(device.serviceAccessDepthMm, part.serviceAccessDepthMm, part.footprint?.service_access_depth_mm, part.footprint?.serviceAccessDepthMm, null) },
       };
     });
     const rails = first(enclosureSource.rails, source.rails, []) || [];

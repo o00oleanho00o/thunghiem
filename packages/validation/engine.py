@@ -75,6 +75,19 @@ def _rect_for(project: Project, device: Device, placement: Placement, parts: Map
     return Rect(x=placement.x, y=placement.y, width=size.width, height=size.height)
 
 
+def _access_rect(rect: Rect, direction: str, depth: float) -> Rect:
+    """Return the service corridor outside a component edge."""
+
+    if direction == "left":
+        return Rect(x=rect.x - depth, y=rect.y, width=depth, height=rect.height)
+    if direction == "right":
+        return Rect(x=rect.right, y=rect.y, width=depth, height=rect.height)
+    if direction == "top":
+        return Rect(x=rect.x, y=rect.top, width=rect.width, height=depth)
+    # bottom and front are represented as a bottom-side corridor in the 2D MVP.
+    return Rect(x=rect.x, y=rect.y - depth, width=rect.width, height=depth)
+
+
 def validate_project(project: Project, *, clearance_mm: float = 0.0) -> ValidationReport:
     report = ValidationReport()
     parts = project.part_index()
@@ -128,6 +141,28 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0) -> Validati
         for right_id, right in ordered[index + 1 :]:
             if left.intersects(right, clearance=clearance_mm):
                 _issue(report, "E002", "error", left_id, f"component overlaps {right_id}", "Move one component or increase the row/duct spacing.", other_entity_id=right_id, left=left.to_dict(), right=right.to_dict(), clearance_mm=clearance_mm)
+            left_device = devices[left_id]
+            right_device = devices[right_id]
+            left_part = parts.get(left_device.part_id)
+            right_part = parts.get(right_device.part_id)
+            effective_clearance = max(
+                clearance_mm,
+                left_part.footprint.clearance_mm if left_part else 0.0,
+                right_part.footprint.clearance_mm if right_part else 0.0,
+            )
+            if effective_clearance > 0 and left.intersects(right, clearance=effective_clearance):
+                _issue(
+                    report,
+                    "E004",
+                    "error",
+                    left_id,
+                    f"required clearance to {right_id} is insufficient",
+                    "Move components apart or reduce the documented keepout only with evidence.",
+                    other_entity_id=right_id,
+                    clearance_mm=effective_clearance,
+                    left=left.to_dict(),
+                    right=right.to_dict(),
+                )
 
     # DIN-rail attachment and rail bounds.
     for device in project.devices:
@@ -155,6 +190,53 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0) -> Validati
         for device_id, rect in rect_by_device.items():
             if duct_rect.intersects(rect):
                 _issue(report, "E006", "error", duct.id, f"duct collides with component {device_id}", "Move the duct corridor or component.", component_id=device_id)
+
+    # MVP terminal/service access: a known face creates a 2D corridor. Unknown
+    # metadata is explicitly non-verifiable rather than silently passing.
+    for device_id, rect in rect_by_device.items():
+        device = devices[device_id]
+        part = parts.get(device.part_id)
+        footprint = part.footprint if part else None
+        if not footprint or not device.terminal_ids:
+            continue
+        direction = footprint.service_access_direction
+        depth = footprint.service_access_depth_mm
+        if not direction or direction == "unknown" or not depth:
+            _issue(
+                report,
+                "E005",
+                "warning",
+                device_id,
+                "terminal/service access is not verifiable from part metadata",
+                "Document an access face and corridor before authoritative release.",
+                access_direction=direction or "unknown",
+            )
+            continue
+        corridor = _access_rect(rect, direction, depth)
+        for other_id, other_rect in rect_by_device.items():
+            if other_id != device_id and corridor.intersects(other_rect):
+                _issue(
+                    report,
+                    "E005",
+                    "error",
+                    device_id,
+                    f"service access corridor is blocked by {other_id}",
+                    "Move the blocking component or document a different access face.",
+                    other_entity_id=other_id,
+                    access_corridor=corridor.to_dict(),
+                )
+        for duct_id, duct in ducts.items():
+            if corridor.intersects(duct.rect()):
+                _issue(
+                    report,
+                    "E005",
+                    "error",
+                    device_id,
+                    f"service access corridor is blocked by duct {duct_id}",
+                    "Move the duct corridor or document a different access face.",
+                    duct_id=duct_id,
+                    access_corridor=corridor.to_dict(),
+                )
 
     # Connection references and dangling terminals.
     for connection in project.connections:

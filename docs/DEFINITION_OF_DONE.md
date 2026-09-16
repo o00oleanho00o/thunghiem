@@ -49,3 +49,6 @@ From the lab root, after the Python environment is installed:
 The gate runs Python tests, both Node export contracts, a real browser
 interaction test, syntax checks, demo/benchmark generation, independent DXF
 audit/render, and required-document checks. It does not require an API key.
+# R3 engineering-truth gate
+
+R3 is not complete merely because a DXF parses. A release candidate requires traceable `ProductIdentity`, field-level provenance, E004/E005 validation, canonical EIR round-trip, deterministic lock/regenerate, an authoritative export gate, independent DXF audit and evidence screenshots. The current R3 run is explicitly marked **REPEAT R3** because exact-product CAD and directly retrievable vendor documents remain incomplete.

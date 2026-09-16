@@ -1,0 +1,61 @@
+{
+  "policy": "retrieval status is evidence only; review_verified records are not vendor_verified",
+  "results": [
+    {
+      "error": "http",
+      "id": "phoenix-2866750",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/power-supplies/2866750"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-2966171",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/relay-modules/2966171"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-2903149",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/relay-modules/2903149"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-3209510",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-3209577",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-1085036",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/managed-switches/1085036"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-2866776",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/power-supplies/2866776"
+    },
+    {
+      "error": "http",
+      "id": "phoenix-2904627",
+      "retrievable": false,
+      "status": 503,
+      "url": "https://www.phoenixcontact.com/en-us/products/surge-protection/2904627"
+    }
+  ]
+}

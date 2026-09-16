@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "productCount": 8,
+  "validExportStatus": 200,
+  "invalidExportStatus": 422,
+  "blockedCodes": [
+    "E001",
+    "E003"
+  ],
+  "roundTripRevision": "r3-3350537da05e",
+  "lockedDevice": "device_28d6bb98c1b8"
+}

@@ -1,0 +1,11 @@
+{
+  "audit_error_count": 0,
+  "available": true,
+  "dxfversion": "AC1009",
+  "entity_types": {
+    "LINE": 109,
+    "TEXT": 17
+  },
+  "modelspace_entity_count": 126,
+  "valid": true
+}

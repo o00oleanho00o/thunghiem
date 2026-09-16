@@ -129,3 +129,6 @@ manufacturer-neutral, BOM-driven panel workflow and human review. Do not fund
 a broad "AI electrical CAD replacement" claim yet. Advance only through the
 90-day gates in `docs/NEXT_90_DAYS.md`; stop or redirect if permitted customer
 drawings cannot be normalized or if engineers reject the generated handoff.
+# R3 checkpoint
+
+R3 added an eight-product Phoenix Contact review catalog, provenance ledger, E004 clearance and E005 service-access rules, a shared authoritative export gate, EIR revision commands, heuristic/CP-SAT comparison and independent DXF evidence. The benchmark passes its recorded engineering envelope checks, but this is not a vendor-verified procurement release: product pages were not reliably retrievable and exact-product CAD is absent. See `docs/r3/R3_ENGINEERING_TRUTH_REPORT.md`.

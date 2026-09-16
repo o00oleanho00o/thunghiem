@@ -175,6 +175,9 @@ class Footprint(EIRBase):
     keepout_right: float = Field(default=0.0, ge=0)
     keepout_top: float = Field(default=0.0, ge=0)
     keepout_bottom: float = Field(default=0.0, ge=0)
+    clearance_mm: float = Field(default=0.0, ge=0)
+    service_access_direction: Optional[Literal["left", "right", "top", "bottom", "front", "unknown"]] = None
+    service_access_depth_mm: Optional[float] = Field(default=None, gt=0)
     allowed_rotations: List[int] = Field(default_factory=lambda: [0])
 
     @validator("allowed_rotations")
@@ -212,6 +215,36 @@ class Terminal(EIRBase):
         return value
 
 
+class ProductIdentity(EIRBase):
+    """Traceable commercial identity; deliberately separate from CAD geometry."""
+
+    manufacturer: str
+    series: str
+    manufacturer_part_number: str
+    description: str
+    source_url: Optional[str] = None
+    source_document: Optional[str] = None
+    source_type: Literal["official_product_page", "official_datasheet", "official_cad", "review_verified"]
+    retrieved_at: str
+    verification_status: Literal["vendor_verified", "review_verified", "needs_review", "unknown"]
+
+    @validator("manufacturer", "series", "manufacturer_part_number", "description", "retrieved_at")
+    def identity_text(cls, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise ValueError("product identity text must not be empty")
+        return value
+
+
+class ProvenanceValue(EIRBase):
+    """Evidence attached to one engineering field."""
+
+    value: Any = None
+    source: Optional[str] = None
+    source_type: Literal["vendor_datasheet", "official_product_page", "official_cad", "review", "inferred", "unknown"] = "unknown"
+    confidence: Literal["vendor_verified", "review_verified", "trusted_secondary", "inferred", "unknown"] = "unknown"
+
+
 class PartDefinition(EIRBase):
     """Catalog-level part; it has no project-specific tag or placement."""
 
@@ -226,6 +259,8 @@ class PartDefinition(EIRBase):
     symbol_ref: Optional[str] = None
     footprint_ref: Optional[str] = None
     model_3d_ref: Optional[str] = None
+    product_identity: Optional[ProductIdentity] = None
+    provenance: Dict[str, ProvenanceValue] = Field(default_factory=dict)
     # Optional provenance link to an imported CAD asset. Raw CAD entities stay
     # outside EIR; this stable ID only points at the catalog representation.
     cad_asset_id: Optional[str] = None

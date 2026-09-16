@@ -1,0 +1,36 @@
+{
+  "cad_available": false,
+  "cad_verified": false,
+  "description": "QUINT4-PS/1AC/24DC/2.5 power supply",
+  "footprint": {
+    "allowed_rotations": [
+      0
+    ],
+    "clearance_mm": 10.0,
+    "depth_mm": 125.0,
+    "height_mm": 130.0,
+    "mounting": "din_rail",
+    "rail_width_mm": 35.0,
+    "service_access_depth_mm": 40.0,
+    "service_access_direction": "front",
+    "width_mm": 32.0
+  },
+  "id": "phoenix-2866750",
+  "known_unknowns": [
+    "terminal pitch and exact clearance envelope require installation manual cross-check"
+  ],
+  "manufacturer": "Phoenix Contact",
+  "manufacturer_part_number": "2866750",
+  "retrieved_at": "2026-09-16",
+  "series": "QUINT POWER",
+  "source_type": "official_product_page",
+  "source_url": "https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
+  "terminals": [
+    "L",
+    "N",
+    "PE",
+    "+24V",
+    "0V"
+  ],
+  "verification_status": "review_verified"
+}

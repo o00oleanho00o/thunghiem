@@ -218,6 +218,12 @@
           "title": "Allowed Rotations",
           "type": "array"
         },
+        "clearance_mm": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Clearance Mm",
+          "type": "number"
+        },
         "depth": {
           "exclusiveMinimum": 0,
           "title": "Depth",
@@ -267,6 +273,23 @@
           "exclusiveMinimum": 0,
           "title": "Rail Width",
           "type": "number"
+        },
+        "service_access_depth_mm": {
+          "exclusiveMinimum": 0,
+          "title": "Service Access Depth Mm",
+          "type": "number"
+        },
+        "service_access_direction": {
+          "enum": [
+            "left",
+            "right",
+            "top",
+            "bottom",
+            "front",
+            "unknown"
+          ],
+          "title": "Service Access Direction",
+          "type": "string"
         },
         "width": {
           "exclusiveMinimum": 0,
@@ -331,6 +354,16 @@
         "model_3d_ref": {
           "title": "Model 3D Ref",
           "type": "string"
+        },
+        "product_identity": {
+          "$ref": "#/definitions/ProductIdentity"
+        },
+        "provenance": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ProvenanceValue"
+          },
+          "title": "Provenance",
+          "type": "object"
         },
         "ratings": {
           "additionalProperties": {
@@ -405,6 +438,111 @@
         "y"
       ],
       "title": "Placement",
+      "type": "object"
+    },
+    "ProductIdentity": {
+      "additionalProperties": false,
+      "description": "Traceable commercial identity; deliberately separate from CAD geometry.",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "type": "string"
+        },
+        "manufacturer_part_number": {
+          "title": "Manufacturer Part Number",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "series": {
+          "title": "Series",
+          "type": "string"
+        },
+        "source_document": {
+          "title": "Source Document",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "official_product_page",
+            "official_datasheet",
+            "official_cad",
+            "review_verified"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "verification_status": {
+          "enum": [
+            "vendor_verified",
+            "review_verified",
+            "needs_review",
+            "unknown"
+          ],
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "manufacturer",
+        "series",
+        "manufacturer_part_number",
+        "description",
+        "source_type",
+        "retrieved_at",
+        "verification_status"
+      ],
+      "title": "ProductIdentity",
+      "type": "object"
+    },
+    "ProvenanceValue": {
+      "additionalProperties": false,
+      "description": "Evidence attached to one engineering field.",
+      "properties": {
+        "confidence": {
+          "default": "unknown",
+          "enum": [
+            "vendor_verified",
+            "review_verified",
+            "trusted_secondary",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "source_type": {
+          "default": "unknown",
+          "enum": [
+            "vendor_datasheet",
+            "official_product_page",
+            "official_cad",
+            "review",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value"
+        }
+      },
+      "title": "ProvenanceValue",
       "type": "object"
     },
     "Rail": {
