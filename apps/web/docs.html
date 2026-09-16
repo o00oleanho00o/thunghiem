@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CNB Electrical Lab product and engineering documentation">
+  <title>CNB Electrical Lab · Tài liệu</title>
+  <link rel="stylesheet" href="/docs.css">
+</head>
+<body>
+  <header class="docs-topbar">
+    <a class="docs-brand" href="/" aria-label="Mở Panel Composer"><span class="brand-mark">CNB</span><span><strong>Electrical Lab</strong><small>Engineering intelligence</small></span></a>
+    <div class="docs-status"><span class="status-dot"></span>R3.1b · engineering-layout-grade</div>
+    <a class="back-link" href="/">Mở Panel Composer <span aria-hidden="true">↗</span></a>
+  </header>
+  <div class="docs-shell">
+    <aside class="docs-nav" aria-label="Điều hướng tài liệu">
+      <div class="nav-label">TÀI LIỆU</div>
+      <a class="active" href="#overview">Tổng quan</a>
+      <a href="#vision">Vision</a>
+      <a href="#dh-company">DH Company</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#research">Research journey</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#principles">Principles</a>
+      <div class="nav-divider"></div>
+      <div class="nav-label">EVIDENCE</div>
+      <a href="/docs/product/PRODUCT_OVERVIEW_VI.md" target="_blank" rel="noreferrer">Source overview ↗</a>
+      <a href="/docs/product/DH_ENGINEERING_OPPORTUNITY.md" target="_blank" rel="noreferrer">DH opportunity ↗</a>
+      <a href="/docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md" target="_blank" rel="noreferrer">R3.1 report ↗</a>
+      <a href="/docs/r3/R3_BENCHMARK_RESULTS.md" target="_blank" rel="noreferrer">Benchmark ↗</a>
+      <a href="/docs/research/SIEMENS_DXF_CATALOG_AUDIT.md" target="_blank" rel="noreferrer">DXF audit ↗</a>
+    </aside>
+    <main class="docs-main">
+      <section id="overview" class="hero-section">
+        <div class="eyebrow">CNB ELECTRICAL LAB / PRODUCT BRIEF</div>
+        <h1>Engineering intelligence từ dữ liệu dự án tới nhà máy tủ điện.</h1>
+        <p class="lede">Một hệ thống hỗ trợ kỹ sư hiểu BOQ, chuẩn hóa BOM, map tới component có provenance, thử khả năng vừa tủ và tạo layout/DXF có thể review. AI đề xuất; rules xác nhận; engineer phê duyệt.</p>
+        <div class="hero-actions"><a class="primary-link" href="/">Mở demo Panel Composer <span>→</span></a><a class="secondary-link" href="#research">Xem evidence đã chứng minh</a></div>
+        <div class="truth-callout"><strong>Trạng thái hiện tại</strong><span>R3 CLOSED — GO TO R4 LIMITED</span><small>Engineering-layout-grade. Chưa manufacturing-ready; clearance, service access và terminal model vẫn có unknown provenance.</small></div>
+      </section>
+
+      <section id="vision" class="doc-section">
+        <div class="section-kicker">01 · PRODUCT VISION</div>
+        <h2>Không phải AutoCAD clone</h2>
+        <p>Project không nhằm làm wire-routing software, thay EPLAN ngay lập tức hay cho AI tự vẽ CAD. Vision dài hạn là <strong>AI-assisted Electrical Engineering System</strong>: hiểu dữ liệu kỹ thuật lộn xộn, đề xuất candidate có thể trace, rồi để deterministic engineering engine và kỹ sư kiểm soát kết quả.</p>
+        <div class="flow-diagram" aria-label="Product vision flow">
+          <div class="flow-node input"><span>INPUT</span><strong>PDF · BOQ · BOM<br>Specification · Drawing</strong></div><div class="flow-arrow">→</div><div class="flow-node ai"><span>AI</span><strong>Extraction<br>classification · mapping</strong></div><div class="flow-arrow">→</div><div class="flow-node"><span>ENGINEERING</span><strong>BOM candidate<br>verified components</strong></div><div class="flow-arrow">→</div><div class="flow-node"><span>CAD</span><strong>Cabinet fit<br>layout · DXF</strong></div><div class="flow-arrow">→</div><div class="flow-node engineer"><span>HUMAN</span><strong>Engineer review<br>approval · release</strong></div>
+        </div>
+        <div class="split-grid"><article class="info-card"><h3>AI chịu trách nhiệm</h3><ul><li>Hiểu dữ liệu lộn xộn và extraction.</li><li>Classification, normalization, mapping.</li><li>Đề xuất candidate, không quyết định cuối.</li></ul></article><article class="info-card"><h3>Engine chịu trách nhiệm</h3><ul><li>Geometry, constraints, rules.</li><li>Validation, layout, reproducibility.</li><li>Deterministic export và audit chain.</li></ul></article></div>
+      </section>
+
+      <section id="dh-company" class="doc-section alt-section">
+        <div class="section-kicker">02 · DH COMPANY OPPORTUNITY</div>
+        <h2>Engineering Intelligence Bridge</h2>
+        <p>DH có một khối dự án M&amp;E và một nhà máy sản xuất tủ điện. Hai khối tạo ra dữ liệu liên tục nhưng thường bị chia bởi Excel, revision và hệ thống khác nhau.</p>
+        <div class="two-column"><div><h3>Dự án M&amp;E</h3><div class="mini-flow">BOQ / bản vẽ / specification<br><b>↓</b><br>bóc khối lượng → báo giá → chọn thiết bị → engineering</div><p class="muted">Tên thiết bị không đồng nhất, dữ liệu rời rạc, khó reuse project cũ và nhiều bước thủ công.</p></div><div><h3>Nhà máy tủ điện</h3><div class="mini-flow">Engineering → BOM → Cabinet layout<br><b>↓</b><br>Purchasing → Warehouse → Assembly → QC / FAT</div><p class="muted">Engineering BOM và production BOM dễ lệch; thay thiết bị tạo ripple; khó biết sớm tủ có vừa hay không.</p></div></div>
+        <div class="bridge-diagram" aria-label="DH project to factory flow"><div class="bridge-track"><span>BOQ project</span><i>↓</i><span>Panel identification</span><i>↓</i><span>BOM candidate</span><i>↓</i><span>Verified components</span><i>↓</i><span>Cabinet fit / layout</span><i>↓</i><span>Engineer approval</span></div><div class="bridge-track factory"><span>Production BOM</span><i>→</i><span>ERPNext</span><i>→</i><span>Purchase</span><i>→</i><span>Warehouse</span><i>→</i><span>Manufacturing</span></div></div>
+        <div class="callout"><strong>Opportunity lớn nhất không phải CAD editor.</strong> Làm cầu nối có provenance giữa project pre-engineering và factory execution, rồi tích hợp CAD/ERP hiện có nơi cần.</div>
+      </section>
+
+      <section id="use-cases" class="doc-section">
+        <div class="section-kicker">03 · USE CASES</div>
+        <h2>Từ candidate tới component thật</h2>
+        <div class="usecase-grid"><article><span class="number">01</span><h3>AI bóc BOQ</h3><p>Nhận diện panel, thiết bị trong/ngoài panel, quantity, manufacturer/model nếu có và technical properties. Output là candidate extraction, không phải engineering approval.</p><code>Raw project → Panel MDB-2B → candidate MCCB / MCB / SPD / Meter / CT</code></article><article><span class="number">02</span><h3>BOM intelligence</h3><p>Normalize description, map manufacturer/type/order code, tìm duplicate và missing data, rồi nối vào catalog có trạng thái verified / unknown / needs-review.</p><code>Raw BOM → normalized BOM → catalog references</code></article><article><span class="number">03</span><h3>Real component library</h3><p>Product identity + footprint + DXF/vector + provenance + mounting metadata + rules. Rectangle chỉ là solver envelope; UI có thể render geometry thật.</p><code>ABB S201U-C16 · type ≠ order code · bounds có provenance</code></article><article><span class="number">04</span><h3>Cabinet fit &amp; selection</h3><p>Thử nhiều enclosure, tính rail/duct/clearance/reserve, báo fit hoặc not fit. AI đề xuất; solver xác nhận.</p><code>600×800 · 800×1000 · 800×1200 · 1000×1400</code></article></div>
+      </section>
+
+      <section id="architecture" class="doc-section alt-section">
+        <div class="section-kicker">04 · ARCHITECTURE</div>
+        <h2>Một semantic object, nhiều representation</h2>
+        <div class="component-diagram"><div class="product-root"><span>PART / PRODUCT</span><strong>semantic component</strong></div><div class="tree-lines"></div><div class="component-branches"><div><b>Product Identity</b><small>ABB · S200 U<br>S201U-C16 · order code</small></div><div><b>Engineering Footprint</b><small>width · height · DIN rail<br>envelope · clearance</small></div><div><b>DXF Representation</b><small>SVG/vector cache<br>real mm origin mapping</small></div><div><b>Provenance</b><small>source artifact<br>field status · review</small></div><div><b>Rules</b><small>mounting · rotation<br>validation policy</small></div></div></div>
+        <p>Canonical EIR giữ semantic data và reference (`footprint_ref` / asset ID), không nhúng hàng trăm raw DXF entities vào Device. Solver dùng envelope để tính; renderer dùng vector cache để nhìn đúng thiết bị.</p>
+        <div class="r4-strip"><strong>R4 — Real DXF Cabinet Composer</strong><span>Component Library → drag real device → snap rail → DXF render → manual/auto layout → validation → export</span></div>
+      </section>
+
+      <section id="research" class="doc-section">
+        <div class="section-kicker">05 · RESEARCH JOURNEY</div>
+        <h2>Đã chứng minh gì, chưa chứng minh gì?</h2>
+        <div class="research-table"><div class="research-row head"><span>Giai đoạn</span><span>Đã chứng minh</span><span>Chưa chứng minh</span></div><div class="research-row"><b>R2 / R2A</b><span>BOM/EIR → layout → validation → DXF deterministic; solver và reopen.</span><span>Engineering data truth.</span></div><div class="research-row"><b>R2B</b><span>Vendor verification thử được trên Siemens catalog.</span><span>CAD file không tự là verified component; không suy đoán MPN/dimensions.</span></div><div class="research-row"><b>R3</b><span>Identity, provenance, E004/E005, export gate, canonical revisions.</span><span>Review-verified chưa đủ mạnh cho manufacturing.</span></div><div class="research-row"><b>R3.1b</b><span>ABB official cached artifact, SHA256 chain, field-level status, unknown giữ nguyên, manufacturing blockers.</span><span>Clearance, service access, terminal model và exact CAD của ABB chưa verified.</span></div></div>
+        <div class="evidence-grid"><a href="/docs/r2/R2_REAL_CABINET_REPORT.md" target="_blank">R2 real cabinet report ↗</a><a href="/docs/r2/R2B_VERIFIED_SIEMENS_REPORT.md" target="_blank">R2B Siemens report ↗</a><a href="/docs/r3/R3_ENGINEERING_TRUTH_REPORT.md" target="_blank">R3 truth report ↗</a><a href="/docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md" target="_blank">R3.1 closure ↗</a><a href="/docs/r3/R3_BENCHMARK_RESULTS.md" target="_blank">Benchmark ↗</a><a href="/evidence/r3/SCREENSHOT_REPORT.md" target="_blank">Screenshots ↗</a></div>
+      </section>
+
+      <section id="roadmap" class="doc-section alt-section">
+        <div class="section-kicker">06 · ROADMAP</div>
+        <h2>R3 → R9</h2>
+        <div class="roadmap"><div class="road active"><strong>R3.1b</strong><span>Engineering Truth Closure</span><small>Verified ≠ Default ≠ Unknown</small></div><div class="road next"><strong>R4</strong><span>Real DXF Cabinet Composer</span><small>Real components inside real cabinet</small></div><div class="road"><strong>R5</strong><span>Cabinet Fit &amp; Selection</span><small>BOM này cần tủ nào?</small></div><div class="road"><strong>R6</strong><span>BOM Intelligence</span><small>Excel / BOQ / PDF → normalized BOM</small></div><div class="road"><strong>R7</strong><span>Requirement → BOM Candidate</span><small>AI-assisted candidate design</small></div><div class="road"><strong>R8</strong><span>DH Real Project Pilot</span><small>Measure time, accuracy, corrections</small></div><div class="road"><strong>R9</strong><span>Product Decision</span><small>Chọn wedge dựa trên evidence</small></div></div>
+        <div class="not-now"><h3>Not now</h3><span>Full EPLAN replacement</span><span>Production wire routing</span><span>Full 3D / thermal / NC</span><span>Unrestricted AI engineering</span></div>
+      </section>
+
+      <section id="principles" class="doc-section principles-section">
+        <div class="section-kicker">07 · PRODUCT PRINCIPLES</div>
+        <h2>Ranh giới để project không tự lừa mình</h2>
+        <div class="principles"><div><b>01</b><span>Engineering truth before AI automation.</span></div><div><b>02</b><span>Real components, not fake rectangles.</span></div><div><b>03</b><span>AI proposes; deterministic rules validate.</span></div><div><b>04</b><span>Engineer remains in control.</span></div><div><b>05</b><span>One canonical engineering model.</span></div><div><b>06</b><span>Important values need provenance.</span></div><div><b>07</b><span>Integrate existing CAD/ERP where valuable.</span></div></div>
+        <div class="factory-loop"><strong>Factory data back to engineering</strong><span>Actual material · substitute · labor · cost · manufacturing issue → engineering knowledge → estimation &amp; future project</span></div>
+      </section>
+      <footer class="docs-footer">CNB Electrical Lab · documentation snapshot for R3.1b · <a href="/">Back to working demo</a></footer>
+    </main>
+  </div>
+  <script>
+    const links = [...document.querySelectorAll('.docs-nav a[href^="#"]')];
+    const sections = links.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const update = () => { const y = window.scrollY + 130; let active = sections[0]; sections.forEach((section) => { if (section.offsetTop <= y) active = section; }); links.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${active.id}`)); };
+    window.addEventListener('scroll', update, { passive: true }); update();
+  </script>
+</body>
+</html>

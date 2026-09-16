@@ -8,6 +8,7 @@ const { adapt: adaptEir } = require('./eir-adapter.js');
 const { canonicalStringify, canonicalHash } = require('./canonical-json.js');
 
 const root = __dirname;
+const projectRoot = path.resolve(__dirname, '../..');
 const catalogRoot = path.resolve(__dirname, '../../catalog');
 const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
 const catalogReviewDir = path.join(catalogRoot, 'review');
@@ -22,6 +23,7 @@ const mime = {
   '.json': 'application/json; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.dxf': 'application/dxf',
+  '.md': 'text/markdown; charset=utf-8',
 };
 
 function send(response, status, body, type = 'text/plain; charset=utf-8') {
@@ -283,6 +285,14 @@ const server = http.createServer(async (request, response) => {
       if (format === 'svg') return send(response, 200, exportSvg(model), mime['.svg']);
       if (format === 'audit') return send(response, 200, JSON.stringify(auditDxf(exportDxf(model)), null, 2), mime['.json']);
       return send(response, 400, JSON.stringify({ error: `unsupported format: ${format}` }), mime['.json']);
+    }
+    // Documentation and evidence are read-only project artefacts. Keep the
+    // editor static root separate while exposing linked reports in the web UI.
+    if (request.method === 'GET' && (requestUrl.pathname.startsWith('/docs/') || requestUrl.pathname.startsWith('/evidence/'))) {
+      const relative = decodeURIComponent(requestUrl.pathname).replace(/^\//, '');
+      const resolved = path.resolve(projectRoot, relative);
+      if (!resolved.startsWith(projectRoot + path.sep) || !fs.existsSync(resolved) || fs.statSync(resolved).isDirectory()) return send(response, 404, 'Documentation file not found');
+      return send(response, 200, fs.readFileSync(resolved), mime[path.extname(resolved).toLowerCase()] || 'text/plain; charset=utf-8');
     }
     let pathname = decodeURIComponent(requestUrl.pathname);
     if (pathname === '/') pathname = '/index.html';
