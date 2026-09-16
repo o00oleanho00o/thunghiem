@@ -1,6 +1,6 @@
 # R3 Browser Evidence
 
-Captured with Playwright against `http://127.0.0.1:4176/` after loading the R3 benchmark.
+Captured with Playwright against `http://127.0.0.1:4176/` after loading the R3.1 ABB engineering-truth benchmark (24 physical devices, 8 exact MPN records).
 
 | Evidence | File |
 |---|---|
@@ -18,3 +18,5 @@ Captured with Playwright against `http://127.0.0.1:4176/` after loading the R3 b
 | Canonical EIR reload | `screenshots/11-canonical-eir-reload.png` |
 
 The independent renderer output is `benchmarks/r3-engineering-truth-cabinet/exports/r3-final.png`; the API and round-trip assertions are in `evidence/test-logs/r3-api.json`.
+
+The product detail screenshot explicitly shows the cached source artifact ID/SHA256, `document_verified` status, `UNKNOWN` clearance/access fields and the separate 5 mm `ENGINEERING DEFAULT` policy.

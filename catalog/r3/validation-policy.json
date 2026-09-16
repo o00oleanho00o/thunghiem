@@ -1,0 +1,8 @@
+{
+  "id": "CNB-R31-VALIDATION-POLICY-V1",
+  "mandatory_provenance": ["width_mm", "height_mm", "depth_mm", "mounting"],
+  "clearance_default": {"value_mm": 5, "policy_id": "CNB-CLEARANCE-DEFAULT-V1", "status": "engineering_default", "vendor_requirement": false},
+  "unknown_clearance": "warning_when_default_is_explicit",
+  "unknown_service_access": "warning_and_not_vendor_verified",
+  "authoritative_export": "reject_missing_mandatory_provenance"
+}

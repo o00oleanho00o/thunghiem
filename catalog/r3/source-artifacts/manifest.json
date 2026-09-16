@@ -1,0 +1,19 @@
+{
+  "artifacts": [
+    {
+      "document_date": null,
+      "document_revision": "2CDC002168D0202 Rev. F",
+      "id": "source-abb-2cdc002168d0202-r1",
+      "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C6..S201U-C63",
+      "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "retrieval_status": "success",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+      "type": "official_datasheet_pdf"
+    }
+  ],
+  "catalog_sha256": "3b1c751b6a78029c3db8c462ed0af85fac36b55d9f5f418c6bdb9b6f26d1d1eb",
+  "schema_version": "r3.1-source-artifacts.v1"
+}

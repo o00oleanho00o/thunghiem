@@ -3,9 +3,9 @@
   "available": true,
   "dxfversion": "AC1009",
   "entity_types": {
-    "LINE": 109,
-    "TEXT": 17
+    "LINE": 262,
+    "TEXT": 49
   },
-  "modelspace_entity_count": 126,
+  "modelspace_entity_count": 311,
   "valid": true
 }

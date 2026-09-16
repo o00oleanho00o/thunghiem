@@ -1,181 +1,245 @@
 {
-  "connections":[
-    {
-      "from_device":"device_36b3cf858619",
-      "from_terminal":"L",
-      "id":"connection_eb6e211214ae",
-      "kind":"wire",
-      "to_device":"device_ff519eadf819",
-      "to_terminal":"A1"
-    },
-    {
-      "from_device":"device_ff519eadf819",
-      "from_terminal":"A1",
-      "id":"connection_bbd05e816175",
-      "kind":"wire",
-      "to_device":"device_28d6bb98c1b8",
-      "to_terminal":"A1"
-    },
-    {
-      "from_device":"device_28d6bb98c1b8",
-      "from_terminal":"A1",
-      "id":"connection_548308bbb08e",
-      "kind":"wire",
-      "to_device":"device_cdb35456ab7a",
-      "to_terminal":"1"
-    },
-    {
-      "from_device":"device_cdb35456ab7a",
-      "from_terminal":"1",
-      "id":"connection_e6e86f0fc5b9",
-      "kind":"wire",
-      "to_device":"device_a5812a1dc99d",
-      "to_terminal":"1"
-    },
-    {
-      "from_device":"device_a5812a1dc99d",
-      "from_terminal":"1",
-      "id":"connection_e25c70a5cfb6",
-      "kind":"wire",
-      "to_device":"device_fa0d3dd5ae20",
-      "to_terminal":"24V"
-    },
-    {
-      "from_device":"device_fa0d3dd5ae20",
-      "from_terminal":"24V",
-      "id":"connection_3d15a0ea6cac",
-      "kind":"wire",
-      "to_device":"device_6b897b8cf13e",
-      "to_terminal":"L"
-    },
-    {
-      "from_device":"device_6b897b8cf13e",
-      "from_terminal":"L",
-      "id":"connection_ae7bd151398d",
-      "kind":"wire",
-      "to_device":"device_38ac05eed0fa",
-      "to_terminal":"L"
-    }
-  ],
+  "connections":[],
   "devices":[
     {
-      "description":"QUINT4-PS/1AC/24DC/2.5 power supply",
-      "function":"control",
-      "id":"device_36b3cf858619",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "function":"protection",
+      "id":"device_989eb3a3f5e2",
       "location":"cabinet",
-      "part_id":"phoenix-2866750",
+      "part_id":"abb-s201u-c6",
       "properties":{},
-      "tag":"PS1",
-      "terminal_ids":[
-        "L",
-        "N",
-        "PE",
-        "+24V",
-        "0V"
-      ]
+      "tag":"QF1",
+      "terminal_ids":[]
     },
     {
-      "description":"PLC-RSC-24DC/21 interface relay",
-      "function":"control",
-      "id":"device_ff519eadf819",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "function":"protection",
+      "id":"device_ddcb250435c3",
       "location":"cabinet",
-      "part_id":"phoenix-2966171",
+      "part_id":"abb-s201u-c6",
       "properties":{},
-      "tag":"PS2",
-      "terminal_ids":[
-        "A1",
-        "A2",
-        "11",
-        "14",
-        "12"
-      ]
+      "tag":"QF2",
+      "terminal_ids":[]
     },
     {
-      "description":"PLC-INTERFACE relay module",
-      "function":"control",
-      "id":"device_28d6bb98c1b8",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "function":"protection",
+      "id":"device_a8b29fc7c144",
       "location":"cabinet",
-      "part_id":"phoenix-2903149",
+      "part_id":"abb-s201u-c6",
       "properties":{},
-      "tag":"K1",
-      "terminal_ids":[
-        "A1",
-        "A2",
-        "11",
-        "14",
-        "12"
-      ]
+      "tag":"QF3",
+      "terminal_ids":[]
     },
     {
-      "description":"UK 5 N feed-through terminal block",
-      "function":"control",
-      "id":"device_cdb35456ab7a",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "function":"protection",
+      "id":"device_e7944dd47711",
       "location":"cabinet",
-      "part_id":"phoenix-3209510",
+      "part_id":"abb-s201u-c6",
       "properties":{},
-      "tag":"K2",
-      "terminal_ids":[
-        "1"
-      ]
+      "tag":"QF4",
+      "terminal_ids":[]
     },
     {
-      "description":"PT 2,5-QUATTRO push-in terminal block",
-      "function":"control",
-      "id":"device_a5812a1dc99d",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+      "function":"protection",
+      "id":"device_fd1e6d35d99a",
       "location":"cabinet",
-      "part_id":"phoenix-3209577",
+      "part_id":"abb-s201u-c10",
       "properties":{},
-      "tag":"X1",
-      "terminal_ids":[
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+      "tag":"QF5",
+      "terminal_ids":[]
     },
     {
-      "description":"FL SWITCH 1005N industrial Ethernet switch",
-      "function":"control",
-      "id":"device_fa0d3dd5ae20",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+      "function":"protection",
+      "id":"device_034846ec7431",
       "location":"cabinet",
-      "part_id":"phoenix-1085036",
+      "part_id":"abb-s201u-c10",
       "properties":{},
-      "tag":"X2",
-      "terminal_ids":[
-        "24V",
-        "0V",
-        "PE"
-      ]
+      "tag":"QF6",
+      "terminal_ids":[]
     },
     {
-      "description":"QUINT4-PS/1AC/24DC/5 power supply",
-      "function":"control",
-      "id":"device_6b897b8cf13e",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+      "function":"protection",
+      "id":"device_d0df8e5d4f1b",
       "location":"cabinet",
-      "part_id":"phoenix-2866776",
+      "part_id":"abb-s201u-c10",
       "properties":{},
-      "tag":"SW1",
-      "terminal_ids":[
-        "L",
-        "N",
-        "PE",
-        "+24V",
-        "0V"
-      ]
+      "tag":"QF7",
+      "terminal_ids":[]
     },
     {
-      "description":"VAL-MS 230 ST surge protection device",
-      "function":"control",
-      "id":"device_38ac05eed0fa",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+      "function":"protection",
+      "id":"device_41dba75035b0",
       "location":"cabinet",
-      "part_id":"phoenix-2904627",
+      "part_id":"abb-s201u-c10",
       "properties":{},
-      "tag":"SPD1",
-      "terminal_ids":[
-        "L",
-        "N",
-        "PE"
-      ]
+      "tag":"QF8",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
+      "function":"protection",
+      "id":"device_bb794f48c624",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c16",
+      "properties":{},
+      "tag":"QF9",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
+      "function":"protection",
+      "id":"device_f5453bf74470",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c16",
+      "properties":{},
+      "tag":"QF10",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
+      "function":"protection",
+      "id":"device_c41ac3424be1",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c16",
+      "properties":{},
+      "tag":"QF11",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
+      "function":"protection",
+      "id":"device_4c24bb10504c",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c20",
+      "properties":{},
+      "tag":"QF12",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
+      "function":"protection",
+      "id":"device_b8e9ceb94b60",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c20",
+      "properties":{},
+      "tag":"QF13",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
+      "function":"protection",
+      "id":"device_7b52c20bb2a0",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c20",
+      "properties":{},
+      "tag":"QF14",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
+      "function":"protection",
+      "id":"device_d9c1ed4965e1",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c25",
+      "properties":{},
+      "tag":"QF15",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
+      "function":"protection",
+      "id":"device_8f798c6b227c",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c25",
+      "properties":{},
+      "tag":"QF16",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
+      "function":"protection",
+      "id":"device_d6176475bd22",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c25",
+      "properties":{},
+      "tag":"QF17",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
+      "function":"protection",
+      "id":"device_788155939800",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c32",
+      "properties":{},
+      "tag":"QF18",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
+      "function":"protection",
+      "id":"device_93497a9f4aff",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c32",
+      "properties":{},
+      "tag":"QF19",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
+      "function":"protection",
+      "id":"device_8407ff00d70f",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c32",
+      "properties":{},
+      "tag":"QF20",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
+      "function":"protection",
+      "id":"device_a462ea303e0d",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c40",
+      "properties":{},
+      "tag":"QF21",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
+      "function":"protection",
+      "id":"device_b0088c55b465",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c40",
+      "properties":{},
+      "tag":"QF22",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
+      "function":"protection",
+      "id":"device_6974ff63e13a",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c63",
+      "properties":{},
+      "tag":"QF23",
+      "terminal_ids":[]
+    },
+    {
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
+      "function":"protection",
+      "id":"device_9b767cf2c307",
+      "location":"cabinet",
+      "part_id":"abb-s201u-c63",
+      "properties":{},
+      "tag":"QF24",
+      "terminal_ids":[]
     }
   ],
   "ducts":[
@@ -201,7 +265,7 @@
       "kind":"wire_duct",
       "width":700.0,
       "x":50.0,
-      "y":275.0
+      "y":280.0
     }
   ],
   "enclosure":{
@@ -224,865 +288,1158 @@
     {
       "aliases":[],
       "category":"control",
-      "description":"FL SWITCH 1005N industrial Ethernet switch",
-      "footprint":{
-        "allowed_rotations":[
-          0
-        ],
-        "clearance_mm":10.0,
-        "depth":115.0,
-        "height":130.0,
-        "keepout_bottom":0.0,
-        "keepout_left":0.0,
-        "keepout_right":0.0,
-        "keepout_top":0.0,
-        "mounting":"din_rail",
-        "rail_width":35.0,
-        "service_access_depth_mm":40.0,
-        "service_access_direction":"front",
-        "width":29.0
-      },
-      "id":"phoenix-1085036",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"1085036",
-      "product_identity":{
-        "description":"FL SWITCH 1005N industrial Ethernet switch",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"1085036",
-        "retrieved_at":"2026-09-16",
-        "series":"FL SWITCH 1000",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-        "verification_status":"review_verified"
-      },
-      "provenance":{
-        "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":10.0
-        },
-        "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":115.0
-        },
-        "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":130.0
-        },
-        "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":"din_rail"
-        },
-        "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":"front"
-        },
-        "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036",
-          "source_type":"official_product_page",
-          "value":29.0
-        }
-      },
-      "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-1085036",
-      "terminals":[
-        {
-          "id":"24V",
-          "kind":"power",
-          "name":"24V"
-        },
-        {
-          "id":"0V",
-          "kind":"power",
-          "name":"0V"
-        },
-        {
-          "id":"PE",
-          "kind":"power",
-          "name":"PE"
-        }
-      ]
-    },
-    {
-      "aliases":[],
-      "category":"power_supply",
-      "description":"QUINT4-PS/1AC/24DC/2.5 power supply",
-      "footprint":{
-        "allowed_rotations":[
-          0
-        ],
-        "clearance_mm":10.0,
-        "depth":125.0,
-        "height":130.0,
-        "keepout_bottom":0.0,
-        "keepout_left":0.0,
-        "keepout_right":0.0,
-        "keepout_top":0.0,
-        "mounting":"din_rail",
-        "rail_width":35.0,
-        "service_access_depth_mm":40.0,
-        "service_access_direction":"front",
-        "width":32.0
-      },
-      "id":"phoenix-2866750",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"2866750",
-      "product_identity":{
-        "description":"QUINT4-PS/1AC/24DC/2.5 power supply",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"2866750",
-        "retrieved_at":"2026-09-16",
-        "series":"QUINT POWER",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-        "verification_status":"review_verified"
-      },
-      "provenance":{
-        "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":10.0
-        },
-        "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":125.0
-        },
-        "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":130.0
-        },
-        "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":"din_rail"
-        },
-        "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":"front"
-        },
-        "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750",
-          "source_type":"official_product_page",
-          "value":32.0
-        }
-      },
-      "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-2866750",
-      "terminals":[
-        {
-          "id":"L",
-          "kind":"power",
-          "name":"L"
-        },
-        {
-          "id":"N",
-          "kind":"power",
-          "name":"N"
-        },
-        {
-          "id":"PE",
-          "kind":"power",
-          "name":"PE"
-        },
-        {
-          "id":"+24V",
-          "kind":"power",
-          "name":"+24V"
-        },
-        {
-          "id":"0V",
-          "kind":"power",
-          "name":"0V"
-        }
-      ]
-    },
-    {
-      "aliases":[],
-      "category":"power_supply",
-      "description":"QUINT4-PS/1AC/24DC/5 power supply",
-      "footprint":{
-        "allowed_rotations":[
-          0
-        ],
-        "clearance_mm":10.0,
-        "depth":125.0,
-        "height":130.0,
-        "keepout_bottom":0.0,
-        "keepout_left":0.0,
-        "keepout_right":0.0,
-        "keepout_top":0.0,
-        "mounting":"din_rail",
-        "rail_width":35.0,
-        "service_access_depth_mm":40.0,
-        "service_access_direction":"front",
-        "width":48.0
-      },
-      "id":"phoenix-2866776",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"2866776",
-      "product_identity":{
-        "description":"QUINT4-PS/1AC/24DC/5 power supply",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"2866776",
-        "retrieved_at":"2026-09-16",
-        "series":"QUINT POWER",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-        "verification_status":"review_verified"
-      },
-      "provenance":{
-        "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":10.0
-        },
-        "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":125.0
-        },
-        "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":130.0
-        },
-        "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":"din_rail"
-        },
-        "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":"front"
-        },
-        "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776",
-          "source_type":"official_product_page",
-          "value":48.0
-        }
-      },
-      "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-2866776",
-      "terminals":[
-        {
-          "id":"L",
-          "kind":"power",
-          "name":"L"
-        },
-        {
-          "id":"N",
-          "kind":"power",
-          "name":"N"
-        },
-        {
-          "id":"PE",
-          "kind":"power",
-          "name":"PE"
-        },
-        {
-          "id":"+24V",
-          "kind":"power",
-          "name":"+24V"
-        },
-        {
-          "id":"0V",
-          "kind":"power",
-          "name":"0V"
-        }
-      ]
-    },
-    {
-      "aliases":[],
-      "category":"control",
-      "description":"PLC-INTERFACE relay module",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
       "footprint":{
         "allowed_rotations":[
           0
         ],
         "clearance_mm":5.0,
-        "depth":94.0,
-        "height":80.0,
+        "depth":71.0,
+        "height":92.0,
         "keepout_bottom":0.0,
         "keepout_left":0.0,
         "keepout_right":0.0,
         "keepout_top":0.0,
         "mounting":"din_rail",
         "rail_width":35.0,
-        "service_access_depth_mm":25.0,
-        "service_access_direction":"front",
-        "width":14.0
+        "width":17.5
       },
-      "id":"phoenix-2903149",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"2903149",
+      "id":"abb-s201u-c10",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C10",
       "product_identity":{
-        "description":"PLC-INTERFACE relay module",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"2903149",
-        "retrieved_at":"2026-09-16",
-        "series":"PLC-INTERFACE",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-        "verification_status":"review_verified"
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C10",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
       },
       "provenance":{
         "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
           "value":5.0
         },
         "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
-          "value":94.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
         },
         "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
-          "value":80.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
         },
         "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
           "value":"din_rail"
         },
         "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
-          "value":"front"
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
         },
         "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149",
-          "source_type":"official_product_page",
-          "value":14.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
         }
       },
       "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-2903149",
-      "terminals":[
+      "source_artifacts":[
         {
-          "id":"A1",
-          "kind":"control",
-          "name":"A1"
-        },
-        {
-          "id":"A2",
-          "kind":"control",
-          "name":"A2"
-        },
-        {
-          "id":"11",
-          "kind":"control",
-          "name":"11"
-        },
-        {
-          "id":"14",
-          "kind":"control",
-          "name":"14"
-        },
-        {
-          "id":"12",
-          "kind":"control",
-          "name":"12"
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
         }
-      ]
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c10",
+      "terminal_model_status":"unknown",
+      "terminals":[]
     },
     {
       "aliases":[],
       "category":"control",
-      "description":"VAL-MS 230 ST surge protection device",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
       "footprint":{
         "allowed_rotations":[
           0
         ],
         "clearance_mm":5.0,
-        "depth":75.0,
-        "height":90.0,
+        "depth":71.0,
+        "height":92.0,
         "keepout_bottom":0.0,
         "keepout_left":0.0,
         "keepout_right":0.0,
         "keepout_top":0.0,
         "mounting":"din_rail",
         "rail_width":35.0,
-        "service_access_depth_mm":25.0,
-        "service_access_direction":"front",
-        "width":17.7
+        "width":17.5
       },
-      "id":"phoenix-2904627",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"2904627",
+      "id":"abb-s201u-c16",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C16",
       "product_identity":{
-        "description":"VAL-MS 230 ST surge protection device",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"2904627",
-        "retrieved_at":"2026-09-16",
-        "series":"VALVETRAB",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-        "verification_status":"review_verified"
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C16",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
       },
       "provenance":{
         "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
           "value":5.0
         },
         "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
-          "value":75.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
         },
         "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
-          "value":90.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
         },
         "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
           "value":"din_rail"
         },
         "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
-          "value":"front"
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
         },
         "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627",
-          "source_type":"official_product_page",
-          "value":17.7
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
         }
       },
       "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-2904627",
-      "terminals":[
+      "source_artifacts":[
         {
-          "id":"L",
-          "kind":"power",
-          "name":"L"
-        },
-        {
-          "id":"N",
-          "kind":"power",
-          "name":"N"
-        },
-        {
-          "id":"PE",
-          "kind":"power",
-          "name":"PE"
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
         }
-      ]
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c16",
+      "terminal_model_status":"unknown",
+      "terminals":[]
     },
     {
       "aliases":[],
       "category":"control",
-      "description":"PLC-RSC-24DC/21 interface relay",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
       "footprint":{
         "allowed_rotations":[
           0
         ],
         "clearance_mm":5.0,
-        "depth":94.0,
-        "height":80.0,
+        "depth":71.0,
+        "height":92.0,
         "keepout_bottom":0.0,
         "keepout_left":0.0,
         "keepout_right":0.0,
         "keepout_top":0.0,
         "mounting":"din_rail",
         "rail_width":35.0,
-        "service_access_depth_mm":25.0,
-        "service_access_direction":"front",
-        "width":6.2
+        "width":17.5
       },
-      "id":"phoenix-2966171",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"2966171",
+      "id":"abb-s201u-c20",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C20",
       "product_identity":{
-        "description":"PLC-RSC-24DC/21 interface relay",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"2966171",
-        "retrieved_at":"2026-09-16",
-        "series":"PLC-INTERFACE",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-        "verification_status":"review_verified"
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C20",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
       },
       "provenance":{
         "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
           "value":5.0
         },
         "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
-          "value":94.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
         },
         "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
-          "value":80.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
         },
         "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
           "value":"din_rail"
         },
         "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
-          "value":"front"
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
         },
         "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171",
-          "source_type":"official_product_page",
-          "value":6.2
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
         }
       },
       "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-2966171",
-      "terminals":[
+      "source_artifacts":[
         {
-          "id":"A1",
-          "kind":"control",
-          "name":"A1"
-        },
-        {
-          "id":"A2",
-          "kind":"control",
-          "name":"A2"
-        },
-        {
-          "id":"11",
-          "kind":"control",
-          "name":"11"
-        },
-        {
-          "id":"14",
-          "kind":"control",
-          "name":"14"
-        },
-        {
-          "id":"12",
-          "kind":"control",
-          "name":"12"
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
         }
-      ]
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c20",
+      "terminal_model_status":"unknown",
+      "terminals":[]
     },
     {
       "aliases":[],
-      "category":"terminal",
-      "description":"UK 5 N feed-through terminal block",
+      "category":"control",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
       "footprint":{
         "allowed_rotations":[
           0
         ],
-        "clearance_mm":3.0,
-        "depth":42.5,
-        "height":42.5,
+        "clearance_mm":5.0,
+        "depth":71.0,
+        "height":92.0,
         "keepout_bottom":0.0,
         "keepout_left":0.0,
         "keepout_right":0.0,
         "keepout_top":0.0,
         "mounting":"din_rail",
         "rail_width":35.0,
-        "service_access_depth_mm":20.0,
-        "service_access_direction":"front",
-        "width":5.2
+        "width":17.5
       },
-      "id":"phoenix-3209510",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"3209510",
+      "id":"abb-s201u-c25",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C25",
       "product_identity":{
-        "description":"UK 5 N feed-through terminal block",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"3209510",
-        "retrieved_at":"2026-09-16",
-        "series":"CLIPLINE complete",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-        "verification_status":"review_verified"
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C25",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
       },
       "provenance":{
         "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
-          "value":3.0
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
+          "value":5.0
         },
         "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
-          "value":42.5
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
         },
         "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
-          "value":42.5
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
         },
         "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
           "value":"din_rail"
         },
         "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
-          "value":"front"
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
         },
         "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510",
-          "source_type":"official_product_page",
-          "value":5.2
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
         }
       },
       "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-3209510",
-      "terminals":[
+      "source_artifacts":[
         {
-          "id":"1",
-          "kind":"control",
-          "name":"1"
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
         }
-      ]
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c25",
+      "terminal_model_status":"unknown",
+      "terminals":[]
     },
     {
       "aliases":[],
-      "category":"terminal",
-      "description":"PT 2,5-QUATTRO push-in terminal block",
+      "category":"control",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
       "footprint":{
         "allowed_rotations":[
           0
         ],
-        "clearance_mm":3.0,
-        "depth":46.0,
-        "height":56.0,
+        "clearance_mm":5.0,
+        "depth":71.0,
+        "height":92.0,
         "keepout_bottom":0.0,
         "keepout_left":0.0,
         "keepout_right":0.0,
         "keepout_top":0.0,
         "mounting":"din_rail",
         "rail_width":35.0,
-        "service_access_depth_mm":20.0,
-        "service_access_direction":"front",
-        "width":5.2
+        "width":17.5
       },
-      "id":"phoenix-3209577",
-      "manufacturer":"Phoenix Contact",
-      "manufacturer_part":"3209577",
+      "id":"abb-s201u-c32",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C32",
       "product_identity":{
-        "description":"PT 2,5-QUATTRO push-in terminal block",
-        "manufacturer":"Phoenix Contact",
-        "manufacturer_part_number":"3209577",
-        "retrieved_at":"2026-09-16",
-        "series":"CLIPLINE complete",
-        "source_type":"official_product_page",
-        "source_url":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-        "verification_status":"review_verified"
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C32",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
       },
       "provenance":{
         "clearance_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
-          "value":3.0
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
+          "value":5.0
         },
         "depth_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
-          "value":46.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
         },
         "height_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
-          "value":56.0
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
         },
         "mounting":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
           "value":"din_rail"
         },
         "service_access_direction":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
-          "value":"front"
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
         },
         "width_mm":{
-          "confidence":"review_verified",
-          "source":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577",
-          "source_type":"official_product_page",
-          "value":5.2
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
         }
       },
       "ratings":{},
-      "symbol_ref":"r3/symbols/phoenix-3209577",
-      "terminals":[
+      "source_artifacts":[
         {
-          "id":"1",
-          "kind":"control",
-          "name":"1"
-        },
-        {
-          "id":"2",
-          "kind":"control",
-          "name":"2"
-        },
-        {
-          "id":"3",
-          "kind":"control",
-          "name":"3"
-        },
-        {
-          "id":"4",
-          "kind":"control",
-          "name":"4"
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
         }
-      ]
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c32",
+      "terminal_model_status":"unknown",
+      "terminals":[]
+    },
+    {
+      "aliases":[],
+      "category":"control",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
+      "footprint":{
+        "allowed_rotations":[
+          0
+        ],
+        "clearance_mm":5.0,
+        "depth":71.0,
+        "height":92.0,
+        "keepout_bottom":0.0,
+        "keepout_left":0.0,
+        "keepout_right":0.0,
+        "keepout_top":0.0,
+        "mounting":"din_rail",
+        "rail_width":35.0,
+        "width":17.5
+      },
+      "id":"abb-s201u-c40",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C40",
+      "product_identity":{
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C40",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
+      },
+      "provenance":{
+        "clearance_mm":{
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
+          "value":5.0
+        },
+        "depth_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
+        },
+        "height_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
+        },
+        "mounting":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":"din_rail"
+        },
+        "service_access_direction":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
+        },
+        "width_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
+        }
+      },
+      "ratings":{},
+      "source_artifacts":[
+        {
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
+        }
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c40",
+      "terminal_model_status":"unknown",
+      "terminals":[]
+    },
+    {
+      "aliases":[],
+      "category":"control",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "footprint":{
+        "allowed_rotations":[
+          0
+        ],
+        "clearance_mm":5.0,
+        "depth":71.0,
+        "height":92.0,
+        "keepout_bottom":0.0,
+        "keepout_left":0.0,
+        "keepout_right":0.0,
+        "keepout_top":0.0,
+        "mounting":"din_rail",
+        "rail_width":35.0,
+        "width":17.5
+      },
+      "id":"abb-s201u-c6",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C6",
+      "product_identity":{
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C6",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
+      },
+      "provenance":{
+        "clearance_mm":{
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
+          "value":5.0
+        },
+        "depth_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
+        },
+        "height_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
+        },
+        "mounting":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":"din_rail"
+        },
+        "service_access_direction":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
+        },
+        "width_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
+        }
+      },
+      "ratings":{},
+      "source_artifacts":[
+        {
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
+        }
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c6",
+      "terminal_model_status":"unknown",
+      "terminals":[]
+    },
+    {
+      "aliases":[],
+      "category":"control",
+      "description":"ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
+      "footprint":{
+        "allowed_rotations":[
+          0
+        ],
+        "clearance_mm":5.0,
+        "depth":71.0,
+        "height":92.0,
+        "keepout_bottom":0.0,
+        "keepout_left":0.0,
+        "keepout_right":0.0,
+        "keepout_top":0.0,
+        "mounting":"din_rail",
+        "rail_width":35.0,
+        "width":17.5
+      },
+      "id":"abb-s201u-c63",
+      "manufacturer":"ABB",
+      "manufacturer_part":"S201U-C63",
+      "product_identity":{
+        "description":"ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
+        "manufacturer":"ABB",
+        "manufacturer_part_number":"S201U-C63",
+        "retrieved_at":"2026-09-16T00:00:00Z",
+        "series":"System pro M compact S 200 U",
+        "source_type":"official_datasheet",
+        "source_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+        "verification_status":"document_verified"
+      },
+      "provenance":{
+        "clearance_mm":{
+          "confidence":"engineering_default",
+          "notes":"Generic 5 mm design default; not a vendor requirement.",
+          "reviewed_at":"2026-09-16",
+          "source_locator":"CNB-CLEARANCE-DEFAULT-V1",
+          "source_type":"engineering_default",
+          "status":"engineering_default",
+          "value":5.0
+        },
+        "depth_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":71.0
+        },
+        "height_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":92.0
+        },
+        "mounting":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":"din_rail"
+        },
+        "service_access_direction":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified"
+        },
+        "width_mm":{
+          "confidence":"document_verified",
+          "notes":"",
+          "reviewed_at":"2026-09-16T00:00:00Z",
+          "source":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "source_artifact_id":"source-abb-2cdc002168d0202-r1",
+          "source_locator":"PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type":"vendor_datasheet",
+          "status":"document_verified",
+          "value":17.5
+        }
+      },
+      "ratings":{},
+      "source_artifacts":[
+        {
+          "document_revision":"2CDC002168D0202 Rev. F",
+          "id":"source-abb-2cdc002168d0202-r1",
+          "local_path":"catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer":"ABB",
+          "manufacturer_part_number":"S201U-C6..S201U-C63",
+          "original_url":"https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status":"success",
+          "retrieved_at":"2026-09-16T00:00:00Z",
+          "sha256":"e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type":"official_datasheet_pdf"
+        }
+      ],
+      "symbol_ref":"r3/symbols/abb-s201u-c63",
+      "terminal_model_status":"unknown",
+      "terminals":[]
     }
   ],
   "placements":[
     {
-      "device_id":"device_28d6bb98c1b8",
+      "device_id":"device_034846ec7431",
       "locked":false,
-      "rail_id":"rail_e3095e216e0d",
+      "rail_id":"rail_a6532e947796",
+      "rotation":0,
+      "x":170.0,
+      "y":345.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_41dba75035b0",
+      "locked":false,
+      "rail_id":"rail_a6532e947796",
+      "rotation":0,
+      "x":220.0,
+      "y":345.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_4c24bb10504c",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":220.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_6974ff63e13a",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":550.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_788155939800",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":390.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_7b52c20bb2a0",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":280.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_8407ff00d70f",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":470.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_8f798c6b227c",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":330.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_93497a9f4aff",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":415.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_989eb3a3f5e2",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":140.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_9b767cf2c307",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":580.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_a462ea303e0d",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":500.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_a8b29fc7c144",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":610.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_b0088c55b465",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":525.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_b8e9ceb94b60",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
       "rotation":0,
       "x":250.0,
-      "y":125.0,
-      "zone":"control"
+      "y":165.0,
+      "zone":"auxiliary"
     },
     {
-      "device_id":"device_36b3cf858619",
+      "device_id":"device_bb794f48c624",
       "locked":false,
-      "rail_id":"rail_e3095e216e0d",
+      "rail_id":"rail_a6532e947796",
+      "rotation":0,
+      "x":250.0,
+      "y":345.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_c41ac3424be1",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":195.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_d0df8e5d4f1b",
+      "locked":false,
+      "rail_id":"rail_a6532e947796",
+      "rotation":0,
+      "x":195.0,
+      "y":345.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_d6176475bd22",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":360.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_d9c1ed4965e1",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":305.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_ddcb250435c3",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":440.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_e7944dd47711",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":635.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_f5453bf74470",
+      "locked":false,
+      "rail_id":"rail_4bd07ea2ffc1",
+      "rotation":0,
+      "x":170.0,
+      "y":165.0,
+      "zone":"auxiliary"
+    },
+    {
+      "device_id":"device_fd1e6d35d99a",
+      "locked":false,
+      "rail_id":"rail_a6532e947796",
       "rotation":0,
       "x":140.0,
-      "y":125.0,
-      "zone":"control"
-    },
-    {
-      "device_id":"device_38ac05eed0fa",
-      "locked":false,
-      "rail_id":"rail_e3095e216e0d",
-      "rotation":0,
-      "x":290.0,
-      "y":125.0,
-      "zone":"control"
-    },
-    {
-      "device_id":"device_6b897b8cf13e",
-      "locked":false,
-      "rail_id":"rail_e3095e216e0d",
-      "rotation":0,
-      "x":185.0,
-      "y":125.0,
-      "zone":"control"
-    },
-    {
-      "device_id":"device_a5812a1dc99d",
-      "locked":false,
-      "rail_id":"rail_e12ee6330dd5",
-      "rotation":0,
-      "x":155.0,
-      "y":335.0,
-      "zone":"terminals"
-    },
-    {
-      "device_id":"device_cdb35456ab7a",
-      "locked":false,
-      "rail_id":"rail_e12ee6330dd5",
-      "rotation":0,
-      "x":140.0,
-      "y":335.0,
-      "zone":"terminals"
-    },
-    {
-      "device_id":"device_fa0d3dd5ae20",
-      "locked":false,
-      "rail_id":"rail_e3095e216e0d",
-      "rotation":0,
-      "x":320.0,
-      "y":125.0,
-      "zone":"control"
-    },
-    {
-      "device_id":"device_ff519eadf819",
-      "locked":false,
-      "rail_id":"rail_e3095e216e0d",
-      "rotation":0,
-      "x":275.0,
-      "y":125.0,
-      "zone":"control"
+      "y":345.0,
+      "zone":"auxiliary"
     }
   ],
   "rails":[
     {
-      "id":"rail_e3095e216e0d",
+      "id":"rail_4bd07ea2ffc1",
       "length":520.0,
       "orientation":"horizontal",
       "width":35.0,
       "x":140.0,
-      "y":90.0
+      "y":130.0
     },
     {
-      "id":"rail_e12ee6330dd5",
+      "id":"rail_a6532e947796",
       "length":520.0,
       "orientation":"horizontal",
       "width":35.0,
       "x":140.0,
-      "y":300.0
+      "y":310.0
     }
   ],
   "schema_version":"eir.v1",

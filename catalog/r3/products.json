@@ -1,14 +1,1398 @@
 {
-  "schema_version": "r3-product-catalog.v1",
-  "verification_policy": "review_verified records are traceable to an official manufacturer page/datasheet URL and are not claims of live vendor endpoint retrieval",
   "products": [
-    {"id":"phoenix-2866750","manufacturer":"Phoenix Contact","series":"QUINT POWER","manufacturer_part_number":"2866750","description":"QUINT4-PS/1AC/24DC/2.5 power supply","source_url":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866750","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":32.0,"height_mm":130.0,"depth_mm":125.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":10.0,"service_access_direction":"front","service_access_depth_mm":40.0,"allowed_rotations":[0]},"terminals":["L","N","PE","+24V","0V"],"cad_available":false,"cad_verified":false,"known_unknowns":["terminal pitch and exact clearance envelope require installation manual cross-check"]},
-    {"id":"phoenix-2966171","manufacturer":"Phoenix Contact","series":"PLC-INTERFACE","manufacturer_part_number":"2966171","description":"PLC-RSC-24DC/21 interface relay","source_url":"https://www.phoenixcontact.com/en-us/products/relay-modules/2966171","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":6.2,"height_mm":80.0,"depth_mm":94.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":5.0,"service_access_direction":"front","service_access_depth_mm":25.0,"allowed_rotations":[0]},"terminals":["A1","A2","11","14","12"],"cad_available":false,"cad_verified":false,"known_unknowns":["socket/relay variant must be confirmed at procurement"]},
-    {"id":"phoenix-2903149","manufacturer":"Phoenix Contact","series":"PLC-INTERFACE","manufacturer_part_number":"2903149","description":"PLC-INTERFACE relay module","source_url":"https://www.phoenixcontact.com/en-us/products/relay-modules/2903149","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":14.0,"height_mm":80.0,"depth_mm":94.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":5.0,"service_access_direction":"front","service_access_depth_mm":25.0,"allowed_rotations":[0]},"terminals":["A1","A2","11","14","12"],"cad_available":false,"cad_verified":false,"known_unknowns":["coil voltage variant requires order-line confirmation"]},
-    {"id":"phoenix-3209510","manufacturer":"Phoenix Contact","series":"CLIPLINE complete","manufacturer_part_number":"3209510","description":"UK 5 N feed-through terminal block","source_url":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209510","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":5.2,"height_mm":42.5,"depth_mm":42.5,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":3.0,"service_access_direction":"front","service_access_depth_mm":20.0,"allowed_rotations":[0]},"terminals":["1"],"cad_available":false,"cad_verified":false,"known_unknowns":["end-stop and marker accessories excluded"]},
-    {"id":"phoenix-3209577","manufacturer":"Phoenix Contact","series":"CLIPLINE complete","manufacturer_part_number":"3209577","description":"PT 2,5-QUATTRO push-in terminal block","source_url":"https://www.phoenixcontact.com/en-us/products/terminal-blocks/3209577","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":5.2,"height_mm":56.0,"depth_mm":46.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":3.0,"service_access_direction":"front","service_access_depth_mm":20.0,"allowed_rotations":[0]},"terminals":["1","2","3","4"],"cad_available":false,"cad_verified":false,"known_unknowns":["comb bridge/accessory envelope excluded"]},
-    {"id":"phoenix-1085036","manufacturer":"Phoenix Contact","series":"FL SWITCH 1000","manufacturer_part_number":"1085036","description":"FL SWITCH 1005N industrial Ethernet switch","source_url":"https://www.phoenixcontact.com/en-us/products/managed-switches/1085036","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":29.0,"height_mm":130.0,"depth_mm":115.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":10.0,"service_access_direction":"front","service_access_depth_mm":40.0,"allowed_rotations":[0]},"terminals":["24V","0V","PE"],"cad_available":false,"cad_verified":false,"known_unknowns":["port-side cable bend radius is not included in physical envelope"]},
-    {"id":"phoenix-2866776","manufacturer":"Phoenix Contact","series":"QUINT POWER","manufacturer_part_number":"2866776","description":"QUINT4-PS/1AC/24DC/5 power supply","source_url":"https://www.phoenixcontact.com/en-us/products/power-supplies/2866776","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":48.0,"height_mm":130.0,"depth_mm":125.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":10.0,"service_access_direction":"front","service_access_depth_mm":40.0,"allowed_rotations":[0]},"terminals":["L","N","PE","+24V","0V"],"cad_available":false,"cad_verified":false,"known_unknowns":["terminal pitch and exact clearance envelope require installation manual cross-check"]},
-    {"id":"phoenix-2904627","manufacturer":"Phoenix Contact","series":"VALVETRAB","manufacturer_part_number":"2904627","description":"VAL-MS 230 ST surge protection device","source_url":"https://www.phoenixcontact.com/en-us/products/surge-protection/2904627","source_type":"official_product_page","retrieved_at":"2026-09-16","verification_status":"review_verified","footprint":{"width_mm":17.7,"height_mm":90.0,"depth_mm":75.0,"mounting":"din_rail","rail_width_mm":35.0,"clearance_mm":5.0,"service_access_direction":"front","service_access_depth_mm":25.0,"allowed_rotations":[0]},"terminals":["L","N","PE"],"cad_available":false,"cad_verified":false,"known_unknowns":["system-specific upstream protection coordination not modeled"]}
-  ]
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 6 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c6",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C6",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C6"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 10 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c10",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C10",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C10"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 16 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c16",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C16",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C16"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 20 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c20",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C20",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C20"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 25 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c25",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C25",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C25"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 32 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c32",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C32",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C32"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 40 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c40",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C40",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C40"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    },
+    {
+      "cad_available": false,
+      "cad_verified": false,
+      "description": "ABB S 201 U miniature circuit breaker, C characteristic, 63 A",
+      "footprint": {
+        "allowed_rotations": [
+          0
+        ],
+        "clearance_mm": null,
+        "depth_mm": 71.0,
+        "height_mm": 92.0,
+        "mounting": "din_rail",
+        "rail_width_mm": 35.0,
+        "service_access_depth_mm": null,
+        "service_access_direction": null,
+        "width_mm": 17.5
+      },
+      "id": "abb-s201u-c63",
+      "known_unknowns": [
+        "product-specific clearance",
+        "service access face/depth",
+        "terminal identifiers/count",
+        "exact-product CAD representation"
+      ],
+      "manufacturer": "ABB",
+      "manufacturer_part_number": "S201U-C63",
+      "provenance": {
+        "allowed_rotations": {
+          "confidence": "document_verified",
+          "notes": "0 is the canonical panel orientation; source permits any mounting position.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Mounting position: any",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": [
+            0
+          ]
+        },
+        "clearance_mm": {
+          "confidence": "unknown",
+          "notes": "No product-specific clearance value in cached datasheet; do not use vendor truth.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "depth_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 71.0
+        },
+        "height_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 92.0
+        },
+        "mounting": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "din_rail"
+        },
+        "order_code": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 6, Ordering data characteristic C, S 201 U table",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": "S201U-C63"
+        },
+        "rail_width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Installation: DIN rail 35 mm acc. to EN 60715 by fast clip",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 35.0
+        },
+        "service_access_depth_mm": {
+          "confidence": "unknown",
+          "notes": "No service-access depth in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "service_access_direction": {
+          "confidence": "unknown",
+          "notes": "No service-face direction in cached datasheet.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_count": {
+          "confidence": "unknown",
+          "notes": "Terminal count is not stated as a canonical ID set in the cached artifact.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "terminal_identifiers": {
+          "confidence": "unknown",
+          "notes": "Datasheet documents terminal type and conductor cross-section but does not identify terminal IDs; topology must not fabricate IDs.",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": null,
+          "source_locator": null,
+          "source_type": "unknown",
+          "status": "unknown",
+          "value": null
+        },
+        "width_mm": {
+          "confidence": "document_verified",
+          "notes": "",
+          "reviewed_at": "2026-09-16T00:00:00Z",
+          "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+          "source_locator": "PDF page 3, Technical data, Dimensions and weight, pole dimensions H x D x W: 92 x 71 x 17.5 mm",
+          "source_type": "vendor_datasheet",
+          "status": "document_verified",
+          "value": 17.5
+        }
+      },
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "series": "System pro M compact S 200 U",
+      "source_artifact_id": "source-abb-2cdc002168d0202-r1",
+      "source_artifacts": [
+        {
+          "document_date": null,
+          "document_revision": "2CDC002168D0202 Rev. F",
+          "id": "source-abb-2cdc002168d0202-r1",
+          "local_path": "catalog/r3/abb-s200-datasheet.pdf",
+          "manufacturer": "ABB",
+          "manufacturer_part_number": "S201U-C6..S201U-C63",
+          "original_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+          "retrieval_status": "success",
+          "retrieved_at": "2026-09-16T00:00:00Z",
+          "sha256": "e3bd374e5540f76034b0168fdf45742ba88dce7e579e522b01449311de54a7e1",
+          "type": "official_datasheet_pdf"
+        }
+      ],
+      "source_type": "official_datasheet",
+      "source_url": "https://library.e.abb.com/public/b0896d9679854f92bba039c62c596831/2CDC002168D0202.pdf",
+      "terminal_model_status": "unknown",
+      "terminals": [],
+      "verification_status": "document_verified"
+    }
+  ],
+  "schema_version": "r3.1-product-catalog.v1",
+  "verification_policy": "Only locally cached official source artifacts can produce document_verified fields. Unknown fields remain unknown."
 }

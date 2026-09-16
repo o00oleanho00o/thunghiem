@@ -1,9 +1,9 @@
 {
-  "catalog_sha256": "80bfe72a84f5a95d58e76b24e2cf9e0aeab6bec888b4df33503b751aec4d95f5",
+  "catalog_sha256": "3b1c751b6a78029c3db8c462ed0af85fac36b55d9f5f418c6bdb9b6f26d1d1eb",
   "catalog_source": "catalog\\r3\\products.json",
   "product_count": 8,
-  "retrieved_at": "2026-09-16T08:57:11.699597+00:00",
+  "retrieved_at": "2026-09-16T11:05:30.446386+00:00",
   "verification_statuses": [
-    "review_verified"
+    "document_verified"
   ]
 }

@@ -132,3 +132,5 @@ drawings cannot be normalized or if engineers reject the generated handoff.
 # R3 checkpoint
 
 R3 added an eight-product Phoenix Contact review catalog, provenance ledger, E004 clearance and E005 service-access rules, a shared authoritative export gate, EIR revision commands, heuristic/CP-SAT comparison and independent DXF evidence. The benchmark passes its recorded engineering envelope checks, but this is not a vendor-verified procurement release: product pages were not reliably retrievable and exact-product CAD is absent. See `docs/r3/R3_ENGINEERING_TRUTH_REPORT.md`.
+
+R3.1 replaces the authoritative slice with eight ABB S201U exact MPNs backed by one cached official PDF artifact and field-level page locators. See `docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md`.

@@ -88,7 +88,7 @@ def _access_rect(rect: Rect, direction: str, depth: float) -> Rect:
     return Rect(x=rect.x, y=rect.y - depth, width=rect.width, height=depth)
 
 
-def validate_project(project: Project, *, clearance_mm: float = 0.0) -> ValidationReport:
+def validate_project(project: Project, *, clearance_mm: float = 0.0, authoritative: bool = False) -> ValidationReport:
     report = ValidationReport()
     parts = project.part_index()
     devices = project.device_index()
@@ -109,7 +109,26 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0) -> Validati
         if not device.terminal_ids and device.part_id in parts and parts[device.part_id].terminals:
             _issue(report, "E011", "warning", device.id, "device has no terminal links despite a terminal-bearing part", "Map logical terminals before exporting wiring.")
         if device.part_id in parts:
+            if authoritative:
+                part = parts[device.part_id]
+                accepted = {"vendor_verified", "document_verified", "human_measured", "trusted_secondary"}
+                for field_name in ("width_mm", "height_mm", "depth_mm", "mounting"):
+                    evidence = part.provenance.get(field_name)
+                    if not evidence or evidence.status not in accepted:
+                        _issue(report, "E010", "error", device.id, f"mandatory provenance missing for {field_name}", "Attach a successful local source artifact and field locator.", field=field_name, status=evidence.status if evidence else "unknown", source_artifact_id=evidence.source_artifact_id if evidence else None)
+                if not part.source_artifacts or any(artifact.retrieval_status != "success" or not artifact.sha256 for artifact in part.source_artifacts):
+                    _issue(report, "E010", "error", device.id, "successful source artifact with SHA256 is required", "Cache the official document and record its digest.", source_artifacts=[artifact.id for artifact in part.source_artifacts])
             declared = {terminal.id for terminal in parts[device.part_id].terminals}
+            if parts[device.part_id].footprint.clearance_mm is None:
+                _issue(
+                    report,
+                    "V004_UNVERIFIED_CLEARANCE",
+                    "warning",
+                    device.id,
+                    "clearance requirement is unknown; geometric clearance is not fully verifiable",
+                    "Apply a documented engineering default or add a source-artifact field value.",
+                    rule_source="unknown",
+                )
             unknown_terminals = sorted(set(device.terminal_ids) - declared)
             if unknown_terminals:
                 _issue(
@@ -147,10 +166,13 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0) -> Validati
             right_part = parts.get(right_device.part_id)
             effective_clearance = max(
                 clearance_mm,
-                left_part.footprint.clearance_mm if left_part else 0.0,
-                right_part.footprint.clearance_mm if right_part else 0.0,
+                (left_part.footprint.clearance_mm or 0.0) if left_part else 0.0,
+                (right_part.footprint.clearance_mm or 0.0) if right_part else 0.0,
             )
             if effective_clearance > 0 and left.intersects(right, clearance=effective_clearance):
+                left_provenance = left_part.provenance.get("clearance_mm") if left_part else None
+                right_provenance = right_part.provenance.get("clearance_mm") if right_part else None
+                rule_provenance = left_provenance or right_provenance
                 _issue(
                     report,
                     "E004",
@@ -160,6 +182,9 @@ def validate_project(project: Project, *, clearance_mm: float = 0.0) -> Validati
                     "Move components apart or reduce the documented keepout only with evidence.",
                     other_entity_id=right_id,
                     clearance_mm=effective_clearance,
+                    rule_source=(rule_provenance.status if rule_provenance else "unknown"),
+                    source_artifact_id=(rule_provenance.source_artifact_id if rule_provenance else None),
+                    policy_id=("CNB-CLEARANCE-DEFAULT-V1" if rule_provenance and rule_provenance.status == "engineering_default" else None),
                     left=left.to_dict(),
                     right=right.to_dict(),
                 )

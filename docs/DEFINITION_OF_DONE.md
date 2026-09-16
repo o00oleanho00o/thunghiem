@@ -52,3 +52,5 @@ audit/render, and required-document checks. It does not require an API key.
 # R3 engineering-truth gate
 
 R3 is not complete merely because a DXF parses. A release candidate requires traceable `ProductIdentity`, field-level provenance, E004/E005 validation, canonical EIR round-trip, deterministic lock/regenerate, an authoritative export gate, independent DXF audit and evidence screenshots. The current R3 run is explicitly marked **REPEAT R3** because exact-product CAD and directly retrievable vendor documents remain incomplete.
+
+R3.1 closure adds locally cached official source artifacts, artifact SHA256/locators, recursive canonical hashing, an export-chain verifier, explicit engineering-default policy and a 24-device benchmark. Product-specific clearance, service access and terminal identity remain unknown unless an artifact proves them.

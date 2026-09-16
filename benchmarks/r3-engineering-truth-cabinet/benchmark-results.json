@@ -6,13 +6,13 @@
     "warnings": 0
   },
   "heuristic": {
-    "component_count": 8.0,
-    "elapsed_ms": 3.573,
+    "component_count": 24.0,
+    "elapsed_ms": 3.648,
     "engine": "heuristic",
     "overlap_pairs": 0.0,
     "plate_area_mm2": 770000.0,
-    "space_utilization_percent": 2.324,
-    "used_area_mm2": 17891.2,
+    "space_utilization_percent": 5.018,
+    "used_area_mm2": 38640.0,
     "validation": {
       "errors": 0,
       "issues": [],
@@ -25,24 +25,24 @@
     "available": true,
     "dxfversion": "AC1009",
     "entity_types": {
-      "LINE": 109,
-      "TEXT": 17
+      "LINE": 262,
+      "TEXT": 49
     },
-    "modelspace_entity_count": 126,
+    "modelspace_entity_count": 311,
     "valid": true
   },
   "locked_coordinate_preserved": true,
-  "locked_device": "device_28d6bb98c1b8",
+  "locked_device": "device_034846ec7431",
   "manual_corrections": 1,
   "solver": {
-    "component_count": 8.0,
-    "elapsed_ms": 18.93,
+    "component_count": 24.0,
+    "elapsed_ms": 27.92,
     "engine": "ortools-cp-sat-optimal",
     "overlap_pairs": 0.0,
     "plate_area_mm2": 770000.0,
-    "solver_objective": 1080.0,
-    "space_utilization_percent": 2.324,
-    "used_area_mm2": 17891.2,
+    "solver_objective": 0.0,
+    "space_utilization_percent": 5.018,
+    "used_area_mm2": 38640.0,
     "validation": {
       "errors": 0,
       "issues": [],

@@ -1,5 +1,7 @@
 # R3 Benchmark Results
 
+R3.1 supersedes the original Phoenix review-only run for authoritative data. The current regenerated artifact is ABB-backed and contains 24 physical device instances (8 exact MPNs), with product-specific unknowns and an explicit engineering-default policy.
+
 The benchmark is `benchmarks/r3-engineering-truth-cabinet/` and contains eight review-verified Phoenix Contact products, BOM, product resolution, source manifest, canonical EIR, heuristic layout, CP-SAT layout, manual-review layout and regenerated layout.
 
 On the recorded run, heuristic and OR-Tools CP-SAT both produced zero overlap pairs and passed Python validation. CP-SAT completed as `ortools-cp-sat-optimal`; heuristic completed in approximately 4 ms and CP-SAT in approximately 21 ms. One manual correction was made to PS1 and its lock survived regeneration exactly. The final DXF reopened with ezdxf (`AC1009`, 126 modelspace entities, zero audit errors).

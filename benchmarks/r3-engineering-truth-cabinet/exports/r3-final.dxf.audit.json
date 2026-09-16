@@ -1,8 +1,8 @@
 {
-  "entity_count": 126,
+  "entity_count": 311,
   "entity_types": {
-    "LINE": 109,
-    "TEXT": 17
+    "LINE": 262,
+    "TEXT": 49
   },
   "errors": [],
   "valid": true,

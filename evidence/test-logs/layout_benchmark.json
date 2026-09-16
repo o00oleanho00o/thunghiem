@@ -6,8 +6,8 @@
     "requested_motors": 2,
     "solver_engine": "ortools-cp-sat-optimal",
     "timings": {
-      "heuristic_ms": 1.946,
-      "solver_ms": 28.184
+      "heuristic_ms": 1.942,
+      "solver_ms": 24.244
     },
     "valid": true
   },
@@ -18,8 +18,8 @@
     "requested_motors": 10,
     "solver_engine": "ortools-cp-sat-feasible",
     "timings": {
-      "heuristic_ms": 6.574,
-      "solver_ms": 1032.269
+      "heuristic_ms": 7.153,
+      "solver_ms": 1026.426
     },
     "valid": true
   },
@@ -30,8 +30,8 @@
     "requested_motors": 32,
     "solver_engine": "ortools-cp-sat-feasible",
     "timings": {
-      "heuristic_ms": 34.95,
-      "solver_ms": 1123.374
+      "heuristic_ms": 29.375,
+      "solver_ms": 1099.54
     },
     "valid": true
   }

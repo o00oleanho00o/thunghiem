@@ -175,7 +175,7 @@ class Footprint(EIRBase):
     keepout_right: float = Field(default=0.0, ge=0)
     keepout_top: float = Field(default=0.0, ge=0)
     keepout_bottom: float = Field(default=0.0, ge=0)
-    clearance_mm: float = Field(default=0.0, ge=0)
+    clearance_mm: Optional[float] = Field(default=0.0, ge=0)
     service_access_direction: Optional[Literal["left", "right", "top", "bottom", "front", "unknown"]] = None
     service_access_depth_mm: Optional[float] = Field(default=None, gt=0)
     allowed_rotations: List[int] = Field(default_factory=lambda: [0])
@@ -224,9 +224,9 @@ class ProductIdentity(EIRBase):
     description: str
     source_url: Optional[str] = None
     source_document: Optional[str] = None
-    source_type: Literal["official_product_page", "official_datasheet", "official_cad", "review_verified"]
+    source_type: Literal["official_product_page", "official_datasheet", "official_cad", "document_verified", "vendor_verified", "review_verified"]
     retrieved_at: str
-    verification_status: Literal["vendor_verified", "review_verified", "needs_review", "unknown"]
+    verification_status: Literal["vendor_verified", "document_verified", "human_measured", "trusted_secondary", "engineering_default", "inferred", "unknown", "needs_review", "review_verified"]
 
     @validator("manufacturer", "series", "manufacturer_part_number", "description", "retrieved_at")
     def identity_text(cls, value: str) -> str:
@@ -240,9 +240,28 @@ class ProvenanceValue(EIRBase):
     """Evidence attached to one engineering field."""
 
     value: Any = None
+    status: Literal["vendor_verified", "document_verified", "human_measured", "trusted_secondary", "engineering_default", "inferred", "unknown"] = "unknown"
     source: Optional[str] = None
-    source_type: Literal["vendor_datasheet", "official_product_page", "official_cad", "review", "inferred", "unknown"] = "unknown"
-    confidence: Literal["vendor_verified", "review_verified", "trusted_secondary", "inferred", "unknown"] = "unknown"
+    source_artifact_id: Optional[str] = None
+    source_locator: Optional[str] = None
+    reviewed_at: Optional[str] = None
+    notes: str = ""
+    source_type: Literal["vendor_datasheet", "official_product_page", "official_cad", "review", "inferred", "engineering_default", "unknown"] = "unknown"
+    confidence: Literal["vendor_verified", "document_verified", "review_verified", "trusted_secondary", "engineering_default", "inferred", "unknown"] = "unknown"
+
+
+class SourceArtifact(EIRBase):
+    id: str
+    manufacturer: str
+    manufacturer_part_number: str
+    type: Literal["official_datasheet_pdf", "official_technical_drawing", "official_cad", "official_manual_pdf"]
+    original_url: str
+    local_path: str
+    sha256: str
+    retrieved_at: str
+    retrieval_status: Literal["success", "failed"]
+    document_revision: Optional[str] = None
+    document_date: Optional[str] = None
 
 
 class PartDefinition(EIRBase):
@@ -261,6 +280,8 @@ class PartDefinition(EIRBase):
     model_3d_ref: Optional[str] = None
     product_identity: Optional[ProductIdentity] = None
     provenance: Dict[str, ProvenanceValue] = Field(default_factory=dict)
+    source_artifacts: List[SourceArtifact] = Field(default_factory=list)
+    terminal_model_status: Literal["document_verified", "unknown"] = "unknown"
     # Optional provenance link to an imported CAD asset. Raw CAD entities stay
     # outside EIR; this stable ID only points at the catalog representation.
     cad_asset_id: Optional[str] = None

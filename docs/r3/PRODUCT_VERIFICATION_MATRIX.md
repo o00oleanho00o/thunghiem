@@ -1,5 +1,7 @@
 # R3 Product Verification Matrix
 
+> R3.1 supersedes this Phoenix review-only matrix for authoritative use. The R3.1 source of truth is `catalog/r3/products.json`, backed by `catalog/r3/source-artifacts/manifest.json`; see `R3_1_PROVENANCE_MATRIX.md`. Phoenix records below remain historical R3 evidence and are not authoritative.
+
 The mini-catalog contains eight exact Phoenix Contact order numbers. They are `review_verified`: the identity and envelope are recorded against an official manufacturer URL and a second-pass internal review. They are not labelled `vendor_verified` because live manufacturer endpoints were not reliably retrievable in this environment.
 
 | Manufacturer | Series | MPN | Description | Source | Width x height x depth (mm) | Mounting | Terminals | CAD | Status | Known unknowns |

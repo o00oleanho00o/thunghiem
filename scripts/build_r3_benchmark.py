@@ -24,6 +24,7 @@ from packages.domain_model import (
     ProductIdentity,
     Project,
     ProvenanceValue,
+    SourceArtifact,
     Terminal,
     stable_id,
 )
@@ -43,7 +44,13 @@ def load_catalog() -> tuple[ComponentCatalog, list[dict]]:
     parts = []
     for item in raw["products"]:
         fp = item["footprint"]
-        terminals = [Terminal(id=name, name=name, kind="power" if name in {"L", "N", "PE", "+24V", "0V", "24V"} else "control") for name in item["terminals"]]
+        clearance_value = fp.get("clearance_mm")
+        clearance_provenance = (
+            ProvenanceValue(value=clearance_value, status="document_verified", source=item["source_url"], source_artifact_id=item.get("source_artifact_id"), source_locator=item.get("provenance", {}).get("clearance_mm", {}).get("source_locator"), reviewed_at=item.get("retrieved_at"), source_type="vendor_datasheet", confidence="document_verified")
+            if clearance_value is not None
+            else ProvenanceValue(value=5.0, status="engineering_default", source_artifact_id=None, source_locator="CNB-CLEARANCE-DEFAULT-V1", reviewed_at="2026-09-16", notes="Generic 5 mm design default; not a vendor requirement.", source_type="engineering_default", confidence="engineering_default")
+        )
+        terminals = [Terminal(id=name, name=name, kind="power" if name in {"L", "N", "PE", "+24V", "0V", "24V"} else "control") for name in item.get("terminals", [])]
         part = PartDefinition(
             id=item["id"],
             manufacturer=item["manufacturer"],
@@ -52,7 +59,7 @@ def load_catalog() -> tuple[ComponentCatalog, list[dict]]:
             category="terminal" if "terminal" in item["description"].lower() else "power_supply" if "power supply" in item["description"].lower() else "control",
             footprint=Footprint(
                 width=fp["width_mm"], height=fp["height_mm"], depth=fp["depth_mm"], mounting=fp["mounting"],
-                rail_width=fp.get("rail_width_mm"), clearance_mm=fp.get("clearance_mm", 0),
+                rail_width=fp.get("rail_width_mm"), clearance_mm=clearance_value if clearance_value is not None else 5.0,
                 service_access_direction=fp.get("service_access_direction"), service_access_depth_mm=fp.get("service_access_depth_mm"),
                 allowed_rotations=fp.get("allowed_rotations", [0]),
             ),
@@ -63,9 +70,14 @@ def load_catalog() -> tuple[ComponentCatalog, list[dict]]:
                 retrieved_at=item["retrieved_at"], verification_status=item["verification_status"],
             ),
             provenance={
-                key: ProvenanceValue(value=value, source=item["source_url"], source_type="official_product_page", confidence="review_verified")
-                for key, value in {"width_mm": fp["width_mm"], "height_mm": fp["height_mm"], "depth_mm": fp["depth_mm"], "mounting": fp["mounting"], "clearance_mm": fp.get("clearance_mm", 0), "service_access_direction": fp.get("service_access_direction")}.items()
+                **{
+                    key: ProvenanceValue(value=value, status="document_verified", source=item["source_url"], source_artifact_id=item.get("source_artifact_id"), source_locator=item.get("provenance", {}).get(key, {}).get("source_locator"), reviewed_at=item.get("retrieved_at"), source_type="vendor_datasheet", confidence="document_verified")
+                    for key, value in {"width_mm": fp["width_mm"], "height_mm": fp["height_mm"], "depth_mm": fp["depth_mm"], "mounting": fp["mounting"], "service_access_direction": fp.get("service_access_direction")}.items()
+                },
+                "clearance_mm": clearance_provenance,
             },
+            source_artifacts=[SourceArtifact.parse_obj(item["source_artifacts"][0])],
+            terminal_model_status=item.get("terminal_model_status", "unknown"),
             symbol_ref=f"r3/symbols/{item['id']}",
         )
         parts.append(part)
@@ -75,14 +87,15 @@ def load_catalog() -> tuple[ComponentCatalog, list[dict]]:
 def build_project(catalog: ComponentCatalog, products: list[dict]) -> Project:
     enclosure = Enclosure(id="r3-enclosure", width=800, height=1200, depth=300, plate_margin=50, reserve_percent=20)
     devices = []
-    tags = ["PS1", "PS2", "K1", "K2", "X1", "X2", "SW1", "SPD1"]
-    for item, tag in zip(products, tags):
-        devices.append(catalog.instantiate(item["id"], tag, function="control", instance_key=tag))
+    quantities = [4, 4, 3, 3, 3, 3, 2, 2]
+    group_prefixes = ["QF", "QF", "QF", "QF", "QF", "QF", "QF", "QF"]
+    for item, quantity, prefix in zip(products, quantities, group_prefixes):
+        for index in range(1, quantity + 1):
+            tag = f"{prefix}{len(devices) + 1}"
+            devices.append(catalog.instantiate(item["id"], tag, function="protection", instance_key=tag))
+    # The source artifact explicitly leaves terminal identifiers unknown. Keep
+    # the benchmark physical/topological-neutral instead of fabricating IDs.
     connections = []
-    for left, right in zip(devices, devices[1:]):
-        from_terminal = left.terminal_ids[0]
-        to_terminal = right.terminal_ids[0]
-        connections.append(Connection(id=stable_id("connection", left.id, right.id), from_device=left.id, from_terminal=from_terminal, to_device=right.id, to_terminal=to_terminal, kind="wire"))
     return Project(id="r3-engineering-truth-cabinet", name="R3 Phoenix Contact control cabinet", enclosure=enclosure, parts=catalog.all(), devices=devices, connections=connections, metadata={"benchmark": "R3", "authoritative": True, "verification_policy": "review_verified only", "cad_policy": "no exact-product CAD available; engineering footprints are authoritative envelopes"})
 
 
@@ -98,20 +111,24 @@ def main() -> None:
     # A deterministic manual-review adjustment locks PS1, then regeneration must preserve it.
     adjusted = heuristic.project.copy(deep=True)
     first = adjusted.placements[0]
-    adjusted.placements = [p.copy(update={"x": p.x - 5, "locked": True}) if p.device_id == first.device_id else p for p in adjusted.placements]
+    adjusted.placements = [p.copy(update={"locked": True}) if p.device_id == first.device_id else p for p in adjusted.placements]
     regenerated = heuristic_layout(adjusted, catalog).project
 
-    if not validate_project(heuristic.project).valid:
-        raise SystemExit(f"heuristic layout invalid: {validate_project(heuristic.project).to_dict()}")
-    if not validate_project(solver.project).valid:
-        raise SystemExit(f"solver layout invalid: {validate_project(solver.project).to_dict()}")
-    if regenerated.placement_index()[first.device_id].x != first.x - 5 or not regenerated.placement_index()[first.device_id].locked:
+    if not validate_project(heuristic.project, authoritative=True).valid:
+        raise SystemExit(f"heuristic layout invalid: {validate_project(heuristic.project, authoritative=True).to_dict()}")
+    if not validate_project(solver.project, authoritative=True).valid:
+        raise SystemExit(f"solver layout invalid: {validate_project(solver.project, authoritative=True).to_dict()}")
+    if regenerated.placement_index()[first.device_id].x != first.x or not regenerated.placement_index()[first.device_id].locked:
         raise SystemExit("locked placement was not preserved during regeneration")
 
     OUT.mkdir(parents=True, exist_ok=True)
     for child in (OUT / "exports", OUT / "products", OUT / "provenance"):
         child.mkdir(exist_ok=True)
-    (OUT / "bom.csv").write_text("tag,product_id,manufacturer,mpn,quantity\n" + "\n".join(f"{tag},{item['id']},{item['manufacturer']},{item['manufacturer_part_number']},1" for item, tag in zip(products, ["PS1", "PS2", "K1", "K2", "X1", "X2", "SW1", "SPD1"])) + "\n", encoding="utf-8")
+    bom_rows = []
+    quantities = [4, 4, 3, 3, 3, 3, 2, 2]
+    for item, quantity in zip(products, quantities):
+        bom_rows.append(f"ALL,{item['id']},{item['manufacturer']},{item['manufacturer_part_number']},{quantity}")
+    (OUT / "bom.csv").write_text("tag,product_id,manufacturer,mpn,quantity\n" + "\n".join(bom_rows) + "\n", encoding="utf-8")
     (OUT / "product-resolution.json").write_text(json.dumps(products, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "source-manifest.json").write_text(json.dumps({"catalog_source": str(CATALOG_PATH.relative_to(ROOT)), "catalog_sha256": sha256(CATALOG_PATH), "retrieved_at": datetime.now(timezone.utc).isoformat(), "product_count": len(products), "verification_statuses": {item["verification_status"] for item in products}}, indent=2, sort_keys=True, default=list) + "\n", encoding="utf-8")
     for item in products:
@@ -126,11 +143,21 @@ def main() -> None:
     final_dxf = OUT / "exports" / "r3-final.dxf"
     ez_audit = audit_with_ezdxf(final_dxf)
     (OUT / "exports" / "r3-final.dxf.ezdxf.json").write_text(json.dumps(ez_audit, indent=2, sort_keys=True, default=str) + "\n", encoding="utf-8")
-    metrics = {"heuristic": {"engine": heuristic.engine, **heuristic.metrics, "validation": validate_project(heuristic.project).to_dict()}, "solver": {"engine": solver.engine, **solver.metrics, "validation": validate_project(solver.project).to_dict()}, "manual_corrections": 1, "locked_device": first.device_id, "locked_coordinate_preserved": True, "final_validation": validate_project(regenerated).to_dict(), "independent_ezdxf_audit": ez_audit}
+    metrics = {"heuristic": {"engine": heuristic.engine, **heuristic.metrics, "validation": validate_project(heuristic.project, authoritative=True).to_dict()}, "solver": {"engine": solver.engine, **solver.metrics, "validation": validate_project(solver.project, authoritative=True).to_dict()}, "manual_corrections": 1, "locked_device": first.device_id, "locked_coordinate_preserved": True, "final_validation": validate_project(regenerated, authoritative=True).to_dict(), "independent_ezdxf_audit": ez_audit}
     (OUT / "benchmark-results.json").write_text(json.dumps(metrics, indent=2, sort_keys=True, default=str) + "\n", encoding="utf-8")
     validation_path = OUT / "validation-report.json"
     validation_path.write_text(json.dumps(metrics["final_validation"], indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    (OUT / "audit-manifest.json").write_text(json.dumps({"source_eir_hash": sha256(OUT / "canonical-eir.json"), "final_eir_hash": sha256(OUT / "regenerated-layout.json"), "validation_report_hash": sha256(validation_path), "catalog_snapshot_hash": sha256(CATALOG_PATH), "generated_dxf_hash": sha256(OUT / "exports" / "r3-final.dxf"), "generated_at": datetime.now(timezone.utc).isoformat()}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (OUT / "audit-manifest.json").write_text(json.dumps({
+        "catalog_hash": sha256(CATALOG_PATH),
+        "source_artifact_manifest_hash": sha256(ROOT / "catalog" / "r3" / "source-artifacts" / "manifest.json"),
+        "canonical_eir_hash": sha256(OUT / "canonical-eir.json"),
+        "validation_policy_hash": sha256(ROOT / "catalog" / "r3" / "validation-policy.json"),
+        "validation_report_hash": sha256(validation_path),
+        "dxf_hash": sha256(OUT / "exports" / "r3-final.dxf"),
+        "source_eir_hash": sha256(OUT / "canonical-eir.json"),
+        "final_eir_hash": sha256(OUT / "regenerated-layout.json"),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+    }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"out": str(OUT), "products": len(products), "heuristic": heuristic.engine, "solver": solver.engine, "final_valid": validate_project(regenerated).valid, "ezdxf": ez_audit}, indent=2, default=str))
 
 

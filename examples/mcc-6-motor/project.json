@@ -841,7 +841,9 @@
       "ratings":{
         "power":"15kW"
       },
+      "source_artifacts":[],
       "symbol_ref":"symbols/contactor/CONTACTOR_15KW",
+      "terminal_model_status":"unknown",
       "terminals":[
         {
           "id":"L1",
@@ -913,7 +915,9 @@
         "current":"16A",
         "poles":"3"
       },
+      "source_artifacts":[],
       "symbol_ref":"symbols/breaker/MCB_3P_16A",
+      "terminal_model_status":"unknown",
       "terminals":[
         {
           "id":"L1",
@@ -974,7 +978,9 @@
         "current":"250A",
         "poles":"3"
       },
+      "source_artifacts":[],
       "symbol_ref":"symbols/breaker/MCCB_MAIN_250A",
+      "terminal_model_status":"unknown",
       "terminals":[
         {
           "id":"L1",
@@ -1035,7 +1041,9 @@
       "ratings":{
         "power":"15kW"
       },
+      "source_artifacts":[],
       "symbol_ref":"symbols/overload/OVERLOAD_15KW",
+      "terminal_model_status":"unknown",
       "terminals":[
         {
           "id":"L1",
@@ -1104,7 +1112,9 @@
       "manufacturer_part":"CNB-TERM-4",
       "provenance":{},
       "ratings":{},
+      "source_artifacts":[],
       "symbol_ref":"symbols/terminal/TERMINAL_4MM",
+      "terminal_model_status":"unknown",
       "terminals":[
         {
           "id":"1",

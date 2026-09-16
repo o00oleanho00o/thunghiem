@@ -372,8 +372,24 @@
           "title": "Ratings",
           "type": "object"
         },
+        "source_artifacts": {
+          "items": {
+            "$ref": "#/definitions/SourceArtifact"
+          },
+          "title": "Source Artifacts",
+          "type": "array"
+        },
         "symbol_ref": {
           "title": "Symbol Ref",
+          "type": "string"
+        },
+        "terminal_model_status": {
+          "default": "unknown",
+          "enum": [
+            "document_verified",
+            "unknown"
+          ],
+          "title": "Terminal Model Status",
           "type": "string"
         },
         "terminals": {
@@ -473,6 +489,8 @@
             "official_product_page",
             "official_datasheet",
             "official_cad",
+            "document_verified",
+            "vendor_verified",
             "review_verified"
           ],
           "title": "Source Type",
@@ -485,9 +503,14 @@
         "verification_status": {
           "enum": [
             "vendor_verified",
-            "review_verified",
+            "document_verified",
+            "human_measured",
+            "trusted_secondary",
+            "engineering_default",
+            "inferred",
+            "unknown",
             "needs_review",
-            "unknown"
+            "review_verified"
           ],
           "title": "Verification Status",
           "type": "string"
@@ -513,16 +536,35 @@
           "default": "unknown",
           "enum": [
             "vendor_verified",
+            "document_verified",
             "review_verified",
             "trusted_secondary",
+            "engineering_default",
             "inferred",
             "unknown"
           ],
           "title": "Confidence",
           "type": "string"
         },
+        "notes": {
+          "default": "",
+          "title": "Notes",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "title": "Reviewed At",
+          "type": "string"
+        },
         "source": {
           "title": "Source",
+          "type": "string"
+        },
+        "source_artifact_id": {
+          "title": "Source Artifact Id",
+          "type": "string"
+        },
+        "source_locator": {
+          "title": "Source Locator",
           "type": "string"
         },
         "source_type": {
@@ -533,9 +575,24 @@
             "official_cad",
             "review",
             "inferred",
+            "engineering_default",
             "unknown"
           ],
           "title": "Source Type",
+          "type": "string"
+        },
+        "status": {
+          "default": "unknown",
+          "enum": [
+            "vendor_verified",
+            "document_verified",
+            "human_measured",
+            "trusted_secondary",
+            "engineering_default",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
           "type": "string"
         },
         "value": {
@@ -590,6 +647,78 @@
         "length"
       ],
       "title": "Rail",
+      "type": "object"
+    },
+    "SourceArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "document_date": {
+          "title": "Document Date",
+          "type": "string"
+        },
+        "document_revision": {
+          "title": "Document Revision",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "local_path": {
+          "title": "Local Path",
+          "type": "string"
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "type": "string"
+        },
+        "manufacturer_part_number": {
+          "title": "Manufacturer Part Number",
+          "type": "string"
+        },
+        "original_url": {
+          "title": "Original Url",
+          "type": "string"
+        },
+        "retrieval_status": {
+          "enum": [
+            "success",
+            "failed"
+          ],
+          "title": "Retrieval Status",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "official_datasheet_pdf",
+            "official_technical_drawing",
+            "official_cad",
+            "official_manual_pdf"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "manufacturer",
+        "manufacturer_part_number",
+        "type",
+        "original_url",
+        "local_path",
+        "sha256",
+        "retrieved_at",
+        "retrieval_status"
+      ],
+      "title": "SourceArtifact",
       "type": "object"
     },
     "Terminal": {
