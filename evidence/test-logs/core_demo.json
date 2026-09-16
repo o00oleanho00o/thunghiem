@@ -7,8 +7,8 @@
       "requested_motors": 2,
       "solver_engine": "ortools-cp-sat-optimal",
       "timings": {
-        "heuristic_ms": 2.444,
-        "solver_ms": 23.869
+        "heuristic_ms": 2.502,
+        "solver_ms": 24.102
       },
       "valid": true
     },
@@ -19,8 +19,8 @@
       "requested_motors": 10,
       "solver_engine": "ortools-cp-sat-feasible",
       "timings": {
-        "heuristic_ms": 7.375,
-        "solver_ms": 1027.925
+        "heuristic_ms": 6.897,
+        "solver_ms": 1027.37
       },
       "valid": true
     },
@@ -31,8 +31,8 @@
       "requested_motors": 32,
       "solver_engine": "ortools-cp-sat-feasible",
       "timings": {
-        "heuristic_ms": 26.479,
-        "solver_ms": 1100.686
+        "heuristic_ms": 27.649,
+        "solver_ms": 1107.436
       },
       "valid": true
     }
@@ -72,7 +72,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 15.0,
-          "elapsed_ms": 2.261,
+          "elapsed_ms": 1.957,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 450000.0,
           "space_utilization_percent": 9.44,
@@ -88,7 +88,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 15.0,
-          "elapsed_ms": 21.555,
+          "elapsed_ms": 25.07,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 450000.0,
           "solver_objective": 2686.0,
@@ -139,7 +139,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 37.0,
-          "elapsed_ms": 3.461,
+          "elapsed_ms": 3.728,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 1330000.0,
           "space_utilization_percent": 6.907,
@@ -155,7 +155,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 37.0,
-          "elapsed_ms": 67.78,
+          "elapsed_ms": 74.44,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 1330000.0,
           "solver_objective": 17118.0,
@@ -206,7 +206,7 @@
         "engine": "heuristic",
         "metrics": {
           "component_count": 9.0,
-          "elapsed_ms": 1.32,
+          "elapsed_ms": 1.414,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 550000.0,
           "space_utilization_percent": 10.32,
@@ -222,7 +222,7 @@
         "engine": "ortools-cp-sat-optimal",
         "metrics": {
           "component_count": 9.0,
-          "elapsed_ms": 8.195,
+          "elapsed_ms": 8.952,
           "overlap_pairs": 0.0,
           "plate_area_mm2": 550000.0,
           "solver_objective": 0.0,

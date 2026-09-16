@@ -3,3 +3,5 @@
 !.gitignore
 !generated/
 !generated/**
+!review/
+!review/catalog-review.json

@@ -4,7 +4,7 @@ The CAD catalog is an evidence layer beside canonical EIR. Raw DXF entities
 never enter a `Device` or the authoritative layout model.
 
 ```text
-SourceAsset (immutable file metadata)
+SourceAsset (immutable provenance identity + content SHA)
   -> CadRepresentation (front/side/top/unknown + derived vector cache)
        -> GeometryCluster (similarity evidence only)
        -> ProductCandidate (filename/metadata hypothesis)
@@ -16,29 +16,36 @@ SourceAsset (immutable file metadata)
 
 ## Objects
 
-`SourceAsset` stores the original relative path, source group, file size,
-SHA256, detected DXF version, encoding, raw `source_bbox`, declared units and
-the parser findings. Source files are read-only inputs.
+`SourceAsset` has a stable `source_asset_id` derived from source group and
+relative path. It also stores the original relative path, source group, file
+size, `content_sha256`, detected DXF version, encoding, raw `source_bbox`,
+declared units and parser findings. Source files are read-only inputs. Exact
+duplicate paths remain distinct source assets while sharing a content SHA and
+geometry cluster.
 
-`CadRepresentation` stores the explicit view (`front`, `side`, `top` or
-`unknown`), `asset_id`, source bounds/units, derived SVG preview reference and
-the source-to-preview transform. An unknown view is never silently promoted.
+`CadRepresentation` stores its own stable `representation_id`, the explicit
+view (`front`, `side`, `top` or `unknown`), `source_asset_id`, source
+bounds/units, derived SVG preview reference and the source-to-preview
+transform. An unknown view is never silently promoted.
 
 `GeometryCluster` stores exact or translation-normalized geometric similarity.
 It is useful for duplicate review only. A shared cluster is not a product
 identity and does not merge source records.
 
-`ProductCandidate` groups representations using filename/manufacturer/family
-evidence and carries confidence plus `candidate-needs-review` status. The
+`ProductCandidate` has a separate `product_candidate_id` and groups
+representations using filename/manufacturer/family evidence. It carries
+confidence plus `candidate-needs-review` status. The
 ET200SP front/side pair demonstrates two representations under one candidate
 while retaining separate assets. `ProductIdentity` is reserved for a later
 review-confirmed identity.
 
-`PhysicalFootprint` is created only by an approval action. It contains
-`physical_width_mm`, `physical_height_mm`, optional depth, unit/view confidence,
-and provenance (`approved_from_asset_id`, revision/time, review source). Until
-then an asset is preview-only and is excluded from authoritative layout,
-collision checks and manufacturing DXF/SVG export.
+`PhysicalFootprint` is created only by an approval action. It has a stable
+`physical_footprint_id`, explicit source/representation references,
+`width_mm`/`height_mm`, optional depth, source-to-physical mapping and
+provenance. Until then an asset is preview-only and is excluded from
+authoritative layout, collision checks and manufacturing DXF/SVG export.
+Reviewer decisions are stored in a separate review overlay; generated audit
+output is never mutated by a browser approval.
 
 ## Transform contract
 

@@ -51,6 +51,17 @@ def source_group(rel: Path) -> str:
     return rel.parts[0] if rel.parts else "unknown"
 
 
+def source_asset_id(rel: Path) -> str:
+    """Stable source identity: provenance, never file content."""
+    provenance = f"{source_group(rel)}:{rel.as_posix()}"
+    return "source-" + hashlib.sha256(provenance.encode("utf-8")).hexdigest()[:16]
+
+
+def stable_id(prefix: str, *parts: Any) -> str:
+    payload = "|".join("" if part is None else str(part) for part in parts)
+    return f"{prefix}-" + hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+
 def classify(rel: Path) -> dict[str, Any]:
     stem = rel.stem.lower()
     normalized_stem = re.sub(r"-dxf$", "", stem)
@@ -152,10 +163,10 @@ def geometry_fingerprint(doc: Any) -> tuple[str, dict[str, Any]]:
 
 def audit(root: Path) -> dict[str, Any]:
     out = root / "generated"; preview_root = out / "previews"; out.mkdir(parents=True, exist_ok=True)
-    files = sorted(p for p in root.rglob("*") if p.is_file() and "generated" not in p.parts and p.name != ".gitignore")
+    files = sorted(p for p in root.rglob("*") if p.is_file() and "generated" not in p.parts and "review" not in p.parts and p.name != ".gitignore")
     records: list[dict[str, Any]] = []; exact: defaultdict[str, list[str]] = defaultdict(list); fingerprints: defaultdict[str, list[str]] = defaultdict(list)
     for path in files:
-        rel = path.relative_to(root); raw = path.read_bytes(); digest = sha256(path); record: dict[str, Any] = {"id": digest[:16], "relative_path": rel.as_posix(), "source_group": source_group(rel), "file_size": len(raw), "sha256": digest, "extension": path.suffix.lower(), "content_is_dxf": sniff_dxf(raw), "parse_status": "failed", "encoding": detect_encoding(raw), **classify(rel)}
+        rel = path.relative_to(root); raw = path.read_bytes(); digest = sha256(path); source_id = source_asset_id(rel); record: dict[str, Any] = {"source_asset_id": source_id, "id": source_id, "content_sha256": digest, "sha256": digest, "relative_path": rel.as_posix(), "source_group": source_group(rel), "file_size": len(raw), "extension": path.suffix.lower(), "content_is_dxf": sniff_dxf(raw), "parse_status": "failed", "encoding": detect_encoding(raw), "product_identity_id": None, "physical_footprint_id": None, **classify(rel)}
         exact[digest].append(rel.as_posix())
         try:
             if not record["content_is_dxf"]: raise ValueError("content sniff did not find a DXF section/EOF")
@@ -165,6 +176,8 @@ def audit(root: Path) -> dict[str, Any]:
             entities = Counter(entity.dxftype() for entity in doc.modelspace()); layers = sorted({entity.dxf.layer for entity in doc.modelspace() if hasattr(entity.dxf, "layer")}); blocks = sorted(doc.blocks.block_names())
             units_code = doc.header.get("$INSUNITS"); units = UNITS.get(units_code, None)
             fp, fpmeta = geometry_fingerprint(doc); fingerprints[fp].append(rel.as_posix())
+            # The vector cache may be shared by exact duplicate source files;
+            # provenance remains distinct in the manifest and review store.
             preview = preview_root / f"{digest[:16]}.svg"; segment_count, preview_bounds = svg_preview(doc, path, preview, max_x - min_x, max_y - min_y)
             annotation_present = any(k in entities for k in ("TEXT", "MTEXT", "DIMENSION", "LEADER", "MLEADER"))
             dimensions = sorted((max_x - min_x, max_y - min_y))
@@ -172,7 +185,8 @@ def audit(root: Path) -> dict[str, Any]:
             has_physical_units = units == "millimetres"
             initial_review = "needs-unit-review" if not has_physical_units else ("needs-product-review" if annotation_present else ("needs-view-review" if not record.get("candidate_view") else "needs-product-review"))
             source_bbox = {"min_x": min_x, "min_y": min_y, "max_x": max_x, "max_y": max_y, "width": max_x - min_x, "height": max_y - min_y}
-            record.update({"parse_status": "parsed", "dxf_version": doc.dxfversion, "source_units_code": units_code, "source_units": units, "units_code": units_code, "units": units, "unit_confidence": "confirmed-from-dxf" if has_physical_units else "unknown", "unit_source": "$INSUNITS" if has_physical_units else None, "physical_width_mm": source_bbox["width"] if has_physical_units else None, "physical_height_mm": source_bbox["height"] if has_physical_units else None, "physical_depth_mm": None, "layers": layers, "layer_count": len(layers), "blocks": blocks, "block_count": len(blocks), "entity_types": dict(sorted(entities.items())), "entity_count": sum(entities.values()), "modelspace_entity_count": len(doc.modelspace()), "paperspace_layouts": sorted(name for name in doc.layouts.names() if name.lower() != "model"), "source_bbox": source_bbox, "bbox": source_bbox, "extreme_dimensions": bool(max(max_x - min_x, max_y - min_y) > 5000 or min(max_x - min_x, max_y - min_y) <= 0), "geometry_fingerprint": fp, "geometry_fingerprint_meta": fpmeta, "preview_ref": f"previews/{preview.name}", "preview_viewbox": preview_bounds, "source_to_preview_transform": {"translate_x": -min_x, "translate_y": max_y, "scale": 1.0} if preview_bounds else None, "physical_transform": {"source_units": units, "scale_to_mm": 1.0} if has_physical_units else None, "preview_segment_count": segment_count, "preview_bounds": preview_bounds, "annotation_present": annotation_present, "drawing_sheet": drawing_sheet, "insert_present": "INSERT" in entities, "review_state": initial_review, "suitable_as_panel_footprint": bool(segment_count and max(max_x-min_x, max_y-min_y) < 5000 and not annotation_present and (max_x-min_x) > 0 and (max_y-min_y) > 0)})
+            representation_id = stable_id("representation", source_id, record.get("candidate_view") or "unknown")
+            record.update({"parse_status": "parsed", "dxf_version": doc.dxfversion, "source_units_code": units_code, "source_units": units, "units_code": units_code, "units": units, "unit_confidence": "confirmed-from-dxf" if has_physical_units else "unknown", "unit_source": "$INSUNITS" if has_physical_units else None, "physical_width_mm": source_bbox["width"] if has_physical_units else None, "physical_height_mm": source_bbox["height"] if has_physical_units else None, "physical_depth_mm": None, "layers": layers, "layer_count": len(layers), "blocks": blocks, "block_count": len(blocks), "entity_types": dict(sorted(entities.items())), "entity_count": sum(entities.values()), "modelspace_entity_count": len(doc.modelspace()), "paperspace_layouts": sorted(name for name in doc.layouts.names() if name.lower() != "model"), "source_bbox": source_bbox, "bbox": source_bbox, "extreme_dimensions": bool(max(max_x - min_x, max_y - min_y) > 5000 or min(max_x - min_x, max_y - min_y) <= 0), "geometry_fingerprint": fp, "geometry_fingerprint_meta": fpmeta, "preview_ref": f"previews/{preview.name}", "preview_viewbox": preview_bounds, "source_to_preview_transform": {"translate_x": -min_x, "translate_y": max_y, "scale": 1.0} if preview_bounds else None, "physical_transform": {"source_units": units, "scale_to_mm": 1.0} if has_physical_units else None, "preview_segment_count": segment_count, "preview_bounds": preview_bounds, "annotation_present": annotation_present, "drawing_sheet": drawing_sheet, "insert_present": "INSERT" in entities, "representation_id": representation_id, "physical_footprint_id": None, "review_state": initial_review, "suitable_as_panel_footprint": bool(segment_count and max(max_x-min_x, max_y-min_y) < 5000 and not annotation_present and (max_x-min_x) > 0 and (max_y-min_y) > 0)})
             if record["candidate_view"] is None and record["suitable_as_panel_footprint"]: record["review_status"] = "needs-review"
         except Exception as error:
             record["error"] = f"{type(error).__name__}: {error}"
@@ -182,20 +196,21 @@ def audit(root: Path) -> dict[str, Any]:
     products_by_key: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
         geometry_key = record.get("geometry_fingerprint")
-        record["geometry_cluster_id"] = "geometry-" + hashlib.sha256((geometry_key or "empty").encode()).hexdigest()[:16]
+        record["geometry_cluster_id"] = stable_id("geometry", geometry_key or "empty")
         key = f"candidate:{record.get('manufacturer')}:{record.get('candidate_product_key')}"
-        product_id = "product-" + hashlib.sha256(key.encode()).hexdigest()[:16]
+        product_id = stable_id("product-candidate", key)
+        record["product_candidate_id"] = product_id
         record["product_id"] = product_id
-        record["representation"] = {"asset_id": record["id"], "kind": record.get("candidate_view") or "unknown", "confidence": record.get("view_confidence", 0.0)}
+        record["representation"] = {"representation_id": record["representation_id"], "source_asset_id": record["source_asset_id"], "kind": record.get("candidate_view") or "unknown", "confidence": record.get("view_confidence", 0.0), "physical_footprint_id": None}
         products_by_key[key].append(record)
-    products = [{"id": entries[0]["product_id"], "manufacturer": entries[0].get("manufacturer"), "product_family": entries[0].get("product_family"), "candidate_key": entries[0].get("candidate_product_key"), "identity_status": "candidate-needs-review", "identity_confidence": 0.65, "representations": [entry["representation"] for entry in entries]} for entries in products_by_key.values()]
+    products = [{"product_candidate_id": entries[0]["product_candidate_id"], "id": entries[0]["product_candidate_id"], "manufacturer": entries[0].get("manufacturer"), "product_family": entries[0].get("product_family"), "candidate_key": entries[0].get("candidate_product_key"), "identity_status": "candidate-needs-review", "identity_confidence": 0.65, "product_identity_id": None, "representations": [entry["representation"] for entry in entries]} for entries in products_by_key.values()]
     duplicate_candidates = []
     for digest, paths in exact.items():
-        if len(paths) > 1: duplicate_candidates.append({"kind": "exact-file-duplicate", "confidence": 1.0, "paths": paths, "reason": "identical SHA256"})
+        if len(paths) > 1: duplicate_candidates.append({"kind": "exact-file-duplicate", "confidence": 1.0, "content_sha256": digest, "source_asset_ids": [next(r["source_asset_id"] for r in records if r["relative_path"] == p) for p in paths], "paths": paths, "reason": "identical content SHA256; distinct source provenance IDs"})
     for fp, paths in fingerprints.items():
-        if len(paths) > 1: duplicate_candidates.append({"kind": "geometric-near-duplicate", "confidence": 0.92, "paths": paths, "reason": "same translation-normalized line/curve fingerprint"})
+        if len(paths) > 1: duplicate_candidates.append({"kind": "geometric-near-duplicate", "confidence": 0.92, "geometry_cluster_id": stable_id("geometry", fp), "source_asset_ids": [next(r["source_asset_id"] for r in records if r["relative_path"] == p) for p in paths], "paths": paths, "reason": "same translation-normalized line/curve fingerprint; candidate only, no merge"})
     json_path = out / "catalog-assets.json"; json_path.write_text(json.dumps({"schema_version": "cad-asset-catalog.v1", "source_root": "catalog", "asset_count": len(records), "parsed_count": sum(r["parse_status"] == "parsed" for r in records), "product_count": len(products), "products": products, "records": records, "duplicate_candidates": duplicate_candidates}, indent=2), encoding="utf-8")
-    fields = ["id", "product_id", "geometry_cluster_id", "relative_path", "source_group", "file_size", "sha256", "encoding", "content_is_dxf", "parse_status", "dxf_version", "source_units", "source_units_code", "physical_width_mm", "physical_height_mm", "unit_confidence", "unit_source", "candidate_product_key", "candidate_view", "product_family", "review_status", "review_state", "entity_count", "layer_count", "block_count", "source_bbox", "preview_ref", "suitable_as_panel_footprint", "error"]
+    fields = ["source_asset_id", "content_sha256", "product_candidate_id", "product_identity_id", "representation_id", "physical_footprint_id", "geometry_cluster_id", "relative_path", "source_group", "file_size", "sha256", "encoding", "content_is_dxf", "parse_status", "dxf_version", "source_units", "source_units_code", "physical_width_mm", "physical_height_mm", "unit_confidence", "unit_source", "candidate_product_key", "candidate_view", "product_family", "review_status", "review_state", "entity_count", "layer_count", "block_count", "source_bbox", "preview_ref", "suitable_as_panel_footprint", "error"]
     with (out / "catalog-assets.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields); writer.writeheader()
         for r in records: writer.writerow({key: json.dumps(r.get(key), separators=(",", ":")) if isinstance(r.get(key), (dict, list)) else r.get(key, "") for key in fields})

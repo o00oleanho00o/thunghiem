@@ -69,12 +69,16 @@ complete path pairs and reasons.
 
 ## Asset model and approval posture
 
-Each record is a `CadAsset`-like representation with an immutable source path,
-source group, SHA256, detected version/units, geometry bounds, preview and
-review status. Filename evidence supplies only a candidate manufacturer,
-family, description and view. It never invents an order number. A browser
-approval creates a `footprintRef`/asset reference on a component; raw DXF
-entities remain outside canonical EIR.
+Each record separates `source_asset_id` (stable source-group/path provenance)
+from `content_sha256` (integrity and duplicate evidence). Exact duplicate
+paths remain separate source assets. It also carries a separate
+`representation_id`, `geometry_cluster_id`, `product_candidate_id`, nullable
+`product_identity_id`, and nullable `physical_footprint_id`. Filename evidence
+supplies only a candidate manufacturer, family, description and view. It never
+invents an order number. A browser approval creates a persisted normalized
+`PhysicalFootprint` referenced by `footprint_ref`; raw DXF entities remain
+outside canonical EIR. Review data is stored separately from generated
+forensic output and survives audit regeneration.
 
 ## Suitability decisions
 
@@ -83,8 +87,10 @@ entities remain outside canonical EIR.
   footprint.
 - Needs cleanup/review: annotation-bearing files, INSERT-heavy files, all
   unknown-view assets, and any unitless/undeclared asset used for manufacturing.
-- Approved footprints in this snapshot: 0 from automatic ingestion. Approval
-  requires reviewer-supplied mm bounds and a view, with provenance recorded.
+- Approved footprints in this snapshot: one manually review-approved test
+  footprint in the separate review overlay. Approval requires reviewer-
+  supplied mm bounds and a view, with provenance recorded. It is not an
+  externally verified Siemens vendor footprint.
 
 Initial workflow states are `needs-unit-review` for 48 files and
 `needs-product-review` for the 10 declared-mm drawing sheets. The 46-file
