@@ -81,7 +81,7 @@
       ducts: ducts.map((duct, index) => ({ id: idOf(duct, `duct-${index + 1}`), x: finite(duct.x, 50), y: finite(duct.y, 50), width: finite(duct.width, 40), height: finite(duct.height, 120), orientation: duct.orientation || 'vertical' })),
       components,
       connections,
-      metadata: { sourceSchema: source.schemaVersion || source.schema_version || source.version || 'unknown', adapter: 'eir-v1-to-panel-view-0.1' },
+      metadata: { ...(source.metadata || {}), sourceSchema: source.schemaVersion || source.schema_version || source.version || 'unknown', adapter: 'eir-v1-to-panel-view-0.1' },
     };
   }
 

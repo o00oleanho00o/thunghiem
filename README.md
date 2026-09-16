@@ -80,6 +80,17 @@ To build the R2 reference cabinet benchmark (using only DXF files under
 The benchmark is explicitly semi-real and source-unverified; see
 `docs/r2/R2_REAL_CABINET_REPORT.md` and its frozen source manifest.
 
+R2B geometry and verification work package:
+
+```powershell
+.venv/Scripts/python.exe scripts/build_r2b_benchmark.py
+.venv/Scripts/python.exe scripts/audit_dxf_ezdxf.py benchmarks/r2b-verified-siemens-cabinet/exports/r2b-verified-cabinet.dxf
+node scripts/capture_r2b_evidence.cjs
+```
+
+R2B intentionally remains incomplete when Siemens vendor endpoints are
+unreachable; see `docs/r2/R2B_VERIFIED_SIEMENS_REPORT.md`.
+
 The audit writes `catalog/generated/catalog-assets.json`, CSV, previews and
 duplicate candidates. Original catalog DXF files are local inputs and are
 ignored by Git; only the derived cache/manifest is committed.

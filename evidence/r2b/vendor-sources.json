@@ -1,0 +1,14 @@
+{
+  "verification_status": "blocked",
+  "blocker": "VENDOR VERIFICATION BLOCKED BY NETWORK: Siemens Industry Mall and support endpoints returned HTTP 403 during this run.",
+  "products": [
+    {"manufacturer":"Siemens","candidate":"SIMATIC S7-1200 PLC 1211C","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/systems/industrial/plc/s7-1200.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SIMATIC S7-1200 PM1207","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/systems/industrial/plc/s7-1200.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SIMATIC S7-1200 SM1221","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/systems/industrial/plc/s7-1200.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SIMATIC S7-1500 CPU 1511","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/systems/industrial/plc/s7-1500.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SIMATIC S7-1500 SM531","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/systems/industrial/plc/s7-1500.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SIRIUS contactor","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/industrial-controls/sirius.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SITOP PSU","order_number":null,"sources":["https://www.siemens.com/global/en/products/automation/industrial-controls/sitop.html"],"verified_claims":{}},
+    {"manufacturer":"Siemens","candidate":"SINAMICS G120C","order_number":null,"sources":["https://www.siemens.com/global/en/products/drives/sinamics.html"],"verified_claims":{}}
+  ]
+}

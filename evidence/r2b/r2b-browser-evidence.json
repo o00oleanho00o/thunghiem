@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "screenshots": [
+    "01-verified-siemens-library.png",
+    "02-verified-component-detail.png",
+    "03-bom-product-resolution.png",
+    "04-heuristic-real-cad-layout.png",
+    "05-solver-real-cad-layout.png",
+    "06-real-siemens-deep-zoom.png",
+    "07-engineer-adjustment.png",
+    "08-locked-regeneration.png",
+    "09-exported-dxf-reopened.png",
+    "10-dxf-device-geometry-closeup.png"
+  ],
+  "modelComponents": 8,
+  "note": "R2B source products remain unresolved; geometry screenshots are catalog-derived preview evidence."
+}

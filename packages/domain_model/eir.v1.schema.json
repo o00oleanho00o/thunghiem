@@ -297,6 +297,10 @@
           "title": "Cad Asset Id",
           "type": "string"
         },
+        "cad_geometry_ref": {
+          "title": "Cad Geometry Ref",
+          "type": "string"
+        },
         "category": {
           "title": "Category",
           "type": "string"

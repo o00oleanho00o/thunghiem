@@ -136,6 +136,11 @@ const server = http.createServer(async (request, response) => {
       if (!benchmarkPath.startsWith(path.resolve(root, '../..') + path.sep) || !fs.existsSync(benchmarkPath)) return send(response, 404, JSON.stringify({ error: 'R2 benchmark not generated; run scripts/build_r2_benchmark.py' }), mime['.json']);
       return send(response, 200, fs.readFileSync(benchmarkPath), mime['.json']);
     }
+    if (requestUrl.pathname === '/api/benchmark/r2b' && request.method === 'GET') {
+      const benchmarkPath = path.resolve(root, '../../benchmarks/r2b-verified-siemens-cabinet/exports/r2b-verified-cabinet.json');
+      if (!benchmarkPath.startsWith(path.resolve(root, '../..') + path.sep) || !fs.existsSync(benchmarkPath)) return send(response, 404, JSON.stringify({ error: 'R2B benchmark not generated; run scripts/build_r2b_benchmark.py' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(benchmarkPath), mime['.json']);
+    }
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'GET') return send(response, 200, JSON.stringify(readReviews()), mime['.json']);
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'POST') {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing' }), mime['.json']);

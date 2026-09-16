@@ -1,0 +1,102 @@
+{
+  "records": [
+    {
+      "bounds": {
+        "height": 129.9670496,
+        "min_x": -3.2144523000000014,
+        "min_y": -3.5920185,
+        "width": 57.32475860000001
+      },
+      "entity_count": 2477,
+      "source_asset_id": "source-a0a9c0419df569bb",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-a0a9c0419df569bb.json"
+    },
+    {
+      "bounds": {
+        "height": 82.3420496,
+        "min_x": -2.4511196,
+        "min_y": -3.5920185,
+        "width": 51.3434775
+      },
+      "entity_count": 1069,
+      "source_asset_id": "source-67d0e317f239396c",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-67d0e317f239396c.json"
+    },
+    {
+      "bounds": {
+        "height": 129.4671366,
+        "min_x": -2.4816043000000008,
+        "min_y": -2.9305185,
+        "width": 51.463217900000004
+      },
+      "entity_count": 2151,
+      "source_asset_id": "source-33c324f4df97c631",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-33c324f4df97c631.json"
+    },
+    {
+      "bounds": {
+        "height": 73.7430496,
+        "min_x": -2.4511196,
+        "min_y": -2.9305185,
+        "width": 51.3434775
+      },
+      "entity_count": 1270,
+      "source_asset_id": "source-e2454df537a9505c",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-e2454df537a9505c.json"
+    },
+    {
+      "bounds": {
+        "height": 177.7536044,
+        "min_x": -3.2150523,
+        "min_y": -3.5920185,
+        "width": 57.324758599999996
+      },
+      "entity_count": 2643,
+      "source_asset_id": "source-fe6d18f6b8ce400b",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-fe6d18f6b8ce400b.json"
+    },
+    {
+      "bounds": {
+        "height": 224.864779,
+        "min_x": 0.0,
+        "min_y": -14.864778999999999,
+        "width": 297.0
+      },
+      "entity_count": 2671,
+      "source_asset_id": "source-66748a98dbbdcf49",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-66748a98dbbdcf49.json"
+    },
+    {
+      "bounds": {
+        "height": 431.8,
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "width": 279.4
+      },
+      "entity_count": 82,
+      "source_asset_id": "source-7ab1640d1d97df20",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-7ab1640d1d97df20.json"
+    },
+    {
+      "bounds": {
+        "height": 349.25,
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "width": 525.0
+      },
+      "entity_count": 412,
+      "source_asset_id": "source-a0a9f79675c3f78e",
+      "status": "ok",
+      "vector_cache_ref": "catalog/generated/vector-cache/source-a0a9f79675c3f78e.json"
+    }
+  ],
+  "schema_version": "cad-vector-cache.v1",
+  "source_root": "catalog"
+}

@@ -1,0 +1,16 @@
+# siemens simatic s7 1500 cpu 1511 1 pn
+
+- verification_status: unresolved
+- verification_level: test
+- catalog_source_asset: source-e2454df537a9505c
+- source_filename: `radica-dxf/1-siemens-simatic-s7-1500-cpu-1511-1-pn-7deea3b07d-dxf`
+- candidate_identity: siemens simatic s7 1500 cpu 1511 1 pn
+- verified Siemens identity: null
+- order number / MPN: null (not inferred)
+- width / height / depth mm: null (source envelope is not vendor evidence)
+- mounting: candidate DIN-compatible drawing; unresolved
+- vendor source: https://www.siemens.com/global/en/products/automation.html
+- source evidence: official Siemens pages were requested during R2B; Industry Mall/support returned HTTP 403 in this environment
+- verification confidence: 0.0
+- why this DXF is considered the same product: filename/family evidence only; insufficient for exact match
+- known ambiguity: units, exact order number, physical dimensions and representation role remain unresolved

@@ -18,6 +18,8 @@ from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 from packages.domain_model import Device, PartDefinition, Placement, Project, Rect, canonical_json
 
+_ROOT = Path(__file__).resolve().parents[2]
+
 
 def _fmt(value: float) -> str:
     if abs(value) < 1e-9:
@@ -69,6 +71,54 @@ def _rect_lines(rect: Rect, layer: str) -> str:
     )
 
 
+def _cad_geometry(part: PartDefinition) -> Optional[dict]:
+    if not part.cad_geometry_ref:
+        return None
+    path = _ROOT / part.cad_geometry_ref
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def _cad_entities(part: PartDefinition, placement: Placement) -> List[str]:
+    """Transform normalized cached CAD primitives into panel coordinates."""
+    cache = _cad_geometry(part)
+    if not cache or not cache.get("geometry"):
+        return []
+    bounds = cache.get("bounds") or {}
+    source_w, source_h = float(bounds.get("width") or 0), float(bounds.get("height") or 0)
+    if source_w <= 0 or source_h <= 0:
+        return []
+    target = part.footprint.oriented_size(placement.rotation)
+    sx, sy = target.width / source_w, target.height / source_h
+
+    def point(x: float, y: float) -> Tuple[float, float]:
+        x *= sx; y *= sy
+        w, h = part.footprint.width * sx, part.footprint.height * sy
+        angle = placement.rotation % 360
+        if angle == 90: x, y = h - y, x
+        elif angle == 180: x, y = w - x, h - y
+        elif angle == 270: x, y = y, w - x
+        return placement.x + x, placement.y + y
+
+    entities: List[str] = []
+    for item in cache["geometry"]:
+        kind = item.get("type")
+        if kind == "line":
+            x1, y1 = point(float(item["x1"]), float(item["y1"])); x2, y2 = point(float(item["x2"]), float(item["y2"]))
+            entities.append(_line(x1, y1, x2, y2, "COMPONENT_DETAIL"))
+        elif kind in {"circle", "arc"}:
+            cx, cy = point(float(item["cx"]), float(item["cy"]))
+            radius = float(item["r"]) * (sx + sy) / 2
+            if kind == "circle":
+                entities.append("".join([_pair(0, "CIRCLE"), _pair(8, "COMPONENT_DETAIL"), _pair(10, _fmt(cx)), _pair(20, _fmt(cy)), _pair(30, "0"), _pair(40, _fmt(radius))]))
+            else:
+                start, end = float(item.get("start", 0)), float(item.get("end", 360))
+                entities.append("".join([_pair(0, "ARC"), _pair(8, "COMPONENT_DETAIL"), _pair(10, _fmt(cx)), _pair(20, _fmt(cy)), _pair(30, "0"), _pair(40, _fmt(radius)), _pair(50, _fmt(start)), _pair(51, _fmt(end))]))
+    return entities
+
+
 def export_dxf(project: Project) -> str:
     """Export a deterministic ASCII DXF R12 document."""
 
@@ -94,12 +144,17 @@ def export_dxf(project: Project) -> str:
             continue
         size = part.footprint.oriented_size(placement.rotation)
         rect = Rect(x=placement.x, y=placement.y, width=size.width, height=size.height)
-        entities.append(_rect_lines(rect, "DEVICE"))
-        # Keep the legacy DEVICE layer for compatibility while exposing the
-        # explicit R2 export contract for downstream CAD consumers.
-        entities.append(_rect_lines(rect, "COMPONENT_OUTLINE"))
-        entities.append(_line(rect.center.x - min(4.0, rect.width / 4), rect.center.y, rect.center.x + min(4.0, rect.width / 4), rect.center.y, "COMPONENT_DETAIL"))
-        entities.append(_line(rect.center.x, rect.center.y - min(4.0, rect.height / 4), rect.center.x, rect.center.y + min(4.0, rect.height / 4), "COMPONENT_DETAIL"))
+        geometry = _cad_entities(part, placement)
+        if geometry:
+            entities.extend(geometry)
+            entities.append(_rect_lines(rect, "COMPONENT_OUTLINE"))
+        else:
+            entities.append(_rect_lines(rect, "DEVICE"))
+            # Keep the legacy DEVICE layer for compatibility for parts without
+            # a normalized CAD representation.
+            entities.append(_rect_lines(rect, "COMPONENT_OUTLINE"))
+            entities.append(_line(rect.center.x - min(4.0, rect.width / 4), rect.center.y, rect.center.x + min(4.0, rect.width / 4), rect.center.y, "COMPONENT_DETAIL"))
+            entities.append(_line(rect.center.x, rect.center.y - min(4.0, rect.height / 4), rect.center.x, rect.center.y + min(4.0, rect.height / 4), "COMPONENT_DETAIL"))
         entities.append(_text(rect.x + 2, rect.y + min(rect.height - 2, 10), device.tag, "DEVICE_TAG", 6))
         entities.append(_text(rect.x + 2, rect.y + min(rect.height - 10, 3), part.manufacturer_part, "PART_REF", 3))
     for connection in sorted(project.connections, key=lambda item: item.id):
