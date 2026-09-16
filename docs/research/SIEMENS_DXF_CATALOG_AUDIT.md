@@ -16,7 +16,7 @@ Radica files were accepted by content.
 |---|---:|
 | Parsed | 58 / 58 |
 | Parse failures | 0 |
-| Normalized product groups | 47 |
+| Product candidates | 57 |
 | DXF versions | AC1009: 46; AC1015: 4; AC1024: 2; AC1027: 2; AC1032: 4 |
 | Declared units | millimetres: 10; unitless: 2; undeclared: 46 |
 | Bounding width | 23.81–677.60 (mean 103.94) |
@@ -26,6 +26,7 @@ Radica files were accepted by content.
 | Unknown view | 56 |
 | Annotation-bearing files | 12 |
 | INSERT-bearing files | 10 |
+| Drawing-sheet heuristic | 8 |
 | Suitable direct footprint candidates | 46 (heuristic) |
 
 Dimensions are reported in the file's declared units when available. For the
@@ -34,10 +35,12 @@ Dimensions are reported in the file's declared units when available. For the
 `front-view`, `side-view`, or `top-view`.
 
 The generated manifest exposes `products[]` with nested `representations[]`.
-Exact/translation-normalized geometry groups share a product id while keeping
-each original source file as a separate representation. This is the explicit
-multi-view model boundary required by the web editor; it does not merge or
-rewrite source assets.
+Product candidates are grouped from filename/manufacturer/family evidence, not
+from geometry fingerprints. Exact/translation-normalized geometry groups are
+separate `geometry_cluster_id` evidence. The ET200SP `front-view` and
+`side-view` files resolve to one candidate with two representations while each
+original source file remains separate. No ProductIdentity is authoritative
+until review.
 
 ## Entity and structure findings
 
@@ -75,11 +78,18 @@ entities remain outside canonical EIR.
 
 ## Suitability decisions
 
-- Direct candidates: parsed geometry with a finite non-extreme bounding box and
-  a generated vector preview; these still require human approval because units
-  are often undeclared.
+- Preview-only candidates: all 58 assets initially. Parsed geometry with a
+  finite non-extreme bounding box is a browse candidate, not an engineering
+  footprint.
 - Needs cleanup/review: annotation-bearing files, INSERT-heavy files, all
   unknown-view assets, and any unitless/undeclared asset used for manufacturing.
+- Approved footprints in this snapshot: 0 from automatic ingestion. Approval
+  requires reviewer-supplied mm bounds and a view, with provenance recorded.
+
+Initial workflow states are `needs-unit-review` for 48 files and
+`needs-product-review` for the 10 declared-mm drawing sheets. The 46-file
+“suitable” count is only a geometry/preview heuristic and must not be read as
+46 production-ready footprints.
 - Rejected: none in this dataset. A future ingestion run should reject parse
   failures or non-finite/extreme geometry explicitly rather than fabricate a
   footprint.

@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "catalog_parse_58_of_58": true,
+  "unknown_units_not_assumed_mm": true,
+  "physical_dimension_clamp_removed": true,
+  "front_side_grouping_correct": true,
+  "approval_gating_correct": true,
+  "rendered_bounds_match_physical_bounds": true,
+  "cursor_zoom_stationary": true,
+  "right_pan_empty_viewport": true,
+  "middle_pan_empty_viewport": true,
+  "drag_after_zoom_pan_mm_correct": true,
+  "snap_after_zoom_pan": true,
+  "fit_geometry_correct": true,
+  "zoom_min": 0.1,
+  "zoom_max": 20,
+  "fit_ratios": [
+    {
+      "zoom": 0.7133018274488299,
+      "fits": true,
+      "ratio": 0.6666720841624457
+    },
+    {
+      "zoom": 0.4279797158673015,
+      "fits": true,
+      "ratio": 0.4000019785636758
+    },
+    {
+      "zoom": 1.2387196670940894,
+      "fits": true,
+      "ratio": 2.5000300411019496
+    }
+  ]
+}
