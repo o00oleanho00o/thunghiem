@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "approvedForEvidence": [
+    "source-a0a9c0419df569bb",
+    "source-67d0e317f239396c",
+    "source-33c324f4df97c631"
+  ],
+  "components": 15,
+  "componentAssetIds": [
+    "source-a0a9c0419df569bb",
+    "source-67d0e317f239396c",
+    "source-33c324f4df97c631"
+  ],
+  "directAssetId": "source-a0a9c0419df569bb",
+  "normalizedAssetId": "source-a0a9c0419df569bb",
+  "directPart": "UNRESOLVED",
+  "componentPartNumbers": [
+    "UNRESOLVED",
+    "UNRESOLVED",
+    "UNRESOLVED"
+  ],
+  "catalogStates": [
+    "source-a0a9c0419df569bb",
+    "source-67d0e317f239396c",
+    "source-33c324f4df97c631"
+  ],
+  "approvedVectors": 3,
+  "zoom": 11.940505458188646,
+  "panX": -489.06103515625,
+  "panY": 861.9640808105469
+}

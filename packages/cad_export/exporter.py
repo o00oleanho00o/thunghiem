@@ -95,6 +95,11 @@ def export_dxf(project: Project) -> str:
         size = part.footprint.oriented_size(placement.rotation)
         rect = Rect(x=placement.x, y=placement.y, width=size.width, height=size.height)
         entities.append(_rect_lines(rect, "DEVICE"))
+        # Keep the legacy DEVICE layer for compatibility while exposing the
+        # explicit R2 export contract for downstream CAD consumers.
+        entities.append(_rect_lines(rect, "COMPONENT_OUTLINE"))
+        entities.append(_line(rect.center.x - min(4.0, rect.width / 4), rect.center.y, rect.center.x + min(4.0, rect.width / 4), rect.center.y, "COMPONENT_DETAIL"))
+        entities.append(_line(rect.center.x, rect.center.y - min(4.0, rect.height / 4), rect.center.x, rect.center.y + min(4.0, rect.height / 4), "COMPONENT_DETAIL"))
         entities.append(_text(rect.x + 2, rect.y + min(rect.height - 2, 10), device.tag, "DEVICE_TAG", 6))
         entities.append(_text(rect.x + 2, rect.y + min(rect.height - 10, 3), part.manufacturer_part, "PART_REF", 3))
     for connection in sorted(project.connections, key=lambda item: item.id):

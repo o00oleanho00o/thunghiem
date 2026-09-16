@@ -1,0 +1,20 @@
+{
+  "expected_device_count": 15,
+  "expected_source_asset_ids": [
+    "source-a0a9c0419df569bb",
+    "source-67d0e317f239396c",
+    "source-33c324f4df97c631",
+    "source-e2454df537a9505c",
+    "source-fe6d18f6b8ce400b",
+    "source-3e9d4d72f5c1ae6a",
+    "source-66748a98dbbdcf49",
+    "source-7ab1640d1d97df20",
+    "source-a0a9f79675c3f78e",
+    "source-a09d1ac943d14cd4",
+    "source-283eb0c95aa5ca9e",
+    "source-ecebbf6aa559a3ee",
+    "source-a66f85c4d6e10fba",
+    "source-7838edfb45044227",
+    "source-cd095c0d1e21645e"
+  ]
+}

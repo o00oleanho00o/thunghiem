@@ -226,6 +226,9 @@ class PartDefinition(EIRBase):
     symbol_ref: Optional[str] = None
     footprint_ref: Optional[str] = None
     model_3d_ref: Optional[str] = None
+    # Optional provenance link to an imported CAD asset. Raw CAD entities stay
+    # outside EIR; this stable ID only points at the catalog representation.
+    cad_asset_id: Optional[str] = None
     aliases: List[str] = Field(default_factory=list)
 
     @validator("id", "manufacturer", "manufacturer_part", "description", "category")

@@ -2,10 +2,10 @@
   "ok": true,
   "rawPythonEir": true,
   "deterministic": true,
-  "dxfBytes": 30741,
-  "entityCount": 448,
+  "dxfBytes": 45943,
+  "entityCount": 633,
   "counts": {
-    "LINE": 208,
+    "LINE": 393,
     "TEXT": 84,
     "CIRCLE": 156
   },
@@ -15,5 +15,6 @@
     "maxX": 800,
     "maxY": 2000
   },
-  "unsupportedFormatStatus": 400
+  "unsupportedFormatStatus": 400,
+  "r2BenchmarkComponents": 15
 }

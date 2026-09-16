@@ -58,6 +58,11 @@ async function post(baseUrl, payload) {
 
   try {
     await waitForHealth(baseUrl, child, diagnostics);
+    const benchmarkResponse = await fetch(`${baseUrl}/api/benchmark/r2`);
+    assert.equal(benchmarkResponse.status, 200);
+    const benchmark = await benchmarkResponse.json();
+    assert.equal(benchmark.id, 'r2-reference-cabinet');
+    assert.equal(benchmark.schema_version, 'eir.v1');
     const fixture = JSON.parse(fs.readFileSync(path.join(root, 'examples', 'mcc-6-motor', 'project.json'), 'utf8'));
 
     const firstResponse = await post(baseUrl, { model: fixture, format: 'dxf' });
@@ -102,6 +107,7 @@ async function post(baseUrl, payload) {
       counts: localAudit.counts,
       bounds: localAudit.bounds,
       unsupportedFormatStatus: unsupported.status,
+      r2BenchmarkComponents: benchmark.devices.length,
     };
     fs.writeFileSync(logPath, `${JSON.stringify(report, null, 2)}\n`);
     console.log(JSON.stringify(report, null, 2));

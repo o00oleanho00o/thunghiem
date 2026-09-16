@@ -192,6 +192,8 @@ function exportDxf(input) {
   model.components.forEach((component) => {
     const rect = componentRect(component);
     lines.push(...rectEntities(rect.x, rect.y, rect.width, rect.height, 'COMPONENT'));
+    lines.push(...rectEntities(rect.x, rect.y, rect.width, rect.height, 'COMPONENT_OUTLINE'));
+    lines.push(...lineEntity(rect.x + rect.width / 2 - Math.min(4, rect.width / 4), rect.y + rect.height / 2, rect.x + rect.width / 2 + Math.min(4, rect.width / 4), rect.y + rect.height / 2, 'COMPONENT_DETAIL'));
     lines.push(...textEntity(component.tag, rect.x + 3, rect.y + rect.height / 2, Math.max(5, Math.min(12, rect.height / 4)), 'TAG'));
     lines.push(...textEntity(component.name, rect.x + 3, rect.y + Math.min(10, rect.height - 3), 4, 'TEXT'));
     const terminalCount = Math.max(0, component.terminals.length || 2);

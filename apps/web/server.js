@@ -131,6 +131,11 @@ const server = http.createServer(async (request, response) => {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing; run scripts/audit_catalog.py catalog' }), mime['.json']);
       return send(response, 200, JSON.stringify(readEffectiveCatalog()), mime['.json']);
     }
+    if (requestUrl.pathname === '/api/benchmark/r2' && request.method === 'GET') {
+      const benchmarkPath = path.resolve(root, '../../benchmarks/r2-real-cabinet/artifacts/r2-reference-cabinet.json');
+      if (!benchmarkPath.startsWith(path.resolve(root, '../..') + path.sep) || !fs.existsSync(benchmarkPath)) return send(response, 404, JSON.stringify({ error: 'R2 benchmark not generated; run scripts/build_r2_benchmark.py' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(benchmarkPath), mime['.json']);
+    }
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'GET') return send(response, 200, JSON.stringify(readReviews()), mime['.json']);
     if (requestUrl.pathname === '/api/catalog/reviews' && request.method === 'POST') {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing' }), mime['.json']);

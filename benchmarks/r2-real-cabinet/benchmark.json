@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "audit": "benchmarks\\r2-real-cabinet\\artifacts\\r2-reference-cabinet.dxf.audit.json",
+    "dxf": "benchmarks\\r2-real-cabinet\\artifacts\\r2-reference-cabinet.dxf",
+    "json": "benchmarks\\r2-real-cabinet\\artifacts\\r2-reference-cabinet.json",
+    "svg": "benchmarks\\r2-real-cabinet\\artifacts\\r2-reference-cabinet.svg"
+  },
+  "benchmark_id": "r2-reference-cabinet",
+  "components": 15,
+  "ezdxf": {
+    "audit_error_count": 0,
+    "available": true,
+    "dxfversion": "AC1009",
+    "entity_types": {
+      "LINE": 186,
+      "TEXT": 31
+    },
+    "modelspace_entity_count": 217,
+    "valid": true
+  },
+  "heuristic": {
+    "elapsed_ms": 3.151,
+    "engine": "heuristic",
+    "metrics": {
+      "component_count": 15.0,
+      "elapsed_ms": 2.756,
+      "overlap_pairs": 0.0,
+      "plate_area_mm2": 1650000.0,
+      "space_utilization_percent": 8.304,
+      "used_area_mm2": 137011.477
+    },
+    "valid": true
+  },
+  "scale_benchmark": [
+    {
+      "component_count": 10,
+      "heuristic_engine": "heuristic",
+      "heuristic_error": "",
+      "heuristic_ms": 3.02,
+      "heuristic_valid": true,
+      "solver_engine": "ortools-cp-sat-optimal",
+      "solver_error": "",
+      "solver_ms": 18.817,
+      "solver_valid": true
+    },
+    {
+      "component_count": 30,
+      "heuristic_engine": "heuristic",
+      "heuristic_error": "",
+      "heuristic_ms": 3.641,
+      "heuristic_valid": true,
+      "solver_engine": "ortools-cp-sat-optimal",
+      "solver_error": "",
+      "solver_ms": 51.674,
+      "solver_valid": true
+    },
+    {
+      "component_count": 100,
+      "heuristic_engine": "error",
+      "heuristic_error": "LayoutCapacityError: 11 DIN rail rows require at least 230.0 mm pitch, but enclosure provides 116.0 mm",
+      "heuristic_ms": 5.239,
+      "heuristic_valid": false,
+      "solver_engine": "error",
+      "solver_error": "LayoutCapacityError: 11 DIN rail rows require at least 230.0 mm pitch, but enclosure provides 116.0 mm",
+      "solver_ms": 4.268,
+      "solver_valid": false
+    },
+    {
+      "component_count": 15,
+      "locked_device_id": "device_05c3a0f9b42a",
+      "locked_regeneration": true
+    }
+  ],
+  "selected_asset_ids": [
+    "source-a0a9c0419df569bb",
+    "source-67d0e317f239396c",
+    "source-33c324f4df97c631",
+    "source-e2454df537a9505c",
+    "source-fe6d18f6b8ce400b",
+    "source-3e9d4d72f5c1ae6a",
+    "source-66748a98dbbdcf49",
+    "source-7ab1640d1d97df20",
+    "source-a0a9f79675c3f78e",
+    "source-a09d1ac943d14cd4",
+    "source-283eb0c95aa5ca9e",
+    "source-ecebbf6aa559a3ee",
+    "source-a66f85c4d6e10fba",
+    "source-7838edfb45044227",
+    "source-cd095c0d1e21645e"
+  ],
+  "solver": {
+    "elapsed_ms": 1339.726,
+    "engine": "ortools-cp-sat-optimal",
+    "metrics": {
+      "component_count": 15.0,
+      "elapsed_ms": 512.974,
+      "overlap_pairs": 0.0,
+      "plate_area_mm2": 1650000.0,
+      "solver_objective": 4097.0,
+      "space_utilization_percent": 8.304,
+      "used_area_mm2": 137011.477
+    },
+    "valid": true,
+    "warnings": []
+  },
+  "source_policy": "Only catalog/ DXF assets are valid sources",
+  "status": "REFERENCE / SEMI-REAL BENCHMARK \u2014 NOT A HUMAN PRODUCTION CABINET",
+  "validation": {
+    "errors": 0,
+    "issues": [],
+    "valid": true,
+    "warnings": 0
+  }
+}

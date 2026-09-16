@@ -293,6 +293,10 @@
           "title": "Aliases",
           "type": "array"
         },
+        "cad_asset_id": {
+          "title": "Cad Asset Id",
+          "type": "string"
+        },
         "category": {
           "title": "Category",
           "type": "string"

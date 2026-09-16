@@ -69,6 +69,17 @@ py -3.10 scripts/audit_catalog.py catalog
 node scripts/test_cad_viewport_and_catalog.cjs
 ```
 
+To build the R2 reference cabinet benchmark (using only DXF files under
+`catalog/`), run:
+
+```powershell
+.venv/Scripts/python.exe scripts/build_r2_benchmark.py
+.venv/Scripts/python.exe scripts/audit_dxf_ezdxf.py benchmarks/r2-real-cabinet/artifacts/r2-reference-cabinet.dxf
+```
+
+The benchmark is explicitly semi-real and source-unverified; see
+`docs/r2/R2_REAL_CABINET_REPORT.md` and its frozen source manifest.
+
 The audit writes `catalog/generated/catalog-assets.json`, CSV, previews and
 duplicate candidates. Original catalog DXF files are local inputs and are
 ignored by Git; only the derived cache/manifest is committed.
