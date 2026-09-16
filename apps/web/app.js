@@ -61,9 +61,18 @@
 
   const scenarios = { starter: starterScenario, mcc: mccScenario, plc: plcScenario };
   const GRID_MM = 5;
-  const state = { model: mccScenario(), selectedId: null, zoom: 1, panX: 0, panY: 0, grid: true, issues: [], drag: null, pan: null };
+  const state = { model: mccScenario(), selectedId: null, zoom: 1, panX: 0, panY: 0, grid: true, issues: [], drag: null, pan: null, assetCatalog: [], libraryMode: 'components' };
 
   function componentById(id) { return state.model.components.find((component) => component.id === id); }
+  function assetFor(component) { return state.assetCatalog.find((asset) => asset.id === component.assetId) || null; }
+  function assetPreview(asset) { return asset ? `/api/catalog/preview/${asset.id}` : ''; }
+  function assignDemoAssets() {
+    if (!state.assetCatalog.length) return;
+    const candidates = state.assetCatalog.filter((asset) => asset.parse_status === 'parsed' && asset.preview_ref && asset.suitable_as_panel_footprint);
+    const match = (pattern) => candidates.find((asset) => pattern.test(`${asset.relative_path} ${asset.candidate_description}`.toLowerCase()));
+    const assets = [match(/s7-1200.*(plc|cpu|power)/), match(/s7-1500.*(cpu|power)/), match(/sirius.*contactor/), match(/sitop.*psu/), match(/sinamics.*v20/)].filter(Boolean);
+    state.model.components.slice(0, assets.length).forEach((component, index) => { component.assetId = assets[index].id; component.footprintRef = `cad-asset:${assets[index].id}`; });
+  }
   function rect(component) { return CnbCadExport.rect(component); }
   function pointInside(a, b) { return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y; }
   function railFor(component) { return state.model.rails.find((rail) => { const r = rect(component); const railCenter = rail.y + rail.height / 2; return r.x + r.width > rail.x && r.x < rail.x + rail.length && railCenter >= r.y && railCenter <= r.y + r.height; }); }
@@ -93,7 +102,14 @@
   }
 
   function pointerToModel(event) {
-    const svg = $('#panelSvg'); const box = svg.getBoundingClientRect(); const x = ((event.clientX - box.left) / box.width) * state.model.enclosure.width; const yTop = ((event.clientY - box.top) / box.height) * state.model.enclosure.height; return { x, y: state.model.enclosure.height - yTop };
+    const svg = $('#panelSvg');
+    try {
+      const point = svg.createSVGPoint(); point.x = event.clientX; point.y = event.clientY;
+      const local = point.matrixTransform(svg.getScreenCTM().inverse());
+      return { x: local.x, y: state.model.enclosure.height - local.y };
+    } catch (error) {
+      const box = svg.getBoundingClientRect(); const x = ((event.clientX - box.left) / box.width) * state.model.enclosure.width; const yTop = ((event.clientY - box.top) / box.height) * state.model.enclosure.height; return { x, y: state.model.enclosure.height - yTop };
+    }
   }
 
   function render() {
@@ -103,7 +119,7 @@
     model.rails.forEach((rail) => out.push(`<g data-rail-id="${esc(rail.id)}"><rect x="${rail.x}" y="${sy(rail.y, rail.height)}" width="${rail.length}" height="${rail.height}" fill="#4b5d72" stroke="#d2deec" stroke-width="1"/><line x1="${rail.x + 5}" y1="${sy(rail.y + rail.height / 2)}" x2="${rail.x + rail.length - 5}" y2="${sy(rail.y + rail.height / 2)}" stroke="#d2deec" stroke-opacity=".35" stroke-dasharray="6 5"/></g>`));
     model.ducts.forEach((duct) => out.push(`<rect data-duct-id="${esc(duct.id)}" x="${duct.x}" y="${sy(duct.y, duct.height)}" width="${duct.width}" height="${duct.height}" fill="#1b2a3c" stroke="#70839c" stroke-dasharray="5 4"/>`));
     model.connections.forEach((connection) => { const from = componentById(connection.from); const to = componentById(connection.to); if (from && to) { const a = CnbCadExport.center(from); const b = CnbCadExport.center(to); out.push(`<line class="wire-line" x1="${a.x}" y1="${sy(a.y)}" x2="${b.x}" y2="${sy(b.y)}"/><circle cx="${a.x}" cy="${sy(a.y)}" r="2" fill="#f59e0b"/><circle cx="${b.x}" cy="${sy(b.y)}" r="2" fill="#f59e0b"/>`); } });
-    model.components.forEach((component) => { const r = rect(component); const selected = component.id === state.selectedId; out.push(`<g data-component-id="${esc(component.id)}" tabindex="0" role="button" aria-label="${esc(component.tag)} ${esc(component.name)}"><rect x="${r.x}" y="${sy(r.y, r.height)}" width="${r.width}" height="${r.height}" fill="${esc(component.color)}" fill-opacity=".86" stroke="${selected ? '#ffffff' : '#a6ceff'}" stroke-width="${selected ? 3 : 1.3}" rx="2"/><text pointer-events="none" x="${r.x + 4}" y="${sy(r.y + r.height / 2) + 4}" fill="#f0f7ff" font-size="${Math.max(6, Math.min(13, r.height / 4))}" font-weight="650">${esc(component.tag)}</text><text pointer-events="none" x="${r.x + 4}" y="${sy(r.y + 8)}" fill="#d2e2f4" font-size="${Math.max(4, Math.min(7, r.height / 8))}">${esc(component.name)}</text>${selected ? `<rect x="${r.x - 5}" y="${sy(r.y, r.height) - 5}" width="${r.width + 10}" height="${r.height + 10}" fill="none" stroke="#60a5fa" stroke-dasharray="4 3"/>` : ''}</g>`); });
+    model.components.forEach((component) => { const r = rect(component); const selected = component.id === state.selectedId; const asset = assetFor(component); const image = asset ? `<image href="${assetPreview(asset)}" x="${r.x}" y="${sy(r.y, r.height)}" width="${r.width}" height="${r.height}" preserveAspectRatio="xMidYMid meet" opacity=".96" pointer-events="none"/>` : ''; out.push(`<g data-component-id="${esc(component.id)}" tabindex="0" role="button" aria-label="${esc(component.tag)} ${esc(component.name)}"><rect x="${r.x}" y="${sy(r.y, r.height)}" width="${r.width}" height="${r.height}" fill="${esc(component.color)}" fill-opacity="${asset ? '.18' : '.86'}" stroke="${selected ? '#ffffff' : '#a6ceff'}" stroke-width="${selected ? 3 : 1.3}" rx="2"/>${image}<text pointer-events="none" x="${r.x + 4}" y="${sy(r.y + r.height / 2) + 4}" fill="#f0f7ff" font-size="${Math.max(6, Math.min(13, r.height / 4))}" font-weight="650">${esc(component.tag)}</text><text pointer-events="none" x="${r.x + 4}" y="${sy(r.y + 8)}" fill="#d2e2f4" font-size="${Math.max(4, Math.min(7, r.height / 8))}">${esc(component.name)}${asset ? ' · CAD' : ''}</text>${selected ? `<rect x="${r.x - 5}" y="${sy(r.y, r.height) - 5}" width="${r.width + 10}" height="${r.height + 10}" fill="none" stroke="#60a5fa" stroke-dasharray="4 3"/>` : ''}</g>`); });
     out.push(`<text x="20" y="25" fill="#c6d9ef" font-size="13" font-weight="650">${esc(model.enclosure.name)} · ${esc(model.project.revision)}</text>`); svg.innerHTML = out.join('');
     $('#projectName').textContent = model.project.name; $('#canvasTitle').textContent = model.project.name; $('#projectRevision').textContent = `REV ${model.project.revision}`; $('#zoomValue').textContent = `${Math.round(state.zoom * 100)}%`; $('#toggleGrid').setAttribute('aria-pressed', String(state.grid)); $('#canvasViewport').classList.toggle('no-grid', !state.grid); $('#dropHint').classList.toggle('hidden', model.components.length > 0);
     renderInspector(); renderValidation(); renderBom(); renderRulers();
@@ -164,21 +180,38 @@
   function removeSelected() { const index = state.model.components.findIndex((component) => component.id === state.selectedId); if (index < 0) return; const removed = state.model.components.splice(index, 1)[0]; state.model.connections = state.model.connections.filter((connection) => connection.from !== removed.id && connection.to !== removed.id); state.selectedId = null; validate(); render(); showToast(`${removed.tag} removed`); }
   function download(name, content, type) { const blob = new Blob([content], { type }); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
   function exportFormat(format) { const base = state.model.project.id || 'panel'; if (format === 'dxf') { const text = CnbCadExport.exportDxf(state.model); const audit = clientAuditDxf(text); download(`${base}.dxf`, text, 'application/dxf'); showToast(audit.valid ? `DXF exported · ${audit.entityCount} entities audited` : 'DXF export failed audit', audit.valid ? 'info' : 'error'); } else if (format === 'svg') { download(`${base}.svg`, CnbCadExport.exportSvg(state.model), 'image/svg+xml'); showToast('SVG preview exported'); } else { download(`${base}.canonical.json`, `${JSON.stringify(state.model, null, 2)}\n`, 'application/json'); showToast('Canonical model exported'); } }
+  function screenPointForModel(modelPoint) { const svg = $('#panelSvg'); const point = svg.createSVGPoint(); point.x = modelPoint.x; point.y = state.model.enclosure.height - modelPoint.y; const screen = point.matrixTransform(svg.getScreenCTM()); return { x: screen.x, y: screen.y }; }
+  function zoomAt(event, nextZoom) { const before = pointerToModel(event); state.zoom = Math.max(.1, Math.min(20, nextZoom)); render(); const after = screenPointForModel(before); state.panX += event.clientX - after.x; state.panY += event.clientY - after.y; render(); }
+  function focusComponent(component) { const viewport = $('#canvasViewport').getBoundingClientRect(); const center = CnbCadExport.center(component); state.zoom = Math.max(state.zoom, Math.min(20, 3.5)); render(); const screen = screenPointForModel(center); state.panX += viewport.left + viewport.width / 2 - screen.x; state.panY += viewport.top + viewport.height / 2 - screen.y; render(); }
   function fitCanvas() { state.zoom = 1; state.panX = 0; state.panY = 0; render(); }
-  function loadModel(raw, label) { const adapted = CnbEirAdapter.adapt(raw); state.model = CnbCadExport.normalizeModel(adapted); state.selectedId = null; validate(); render(); showToast(`${label || state.model.project.name} loaded`); }
+  function loadModel(raw, label) { const adapted = CnbEirAdapter.adapt(raw); state.model = CnbCadExport.normalizeModel(adapted); state.selectedId = null; assignDemoAssets(); validate(); render(); showToast(`${label || state.model.project.name} loaded`); }
+
+  function renderAssetLibrary() {
+    const list = $('#assetList'); if (!list) return;
+    const query = $('#librarySearch').value.toLowerCase();
+    const records = state.assetCatalog.filter((asset) => `${asset.relative_path} ${asset.candidate_description || ''} ${asset.product_family || ''}`.toLowerCase().includes(query));
+    list.innerHTML = records.map((asset) => `<button class="asset-card" type="button" data-asset-id="${asset.id}" title="${asset.relative_path}"><img loading="lazy" src="${assetPreview(asset)}" alt=""><span><strong>${asset.candidate_description || asset.relative_path}</strong><small>${asset.product_family || 'Unknown family'} · ${asset.candidate_view || 'unknown view'}<br>${asset.bbox ? `${Math.round(asset.bbox.width)} × ${Math.round(asset.bbox.height)} mm` : 'unparsed'} · ${asset.parse_status}</small></span></button>`).join('');
+    $$('.asset-card', list).forEach((item) => item.addEventListener('click', () => { const asset = state.assetCatalog.find((candidate) => candidate.id === item.dataset.assetId); if (!asset) return; const next = nextDeviceIndex(); const dimensions = asset.bbox || { width: 75, height: 100 }; const component = componentFrom('plc', next, state.model.enclosure.width / 2, state.model.enclosure.height / 2); component.name = asset.candidate_description || 'Imported CAD asset'; component.partNumber = `CAD-${asset.id}`; component.assetId = asset.id; component.footprintRef = `cad-asset:${asset.id}`; component.width = Math.min(160, Math.max(30, dimensions.width)); component.height = Math.min(220, Math.max(30, dimensions.height)); component.mounting = 'Plate'; component.x = snap(state.model.enclosure.width / 2 - component.width / 2, GRID_MM); component.y = snap(state.model.enclosure.height / 2 - component.height / 2, GRID_MM); state.model.components.push(component); state.selectedId = component.id; validate(); render(); showToast('CAD asset added as review footprint'); }));
+  }
+
+  async function loadAssetCatalog() { try { const response = await fetch('/api/catalog'); if (!response.ok) throw new Error(`HTTP ${response.status}`); const manifest = await response.json(); state.assetCatalog = manifest.records || []; assignDemoAssets(); renderAssetLibrary(); render(); $('#libraryCount').textContent = String(state.assetCatalog.length); } catch (error) { showToast(`CAD catalog unavailable: ${error.message}`, 'error'); } }
 
   function wireEvents() {
     $('#loadScenario').addEventListener('click', () => loadModel(scenarios[$('#scenarioSelect').value](), $('#scenarioSelect option:checked').textContent));
     $('#jsonInput').addEventListener('change', async (event) => { const file = event.target.files?.[0]; if (!file) return; try { loadModel(JSON.parse(await file.text()), file.name); } catch (error) { showToast(`Could not read JSON: ${error.message}`, 'error'); } event.target.value = ''; });
-    $('#autoLayout').addEventListener('click', autoLayout); $('#zoomIn').addEventListener('click', () => { state.zoom = Math.min(1.6, state.zoom + .1); render(); }); $('#zoomOut').addEventListener('click', () => { state.zoom = Math.max(.6, state.zoom - .1); render(); }); $('#fitCanvas').addEventListener('click', fitCanvas); $('#toggleGrid').addEventListener('click', () => { state.grid = !state.grid; render(); });
-    $('#librarySearch').addEventListener('input', (event) => { const query = event.target.value.toLowerCase(); $$('.library-item').forEach((item) => { item.hidden = !item.textContent.toLowerCase().includes(query); }); });
+    $('#autoLayout').addEventListener('click', autoLayout); $('#zoomIn').addEventListener('click', () => zoomAt({ clientX: $('#canvasViewport').getBoundingClientRect().left + $('#canvasViewport').clientWidth / 2, clientY: $('#canvasViewport').getBoundingClientRect().top + $('#canvasViewport').clientHeight / 2 }, state.zoom * 1.25)); $('#zoomOut').addEventListener('click', () => zoomAt({ clientX: $('#canvasViewport').getBoundingClientRect().left + $('#canvasViewport').clientWidth / 2, clientY: $('#canvasViewport').getBoundingClientRect().top + $('#canvasViewport').clientHeight / 2 }, state.zoom / 1.25)); $('#fitCanvas').addEventListener('click', fitCanvas); $('#toggleGrid').addEventListener('click', () => { state.grid = !state.grid; render(); });
+    $('#librarySearch').addEventListener('input', (event) => { const query = event.target.value.toLowerCase(); $$('.library-item').forEach((item) => { item.hidden = !item.textContent.toLowerCase().includes(query); }); renderAssetLibrary(); });
+    $('#componentTab').addEventListener('click', () => { state.libraryMode = 'components'; $('#componentTab').classList.add('active'); $('#assetTab').classList.remove('active'); $('#componentTab').setAttribute('aria-selected', 'true'); $('#assetTab').setAttribute('aria-selected', 'false'); $('#libraryList').hidden = false; $('#assetList').hidden = true; });
+    $('#assetTab').addEventListener('click', () => { state.libraryMode = 'assets'; $('#assetTab').classList.add('active'); $('#componentTab').classList.remove('active'); $('#componentTab').setAttribute('aria-selected', 'false'); $('#assetTab').setAttribute('aria-selected', 'true'); $('#libraryList').hidden = true; $('#assetList').hidden = false; renderAssetLibrary(); });
     $('#exportMenu').addEventListener('click', () => { const menu = $('#exportMenuItems'); menu.hidden = !menu.hidden; $('#exportMenu').setAttribute('aria-expanded', String(!menu.hidden)); }); $$('#exportMenuItems button').forEach((button) => button.addEventListener('click', () => { exportFormat(button.dataset.export); $('#exportMenuItems').hidden = true; $('#exportMenu').setAttribute('aria-expanded', 'false'); }));
     $('#inspectorForm').addEventListener('change', (event) => { if (event.target.name) updateSelected(event.target.name, event.target.value); }); $('#deleteComponent').addEventListener('click', removeSelected);
     const svg = $('#panelSvg');
+    $('#canvasViewport').addEventListener('wheel', (event) => { event.preventDefault(); zoomAt(event, state.zoom * Math.exp(-event.deltaY * 0.0015)); }, { passive: false });
+    svg.addEventListener('contextmenu', (event) => event.preventDefault());
     svg.addEventListener('dragover', (event) => { if (event.dataTransfer.types.includes('text/cnb-component')) event.preventDefault(); });
     svg.addEventListener('drop', pointerDrop);
     svg.addEventListener('pointerdown', (event) => {
-      if (event.button === 1 || (event.button === 0 && event.altKey)) {
+      if (event.button === 1 || event.button === 2 || (event.button === 0 && event.altKey)) {
         state.pan = { x: event.clientX, y: event.clientY, panX: state.panX, panY: state.panY };
         svg.setPointerCapture(event.pointerId);
         event.preventDefault();
@@ -199,12 +232,14 @@
       if (state.drag) { const component = componentById(state.drag.id); if (component) snapToNearestRail(component); state.drag = null; svg.releasePointerCapture?.(event.pointerId); validate(); render(); }
     });
     svg.addEventListener('pointercancel', () => { state.drag = null; state.pan = null; render(); });
+    svg.addEventListener('dblclick', (event) => { const target = event.target.closest?.('[data-component-id]'); if (!target) return; const component = componentById(target.dataset.componentId); if (component) { state.selectedId = component.id; focusComponent(component); } });
     svg.addEventListener('keydown', (event) => { if (!state.selectedId) return; const component = componentById(state.selectedId); if (!component) return; const delta = event.shiftKey ? 10 : 1; if (event.key === 'ArrowLeft') component.x -= delta; else if (event.key === 'ArrowRight') component.x += delta; else if (event.key === 'ArrowUp') component.y += delta; else if (event.key === 'ArrowDown') component.y -= delta; else if (event.key === 'Delete') return removeSelected(); else return; event.preventDefault(); validate(); render(); });
     document.addEventListener('click', (event) => { if (!event.target.closest('.export-menu')) { $('#exportMenuItems').hidden = true; $('#exportMenu').setAttribute('aria-expanded', 'false'); } });
     $$('.library-item').forEach((item) => { item.addEventListener('dragstart', (event) => { event.dataTransfer.setData('text/cnb-component', item.dataset.kind); event.dataTransfer.effectAllowed = 'copy'; }); item.addEventListener('click', () => addComponent(item.dataset.kind, state.model.enclosure.width / 2, state.model.enclosure.height / 2)); });
+    document.addEventListener('keydown', (event) => { if (event.key.toLowerCase() === 'f' && !/input|select|textarea/i.test(event.target.tagName)) { event.preventDefault(); fitCanvas(); } });
   }
 
   function renderLibrary() { const list = $('#libraryList'); list.innerHTML = library.map((item) => `<button class="library-item" draggable="true" data-kind="${item.kind}" type="button"><span class="library-glyph">${item.short}</span><span><strong>${item.label}</strong><small>${item.width} × ${item.height} mm · ${item.mounting}</small></span></button>`).join(''); $('#libraryCount').textContent = String(library.length); }
 
-  renderLibrary(); wireEvents(); validate(); render(); window.CNB_APP = { state, loadModel, autoLayout, validate, exportFormat, scenarios };
+  renderLibrary(); wireEvents(); validate(); render(); loadAssetCatalog(); window.CNB_APP = { state, loadModel, autoLayout, validate, exportFormat, scenarios, zoomAt, fitCanvas, pointerToModel };
 }());

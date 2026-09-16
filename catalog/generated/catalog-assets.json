@@ -1,0 +1,4909 @@
+{
+  "schema_version": "cad-asset-catalog.v1",
+  "source_root": "catalog",
+  "asset_count": 58,
+  "parsed_count": 58,
+  "product_count": 47,
+  "products": [
+    {
+      "id": "product-78cbb48e67ae3295",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "representations": [
+        {
+          "asset_id": "f4080e2f1fca2e38",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-318302997b20dfd2",
+      "manufacturer": "Siemens",
+      "product_family": "ET200S",
+      "representations": [
+        {
+          "asset_id": "63893bf415991296",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-db7099be40e9714a",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "d2040a6577395435",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "d2040a6577395435",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-2155cf8f7b28a808",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "a8120cb4d1fef926",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-42f2946b56b0945c",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "6689d7bfa34a7c44",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "6689d7bfa34a7c44",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-c64070f791685579",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "ee9f654c57605ea1",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "ee9f654c57605ea1",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-00ca9ae41bf29302",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "41635aacb5f6a2cb",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "41635aacb5f6a2cb",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-a7e56936f7caeb02",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "f9f9d015c5f1ac10",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "f9f9d015c5f1ac10",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-8f28a2d2d2472a63",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "ae0b2ecfef4e3714",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-97dd6253255f43ad",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "representations": [
+        {
+          "asset_id": "7409361b2ab0bd6c",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-b36d62c196ec7cb3",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "representations": [
+        {
+          "asset_id": "dfae0184b942589f",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-35f4e7db58b3df23",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "representations": [
+        {
+          "asset_id": "90c05981f998243b",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-6e886c4eadf8f80e",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "representations": [
+        {
+          "asset_id": "e0c450f62d48b5d2",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-c531bb41c28f1c58",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "representations": [
+        {
+          "asset_id": "9bd4640d3780c5e7",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-bd15c9a88a749b81",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "representations": [
+        {
+          "asset_id": "89c240c1c5794108",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-52bd9b8cd00350bf",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "representations": [
+        {
+          "asset_id": "30d93b5d0097c63e",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-fc6610e1cdcca8ce",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "representations": [
+        {
+          "asset_id": "ef954376114522a1",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-491372c07e0a8bb3",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "409adeb36772ffce",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-5004c74b0b7150e2",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "074f9df9d0280e7b",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-ac9c8e3af2d77353",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "8e4ea67b35e91470",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-ce5ca73c01b511f2",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "10dd8ab2cbd2c270",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-4eecfa92bf344d41",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "0d399eb259b8f55f",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-de99d0f54bdfff30",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "b236f9e82d6a6f2e",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-e58bc2f9ea6e0d49",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "1dd7bc3ba2bd6a35",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-08df1136659be6d7",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "59a4258b15ecd1fd",
+          "kind": "front",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "id": "product-c27931db171e2e38",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "68329709c96b95aa",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-c2c22de3791c1bfe",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "eb7ed3acc75fbcae",
+          "kind": "side",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "id": "product-48b2361b42702bd9",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "a2a9753b204b0dd3",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-66b786386cf872e2",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "e71066ed905fe257",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-74e39479b867bf04",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "ed005235c6b92b1b",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-bcbffeedb887d6d2",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "cae026a22e121702",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-6a76f5ad7592525a",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "8de4dca21d4d51e3",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-24e9dfe3bff56dcf",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "c34d462cf92d0c4c",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-de8ef4737bf272ce",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "representations": [
+        {
+          "asset_id": "b0e5dd70aa1130a1",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-9ba22bc6f2131b39",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "325c5fe6195d5202",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-b19231f257c68571",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "87fc649eabc31318",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-52a09267b8e0edd9",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "representations": [
+        {
+          "asset_id": "fb84d19f1034eb49",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-8d09e4ae3066f657",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "a18297e1e29076d0",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-e04311d3d3bab37e",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "7ac841ef58f0802d",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-1fdb4cc4238a5705",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "321240370c118c9c",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-0ee29c6596ba33a6",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "representations": [
+        {
+          "asset_id": "4705e7c941dcb507",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-46da739ea2ac782f",
+      "manufacturer": "Siemens",
+      "product_family": "HMI",
+      "representations": [
+        {
+          "asset_id": "4b10e8dd384b8e7e",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "4b10e8dd384b8e7e",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-276dc51a45047801",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "representations": [
+        {
+          "asset_id": "ead8d701fd66a45c",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "ead8d701fd66a45c",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-397f05d90aacc1d4",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "representations": [
+        {
+          "asset_id": "e2ea283cb57674d6",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "e2ea283cb57674d6",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-d2ecb77dd24fab2c",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "representations": [
+        {
+          "asset_id": "65a3915fce7924b1",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "65a3915fce7924b1",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-da5326f355ef688f",
+      "manufacturer": "Siemens",
+      "product_family": "SIRIUS",
+      "representations": [
+        {
+          "asset_id": "7b0bf205ff36ab88",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "7b0bf205ff36ab88",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "id": "product-128ca1056d1612a6",
+      "manufacturer": "Siemens",
+      "product_family": "SITOP",
+      "representations": [
+        {
+          "asset_id": "7836a4a9372aeb88",
+          "kind": "unknown",
+          "confidence": 0.0
+        },
+        {
+          "asset_id": "7836a4a9372aeb88",
+          "kind": "unknown",
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "f4080e2f1fca2e38",
+      "relative_path": "radica-dxf/0-siemens-simatic-et200pro-cpu-1516pro-2-pn-24vdc-16726e20f8-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 182377,
+      "sha256": "f4080e2f1fca2e3864946a705fd630b563199e1edb69cd91f9050cb7f5ebf627",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "candidate_description": "siemens simatic et200pro cpu 1516pro 2 pn 24vdc 16726e20f8 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1145,
+        "LINE": 626
+      },
+      "entity_count": 1771,
+      "modelspace_entity_count": 1771,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781040022797447,
+        "max_x": 26.59065300223,
+        "max_y": 92.47190140600958,
+        "width": 23.812505208171405,
+        "height": 95.25000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "874873230f40a299ecdcc8f7dba00276278fcca72cd80ce3dc8fd7f0fe2546d5",
+      "geometry_fingerprint_meta": {
+        "segments": 14366,
+        "bbox": [
+          23.81,
+          95.25
+        ]
+      },
+      "preview_ref": "previews/f4080e2f1fca2e38.svg",
+      "preview_segment_count": 14366,
+      "preview_bounds": "-1.0318,-6.5881,26.5907,92.4719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-78cbb48e67ae3295",
+      "representation": {
+        "asset_id": "f4080e2f1fca2e38",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "63893bf415991296",
+      "relative_path": "radica-dxf/0-siemens-simatic-et200s-2ai-24-vdc-hs-u-aio-2i-86611c91c4-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 165440,
+      "sha256": "63893bf415991296a30e88ec8841e4e14a9144b91a89fd3fe5171de7c421b6d9",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200S",
+      "candidate_description": "siemens simatic et200s 2ai 24 vdc hs u aio 2i 86611c91c4 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1019,
+        "LINE": 589
+      },
+      "entity_count": 1608,
+      "modelspace_entity_count": 1608,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781537022797447,
+        "max_x": 26.59065300223,
+        "max_y": 68.65935170600959,
+        "width": 23.812505208171405,
+        "height": 71.43750540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "d009ca60db73a22ee92c02ac8264a5f92629d364e571a7111bf53b543a3aad3b",
+      "geometry_fingerprint_meta": {
+        "segments": 12817,
+        "bbox": [
+          23.81,
+          71.44
+        ]
+      },
+      "preview_ref": "previews/63893bf415991296.svg",
+      "preview_segment_count": 12817,
+      "preview_bounds": "-0.0793,-5.6357,26.5907,68.6593",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-318302997b20dfd2",
+      "representation": {
+        "asset_id": "63893bf415991296",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "d2040a6577395435",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-cm-1241-rs232-24vdc-ce70a88b91-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 135989,
+      "sha256": "d2040a6577395435a5b2768b56211a33c988533c5ae1a505d1c9a41c3d64376b",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 cm 1241 rs232 24vdc ce70a88b91 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 956,
+        "LINE": 348
+      },
+      "entity_count": 1304,
+      "modelspace_entity_count": 1304,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153002279745,
+        "max_x": 26.59065300223,
+        "max_y": 21.03435240600958,
+        "width": 23.812505208171405,
+        "height": 23.812505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "1045793bd134c80437b0fe3de7a3b84fdfa7bf670831449d8921661554cd260e",
+      "geometry_fingerprint_meta": {
+        "segments": 11820,
+        "bbox": [
+          23.81,
+          23.81
+        ]
+      },
+      "preview_ref": "previews/d2040a6577395435.svg",
+      "preview_segment_count": 11820,
+      "preview_bounds": "1.8257,-3.7307,26.5907,21.0343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-db7099be40e9714a",
+      "representation": {
+        "asset_id": "d2040a6577395435",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "a8120cb4d1fef926",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-plc-1211c-cpu-dc-rly-6i-4o-2ai-cc0016d5de-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 259410,
+      "sha256": "a8120cb4d1fef92658ae634b666dfdf7f471668a0a45b27b6c3df1da78b0b60f",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1211c cpu dc rly 6i 4o 2ai cc0016d5de dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1864,
+        "LINE": 613
+      },
+      "entity_count": 2477,
+      "modelspace_entity_count": 2477,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781040022797447,
+        "max_x": 26.591153002229998,
+        "max_y": 92.47190140600958,
+        "width": 23.812505208171405,
+        "height": 95.25000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "994d8182cabdbe27033233e9f6b8b9f4bba55d494bd20422535d58f17cfb9237",
+      "geometry_fingerprint_meta": {
+        "segments": 22981,
+        "bbox": [
+          24.57,
+          95.25
+        ]
+      },
+      "preview_ref": "previews/a8120cb4d1fef926.svg",
+      "preview_segment_count": 22981,
+      "preview_bounds": "-1.7852,-6.5881,26.5912,92.4719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-2155cf8f7b28a808",
+      "representation": {
+        "asset_id": "a8120cb4d1fef926",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "6689d7bfa34a7c44",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-pm1207-1p-ac-24v-25a-9b3c45cb8f-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 110961,
+      "sha256": "6689d7bfa34a7c447dcad2e2f5a91f5a82786dca9387343463c4df11c440e3f9",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 pm1207 1p ac 24v 25a 9b3c45cb8f dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 716,
+        "LINE": 353
+      },
+      "entity_count": 1069,
+      "modelspace_entity_count": 1069,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103402279745,
+        "max_x": 26.59065300223,
+        "max_y": 44.846902006009586,
+        "width": 23.812505208171405,
+        "height": 47.62500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "0f7962c3a2a5044ca20a30430f5876991c75e4a235db568ef30204f086647e09",
+      "geometry_fingerprint_meta": {
+        "segments": 8945,
+        "bbox": [
+          23.81,
+          47.63
+        ]
+      },
+      "preview_ref": "previews/6689d7bfa34a7c44.svg",
+      "preview_segment_count": 8945,
+      "preview_bounds": "0.8732,-4.6831,26.5907,44.8469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-42f2946b56b0945c",
+      "representation": {
+        "asset_id": "6689d7bfa34a7c44",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ee9f654c57605ea1",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-sm-1221-dio-24vdc-105ma-8i-2f94caaed2-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 225070,
+      "sha256": "ee9f654c57605ea109f4fb626aa6120dc57b2bbc14da190c2f7cb05c3127098f",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 sm 1221 dio 24vdc 105ma 8i 2f94caaed2 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1672,
+        "LINE": 479
+      },
+      "entity_count": 2151,
+      "modelspace_entity_count": 2151,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781040022797447,
+        "max_x": 26.59065300223,
+        "max_y": 92.47190140600958,
+        "width": 23.812505208171405,
+        "height": 95.25000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "15e37e998576214fa87a180a1c2bcb03ce2651f76d91c3fb20837365362af241",
+      "geometry_fingerprint_meta": {
+        "segments": 20543,
+        "bbox": [
+          23.81,
+          95.25
+        ]
+      },
+      "preview_ref": "previews/ee9f654c57605ea1.svg",
+      "preview_segment_count": 20543,
+      "preview_bounds": "-1.0318,-6.5881,26.5907,92.4719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-c64070f791685579",
+      "representation": {
+        "asset_id": "ee9f654c57605ea1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "41635aacb5f6a2cb",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1200-sm-1231-aio-4ai-6e8bc44e12-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 162047,
+      "sha256": "41635aacb5f6a2cbe12dba4b571d6b74b626899ad7fd09dbad709a9331d989ec",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 sm 1231 aio 4ai 6e8bc44e12 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1128,
+        "LINE": 428
+      },
+      "entity_count": 1556,
+      "modelspace_entity_count": 1556,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "06f62392c4ad83ed32d65132a19a22267de4aefc86d45d912e5ced8184cc2658",
+      "geometry_fingerprint_meta": {
+        "segments": 13964,
+        "bbox": [
+          24.57,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/41635aacb5f6a2cb.svg",
+      "preview_segment_count": 13964,
+      "preview_bounds": "-1.1524,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-00ca9ae41bf29302",
+      "representation": {
+        "asset_id": "41635aacb5f6a2cb",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "f9f9d015c5f1ac10",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1500-sm531-16l-ba-analog-i-o-module-16i-af987867f6-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 271136,
+      "sha256": "f9f9d015c5f1ac10baf58a21d237ff6836bd2597725e5212bc5f4f5dc2d814bb",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 sm531 16l ba analog i o module 16i af987867f6 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1625,
+        "LINE": 1018
+      },
+      "entity_count": 2643,
+      "modelspace_entity_count": 2643,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104702279745,
+        "max_x": 26.59065300223,
+        "max_y": 140.0969007060096,
+        "width": 23.812505208171405,
+        "height": 142.87500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "56e736c87f31a479ab97705422c6b81c04ac9289762723fd035eafc2471eb30d",
+      "geometry_fingerprint_meta": {
+        "segments": 20518,
+        "bbox": [
+          23.81,
+          142.88
+        ]
+      },
+      "preview_ref": "previews/f9f9d015c5f1ac10.svg",
+      "preview_segment_count": 20518,
+      "preview_bounds": "-2.9368,-8.4931,26.5907,140.0969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-a7e56936f7caeb02",
+      "representation": {
+        "asset_id": "f9f9d015c5f1ac10",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ae0b2ecfef4e3714",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-1500-tm-count-2x24v-tech-i-o-module-3i-2o-a1d5bc57cc-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 234038,
+      "sha256": "ae0b2ecfef4e37149c3c3c9d7983c414195a642b12dce07ff49f5c0cfd9ca298",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 tm count 2x24v tech i o module 3i 2o a1d5bc57cc dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1611,
+        "LINE": 629
+      },
+      "entity_count": 2240,
+      "modelspace_entity_count": 2240,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781043022797447,
+        "max_x": 26.59065300223,
+        "max_y": 108.34690110600958,
+        "width": 23.812505208171405,
+        "height": 111.12500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "10b4b5c96e2f3e0ac43f855283f607ce3a18b7f6159a520c26ac45196598f300",
+      "geometry_fingerprint_meta": {
+        "segments": 19961,
+        "bbox": [
+          23.81,
+          111.13
+        ]
+      },
+      "preview_ref": "previews/ae0b2ecfef4e3714.svg",
+      "preview_segment_count": 19961,
+      "preview_bounds": "-1.6668,-7.2231,26.5907,108.3469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-8f28a2d2d2472a63",
+      "representation": {
+        "asset_id": "ae0b2ecfef4e3714",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7409361b2ab0bd6c",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-200-digital-input-em-223-32i-32o-24vdc-0faea9a340-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 774296,
+      "sha256": "7409361b2ab0bd6ce81cc878e40bf0b32fad7f63bec003f366d95c3904f48c2e",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "candidate_description": "siemens simatic s7 200 digital input em 223 32i 32o 24vdc 0faea9a340 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 5989,
+        "LINE": 1312
+      },
+      "entity_count": 7301,
+      "modelspace_entity_count": 7301,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781387021817445,
+        "max_x": 26.59065300223,
+        "max_y": 198.30516660600958,
+        "width": 23.812505208171405,
+        "height": 201.0833053081913
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "615871541d846c05856a1b2368117c7c26742e8b9d79a0eae91cea97cc0da9ba",
+      "geometry_fingerprint_meta": {
+        "segments": 73180,
+        "bbox": [
+          24.57,
+          201.08
+        ]
+      },
+      "preview_ref": "previews/7409361b2ab0bd6c.svg",
+      "preview_segment_count": 73180,
+      "preview_bounds": "-6.0218,-10.8215,26.5907,198.3052",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-97dd6253255f43ad",
+      "representation": {
+        "asset_id": "7409361b2ab0bd6c",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "dfae0184b942589f",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-300-plc-314-cpu-6a1fcc03c5-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 116585,
+      "sha256": "dfae0184b942589ff99f291a082f1681dbd67ded6da05a4f0a2e6f8d22cad67e",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "candidate_description": "siemens simatic s7 300 plc 314 cpu 6a1fcc03c5 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 785,
+        "LINE": 336
+      },
+      "entity_count": 1121,
+      "modelspace_entity_count": 1121,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153002279745,
+        "max_x": 26.59065300223,
+        "max_y": 21.03435240600958,
+        "width": 23.812505208171405,
+        "height": 23.812505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "9fd59ca423f7fe2c23d8d118673e87a2cc2ab194e1b801ecdc434ab87deb0340",
+      "geometry_fingerprint_meta": {
+        "segments": 9756,
+        "bbox": [
+          23.81,
+          23.81
+        ]
+      },
+      "preview_ref": "previews/dfae0184b942589f.svg",
+      "preview_segment_count": 9756,
+      "preview_bounds": "1.8257,-3.7307,26.5907,21.0343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-b36d62c196ec7cb3",
+      "representation": {
+        "asset_id": "dfae0184b942589f",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "90c05981f998243b",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-300-sm-321-dio-24vdc-32i-4ce365f26a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 340489,
+      "sha256": "90c05981f998243b8817aad132fc89d34e1b6ae96c84136e50c18d8ffc6373bd",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "candidate_description": "siemens simatic s7 300 sm 321 dio 24vdc 32i 4ce365f26a dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 2584,
+        "LINE": 635
+      },
+      "entity_count": 3219,
+      "modelspace_entity_count": 3219,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104702279745,
+        "max_x": 26.59065300223,
+        "max_y": 140.0969007060096,
+        "width": 23.812505208171405,
+        "height": 142.87500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "5ceb0c55fc038c918ce4f4a762db98a86c1c3ec64905b58eee7c38a4eee26476",
+      "geometry_fingerprint_meta": {
+        "segments": 31643,
+        "bbox": [
+          24.57,
+          142.88
+        ]
+      },
+      "preview_ref": "previews/90c05981f998243b.svg",
+      "preview_segment_count": 31643,
+      "preview_bounds": "-3.6935,-8.4931,26.5907,140.0969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-35f4e7db58b3df23",
+      "representation": {
+        "asset_id": "90c05981f998243b",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "e0c450f62d48b5d2",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-300-sm-331-aio-iso-24vdc-u-i-8i-3282d43036-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 217501,
+      "sha256": "e0c450f62d48b5d2000afae0aea55907f4686dd3ea7dcdabd97dafda9f3f1933",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-300",
+      "candidate_description": "siemens simatic s7 300 sm 331 aio iso 24vdc u i 8i 3282d43036 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1467,
+        "LINE": 617
+      },
+      "entity_count": 2084,
+      "modelspace_entity_count": 2084,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104502279745,
+        "max_x": 26.59065300223,
+        "max_y": 124.22190090600958,
+        "width": 23.812505208171405,
+        "height": 127.00000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "feefd8e70c557139bc88e4d49e34b8282d9d624e7a43d1204770631e2a6fb0ef",
+      "geometry_fingerprint_meta": {
+        "segments": 18221,
+        "bbox": [
+          23.81,
+          127.0
+        ]
+      },
+      "preview_ref": "previews/e0c450f62d48b5d2.svg",
+      "preview_segment_count": 18221,
+      "preview_bounds": "-2.3018,-7.8581,26.5907,124.2219",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-6e886c4eadf8f80e",
+      "representation": {
+        "asset_id": "e0c450f62d48b5d2",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "9bd4640d3780c5e7",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-400-cp-440-1-comm-24vdc-rs422-485-89e5f611d9-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 144489,
+      "sha256": "9bd4640d3780c5e759823076177658bb833c287315dbc1b1fa031a2d2ec86823",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "candidate_description": "siemens simatic s7 400 cp 440 1 comm 24vdc rs422 485 89e5f611d9 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 924,
+        "LINE": 475
+      },
+      "entity_count": 1399,
+      "modelspace_entity_count": 1399,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153502279745,
+        "max_x": 26.59065300223,
+        "max_y": 52.78435190600958,
+        "width": 23.812505208171405,
+        "height": 55.562505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "c4761d8f4b7a31ecfbca2b0e75c4117ba68c56ea3a77f2d56ed67959cdf955a5",
+      "geometry_fingerprint_meta": {
+        "segments": 11563,
+        "bbox": [
+          23.81,
+          55.56
+        ]
+      },
+      "preview_ref": "previews/9bd4640d3780c5e7.svg",
+      "preview_segment_count": 11563,
+      "preview_bounds": "0.5557,-5.0007,26.5907,52.7843",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-c531bb41c28f1c58",
+      "representation": {
+        "asset_id": "9bd4640d3780c5e7",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "89c240c1c5794108",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-400-plc-412-2-cpu-mpi-dp-profibus-dp-c3f5255ca2-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 115230,
+      "sha256": "89c240c1c5794108a9586ae088cd054c7f87522ca64489571ed16ed4f850f821",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "candidate_description": "siemens simatic s7 400 plc 412 2 cpu mpi dp profibus dp c3f5255ca2 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 758,
+        "LINE": 353
+      },
+      "entity_count": 1111,
+      "modelspace_entity_count": 1111,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103202279745,
+        "max_x": 26.59065300223,
+        "max_y": 28.97190220600958,
+        "width": 23.812505208171405,
+        "height": 31.750005408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "5dbfd4c1ef7b77ef371f3d76a80749e5ee01799c7a5c88f3fdec73653379831f",
+      "geometry_fingerprint_meta": {
+        "segments": 9449,
+        "bbox": [
+          23.81,
+          31.75
+        ]
+      },
+      "preview_ref": "previews/89c240c1c5794108.svg",
+      "preview_segment_count": 9449,
+      "preview_bounds": "1.5082,-4.0481,26.5907,28.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-bd15c9a88a749b81",
+      "representation": {
+        "asset_id": "89c240c1c5794108",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "30d93b5d0097c63e",
+      "relative_path": "radica-dxf/0-siemens-simatic-s7-400-ps-405-24-48-60-vdc-5vdc-4a-180c7837d0-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 135753,
+      "sha256": "30d93b5d0097c63ec6618c615574b702b080f57d0c689566bb3dc225b8288175",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "S7-400",
+      "candidate_description": "siemens simatic s7 400 ps 405 24 48 60 vdc 5vdc 4a 180c7837d0 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 890,
+        "LINE": 421
+      },
+      "entity_count": 1311,
+      "modelspace_entity_count": 1311,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153302279745,
+        "max_x": 26.59065300223,
+        "max_y": 36.909352106009585,
+        "width": 23.812505208171405,
+        "height": 39.68750540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "1efb79e7c6a44fbaff8dd6a771c493f716ea5467eca230a6f5dfa7d134b24a70",
+      "geometry_fingerprint_meta": {
+        "segments": 11101,
+        "bbox": [
+          23.81,
+          39.69
+        ]
+      },
+      "preview_ref": "previews/30d93b5d0097c63e.svg",
+      "preview_segment_count": 11101,
+      "preview_bounds": "1.1907,-4.3657,26.5907,36.9093",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-52bd9b8cd00350bf",
+      "representation": {
+        "asset_id": "30d93b5d0097c63e",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ef954376114522a1",
+      "relative_path": "radica-dxf/1-siemens-logo-plc-24rce-cpu-8i-4o-1039ffe69d-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 226242,
+      "sha256": "ef954376114522a1d6160633eea0b918633cf4c97e69a4bb3716ac6d9aedfad9",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "candidate_description": "siemens logo plc 24rce cpu 8i 4o 1039ffe69d dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1597,
+        "LINE": 569
+      },
+      "entity_count": 2166,
+      "modelspace_entity_count": 2166,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "f9f274c7f7048f01f24282e4d599b23290173b161e043080531599e5465c51ad",
+      "geometry_fingerprint_meta": {
+        "segments": 19733,
+        "bbox": [
+          23.81,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/ef954376114522a1.svg",
+      "preview_segment_count": 19733,
+      "preview_bounds": "-0.3968,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-fc6610e1cdcca8ce",
+      "representation": {
+        "asset_id": "ef954376114522a1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "409adeb36772ffce",
+      "relative_path": "radica-dxf/1-siemens-simatic-et200sp-f-tm-servodrive-1x24-48vdc-st-drive-controller-1o-e3c7ac5535-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 221652,
+      "sha256": "409adeb36772ffcef6f4259733b3054c256504f44dc03fc08bd890fa440223a6",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp f tm servodrive 1x24 48vdc st drive controller 1o e3c7ac5535 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1526,
+        "LINE": 600
+      },
+      "entity_count": 2126,
+      "modelspace_entity_count": 2126,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "145f6ed35080fd48d93ff8fb6eb75bc6c8e5409f90932ac9c42cbc8822526cb5",
+      "geometry_fingerprint_meta": {
+        "segments": 18912,
+        "bbox": [
+          24.02,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/409adeb36772ffce.svg",
+      "preview_segment_count": 18912,
+      "preview_bounds": "-0.6010,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-491372c07e0a8bb3",
+      "representation": {
+        "asset_id": "409adeb36772ffce",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "074f9df9d0280e7b",
+      "relative_path": "radica-dxf/1-siemens-simatic-et200sp-ha-ex-di-4xnamur-dio-4i-301da508ea-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 158843,
+      "sha256": "074f9df9d0280e7b721344ce4b06a54516e3046a5679468efafc2205daca08c0",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp ha ex di 4xnamur dio 4i 301da508ea dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1094,
+        "LINE": 432
+      },
+      "entity_count": 1526,
+      "modelspace_entity_count": 1526,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "b39a08b1201942228e303de5a04581d24f0200433c376bf72baee01f30857432",
+      "geometry_fingerprint_meta": {
+        "segments": 13560,
+        "bbox": [
+          24.08,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/074f9df9d0280e7b.svg",
+      "preview_segment_count": 13560,
+      "preview_bounds": "-0.6609,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-5004c74b0b7150e2",
+      "representation": {
+        "asset_id": "074f9df9d0280e7b",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "8e4ea67b35e91470",
+      "relative_path": "radica-dxf/1-siemens-simatic-et200sp-tm-posinput-1-tech-i-o-module-10-unit-2i-2o-5dde59664f-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 209088,
+      "sha256": "8e4ea67b35e91470f1d2335aa1bd0bafb8ecfcb81ce037c5ef185e278e345221",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp tm posinput 1 tech i o module 10 unit 2i 2o 5dde59664f dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1428,
+        "LINE": 583
+      },
+      "entity_count": 2011,
+      "modelspace_entity_count": 2011,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781539022797452,
+        "max_x": 26.59065300223,
+        "max_y": 84.53435150600959,
+        "width": 23.812505208171405,
+        "height": 87.31250540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "70675c7895f359b86d278167c49aacf95fe53b5be2b41b4ccf30c42a3ed5c42d",
+      "geometry_fingerprint_meta": {
+        "segments": 17719,
+        "bbox": [
+          23.81,
+          87.31
+        ]
+      },
+      "preview_ref": "previews/8e4ea67b35e91470.svg",
+      "preview_segment_count": 17719,
+      "preview_bounds": "-0.7143,-6.2707,26.5907,84.5343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-ac9c8e3af2d77353",
+      "representation": {
+        "asset_id": "8e4ea67b35e91470",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "10dd8ab2cbd2c270",
+      "relative_path": "radica-dxf/1-siemens-simatic-s7-1200-plc-1212c-cpu-ac-rly-8i-6o-2ai-470b7b93ef-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 310394,
+      "sha256": "10dd8ab2cbd2c27042cba382ce40ef8e330c4b0b829519b9a4dcecafceddde2e",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1212c cpu ac rly 8i 6o 2ai 470b7b93ef dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 2281,
+        "LINE": 668
+      },
+      "entity_count": 2949,
+      "modelspace_entity_count": 2949,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781043022797447,
+        "max_x": 26.591153002229998,
+        "max_y": 108.34690110600958,
+        "width": 23.812505208171405,
+        "height": 111.12500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "5134986a61423eff306d5e4d69f4f79864a039ee1f1f0509189bc1aea764f66a",
+      "geometry_fingerprint_meta": {
+        "segments": 28040,
+        "bbox": [
+          24.56,
+          111.13
+        ]
+      },
+      "preview_ref": "previews/10dd8ab2cbd2c270.svg",
+      "preview_segment_count": 28040,
+      "preview_bounds": "-2.4187,-7.2231,26.5912,108.3469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-ce5ca73c01b511f2",
+      "representation": {
+        "asset_id": "10dd8ab2cbd2c270",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "0d399eb259b8f55f",
+      "relative_path": "radica-dxf/1-siemens-simatic-s7-1500-cm-ptp-rs232-hf-comm-1i-o-54356a2f3f-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 122335,
+      "sha256": "0d399eb259b8f55fa591d245271ebd94416b692efe282920433becbe35591619",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 cm ptp rs232 hf comm 1i o 54356a2f3f dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 848,
+        "LINE": 324
+      },
+      "entity_count": 1172,
+      "modelspace_entity_count": 1172,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153002279745,
+        "max_x": 26.59065300223,
+        "max_y": 21.03435240600958,
+        "width": 23.812505208171405,
+        "height": 23.812505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "f5b5f9e5782706d36d7173cacba82d088cac8e3e2f925329c39736d0ba384fcb",
+      "geometry_fingerprint_meta": {
+        "segments": 10500,
+        "bbox": [
+          23.81,
+          23.81
+        ]
+      },
+      "preview_ref": "previews/0d399eb259b8f55f.svg",
+      "preview_segment_count": 10500,
+      "preview_bounds": "1.8257,-3.7307,26.5907,21.0343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-4eecfa92bf344d41",
+      "representation": {
+        "asset_id": "0d399eb259b8f55f",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "b236f9e82d6a6f2e",
+      "relative_path": "radica-dxf/1-siemens-simatic-s7-1500-cpu-1511-1-pn-7deea3b07d-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 131457,
+      "sha256": "b236f9e82d6a6f2e1afae96b6a3f960a8a9dba61e63471a6a0de9906c88868e9",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 cpu 1511 1 pn 7deea3b07d dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 866,
+        "LINE": 404
+      },
+      "entity_count": 1270,
+      "modelspace_entity_count": 1270,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153302279745,
+        "max_x": 26.59065300223,
+        "max_y": 36.909352106009585,
+        "width": 23.812505208171405,
+        "height": 39.68750540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "bd268140ce1fc54376c68e794de3359423ad53ad11a102dd2d5a1e158ec5844b",
+      "geometry_fingerprint_meta": {
+        "segments": 10796,
+        "bbox": [
+          23.81,
+          39.69
+        ]
+      },
+      "preview_ref": "previews/b236f9e82d6a6f2e.svg",
+      "preview_segment_count": 10796,
+      "preview_bounds": "1.1907,-4.3657,26.5907,36.9093",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-de99d0f54bdfff30",
+      "representation": {
+        "asset_id": "b236f9e82d6a6f2e",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "1dd7bc3ba2bd6a35",
+      "relative_path": "radica-dxf/1-siemens-simatic-s7-1500-f-dq-4x24-v-dc-2a-hf-fail-safe-4o-c21befc18a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 251097,
+      "sha256": "1dd7bc3ba2bd6a35a643e94b78d0641376f25e8f2426dd73d7a01c5a2f6343e5",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 f dq 4x24 v dc 2a hf fail safe 4o c21befc18a dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1790,
+        "LINE": 605
+      },
+      "entity_count": 2395,
+      "modelspace_entity_count": 2395,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.591153002229998,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "33e6b2717256f95f262ff83419ca3a54a49195668452927afb373b1d721b10b6",
+      "geometry_fingerprint_meta": {
+        "segments": 22085,
+        "bbox": [
+          23.81,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/1dd7bc3ba2bd6a35.svg",
+      "preview_segment_count": 22085,
+      "preview_bounds": "-0.3963,-5.9531,26.5912,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-e58bc2f9ea6e0d49",
+      "representation": {
+        "asset_id": "1dd7bc3ba2bd6a35",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "59a4258b15ecd1fd",
+      "relative_path": "radica-dxf/10-siemens-simatic-et200sp-1515sp-pc-cpu-64-bit-hmi-128pt-front-view-e0b2013f8a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 610519,
+      "sha256": "59a4258b15ecd1fd06c4424e638210d16f43a388d3648c5410eabd75bf355d7a",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp 1515sp pc cpu 64 bit hmi 128pt front view e0b2013f8a dxf",
+      "candidate_view": "front",
+      "view_confidence": 0.99,
+      "review_status": "auto-safe",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 1,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 382,
+        "LINE": 6858
+      },
+      "entity_count": 7240,
+      "modelspace_entity_count": 7240,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.1362366,
+        "min_y": -0.230536,
+        "max_x": 159.9366644,
+        "max_y": 118.3707348,
+        "width": 159.80042780000002,
+        "height": 118.6012708
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "1ada0df07510b0e8b46f73a7ead0e2811f156825743170225af7f473dcb65c0f",
+      "geometry_fingerprint_meta": {
+        "segments": 11442,
+        "bbox": [
+          159.8,
+          118.6
+        ]
+      },
+      "preview_ref": "previews/59a4258b15ecd1fd.svg",
+      "preview_segment_count": 11442,
+      "preview_bounds": "-6.2558,-6.6226,159.9367,118.3707",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-08df1136659be6d7",
+      "representation": {
+        "asset_id": "59a4258b15ecd1fd",
+        "kind": "front",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "68329709c96b95aa",
+      "relative_path": "radica-dxf/10-siemens-simatic-s7-1200-plc-1217c-cpu-dc-dc-10i-10o-2ai-2ao-310b1ef578-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 571199,
+      "sha256": "68329709c96b95aa0b490f87082e49dedd63aa160194100cf8530d8133c1865f",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1217c cpu dc dc 10i 10o 2ai 2ao 310b1ef578 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 4207,
+        "LINE": 1196
+      },
+      "entity_count": 5403,
+      "modelspace_entity_count": 5403,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.778105602279745,
+        "max_x": 26.591153002229998,
+        "max_y": 203.5968998060096,
+        "width": 23.812505208171405,
+        "height": 206.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "3eefbcb3d172aec4a729cd708190abbe3d644cbeedcc7c14f1bb122c05909ef2",
+      "geometry_fingerprint_meta": {
+        "segments": 51680,
+        "bbox": [
+          24.57,
+          206.38
+        ]
+      },
+      "preview_ref": "previews/68329709c96b95aa.svg",
+      "preview_segment_count": 51680,
+      "preview_bounds": "-6.2302,-11.0331,26.5912,203.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-c27931db171e2e38",
+      "representation": {
+        "asset_id": "68329709c96b95aa",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "eb7ed3acc75fbcae",
+      "relative_path": "radica-dxf/11-siemens-simatic-et200sp-1515sp-pc-cpu-64-bit-hmi-128pt-side-view-5f15cfb04a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 17887,
+      "sha256": "eb7ed3acc75fbcae15360cc0546278b4787d710746abe39e176363c923ff7e6c",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp 1515sp pc cpu 64 bit hmi 128pt side view 5f15cfb04a dxf",
+      "candidate_view": "side",
+      "view_confidence": 0.99,
+      "review_status": "auto-safe",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 1,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 8,
+        "LINE": 207
+      },
+      "entity_count": 215,
+      "modelspace_entity_count": 215,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.1919062,
+        "min_y": -0.2312485,
+        "max_x": 74.4205062,
+        "max_y": 118.368714,
+        "width": 74.2286,
+        "height": 118.5999625
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "a47fd7db8830bffee7c14baba8a594a8238dcfe138907f12993ecd479fe16e32",
+      "geometry_fingerprint_meta": {
+        "segments": 303,
+        "bbox": [
+          74.23,
+          118.6
+        ]
+      },
+      "preview_ref": "previews/eb7ed3acc75fbcae.svg",
+      "preview_segment_count": 303,
+      "preview_bounds": "-4.5521,-4.9752,74.4205,118.3687",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-c2c22de3791c1bfe",
+      "representation": {
+        "asset_id": "eb7ed3acc75fbcae",
+        "kind": "side",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "a2a9753b204b0dd3",
+      "relative_path": "radica-dxf/11-siemens-simatic-s7-1200-plc-1214c-cpu-dc-dc-14i-10o-2ai-20920a86c2-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 412746,
+      "sha256": "a2a9753b204b0dd3ac7c922d6a89f8eed3ed290473d8f96b28bb43bbdfb143da",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1214c cpu dc dc 14i 10o 2ai 20920a86c2 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 3079,
+        "LINE": 826
+      },
+      "entity_count": 3905,
+      "modelspace_entity_count": 3905,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781049022797446,
+        "max_x": 26.591153002229998,
+        "max_y": 155.97190050600958,
+        "width": 23.812505208171405,
+        "height": 158.75000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "71998ab80564e6b96fc7dc1a27f1739b9e35c05fbb32225dcad7788fbda6f3e9",
+      "geometry_fingerprint_meta": {
+        "segments": 37774,
+        "bbox": [
+          24.57,
+          158.75
+        ]
+      },
+      "preview_ref": "previews/a2a9753b204b0dd3.svg",
+      "preview_segment_count": 37774,
+      "preview_bounds": "-4.3245,-9.1281,26.5912,155.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-48b2361b42702bd9",
+      "representation": {
+        "asset_id": "a2a9753b204b0dd3",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "e71066ed905fe257",
+      "relative_path": "radica-dxf/12-siemens-simatic-s7-1200-plc-1214c-cpu-ac-rly-14i-10o-2ai-76dfe13f63-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 413730,
+      "sha256": "e71066ed905fe257a914a233feea857121a80e2349bfd004113f505948cd828a",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1214c cpu ac rly 14i 10o 2ai 76dfe13f63 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 3101,
+        "LINE": 813
+      },
+      "entity_count": 3914,
+      "modelspace_entity_count": 3914,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781049022797446,
+        "max_x": 26.591153002229998,
+        "max_y": 155.97190050600958,
+        "width": 23.812505208171405,
+        "height": 158.75000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "9946476672774236ac25d2d30087b2755823c64be39e2e91f488330db3a11fd4",
+      "geometry_fingerprint_meta": {
+        "segments": 38025,
+        "bbox": [
+          24.57,
+          158.75
+        ]
+      },
+      "preview_ref": "previews/e71066ed905fe257.svg",
+      "preview_segment_count": 38025,
+      "preview_bounds": "-4.3245,-9.1281,26.5912,155.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-66b786386cf872e2",
+      "representation": {
+        "asset_id": "e71066ed905fe257",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ed005235c6b92b1b",
+      "relative_path": "radica-dxf/17-siemens-simatic-s7-1200-plc-1215c-cpu-dc-dc-14i-10o-2ai-2ao-afc296445a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 432208,
+      "sha256": "ed005235c6b92b1ba10a6cc7d754f63835f2292cb5b520662750363cb4c2eda6",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1215c cpu dc dc 14i 10o 2ai 2ao afc296445a dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 3196,
+        "LINE": 898
+      },
+      "entity_count": 4094,
+      "modelspace_entity_count": 4094,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781049022797446,
+        "max_x": 26.591153002229998,
+        "max_y": 155.97190050600958,
+        "width": 23.812505208171405,
+        "height": 158.75000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "5b27abfa9e9bb64256e08e61626fc19eb94fcc1ee207c6591bbd9bfead6ad8c4",
+      "geometry_fingerprint_meta": {
+        "segments": 39250,
+        "bbox": [
+          24.57,
+          158.75
+        ]
+      },
+      "preview_ref": "previews/ed005235c6b92b1b.svg",
+      "preview_segment_count": 39250,
+      "preview_bounds": "-4.3245,-9.1281,26.5912,155.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-74e39479b867bf04",
+      "representation": {
+        "asset_id": "ed005235c6b92b1b",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "cae026a22e121702",
+      "relative_path": "radica-dxf/18-siemens-simatic-s7-1200-plc-1215c-cpu-dc-rly-14i-10o-2ai-2ao-d3978d04a6-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 432341,
+      "sha256": "cae026a22e121702040984c98f889b204c6664ead90bf1c0d51bc8658b1e1dbd",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1215c cpu dc rly 14i 10o 2ai 2ao d3978d04a6 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 3233,
+        "LINE": 857
+      },
+      "entity_count": 4090,
+      "modelspace_entity_count": 4090,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781049022797446,
+        "max_x": 26.591153002229998,
+        "max_y": 155.97190050600958,
+        "width": 23.812505208171405,
+        "height": 158.75000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "a1e3915400fddc9eba7d5f41cda81fb1ffa8bd1980ca7640fb0ee5813126e9ec",
+      "geometry_fingerprint_meta": {
+        "segments": 39653,
+        "bbox": [
+          24.57,
+          158.75
+        ]
+      },
+      "preview_ref": "previews/cae026a22e121702.svg",
+      "preview_segment_count": 39653,
+      "preview_bounds": "-4.3245,-9.1281,26.5912,155.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-bcbffeedb887d6d2",
+      "representation": {
+        "asset_id": "cae026a22e121702",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "8de4dca21d4d51e3",
+      "relative_path": "radica-dxf/2-siemens-simatic-s7-1200-plc-1211c-cpu-dc-dc-6i-4o-2ai-cbaac8b726-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 265534,
+      "sha256": "8de4dca21d4d51e3263c97914aad730b8b06de255052e3aa99e615a28a59f810",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1211c cpu dc dc 6i 4o 2ai cbaac8b726 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1908,
+        "LINE": 627
+      },
+      "entity_count": 2535,
+      "modelspace_entity_count": 2535,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781040022797447,
+        "max_x": 26.591153002229998,
+        "max_y": 92.47190140600958,
+        "width": 23.812505208171405,
+        "height": 95.25000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "628a7670394ec479ee90720bf1cfe94a9e3ac91edcc3810b6fc993a362dc6090",
+      "geometry_fingerprint_meta": {
+        "segments": 23523,
+        "bbox": [
+          24.57,
+          95.25
+        ]
+      },
+      "preview_ref": "previews/8de4dca21d4d51e3.svg",
+      "preview_segment_count": 23523,
+      "preview_bounds": "-1.7852,-6.5881,26.5912,92.4719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-6a76f5ad7592525a",
+      "representation": {
+        "asset_id": "8de4dca21d4d51e3",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "c34d462cf92d0c4c",
+      "relative_path": "radica-dxf/2-siemens-simatic-s7-1500-tm-posinput-2-tech-i-o-module-2i-2o-46c11c0b5a-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 260548,
+      "sha256": "c34d462cf92d0c4caeab08208ac7f988af7071cf597ec552a19684edbf9e7cdf",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "siemens simatic s7 1500 tm posinput 2 tech i o module 2i 2o 46c11c0b5a dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1669,
+        "LINE": 843
+      },
+      "entity_count": 2512,
+      "modelspace_entity_count": 2512,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104702279745,
+        "max_x": 26.59065300223,
+        "max_y": 140.0969007060096,
+        "width": 23.812505208171405,
+        "height": 142.87500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "88b0cf42c2915a1701ef2d8663d2bf8d15f6a60f60b2a6c69cfde47fa73347ac",
+      "geometry_fingerprint_meta": {
+        "segments": 20871,
+        "bbox": [
+          23.81,
+          142.88
+        ]
+      },
+      "preview_ref": "previews/c34d462cf92d0c4c.svg",
+      "preview_segment_count": 20871,
+      "preview_bounds": "-2.9368,-8.4931,26.5907,140.0969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-24e9dfe3bff56dcf",
+      "representation": {
+        "asset_id": "c34d462cf92d0c4c",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "b0e5dd70aa1130a1",
+      "relative_path": "radica-dxf/3-siemens-simatic-et200sp-ha-ex-ai-4xtc-2xrtd-2-3-4-w-aio-4i-9e3dfe8a65-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 161352,
+      "sha256": "b0e5dd70aa1130a165c5f975d1c1c9d7a0dae10256ef85e6a1eadc715a9fe455",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "ET200SP",
+      "candidate_description": "siemens simatic et200sp ha ex ai 4xtc 2xrtd 2 3 4 w aio 4i 9e3dfe8a65 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1068,
+        "LINE": 488
+      },
+      "entity_count": 1556,
+      "modelspace_entity_count": 1556,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "21aa9e09eb50f9b43d0822d05df5155fe17427d848ccc8ffd11ba2e13bdf987a",
+      "geometry_fingerprint_meta": {
+        "segments": 13304,
+        "bbox": [
+          23.81,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/b0e5dd70aa1130a1.svg",
+      "preview_segment_count": 13304,
+      "preview_bounds": "-0.3968,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-de8ef4737bf272ce",
+      "representation": {
+        "asset_id": "b0e5dd70aa1130a1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "325c5fe6195d5202",
+      "relative_path": "radica-dxf/3-siemens-simatic-s7-1200-plc-1212fc-cpu-dc-rly-8i-6o-2ai-9d78ef14a0-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 307364,
+      "sha256": "325c5fe6195d5202efcfd406f2ec78cdf99fdc2fbe31d043e3e73e93442de3ce",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1212fc cpu dc rly 8i 6o 2ai 9d78ef14a0 dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 2244,
+        "LINE": 678
+      },
+      "entity_count": 2922,
+      "modelspace_entity_count": 2922,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781043022797447,
+        "max_x": 26.591153002229998,
+        "max_y": 108.34690110600958,
+        "width": 23.812505208171405,
+        "height": 111.12500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "de6e7093467502ee0818c50331a3208648edb1e7ca7ee129195fd3ef58b81516",
+      "geometry_fingerprint_meta": {
+        "segments": 27606,
+        "bbox": [
+          24.56,
+          111.13
+        ]
+      },
+      "preview_ref": "previews/325c5fe6195d5202.svg",
+      "preview_segment_count": 27606,
+      "preview_bounds": "-2.4187,-7.2231,26.5912,108.3469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-9ba22bc6f2131b39",
+      "representation": {
+        "asset_id": "325c5fe6195d5202",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "87fc649eabc31318",
+      "relative_path": "radica-dxf/4-siemens-simatic-s7-1200-plc-1212fc-cpu-dc-8i-6o-2ai-e58d3dbaeb-dxf",
+      "source_group": "radica-dxf",
+      "file_size": 316630,
+      "sha256": "87fc649eabc31318d713f0cfbe304df55cb88395d3f16d792ccf89f86e2f6336",
+      "extension": "",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "siemens simatic s7 1200 plc 1212fc cpu dc 8i 6o 2ai e58d3dbaeb dxf",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 2311,
+        "LINE": 699
+      },
+      "entity_count": 3010,
+      "modelspace_entity_count": 3010,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778647794058593,
+        "min_y": -2.7781043022797447,
+        "max_x": 26.591153002229998,
+        "max_y": 108.34690110600958,
+        "width": 23.812505208171405,
+        "height": 111.12500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "fceaa507dbad230923be555209cb953f64caa4c6217f1b581bba83295313f1f0",
+      "geometry_fingerprint_meta": {
+        "segments": 28431,
+        "bbox": [
+          24.56,
+          111.13
+        ]
+      },
+      "preview_ref": "previews/87fc649eabc31318.svg",
+      "preview_segment_count": 28431,
+      "preview_bounds": "-2.4187,-7.2231,26.5912,108.3469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-b19231f257c68571",
+      "representation": {
+        "asset_id": "87fc649eabc31318",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "41635aacb5f6a2cb",
+      "relative_path": "siemens-batch-w33/s7-1200-plc-aio-asset-radica-41635aacb5f6a2cb.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 162047,
+      "sha256": "41635aacb5f6a2cbe12dba4b571d6b74b626899ad7fd09dbad709a9331d989ec",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "s7 1200 plc aio asset radica 41635aacb5f6a2cb",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1128,
+        "LINE": 428
+      },
+      "entity_count": 1556,
+      "modelspace_entity_count": 1556,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103802279745,
+        "max_x": 26.59065300223,
+        "max_y": 76.59690160600958,
+        "width": 23.812505208171405,
+        "height": 79.37500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "06f62392c4ad83ed32d65132a19a22267de4aefc86d45d912e5ced8184cc2658",
+      "geometry_fingerprint_meta": {
+        "segments": 13964,
+        "bbox": [
+          24.57,
+          79.38
+        ]
+      },
+      "preview_ref": "previews/41635aacb5f6a2cb.svg",
+      "preview_segment_count": 13964,
+      "preview_bounds": "-1.1524,-5.9531,26.5907,76.5969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-00ca9ae41bf29302",
+      "representation": {
+        "asset_id": "41635aacb5f6a2cb",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "d2040a6577395435",
+      "relative_path": "siemens-batch-w33/s7-1200-plc-comm-asset-radica-d2040a6577395435.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 135989,
+      "sha256": "d2040a6577395435a5b2768b56211a33c988533c5ae1a505d1c9a41c3d64376b",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "s7 1200 plc comm asset radica d2040a6577395435",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 956,
+        "LINE": 348
+      },
+      "entity_count": 1304,
+      "modelspace_entity_count": 1304,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153002279745,
+        "max_x": 26.59065300223,
+        "max_y": 21.03435240600958,
+        "width": 23.812505208171405,
+        "height": 23.812505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "1045793bd134c80437b0fe3de7a3b84fdfa7bf670831449d8921661554cd260e",
+      "geometry_fingerprint_meta": {
+        "segments": 11820,
+        "bbox": [
+          23.81,
+          23.81
+        ]
+      },
+      "preview_ref": "previews/d2040a6577395435.svg",
+      "preview_segment_count": 11820,
+      "preview_bounds": "1.8257,-3.7307,26.5907,21.0343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-db7099be40e9714a",
+      "representation": {
+        "asset_id": "d2040a6577395435",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ee9f654c57605ea1",
+      "relative_path": "siemens-batch-w33/s7-1200-plc-dio-asset-radica-ee9f654c57605ea1.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 225070,
+      "sha256": "ee9f654c57605ea109f4fb626aa6120dc57b2bbc14da190c2f7cb05c3127098f",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "s7 1200 plc dio asset radica ee9f654c57605ea1",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1672,
+        "LINE": 479
+      },
+      "entity_count": 2151,
+      "modelspace_entity_count": 2151,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781040022797447,
+        "max_x": 26.59065300223,
+        "max_y": 92.47190140600958,
+        "width": 23.812505208171405,
+        "height": 95.25000540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "15e37e998576214fa87a180a1c2bcb03ce2651f76d91c3fb20837365362af241",
+      "geometry_fingerprint_meta": {
+        "segments": 20543,
+        "bbox": [
+          23.81,
+          95.25
+        ]
+      },
+      "preview_ref": "previews/ee9f654c57605ea1.svg",
+      "preview_segment_count": 20543,
+      "preview_bounds": "-1.0318,-6.5881,26.5907,92.4719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-c64070f791685579",
+      "representation": {
+        "asset_id": "ee9f654c57605ea1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "6689d7bfa34a7c44",
+      "relative_path": "siemens-batch-w33/s7-1200-plc-power-asset-radica-6689d7bfa34a7c44.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 110961,
+      "sha256": "6689d7bfa34a7c447dcad2e2f5a91f5a82786dca9387343463c4df11c440e3f9",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "s7 1200 plc power asset radica 6689d7bfa34a7c44",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 716,
+        "LINE": 353
+      },
+      "entity_count": 1069,
+      "modelspace_entity_count": 1069,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103402279745,
+        "max_x": 26.59065300223,
+        "max_y": 44.846902006009586,
+        "width": 23.812505208171405,
+        "height": 47.62500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "0f7962c3a2a5044ca20a30430f5876991c75e4a235db568ef30204f086647e09",
+      "geometry_fingerprint_meta": {
+        "segments": 8945,
+        "bbox": [
+          23.81,
+          47.63
+        ]
+      },
+      "preview_ref": "previews/6689d7bfa34a7c44.svg",
+      "preview_segment_count": 8945,
+      "preview_bounds": "0.8732,-4.6831,26.5907,44.8469",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-42f2946b56b0945c",
+      "representation": {
+        "asset_id": "6689d7bfa34a7c44",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "fb84d19f1034eb49",
+      "relative_path": "siemens-batch-w33/s7-1200-plc-special-asset-radica-fb84d19f1034eb49.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 220164,
+      "sha256": "fb84d19f1034eb49739ebe2cb3982e912448badf428e08de4b96cfe305dc053f",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1200",
+      "candidate_description": "s7 1200 plc special asset radica fb84d19f1034eb49",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1535,
+        "LINE": 575
+      },
+      "entity_count": 2110,
+      "modelspace_entity_count": 2110,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.7781537022797447,
+        "max_x": 26.59065300223,
+        "max_y": 68.65935170600959,
+        "width": 23.812505208171405,
+        "height": 71.43750540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "e3ae9a7f2e5001b9987d0037f96cdd802a1aa12bb54d305ac541581ae4460a96",
+      "geometry_fingerprint_meta": {
+        "segments": 18995,
+        "bbox": [
+          23.81,
+          71.44
+        ]
+      },
+      "preview_ref": "previews/fb84d19f1034eb49.svg",
+      "preview_segment_count": 18995,
+      "preview_bounds": "-0.0793,-5.6357,26.5907,68.6593",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-52a09267b8e0edd9",
+      "representation": {
+        "asset_id": "fb84d19f1034eb49",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "f9f9d015c5f1ac10",
+      "relative_path": "siemens-batch-w33/s7-1500-plc-aio-asset-radica-f9f9d015c5f1ac10.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 271136,
+      "sha256": "f9f9d015c5f1ac10baf58a21d237ff6836bd2597725e5212bc5f4f5dc2d814bb",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "s7 1500 plc aio asset radica f9f9d015c5f1ac10",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778",
+        "DEFAULT_255_2_778_1"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 1625,
+        "LINE": 1018
+      },
+      "entity_count": 2643,
+      "modelspace_entity_count": 2643,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104702279745,
+        "max_x": 26.59065300223,
+        "max_y": 140.0969007060096,
+        "width": 23.812505208171405,
+        "height": 142.87500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "56e736c87f31a479ab97705422c6b81c04ac9289762723fd035eafc2471eb30d",
+      "geometry_fingerprint_meta": {
+        "segments": 20518,
+        "bbox": [
+          23.81,
+          142.88
+        ]
+      },
+      "preview_ref": "previews/f9f9d015c5f1ac10.svg",
+      "preview_segment_count": 20518,
+      "preview_bounds": "-2.9368,-8.4931,26.5907,140.0969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-a7e56936f7caeb02",
+      "representation": {
+        "asset_id": "f9f9d015c5f1ac10",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "a18297e1e29076d0",
+      "relative_path": "siemens-batch-w33/s7-1500-plc-comm-asset-radica-a18297e1e29076d0.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 125604,
+      "sha256": "a18297e1e29076d0890b270abd36f24e05650660f07b6f5416a2aa24d47f260e",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "s7 1500 plc comm asset radica a18297e1e29076d0",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 878,
+        "LINE": 324
+      },
+      "entity_count": 1202,
+      "modelspace_entity_count": 1202,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153002279745,
+        "max_x": 26.59065300223,
+        "max_y": 21.03435240600958,
+        "width": 23.812505208171405,
+        "height": 23.812505408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "6267f9d7e6183d8a17318ae3623c77f2ede6d0424b5913abb267c7674d514bfd",
+      "geometry_fingerprint_meta": {
+        "segments": 10860,
+        "bbox": [
+          23.81,
+          23.81
+        ]
+      },
+      "preview_ref": "previews/a18297e1e29076d0.svg",
+      "preview_segment_count": 10860,
+      "preview_bounds": "1.8257,-3.7307,26.5907,21.0343",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-8d09e4ae3066f657",
+      "representation": {
+        "asset_id": "a18297e1e29076d0",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7ac841ef58f0802d",
+      "relative_path": "siemens-batch-w33/s7-1500-plc-cpu-asset-radica-7ac841ef58f0802d.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 136332,
+      "sha256": "7ac841ef58f0802d586ab2e93875e955ca283215de87735984a35c23aa44fc19",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "s7 1500 plc cpu asset radica 7ac841ef58f0802d",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 918,
+        "LINE": 396
+      },
+      "entity_count": 1314,
+      "modelspace_entity_count": 1314,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778153302279745,
+        "max_x": 26.59065300223,
+        "max_y": 36.909352106009585,
+        "width": 23.812505208171405,
+        "height": 39.68750540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "df25ca50b693c149c48c83798d9d2a56855e9143c23b5861ccdc5d277a4841c1",
+      "geometry_fingerprint_meta": {
+        "segments": 11412,
+        "bbox": [
+          23.81,
+          39.69
+        ]
+      },
+      "preview_ref": "previews/7ac841ef58f0802d.svg",
+      "preview_segment_count": 11412,
+      "preview_bounds": "1.1907,-4.3657,26.5907,36.9093",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-e04311d3d3bab37e",
+      "representation": {
+        "asset_id": "7ac841ef58f0802d",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "321240370c118c9c",
+      "relative_path": "siemens-batch-w33/s7-1500-plc-dio-asset-radica-321240370c118c9c.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 287817,
+      "sha256": "321240370c118c9c5c2d3d7ec7aa3340f1659743d34866ecd8278e11665c5127",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "s7 1500 plc dio asset radica 321240370c118c9c",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 2027,
+        "LINE": 726
+      },
+      "entity_count": 2753,
+      "modelspace_entity_count": 2753,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778104702279745,
+        "max_x": 26.59065300223,
+        "max_y": 140.0969007060096,
+        "width": 23.812505208171405,
+        "height": 142.87500540828933
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "215931d3050b3e6a825cc50b5d158ced75222d5cd10abab8367fea461a2da5b0",
+      "geometry_fingerprint_meta": {
+        "segments": 25050,
+        "bbox": [
+          23.81,
+          142.88
+        ]
+      },
+      "preview_ref": "previews/321240370c118c9c.svg",
+      "preview_segment_count": 25050,
+      "preview_bounds": "-2.9368,-8.4931,26.5907,140.0969",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-1fdb4cc4238a5705",
+      "representation": {
+        "asset_id": "321240370c118c9c",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "4705e7c941dcb507",
+      "relative_path": "siemens-batch-w33/s7-1500-plc-power-asset-radica-4705e7c941dcb507.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 138841,
+      "sha256": "4705e7c941dcb507d12e6244dbd25473f79e60013da7fa296a0d2d4393f26119",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": null,
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "s7 1500 plc power asset radica 4705e7c941dcb507",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1009",
+      "units_code": null,
+      "units": null,
+      "layers": [
+        "DEFAULT_255_1_388",
+        "DEFAULT_255_2_778"
+      ],
+      "layer_count": 2,
+      "blocks": [
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 2,
+      "entity_types": {
+        "ARC": 998,
+        "LINE": 326
+      },
+      "entity_count": 1324,
+      "modelspace_entity_count": 1324,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 2.778147794058593,
+        "min_y": -2.778103202279745,
+        "max_x": 26.59065300223,
+        "max_y": 28.97190220600958,
+        "width": 23.812505208171405,
+        "height": 31.750005408289326
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "0d5e5bfb49ba74b1b47553f5a6c39dfed03f87da44717aaff5a3ec40e20cae4d",
+      "geometry_fingerprint_meta": {
+        "segments": 12302,
+        "bbox": [
+          23.81,
+          31.75
+        ]
+      },
+      "preview_ref": "previews/4705e7c941dcb507.svg",
+      "preview_segment_count": 12302,
+      "preview_bounds": "1.5082,-4.0481,26.5907,28.9719",
+      "annotation_present": false,
+      "insert_present": false,
+      "suitable_as_panel_footprint": true,
+      "product_id": "product-0ee29c6596ba33a6",
+      "representation": {
+        "asset_id": "4705e7c941dcb507",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "4b10e8dd384b8e7e",
+      "relative_path": "siemens-batch-w33/simatic-hmi-hmi-panel-cad-asset-siemens-bilddb-4b10e8dd384b8e7e.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 151391,
+      "sha256": "4b10e8dd384b8e7ed430101dc2f8a4f6c003ff5d095ed0570a8338fa7c3b7afe",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "cp1252",
+      "manufacturer": "Siemens",
+      "product_family": "HMI",
+      "candidate_description": "simatic hmi hmi panel cad asset siemens bilddb 4b10e8dd384b8e7e",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1015",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN308",
+        "EPLAN400"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryspecial_symbol13_variant3_placement3",
+        "eplsym_libraryspecial_symbol1_variant0_placement3",
+        "eplsym_libraryspecial_symbol34_variant3_placement3"
+      ],
+      "block_count": 7,
+      "entity_types": {
+        "INSERT": 7,
+        "LWPOLYLINE": 1,
+        "TEXT": 5
+      },
+      "entity_count": 13,
+      "modelspace_entity_count": 13,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 420.0,
+        "max_y": 297.0,
+        "width": 420.0,
+        "height": 297.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "c64362d8e571bce6a7b5b172a3154a7dd9693547077339769ff8959846629a37",
+      "geometry_fingerprint_meta": {
+        "segments": 160,
+        "bbox": [
+          420.0,
+          297.0
+        ]
+      },
+      "preview_ref": "previews/4b10e8dd384b8e7e.svg",
+      "preview_segment_count": 160,
+      "preview_bounds": "-16.8000,-16.8000,420.0000,297.0000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-46da739ea2ac782f",
+      "representation": {
+        "asset_id": "4b10e8dd384b8e7e",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ead8d701fd66a45c",
+      "relative_path": "siemens-batch-w33/simatic-top-connect-terminal-accessory-cad-asset-siemens-bilddb-ead8d701fd66a45c.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 219049,
+      "sha256": "ead8d701fd66a45cf8b23d8746964bce90924b2acd7cfe68ee1776ef6f0551ba",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": null,
+      "candidate_description": "simatic top connect terminal accessory cad asset siemens bilddb ead8d701fd66a45c",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1032",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN100",
+        "EPLAN108"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryspecial_symbol0_variant0_placement2",
+        "eplsym_libraryspecial_symbol13_variant1_placement2",
+        "eplsym_libraryspecial_symbol13_variant3_placement2"
+      ],
+      "block_count": 7,
+      "entity_types": {
+        "INSERT": 15,
+        "LWPOLYLINE": 3,
+        "TEXT": 1
+      },
+      "entity_count": 19,
+      "modelspace_entity_count": 19,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "width": 279.4,
+        "height": 431.8
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "186b036e25a94b00c15d918bcdf55b14fabe6545d745d56cff3e88f53d3a1541",
+      "geometry_fingerprint_meta": {
+        "segments": 197,
+        "bbox": [
+          279.4,
+          431.8
+        ]
+      },
+      "preview_ref": "previews/ead8d701fd66a45c.svg",
+      "preview_segment_count": 197,
+      "preview_bounds": "-17.2720,-17.2720,279.4000,431.8000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-276dc51a45047801",
+      "representation": {
+        "asset_id": "ead8d701fd66a45c",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "e2ea283cb57674d6",
+      "relative_path": "siemens-batch-w33/sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 220572,
+      "sha256": "e2ea283cb57674d65ac3ac101730c88307804bb94e6f78693ea797fdf6d5d15d",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "utf-8",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "candidate_description": "sinamics g120c vfd cad asset siemens bilddb e2ea283cb57674d6",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1024",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "71_GS_LI",
+        "72_GS_AB",
+        "73_GS_ABS",
+        "74_GS_BMK",
+        "75_GS_TXT",
+        "76_GS_AP"
+      ],
+      "layer_count": 7,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe"
+      ],
+      "block_count": 4,
+      "entity_types": {
+        "CIRCLE": 14,
+        "HATCH": 14,
+        "INSERT": 1,
+        "LINE": 140,
+        "LWPOLYLINE": 72,
+        "MTEXT": 6,
+        "TEXT": 299
+      },
+      "entity_count": 546,
+      "modelspace_entity_count": 546,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "max_x": 525.0,
+        "max_y": 349.25,
+        "width": 677.5997271487049,
+        "height": 349.25000000000045
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "d492a4f89858d232b363176fbf7c9b789133713d6a58b5b8c59f24dd35d0bd6f",
+      "geometry_fingerprint_meta": {
+        "segments": 566,
+        "bbox": [
+          525.0,
+          349.25
+        ]
+      },
+      "preview_ref": "previews/e2ea283cb57674d6.svg",
+      "preview_segment_count": 566,
+      "preview_bounds": "-21.0000,-21.0000,525.0000,349.2500",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-397f05d90aacc1d4",
+      "representation": {
+        "asset_id": "e2ea283cb57674d6",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "65a3915fce7924b1",
+      "relative_path": "siemens-batch-w33/sinamics-v20-vfd-cad-asset-siemens-bilddb-65a3915fce7924b1.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 189620,
+      "sha256": "65a3915fce7924b1ece4c274188c5b9bc06fd2cbd0925cf63d083ab5898daed3",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "utf-8",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "candidate_description": "sinamics v20 vfd cad asset siemens bilddb 65a3915fce7924b1",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1027",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "71_GS_LI",
+        "72_GS_AB",
+        "73_GS_ABS",
+        "74_GS_BMK",
+        "75_GS_TXT"
+      ],
+      "layer_count": 6,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "eplframe"
+      ],
+      "block_count": 3,
+      "entity_types": {
+        "ARC": 4,
+        "CIRCLE": 3,
+        "HATCH": 1,
+        "INSERT": 1,
+        "LINE": 72,
+        "LWPOLYLINE": 4,
+        "MTEXT": 4,
+        "TEXT": 212
+      },
+      "entity_count": 301,
+      "modelspace_entity_count": 301,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 420.0,
+        "max_y": 297.0,
+        "width": 420.0,
+        "height": 297.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "097e059e456fe0c9a40d5225a049743d4b3f365d93b9e4cb462084aef0a9f39c",
+      "geometry_fingerprint_meta": {
+        "segments": 184,
+        "bbox": [
+          420.0,
+          297.0
+        ]
+      },
+      "preview_ref": "previews/65a3915fce7924b1.svg",
+      "preview_segment_count": 184,
+      "preview_bounds": "-16.8000,-16.8000,420.0000,297.0000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-d2ecb77dd24fab2c",
+      "representation": {
+        "asset_id": "65a3915fce7924b1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7b0bf205ff36ab88",
+      "relative_path": "siemens-batch-w33/sirius-contactor-cad-asset-siemens-bilddb-7b0bf205ff36ab88.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 585709,
+      "sha256": "7b0bf205ff36ab88464f50eaf121e48c67c8d2ac35d2361b847ca156a46795eb",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "cp1252",
+      "manufacturer": "Siemens",
+      "product_family": "SIRIUS",
+      "candidate_description": "sirius contactor cad asset siemens bilddb 7b0bf205ff36ab88",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1015",
+      "units_code": 0,
+      "units": "unitless",
+      "layers": [
+        "10000_FRONT",
+        "90000_FRAME",
+        "91000_TIP"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "$model_space",
+        "$paper_space",
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 4,
+      "entity_types": {
+        "ARC": 306,
+        "CIRCLE": 4,
+        "LINE": 2229,
+        "POLYLINE": 18,
+        "TEXT": 13
+      },
+      "entity_count": 2570,
+      "modelspace_entity_count": 2570,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 297.0,
+        "max_y": 210.0,
+        "width": 297.0,
+        "height": 210.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "15ec76dbded2df447944b6d35918ad71f58b20469964be6d95b13d77dbca5a00",
+      "geometry_fingerprint_meta": {
+        "segments": 6081,
+        "bbox": [
+          297.0,
+          210.0
+        ]
+      },
+      "preview_ref": "previews/7b0bf205ff36ab88.svg",
+      "preview_segment_count": 6081,
+      "preview_bounds": "-11.8800,-11.8800,297.0000,210.0000",
+      "annotation_present": true,
+      "insert_present": false,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-da5326f355ef688f",
+      "representation": {
+        "asset_id": "7b0bf205ff36ab88",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7836a4a9372aeb88",
+      "relative_path": "siemens-batch-w33/sitop-psu-cad-asset-siemens-bilddb-7836a4a9372aeb88.dxf",
+      "source_group": "siemens-batch-w33",
+      "file_size": 210921,
+      "sha256": "7836a4a9372aeb88ae795398bc9f6340ef67f74e1b56c787c7450354e519566f",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SITOP",
+      "candidate_description": "sitop psu cad asset siemens bilddb 7836a4a9372aeb88",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1032",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN100",
+        "EPLAN108",
+        "EPLAN311",
+        "EPLAN510"
+      ],
+      "layer_count": 5,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryiec_symbol_symbol56_variant1_placement7",
+        "eplsym_libraryspecial_symbol0_variant0_placement1",
+        "eplsym_libraryspecial_symbol22_variant1_placement1",
+        "eplsym_libraryspecial_symbol22_variant3_placement1"
+      ],
+      "block_count": 8,
+      "entity_types": {
+        "CIRCLE": 2,
+        "HATCH": 2,
+        "INSERT": 10,
+        "LINE": 21,
+        "LWPOLYLINE": 2,
+        "TEXT": 1
+      },
+      "entity_count": 38,
+      "modelspace_entity_count": 38,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "width": 279.4,
+        "height": 431.8
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "098283019428fc0f234a019239c751c28331bd6b8ec6178989a9d1d25c288978",
+      "geometry_fingerprint_meta": {
+        "segments": 203,
+        "bbox": [
+          279.4,
+          431.8
+        ]
+      },
+      "preview_ref": "previews/7836a4a9372aeb88.svg",
+      "preview_segment_count": 203,
+      "preview_bounds": "-17.2720,-17.2720,279.4000,431.8000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-128ca1056d1612a6",
+      "representation": {
+        "asset_id": "7836a4a9372aeb88",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "4b10e8dd384b8e7e",
+      "relative_path": "siemens-bilddb/simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 151391,
+      "sha256": "4b10e8dd384b8e7ed430101dc2f8a4f6c003ff5d095ed0570a8338fa7c3b7afe",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "cp1252",
+      "manufacturer": "Siemens",
+      "product_family": "HMI",
+      "candidate_description": "simatic hmi ktp700 basic dp 7 inch g st70 xx 01722",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1015",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN308",
+        "EPLAN400"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryspecial_symbol13_variant3_placement3",
+        "eplsym_libraryspecial_symbol1_variant0_placement3",
+        "eplsym_libraryspecial_symbol34_variant3_placement3"
+      ],
+      "block_count": 7,
+      "entity_types": {
+        "INSERT": 7,
+        "LWPOLYLINE": 1,
+        "TEXT": 5
+      },
+      "entity_count": 13,
+      "modelspace_entity_count": 13,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 420.0,
+        "max_y": 297.0,
+        "width": 420.0,
+        "height": 297.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "c64362d8e571bce6a7b5b172a3154a7dd9693547077339769ff8959846629a37",
+      "geometry_fingerprint_meta": {
+        "segments": 160,
+        "bbox": [
+          420.0,
+          297.0
+        ]
+      },
+      "preview_ref": "previews/4b10e8dd384b8e7e.svg",
+      "preview_segment_count": 160,
+      "preview_bounds": "-16.8000,-16.8000,420.0000,297.0000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-46da739ea2ac782f",
+      "representation": {
+        "asset_id": "4b10e8dd384b8e7e",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "ead8d701fd66a45c",
+      "relative_path": "siemens-bilddb/simatic-top-connect-tp1-connecting-module-for-s7-1500-et-200mp-g-kt01-xx-02193.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 219049,
+      "sha256": "ead8d701fd66a45cf8b23d8746964bce90924b2acd7cfe68ee1776ef6f0551ba",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SIMATIC S7-1500",
+      "candidate_description": "simatic top connect tp1 connecting module for s7 1500 et 200mp g kt01 xx 02193",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1032",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN100",
+        "EPLAN108"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryspecial_symbol0_variant0_placement2",
+        "eplsym_libraryspecial_symbol13_variant1_placement2",
+        "eplsym_libraryspecial_symbol13_variant3_placement2"
+      ],
+      "block_count": 7,
+      "entity_types": {
+        "INSERT": 15,
+        "LWPOLYLINE": 3,
+        "TEXT": 1
+      },
+      "entity_count": 19,
+      "modelspace_entity_count": 19,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "width": 279.4,
+        "height": 431.8
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "186b036e25a94b00c15d918bcdf55b14fabe6545d745d56cff3e88f53d3a1541",
+      "geometry_fingerprint_meta": {
+        "segments": 197,
+        "bbox": [
+          279.4,
+          431.8
+        ]
+      },
+      "preview_ref": "previews/ead8d701fd66a45c.svg",
+      "preview_segment_count": 197,
+      "preview_bounds": "-17.2720,-17.2720,279.4000,431.8000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-276dc51a45047801",
+      "representation": {
+        "asset_id": "ead8d701fd66a45c",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "e2ea283cb57674d6",
+      "relative_path": "siemens-bilddb/sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 220572,
+      "sha256": "e2ea283cb57674d65ac3ac101730c88307804bb94e6f78693ea797fdf6d5d15d",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "utf-8",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "candidate_description": "sinamics g120c sinamics g120c fsd g sd01 xx 00631",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1024",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "71_GS_LI",
+        "72_GS_AB",
+        "73_GS_ABS",
+        "74_GS_BMK",
+        "75_GS_TXT",
+        "76_GS_AP"
+      ],
+      "layer_count": 7,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe"
+      ],
+      "block_count": 4,
+      "entity_types": {
+        "CIRCLE": 14,
+        "HATCH": 14,
+        "INSERT": 1,
+        "LINE": 140,
+        "LWPOLYLINE": 72,
+        "MTEXT": 6,
+        "TEXT": 299
+      },
+      "entity_count": 546,
+      "modelspace_entity_count": 546,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "max_x": 525.0,
+        "max_y": 349.25,
+        "width": 677.5997271487049,
+        "height": 349.25000000000045
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "d492a4f89858d232b363176fbf7c9b789133713d6a58b5b8c59f24dd35d0bd6f",
+      "geometry_fingerprint_meta": {
+        "segments": 566,
+        "bbox": [
+          525.0,
+          349.25
+        ]
+      },
+      "preview_ref": "previews/e2ea283cb57674d6.svg",
+      "preview_segment_count": 566,
+      "preview_bounds": "-21.0000,-21.0000,525.0000,349.2500",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-397f05d90aacc1d4",
+      "representation": {
+        "asset_id": "e2ea283cb57674d6",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "65a3915fce7924b1",
+      "relative_path": "siemens-bilddb/sinamics-v20-sinamics-v20-3ac-400v-frame-size-a-g-sd01-xx-00966.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 189620,
+      "sha256": "65a3915fce7924b1ece4c274188c5b9bc06fd2cbd0925cf63d083ab5898daed3",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "utf-8",
+      "manufacturer": "Siemens",
+      "product_family": "SINAMICS",
+      "candidate_description": "sinamics v20 sinamics v20 3ac 400v frame size a g sd01 xx 00966",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1027",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "71_GS_LI",
+        "72_GS_AB",
+        "73_GS_ABS",
+        "74_GS_BMK",
+        "75_GS_TXT"
+      ],
+      "layer_count": 6,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "eplframe"
+      ],
+      "block_count": 3,
+      "entity_types": {
+        "ARC": 4,
+        "CIRCLE": 3,
+        "HATCH": 1,
+        "INSERT": 1,
+        "LINE": 72,
+        "LWPOLYLINE": 4,
+        "MTEXT": 4,
+        "TEXT": 212
+      },
+      "entity_count": 301,
+      "modelspace_entity_count": 301,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 420.0,
+        "max_y": 297.0,
+        "width": 420.0,
+        "height": 297.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "097e059e456fe0c9a40d5225a049743d4b3f365d93b9e4cb462084aef0a9f39c",
+      "geometry_fingerprint_meta": {
+        "segments": 184,
+        "bbox": [
+          420.0,
+          297.0
+        ]
+      },
+      "preview_ref": "previews/65a3915fce7924b1.svg",
+      "preview_segment_count": 184,
+      "preview_bounds": "-16.8000,-16.8000,420.0000,297.0000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-d2ecb77dd24fab2c",
+      "representation": {
+        "asset_id": "65a3915fce7924b1",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7b0bf205ff36ab88",
+      "relative_path": "siemens-bilddb/sirius-sirius-contactor-size-s0-2no-2nc-spring-terminals-g-ic03-xx-31829.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 585709,
+      "sha256": "7b0bf205ff36ab88464f50eaf121e48c67c8d2ac35d2361b847ca156a46795eb",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "cp1252",
+      "manufacturer": "Siemens",
+      "product_family": "SIRIUS",
+      "candidate_description": "sirius sirius contactor size s0 2no 2nc spring terminals g ic03 xx 31829",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1015",
+      "units_code": 0,
+      "units": "unitless",
+      "layers": [
+        "10000_FRONT",
+        "90000_FRAME",
+        "91000_TIP"
+      ],
+      "layer_count": 3,
+      "blocks": [
+        "$model_space",
+        "$paper_space",
+        "*model_space",
+        "*paper_space"
+      ],
+      "block_count": 4,
+      "entity_types": {
+        "ARC": 306,
+        "CIRCLE": 4,
+        "LINE": 2229,
+        "POLYLINE": 18,
+        "TEXT": 13
+      },
+      "entity_count": 2570,
+      "modelspace_entity_count": 2570,
+      "paperspace_layouts": [
+        "Layout1"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 297.0,
+        "max_y": 210.0,
+        "width": 297.0,
+        "height": 210.0
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "15ec76dbded2df447944b6d35918ad71f58b20469964be6d95b13d77dbca5a00",
+      "geometry_fingerprint_meta": {
+        "segments": 6081,
+        "bbox": [
+          297.0,
+          210.0
+        ]
+      },
+      "preview_ref": "previews/7b0bf205ff36ab88.svg",
+      "preview_segment_count": 6081,
+      "preview_bounds": "-11.8800,-11.8800,297.0000,210.0000",
+      "annotation_present": true,
+      "insert_present": false,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-da5326f355ef688f",
+      "representation": {
+        "asset_id": "7b0bf205ff36ab88",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    },
+    {
+      "id": "7836a4a9372aeb88",
+      "relative_path": "siemens-bilddb/sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf",
+      "source_group": "siemens-bilddb",
+      "file_size": 210921,
+      "sha256": "7836a4a9372aeb88ae795398bc9f6340ef67f74e1b56c787c7450354e519566f",
+      "extension": ".dxf",
+      "content_is_dxf": true,
+      "parse_status": "parsed",
+      "encoding": "ascii",
+      "manufacturer": "Siemens",
+      "product_family": "SITOP",
+      "candidate_description": "sitop sitop pm1207 ex 24 v dc 2 5 a g kt01 xx 02221",
+      "candidate_view": null,
+      "view_confidence": 0.0,
+      "review_status": "needs-review",
+      "dxf_version": "AC1032",
+      "units_code": 4,
+      "units": "millimetres",
+      "layers": [
+        "0",
+        "EPLAN100",
+        "EPLAN108",
+        "EPLAN311",
+        "EPLAN510"
+      ],
+      "layer_count": 5,
+      "blocks": [
+        "*model_space",
+        "*paper_space",
+        "*paper_space0",
+        "eplframe",
+        "eplsym_libraryiec_symbol_symbol56_variant1_placement7",
+        "eplsym_libraryspecial_symbol0_variant0_placement1",
+        "eplsym_libraryspecial_symbol22_variant1_placement1",
+        "eplsym_libraryspecial_symbol22_variant3_placement1"
+      ],
+      "block_count": 8,
+      "entity_types": {
+        "CIRCLE": 2,
+        "HATCH": 2,
+        "INSERT": 10,
+        "LINE": 21,
+        "LWPOLYLINE": 2,
+        "TEXT": 1
+      },
+      "entity_count": 38,
+      "modelspace_entity_count": 38,
+      "paperspace_layouts": [
+        "Layout1",
+        "Layout2"
+      ],
+      "bbox": {
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "width": 279.4,
+        "height": 431.8
+      },
+      "extreme_dimensions": false,
+      "geometry_fingerprint": "098283019428fc0f234a019239c751c28331bd6b8ec6178989a9d1d25c288978",
+      "geometry_fingerprint_meta": {
+        "segments": 203,
+        "bbox": [
+          279.4,
+          431.8
+        ]
+      },
+      "preview_ref": "previews/7836a4a9372aeb88.svg",
+      "preview_segment_count": 203,
+      "preview_bounds": "-17.2720,-17.2720,279.4000,431.8000",
+      "annotation_present": true,
+      "insert_present": true,
+      "suitable_as_panel_footprint": false,
+      "product_id": "product-128ca1056d1612a6",
+      "representation": {
+        "asset_id": "7836a4a9372aeb88",
+        "kind": "unknown",
+        "confidence": 0.0
+      }
+    }
+  ],
+  "duplicate_candidates": [
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-cm-1241-rs232-24vdc-ce70a88b91-dxf",
+        "siemens-batch-w33/s7-1200-plc-comm-asset-radica-d2040a6577395435.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-pm1207-1p-ac-24v-25a-9b3c45cb8f-dxf",
+        "siemens-batch-w33/s7-1200-plc-power-asset-radica-6689d7bfa34a7c44.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-sm-1221-dio-24vdc-105ma-8i-2f94caaed2-dxf",
+        "siemens-batch-w33/s7-1200-plc-dio-asset-radica-ee9f654c57605ea1.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-sm-1231-aio-4ai-6e8bc44e12-dxf",
+        "siemens-batch-w33/s7-1200-plc-aio-asset-radica-41635aacb5f6a2cb.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1500-sm531-16l-ba-analog-i-o-module-16i-af987867f6-dxf",
+        "siemens-batch-w33/s7-1500-plc-aio-asset-radica-f9f9d015c5f1ac10.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/simatic-hmi-hmi-panel-cad-asset-siemens-bilddb-4b10e8dd384b8e7e.dxf",
+        "siemens-bilddb/simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/simatic-top-connect-terminal-accessory-cad-asset-siemens-bilddb-ead8d701fd66a45c.dxf",
+        "siemens-bilddb/simatic-top-connect-tp1-connecting-module-for-s7-1500-et-200mp-g-kt01-xx-02193.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
+        "siemens-bilddb/sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/sinamics-v20-vfd-cad-asset-siemens-bilddb-65a3915fce7924b1.dxf",
+        "siemens-bilddb/sinamics-v20-sinamics-v20-3ac-400v-frame-size-a-g-sd01-xx-00966.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/sirius-contactor-cad-asset-siemens-bilddb-7b0bf205ff36ab88.dxf",
+        "siemens-bilddb/sirius-sirius-contactor-size-s0-2no-2nc-spring-terminals-g-ic03-xx-31829.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "exact-file-duplicate",
+      "confidence": 1.0,
+      "paths": [
+        "siemens-batch-w33/sitop-psu-cad-asset-siemens-bilddb-7836a4a9372aeb88.dxf",
+        "siemens-bilddb/sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf"
+      ],
+      "reason": "identical SHA256"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-cm-1241-rs232-24vdc-ce70a88b91-dxf",
+        "siemens-batch-w33/s7-1200-plc-comm-asset-radica-d2040a6577395435.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-pm1207-1p-ac-24v-25a-9b3c45cb8f-dxf",
+        "siemens-batch-w33/s7-1200-plc-power-asset-radica-6689d7bfa34a7c44.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-sm-1221-dio-24vdc-105ma-8i-2f94caaed2-dxf",
+        "siemens-batch-w33/s7-1200-plc-dio-asset-radica-ee9f654c57605ea1.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1200-sm-1231-aio-4ai-6e8bc44e12-dxf",
+        "siemens-batch-w33/s7-1200-plc-aio-asset-radica-41635aacb5f6a2cb.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "radica-dxf/0-siemens-simatic-s7-1500-sm531-16l-ba-analog-i-o-module-16i-af987867f6-dxf",
+        "siemens-batch-w33/s7-1500-plc-aio-asset-radica-f9f9d015c5f1ac10.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/simatic-hmi-hmi-panel-cad-asset-siemens-bilddb-4b10e8dd384b8e7e.dxf",
+        "siemens-bilddb/simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/simatic-top-connect-terminal-accessory-cad-asset-siemens-bilddb-ead8d701fd66a45c.dxf",
+        "siemens-bilddb/simatic-top-connect-tp1-connecting-module-for-s7-1500-et-200mp-g-kt01-xx-02193.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
+        "siemens-bilddb/sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/sinamics-v20-vfd-cad-asset-siemens-bilddb-65a3915fce7924b1.dxf",
+        "siemens-bilddb/sinamics-v20-sinamics-v20-3ac-400v-frame-size-a-g-sd01-xx-00966.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/sirius-contactor-cad-asset-siemens-bilddb-7b0bf205ff36ab88.dxf",
+        "siemens-bilddb/sirius-sirius-contactor-size-s0-2no-2nc-spring-terminals-g-ic03-xx-31829.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    },
+    {
+      "kind": "geometric-near-duplicate",
+      "confidence": 0.92,
+      "paths": [
+        "siemens-batch-w33/sitop-psu-cad-asset-siemens-bilddb-7836a4a9372aeb88.dxf",
+        "siemens-bilddb/sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf"
+      ],
+      "reason": "same translation-normalized line/curve fingerprint"
+    }
+  ]
+}

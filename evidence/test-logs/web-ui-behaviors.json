@@ -6,16 +6,16 @@
   },
   "snappedDrop": {
     "railId": "rail-mid",
-    "x": 395,
+    "x": 420,
     "y": 1550,
-    "issues": 1
+    "issues": 2
   },
   "beforePan": {
-    "x": 0,
+    "x": -0.00439453125,
     "y": 0
   },
   "afterPan": {
-    "x": 80,
+    "x": 79.99560546875,
     "y": 40
   },
   "viewportPanChanged": true

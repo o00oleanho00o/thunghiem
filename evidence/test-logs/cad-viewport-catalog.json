@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "catalogAssets": 58,
+  "cursorZoomStationary": true,
+  "zoom": 2.857651118063164,
+  "rightPan": {
+    "before": {
+      "x": -198.783203125,
+      "y": 160.68679809570312
+    },
+    "after": {
+      "x": -143.783203125,
+      "y": 185.68679809570312
+    }
+  },
+  "doubleClickZoom": true,
+  "fitShortcut": true,
+  "assetAdded": true
+}

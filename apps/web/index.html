@@ -38,8 +38,10 @@
   <main class="workspace">
     <aside class="left-panel">
       <div class="panel-heading"><div><span class="eyebrow">LIBRARY</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
+      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">CAD assets</button></div>
       <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Filter components</span><input id="librarySearch" type="search" placeholder="Filter components"></label>
       <div class="library-list" id="libraryList" aria-label="Component library"></div>
+      <div class="asset-list" id="assetList" aria-label="Imported CAD asset library" hidden></div>
       <div class="library-foot"><span class="status-dot green"></span><span>Catalog synced</span><span class="foot-meta">v0.1</span></div>
     </aside>
 

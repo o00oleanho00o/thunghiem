@@ -7,6 +7,8 @@ const { normalizeModel, exportDxf, exportSvg, auditDxf } = require('../../packag
 const { adapt: adaptEir } = require('./eir-adapter.js');
 
 const root = __dirname;
+const catalogRoot = path.resolve(__dirname, '../../catalog');
+const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
 const port = Number(process.env.CNB_WEB_PORT || process.argv[2] || 4173);
 const mime = {
   '.html': 'text/html; charset=utf-8',
@@ -36,6 +38,20 @@ const server = http.createServer(async (request, response) => {
   try {
     const requestUrl = new URL(request.url, `http://${request.headers.host || 'localhost'}`);
     if (requestUrl.pathname === '/api/health') return send(response, 200, JSON.stringify({ ok: true, service: 'cnb-electrical-lab-web' }), mime['.json']);
+    if (requestUrl.pathname === '/api/catalog' && request.method === 'GET') {
+      if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing; run scripts/audit_catalog.py catalog' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(catalogManifestPath), mime['.json']);
+    }
+    const previewMatch = requestUrl.pathname.match(/^\/api\/catalog\/preview\/([a-f0-9]{16})$/);
+    if (previewMatch && request.method === 'GET') {
+      if (!fs.existsSync(catalogManifestPath)) return send(response, 404, 'Catalog manifest missing');
+      const manifest = JSON.parse(fs.readFileSync(catalogManifestPath, 'utf8'));
+      const record = manifest.records.find((item) => item.id === previewMatch[1]);
+      if (!record || !record.preview_ref) return send(response, 404, 'Preview not found');
+      const previewPath = path.resolve(catalogRoot, 'generated', record.preview_ref);
+      if (!previewPath.startsWith(path.resolve(catalogRoot, 'generated') + path.sep) || !fs.existsSync(previewPath)) return send(response, 404, 'Preview not found');
+      return send(response, 200, fs.readFileSync(previewPath), mime['.svg']);
+    }
     if (requestUrl.pathname === '/api/export' && request.method === 'POST') {
       const payload = JSON.parse(await bodyFrom(request));
       const candidate = payload.model || payload;

@@ -45,8 +45,10 @@ node apps/web/server.js 4173
 ```
 
 Open <http://127.0.0.1:4173/>. The browser surface supports scenario loading,
-component-library add/drag, selection and typed property edits, snap-grid
-movement, auto-layout, validation, BOM inspection, and JSON/SVG/DXF downloads.
+component-library add/drag, cursor-centered CAD zoom from 10% to 2000%,
+right/middle-button pan, `F` fit, double-click focus, selection and typed
+property edits, snap-grid movement, auto-layout, validation, BOM inspection,
+imported CAD asset previews, and JSON/SVG/DXF downloads.
 The browser model is an explicit projection from Python EIR v1 in
 `apps/web/eir-adapter.js`; it is not a second canonical database.
 
@@ -59,6 +61,17 @@ node scripts/capture_web_evidence.cjs
 
 The script records UI state in `evidence/test-logs/web-ui-evidence.json` and
 captures real browser screenshots in `evidence/screenshots/`.
+
+To audit the local Siemens/Radica DXF inputs and build the browser vector cache:
+
+```powershell
+py -3.10 scripts/audit_catalog.py catalog
+node scripts/test_cad_viewport_and_catalog.cjs
+```
+
+The audit writes `catalog/generated/catalog-assets.json`, CSV, previews and
+duplicate candidates. Original catalog DXF files are local inputs and are
+ignored by Git; only the derived cache/manifest is committed.
 
 ## DXF audit and independent render
 

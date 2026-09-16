@@ -1,0 +1,5 @@
+# Original customer/source DXF files remain local inputs and are never rewritten
+*
+!.gitignore
+!generated/
+!generated/**
