@@ -1,0 +1,64 @@
+{
+  "schema_version": "cnb-r4-3b-cabinet-runtime.v1",
+  "app": "Taam4142/cabinet-layout-generator",
+  "upstream_commit": "0633b013dc65d13055b8f3765a27425cb58ec510",
+  "url": "http://127.0.0.1:4178/",
+  "checks": {
+    "app_started": true,
+    "browser_loaded": true,
+    "cnb_model_loaded": true,
+    "plate_visible": true,
+    "device_visibility": true,
+    "duct_visibility": true,
+    "rail_proxy_visibility": true,
+    "selection": true,
+    "drag": true,
+    "drag_jank": true,
+    "lock": true,
+    "snap_or_reflow": true,
+    "validation": true,
+    "off_plate_warning": true,
+    "missing_library_behavior": true,
+    "export": true,
+    "dxf_ezdxf_audit": true,
+    "all_required": true
+  },
+  "actions": {
+    "drag_delta_mm": 41,
+    "drag_frame_max_gap_ms": 16.800000000000068,
+    "locked_position_before_reflow": {
+      "x_mm": 131,
+      "y_mm": 705
+    },
+    "locked_position_after_reflow": {
+      "x_mm": 131,
+      "y_mm": 705
+    },
+    "overlap_issue_codes": [
+      "OVERLAP",
+      "OVERLAP",
+      "OVERLAP",
+      "OVERLAP",
+      "OVERLAP",
+      "OVERLAP"
+    ],
+    "export_bytes": {
+      "svg": 3665,
+      "dxf": 63327
+    }
+  },
+  "timings": {
+    "startup_ms": 352,
+    "model_load_ms": 84.9,
+    "first_render_ms": 84.9,
+    "export_svg_ms": 1.6,
+    "export_dxf_ms": 29.4,
+    "production_bundle_bytes": 1398142
+  },
+  "artifacts": {
+    "runtime_svg": "evidence/r4-3b/cabinet/runtime-export.svg",
+    "runtime_dxf": "evidence/r4-3b/cabinet/runtime-export.dxf",
+    "dxf_ezdxf_audit": "evidence/r4-3b/cabinet/runtime-export.audit.json"
+  },
+  "errors": []
+}

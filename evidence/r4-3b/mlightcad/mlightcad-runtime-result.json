@@ -1,0 +1,335 @@
+{
+  "schema_version": "cnb-r4-3b-mlightcad-runtime.v1",
+  "app": "mlightcad/cad-viewer",
+  "package": "@mlightcad/cad-simple-viewer + @mlightcad/three-renderer",
+  "upstream_commit": "44cfd514b2d0c56346034f49b499b65c53ed2a70",
+  "url": "http://127.0.0.1:4179/",
+  "checks": {
+    "app_started": true,
+    "browser_loaded": true,
+    "all_three_rendered": true,
+    "g120c_stress_case": true,
+    "zoom": true,
+    "pan": true,
+    "selection": true,
+    "layers": true,
+    "layer_toggle": true,
+    "blocks": true,
+    "bounds_plausible": true,
+    "bounds_match": false,
+    "invalid_dxf": true,
+    "missing_file_behavior": true,
+    "no_page_errors": true
+  },
+  "assets": {
+    "KTP700": {
+      "file": "catalog/siemens-bilddb/simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf",
+      "bytes": 151391,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 13,
+      "rendered_entity_count": 58,
+      "layer_count": 326,
+      "populated_layers": [
+        "EPLAN108",
+        "EPLAN201",
+        "EPLAN205",
+        "EPLAN303",
+        "EPLAN306",
+        "EPLAN308",
+        "EPLAN400",
+        "EPLAN421",
+        "EPLAN425",
+        "EPLAN426",
+        "EPLAN428",
+        "EPLAN440",
+        "EPLAN441",
+        "EPLAN452",
+        "EPLAN453",
+        "EPLAN491",
+        "EPLAN500",
+        "EPLAN501",
+        "EPLAN502",
+        "EPLAN503",
+        "EPLAN504",
+        "SIEMENS_Zusatzfeld_20"
+      ],
+      "blocks": [
+        {
+          "name": "EPLFRAME",
+          "entity_count": 51
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol1_Variant0_Placement3",
+          "entity_count": 8
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol34_Variant3_Placement3",
+          "entity_count": 7
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol13_Variant3_Placement3",
+          "entity_count": 4
+        }
+      ],
+      "bounds": {
+        "minX": 0,
+        "minY": -0.15224947035312653,
+        "maxX": 420,
+        "maxY": 297,
+        "width": 420,
+        "height": 297.1522494703531
+      },
+      "visible_bounds": {
+        "minX": 0,
+        "minY": -0.15224947035312653,
+        "maxX": 420,
+        "maxY": 297,
+        "width": 420,
+        "height": 297.1522494703531
+      },
+      "ezdxf_baseline": {
+        "height": 297,
+        "max_x": 420,
+        "max_y": 297,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 420
+      },
+      "bounds_delta": {
+        "min_x": 0,
+        "min_y": -0.15224947035312653,
+        "max_x": 0,
+        "max_y": 0,
+        "width": 0,
+        "height": 0.15224947035312653
+      },
+      "bounds_match": true,
+      "bounds_match_basis": "mlightcad activeLayout.box compared with ezdxf full model-space extents; hidden-layer extents can differ",
+      "load_ms": 164.7,
+      "render_ms": 2854.1,
+      "browser_responsiveness_ms": 131,
+      "browser_responsive": true,
+      "selection": {
+        "ids": [
+          "1F6"
+        ],
+        "entity": {
+          "id": "1F6",
+          "type": "BlockReference"
+        }
+      },
+      "zoom_before": 2.4134199134199132,
+      "zoom_after": 12.067099567099566,
+      "pan_changed": true,
+      "page_errors": [],
+      "layer_toggle": {
+        "name": "EPLAN108",
+        "before": true,
+        "after": false
+      }
+    },
+    "G120C": {
+      "file": "catalog/siemens-bilddb/sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf",
+      "bytes": 220572,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 546,
+      "rendered_entity_count": 546,
+      "layer_count": 10,
+      "populated_layers": [
+        "71_GS_LI",
+        "75_GS_TXT",
+        "70_GS",
+        "76_GS_AP",
+        "74_GS_BMK",
+        "72_GS_AB",
+        "73_GS_ABS"
+      ],
+      "blocks": [
+        {
+          "name": "EPLFRAME",
+          "entity_count": 12
+        }
+      ],
+      "bounds": {
+        "minX": -4.350000381469727,
+        "minY": 0,
+        "maxX": 525,
+        "maxY": 349.25,
+        "width": 529.3500003814697,
+        "height": 349.25
+      },
+      "visible_bounds": {
+        "minX": -4.350000381469727,
+        "minY": 0,
+        "maxX": 525,
+        "maxY": 349.25,
+        "width": 529.3500003814697,
+        "height": 349.25
+      },
+      "ezdxf_baseline": {
+        "height": 349.25000000000045,
+        "max_x": 525,
+        "max_y": 349.25,
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "width": 677.5997271487049
+      },
+      "bounds_delta": {
+        "min_x": 148.24972676723513,
+        "min_y": 4.650312073994533e-13,
+        "max_x": 0,
+        "max_y": 0,
+        "width": -148.2497267672352,
+        "height": -4.547473508864641e-13
+      },
+      "bounds_match": false,
+      "bounds_match_basis": "mlightcad activeLayout.box compared with ezdxf full model-space extents; hidden-layer extents can differ",
+      "load_ms": 170.4,
+      "render_ms": 1139.2,
+      "browser_responsiveness_ms": 1,
+      "browser_responsive": true,
+      "selection": {
+        "ids": [
+          "8B"
+        ],
+        "entity": {
+          "id": "8B",
+          "type": "BlockReference"
+        }
+      },
+      "zoom_before": 1,
+      "zoom_after": 1,
+      "pan_changed": false,
+      "page_errors": []
+    },
+    "SITOP": {
+      "file": "catalog/siemens-bilddb/sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf",
+      "bytes": 210921,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 38,
+      "rendered_entity_count": 78,
+      "layer_count": 350,
+      "populated_layers": [
+        "EPLAN100",
+        "EPLAN108",
+        "EPLAN201",
+        "EPLAN300",
+        "EPLAN302",
+        "EPLAN305",
+        "EPLAN311",
+        "EPLAN400",
+        "EPLAN420",
+        "EPLAN421",
+        "EPLAN433",
+        "EPLAN440",
+        "EPLAN452",
+        "EPLAN491",
+        "EPLAN500",
+        "EPLAN501",
+        "EPLAN510"
+      ],
+      "blocks": [
+        {
+          "name": "EPLFRAME",
+          "entity_count": 9
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol22_Variant3_Placement1",
+          "entity_count": 3
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol22_Variant1_Placement1",
+          "entity_count": 3
+        },
+        {
+          "name": "EPLSYM_LibraryIEC_symbol_Symbol56_Variant1_Placement7",
+          "entity_count": 11
+        },
+        {
+          "name": "EPLSYM_LibrarySPECIAL_Symbol0_Variant0_Placement1",
+          "entity_count": 3
+        }
+      ],
+      "bounds": {
+        "minX": 0.0000030517578011313162,
+        "minY": 0.000006103515630684342,
+        "maxX": 279.3999969482422,
+        "maxY": 431.79999389648435,
+        "width": 279.3999938964844,
+        "height": 431.79998779296875
+      },
+      "visible_bounds": {
+        "minX": 0.0000030517578011313162,
+        "minY": 0.000006103515630684342,
+        "maxX": 279.3999969482422,
+        "maxY": 431.79999389648435,
+        "width": 279.3999938964844,
+        "height": 431.79998779296875
+      },
+      "ezdxf_baseline": {
+        "height": 431.8,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 279.4
+      },
+      "bounds_delta": {
+        "min_x": 0.0000030517578011313162,
+        "min_y": 0.000006103515630684342,
+        "max_x": -0.0000030517578011313162,
+        "max_y": -0.000006103515659106051,
+        "width": -0.0000061035156022626325,
+        "height": -0.000012207031261368684
+      },
+      "bounds_match": true,
+      "bounds_match_basis": "mlightcad activeLayout.box compared with ezdxf full model-space extents; hidden-layer extents can differ",
+      "load_ms": 196.5,
+      "render_ms": 1319.1,
+      "browser_responsiveness_ms": 86,
+      "browser_responsive": true,
+      "selection": {
+        "ids": [],
+        "entity": null
+      },
+      "zoom_before": 1,
+      "zoom_after": 1,
+      "pan_changed": false,
+      "page_errors": []
+    }
+  },
+  "negative_cases": {
+    "invalid_dxf": {
+      "rejected": false,
+      "accepted_as_empty_document": true,
+      "last_valid_scene_retained": false,
+      "behavior": "Malformed DXF is accepted as an empty document and replaces the last valid scene.",
+      "errors": []
+    },
+    "missing_file_payload": {
+      "rejected": false,
+      "accepted_as_empty_document": true,
+      "last_valid_scene_retained": false,
+      "behavior": "Empty/missing payload is accepted as an empty document and replaces the current scene.",
+      "errors": []
+    }
+  },
+  "tolerance": {
+    "absolute_mm": 5,
+    "relative": 0.1
+  },
+  "screenshots": {
+    "ktp700_fit": "evidence/r4-3b/mlightcad/ktp700-fit.png",
+    "ktp700_deep_zoom": "evidence/r4-3b/mlightcad/ktp700-deep-zoom.png",
+    "layers": "evidence/r4-3b/mlightcad/layers.png",
+    "block_inspection": "evidence/r4-3b/mlightcad/block-inspection.png",
+    "g120c_fit": "evidence/r4-3b/mlightcad/g120c-fit.png",
+    "g120c_selected_entity": "evidence/r4-3b/mlightcad/g120c-selected-entity.png",
+    "sitop_fit": "evidence/r4-3b/mlightcad/sitop-fit.png"
+  },
+  "errors": [],
+  "outcome": "BLOCKED_BOUNDS_COMPARISON"
+}

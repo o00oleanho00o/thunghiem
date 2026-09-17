@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3b\\cabinet\\runtime-export.dxf",
+  "version": "AC1032",
+  "entityCount": 29,
+  "counts": {
+    "LWPOLYLINE": 4,
+    "TEXT": 14,
+    "INSERT": 11
+  },
+  "layers": [
+    "DUCT",
+    "EQUIP",
+    "PLATE",
+    "TEXT"
+  ],
+  "bounds": {
+    "minX": 22.5,
+    "minY": 117.5,
+    "maxX": 477.5,
+    "maxY": 1062.5
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNB mlightcad Runtime Acceptance</title>
+  </head>
+  <body>
+    <main class="shell">
+      <header><strong>mlightcad DXF runtime</strong><span>upstream @mlightcad/cad-simple-viewer + Three renderer</span></header>
+      <nav aria-label="Viewer controls">
+        <label class="file-button">Open DXF/DWG<input id="fileInputElement" type="file" accept=".dxf,.dwg" /></label>
+        <button id="fitButton" type="button">Fit</button>
+        <button id="deepZoomButton" type="button">Deep zoom 5x</button>
+        <button id="selectButton" type="button">Select first entity</button>
+        <button id="layersButton" type="button">Refresh layers</button>
+        <button id="toggleLayerButton" type="button">Toggle populated layer</button>
+        <span id="status" data-testid="runtime-status">Ready for a real DXF</span>
+      </nav>
+      <section class="content">
+        <div id="cad-container" data-testid="cad-container"></div>
+        <aside>
+          <h2>Runtime bridge</h2>
+          <p>Asset: <b id="assetName">none</b></p>
+          <p>Entities: <b id="entityCount">0</b></p>
+          <p>Rendered geometry: <b id="renderedCount">0</b></p>
+          <p>Zoom: <b id="zoomValue">0</b></p>
+          <p>Selection: <code id="selectionValue">none</code></p>
+          <p>Layers: <b id="layerCount">0</b></p>
+          <p>Runtime visible bounds: <code id="boundsValue">none</code></p>
+          <p>Blocks: <code id="blockValue">none</code></p>
+          <ul id="layerList" data-testid="layer-list"></ul>
+          <pre id="entityMetadata" data-testid="entity-metadata">none</pre>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

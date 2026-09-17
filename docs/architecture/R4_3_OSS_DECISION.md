@@ -2,7 +2,7 @@
 
 ## Decision
 
-**R4.3 PASS - ADOPT OSS COMPOSITION ARCHITECTURE.**
+**R4.3 architecture PASS; R4.3b runtime outcome: PARTIAL - CABINET PASS / MLIGHTCAD BLOCKED.**
 
 This is an architecture decision, not a claim that every OSS runtime is ready to
 ship. The two required integration spikes produced useful, auditable results:
@@ -10,6 +10,13 @@ Cabinet Layout Generator accepted a CNB EIR projection and generated valid DXF/S
 mlightcad's DXF path parsed three real Siemens assets and its simple-viewer package
 chain built. The remaining browser/runtime gap is an explicit Phase A gate, not a
 reason to continue expanding the custom CAD canvas.
+
+R4.3b closed the Cabinet browser gap: the real editor loaded the CNB project and
+passed interaction, validation, export, and ezdxf-audit checks. The mlightcad
+browser fixture loaded all three real Siemens assets and passed render, zoom,
+pan, selection, layers, blocks, and responsiveness, but remains blocked for
+promotion because G120C runtime bounds do not match the full ezdxf baseline and
+malformed/empty inputs replace the current scene.
 
 ## Explicit choices
 
@@ -37,10 +44,10 @@ editor's JSON model.
 ### Phase A - adapters and runtime gates
 
 - Freeze the EIR-to-OSS DTOs and ID/provenance map.
-- Complete a browser fixture for mlightcad KTP700, G120C, and SITOP; record render,
-  zoom/pan, selection, layer, block, and entity-inspection checks.
-- Run Cabinet Layout Generator's actual browser editor with the POC model and
-  record drag/move, lock, snap, and export evidence.
+- Resolve mlightcad bounds parity for G120C and add input validation that retains
+  the last valid scene for malformed/empty DXF payloads.
+- Keep Cabinet Layout Generator's actual browser editor evidence as the panel
+  adapter gate; rails remain locked visual proxies.
 - Add adapter contract tests for unsupported rails and connections.
 - Measure bundle, load, conversion, and export timings against the current viewer.
 
@@ -54,7 +61,8 @@ editor's JSON model.
 ### Phase C - feature parity gate
 
 Promote OSS as default only when real Siemens source assets pass the browser gate,
-rail proxies remain locked and traceable, export audits pass, and no critical
+mlightcad bounds and invalid-input gates pass, rail proxies remain locked and
+traceable, export audits pass, and no critical
 placement/provenance regression is observed for two representative cabinets. For
 schematics, require EIR terminal/net round-trip and SVG/DXF review before enabling
 the adapter.

@@ -41,3 +41,27 @@ using the same DXF entity families exercised by mlightcad. This is source-ready
 and reproducible, but not a browser screenshot/runtime acceptance: the complete
 mlightcad example build was blocked as noted above. That limitation is carried
 into the final decision and Phase A gate.
+
+## R4.3b browser runtime acceptance
+
+Runtime environment: Node `v24.19.0`, npm `11.17.0`, Python `3.11.14`.
+Cabinet ran on `http://127.0.0.1:4178/`; mlightcad ran on
+`http://127.0.0.1:4179/`; the independent DXF audit used
+`python scripts/audit_dxf_ezdxf.py <runtime-export.dxf>`. The browser scripts
+are `scripts/test_r43b_cabinet_runtime.cjs` and
+`scripts/test_r43b_mlightcad_runtime.cjs`.
+
+Cabinet runtime passed CNB model load, plate/devices/ducts/rail-proxy
+visibility, selection, 41 mm drag, locked reflow, overlap/off-plate/missing
+library validation, SVG/DXF runtime exports, and ezdxf audit. Rails remain
+locked visual proxies because the upstream model has no first-class DIN rail
+semantics.
+
+mlightcad loaded and rendered all three real Siemens DXFs. KTP700 and SITOP
+bounds matched ezdxf within 5 mm/10%; G120C rendered all 546 entities but its
+runtime bounds omitted left-side extents present in the full ezdxf model-space
+baseline. Malformed and empty payloads were accepted as empty documents and
+replaced the current scene. This is a runtime blocker, not a pass.
+
+Detailed artifacts: `evidence/r4-3b/`; report:
+`docs/architecture/R4_3B_RUNTIME_ACCEPTANCE_REPORT.md`.
