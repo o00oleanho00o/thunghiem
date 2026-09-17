@@ -1,5 +1,11 @@
 # R4.3b - Bao cao chap nhan runtime OSS
 
+> **Trang thai lich su:** Bao cao nay ghi lai ket qua tai R4.3b. Ket qua hien
+> hanh da duoc dong tai R4.3c: **R4.3c PASS - OSS RUNTIME CORRECTNESS CLOSED**.
+> Cabinet tiep tuc PASS; mlightcad da giai thich G120C bounds bang MTEXT overlay
+> va da them input guard/last-valid-scene retention. Chi tiet va visual evidence
+> nam trong `R4_3C_CORRECTNESS_CLOSURE_REPORT.md`.
+
 Ngay danh gia: 2026-09-17
 Branch: `cnb-electrical-lab-r4-3b-oss-runtime-acceptance`
 Ket qua: **R4.3b PARTIAL - CABINET PASS / MLIGHTCAD BLOCKED**

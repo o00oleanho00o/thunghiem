@@ -1,0 +1,57 @@
+{
+  "schema_version": "cnb-r4-3c-cabinet-runtime.v1",
+  "app": "Taam4142/cabinet-layout-generator",
+  "upstream_commit": "0633b013dc65d13055b8f3765a27425cb58ec510",
+  "url": "http://127.0.0.1:4178/",
+  "checks": {
+    "app_started": true,
+    "browser_loaded": true,
+    "cnb_model_loaded": true,
+    "plate_visible": true,
+    "duct_visibility": true,
+    "rail_proxy_visibility": true,
+    "unlocked_branch_moved": true,
+    "locked_branch_unchanged": true,
+    "lock_semantics_pass": true,
+    "export": true,
+    "no_page_errors": true
+  },
+  "actions": {
+    "unlocked_before": {
+      "x_mm": 320,
+      "y_mm": 705,
+      "locked": false
+    },
+    "unlocked_after": {
+      "x_mm": 257.4,
+      "y_mm": 705,
+      "locked": false
+    },
+    "unlocked_delta_mm": 62.6,
+    "locked_before": {
+      "x_mm": 320,
+      "y_mm": 705,
+      "locked": true
+    },
+    "locked_after": {
+      "x_mm": 320,
+      "y_mm": 705,
+      "locked": true
+    },
+    "locked_delta_mm": 0,
+    "lock_semantics_pass": true,
+    "export_bytes": {
+      "svg": 3665,
+      "dxf": 63323
+    }
+  },
+  "screenshots": {
+    "before_reflow_unlocked": "evidence/r4-3c/cabinet/01-before-reflow-unlocked.png",
+    "after_reflow_unlocked": "evidence/r4-3c/cabinet/02-after-reflow-unlocked-moved.png",
+    "before_reflow_locked": "evidence/r4-3c/cabinet/03-before-reflow-locked.png",
+    "after_reflow_locked": "evidence/r4-3c/cabinet/04-after-reflow-locked-unchanged.png",
+    "export": "evidence/r4-3c/cabinet/05-export-result.png"
+  },
+  "errors": [],
+  "outcome": "PASS"
+}

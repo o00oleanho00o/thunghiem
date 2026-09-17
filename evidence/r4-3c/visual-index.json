@@ -1,0 +1,118 @@
+{
+  "schema_version": "cnb-r4-3c-visual-index.v1",
+  "branch": "cnb-electrical-lab-r4-3c-runtime-correctness-visual-gate",
+  "commit_under_test": "800fce7",
+  "generated": "2026-09-17",
+  "entries": [
+    {
+      "file": "cabinet/01-before-reflow-unlocked.png",
+      "app": "Cabinet Layout Generator",
+      "url": "http://127.0.0.1:4178/",
+      "scenario": "CNB project_4de34d02badc, 500 x 1100 mm panel",
+      "action": "Load project and set unlocked fixture at x=320 mm",
+      "expected": "Plate, 9 devices, 3 ducts, 2 rail proxies and unlocked coordinates visible",
+      "observed": "Fixture 320,705 mm; locked false; plate/ducts/rails and warnings visible",
+      "test": "scripts/test_r43c_cabinet_runtime.cjs"
+    },
+    {
+      "file": "cabinet/02-after-reflow-unlocked-moved.png",
+      "app": "Cabinet Layout Generator",
+      "url": "http://127.0.0.1:4178/",
+      "scenario": "CNB project_4de34d02badc",
+      "action": "Run Reflow row with fixture unlocked",
+      "expected": "Fixture moves at least 30 mm",
+      "observed": "x changed 320 -> 257.4 mm, delta 62.6 mm",
+      "test": "scripts/test_r43c_cabinet_runtime.cjs"
+    },
+    {
+      "file": "cabinet/03-before-reflow-locked.png",
+      "app": "Cabinet Layout Generator",
+      "url": "http://127.0.0.1:4178/",
+      "scenario": "CNB project_4de34d02badc",
+      "action": "Lock selected fixture before reflow",
+      "expected": "Selected fixture reports locked true at x=320 mm",
+      "observed": "Selected device_e31f877b1100 reports 320,705 mm; locked true",
+      "test": "scripts/test_r43c_cabinet_runtime.cjs"
+    },
+    {
+      "file": "cabinet/04-after-reflow-locked-unchanged.png",
+      "app": "Cabinet Layout Generator",
+      "url": "http://127.0.0.1:4178/",
+      "scenario": "CNB project_4de34d02badc",
+      "action": "Run Reflow row with fixture locked",
+      "expected": "Locked fixture stays exactly unchanged",
+      "observed": "x remains 320 mm; locked delta 0 mm; only movable IDs reflow",
+      "test": "scripts/test_r43c_cabinet_runtime.cjs"
+    },
+    {
+      "file": "cabinet/05-export-result.png",
+      "app": "Cabinet Layout Generator",
+      "url": "http://127.0.0.1:4178/",
+      "scenario": "CNB project_4de34d02badc",
+      "action": "Export SVG and DXF from runtime UI",
+      "expected": "Both downloads become ready and view remains coherent",
+      "observed": "SVG ready; DXF ready; runtime-export.svg and runtime-export.dxf audited",
+      "test": "scripts/test_r43c_cabinet_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/01-g120c-runtime-fit.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Siemens SINAMICS G120C real DXF",
+      "action": "Open DXF and fit runtime drawing",
+      "expected": "Visible CAD geometry and 546 rendered entities",
+      "observed": "Drawing visible; entity_count 546; rendered_entity_count 546",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/02-g120c-bounds-overlay.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Siemens SINAMICS G120C real DXF",
+      "action": "Toggle bounds overlay and fit source bounds",
+      "expected": "Rendered, full-source and visible-source rectangles visible",
+      "observed": "Blue rendered rectangle inside red/orange source rectangles; delta explained",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/03-g120c-left-extent-highlight.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Siemens SINAMICS G120C real DXF",
+      "action": "Highlight audited left extent",
+      "expected": "Entity causing -152.6 mm extent is visibly identified",
+      "observed": "Pink box labels MTEXT 80 left extent; source audit marks it visible/rendered",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/04-g120c-deep-zoom-left-side.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Siemens SINAMICS G120C real DXF",
+      "action": "Deep zoom 5x-equivalent after left extent highlight",
+      "expected": "Left-side text/geometry remains visible after zoom",
+      "observed": "Zoom 9.574 in captured run; left text and overlays remain visible",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/05-invalid-dxf-rejected.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Valid KTP700 scene followed by malformed bytes",
+      "action": "Open invalid.dxf with malformed payload",
+      "expected": "Reject input, show error, preserve valid scene",
+      "observed": "Open failed; last valid scene retained; KTP geometry still visible; accepted false",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    },
+    {
+      "file": "mlightcad/06-valid-scene-retained.png",
+      "app": "mlightcad DXF runtime",
+      "url": "http://127.0.0.1:4179/",
+      "scenario": "Valid SITOP load after malformed input",
+      "action": "Open SITOP DXF after invalid attempt",
+      "expected": "Subsequent valid load renders normally",
+      "observed": "Loaded SITOP; 38 entities; 79 rendered geometry records; geometry visible",
+      "test": "scripts/test_r43c_mlightcad_runtime.cjs"
+    }
+  ]
+}

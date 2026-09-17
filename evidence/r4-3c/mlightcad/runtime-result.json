@@ -1,0 +1,3681 @@
+{
+  "schema_version": "cnb-r4-3c-mlightcad-runtime.v1",
+  "app": "mlightcad/cad-viewer",
+  "package": "@mlightcad/cad-simple-viewer + @mlightcad/three-renderer",
+  "upstream_commit": "44cfd514b2d0c56346034f49b499b65c53ed2a70",
+  "url": "http://127.0.0.1:4179/",
+  "checks": {
+    "app_started": true,
+    "all_three_rendered": true,
+    "g120c_left_extent_audited": true,
+    "g120c_no_visible_geometry_loss": true,
+    "g120c_bounds_mismatch_explained": true,
+    "invalid_dxf_rejected": true,
+    "last_valid_scene_retained": true,
+    "valid_after_invalid": true,
+    "visual_evidence": true,
+    "no_page_errors": true
+  },
+  "assets": {
+    "KTP700": {
+      "file": "catalog/siemens-bilddb/simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf",
+      "bytes": 151391,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 13,
+      "rendered_entity_count": 58,
+      "layer_count": 326,
+      "layers": [
+        {
+          "name": "0",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN100",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN101",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN102",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN103",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN104",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN105",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN106",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN107",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN108",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN109",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN110",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN200",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN201",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN202",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN203",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN204",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN205",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN206",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN300",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN301",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN302",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN303",
+          "entity_count": 5,
+          "visible": true
+        },
+        {
+          "name": "EPLAN304",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN305",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN306",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN307",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN308",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN309",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN310",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN311",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN312",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN314",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN315",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN316",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN317",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN318",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN319",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN320",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN321",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN322",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN323",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN324",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN325",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN400",
+          "entity_count": 6,
+          "visible": true
+        },
+        {
+          "name": "EPLAN401",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN402",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN403",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN404",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN405",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN406",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN407",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN408",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN409",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN410",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN420",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN421",
+          "entity_count": 5,
+          "visible": true
+        },
+        {
+          "name": "EPLAN422",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN423",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN424",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN425",
+          "entity_count": 4,
+          "visible": true
+        },
+        {
+          "name": "EPLAN426",
+          "entity_count": 4,
+          "visible": true
+        },
+        {
+          "name": "EPLAN427",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN428",
+          "entity_count": 5,
+          "visible": true
+        },
+        {
+          "name": "EPLAN429",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN430",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN431",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN432",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN433",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN434",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN435",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN436",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN440",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN441",
+          "entity_count": 5,
+          "visible": true
+        },
+        {
+          "name": "EPLAN442",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN443",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN444",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN445",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN450",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN451",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN452",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN453",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN454",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN460",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN480",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN481",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN490",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN491",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN492",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN493",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN500",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN501",
+          "entity_count": 6,
+          "visible": true
+        },
+        {
+          "name": "EPLAN502",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN503",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN504",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN505",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN506",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN507",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN508",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN509",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN510",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN511",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN512",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN513",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN514",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN515",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN516",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN517",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN518",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN519",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN520",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN521",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN522",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN523",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN524",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN525",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN526",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN527",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN528",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN529",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN531",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN532",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN533",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN540",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN541",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN542",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN543",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN544",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN545",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN546",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN547",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN550",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN551",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN552",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN555",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN560",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN561",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN562",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN563",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN564",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN565",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN566",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN567",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN568",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN569",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN570",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN571",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN572",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN573",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN574",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN575",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN576",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN577",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN578",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN579",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN580",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN581",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN582",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN583",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN584",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN585",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN586",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN587",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN588",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN589",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN590",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN591",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN592",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN593",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN594",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN595",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN596",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN597",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN598",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN599",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN620",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN621",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN622",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN623",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN624",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN625",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN626",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN627",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN628",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN629",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN630",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN631",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN632",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN633",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN634",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN635",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN636",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN637",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN638",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN639",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN640",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN641",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN642",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN643",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN644",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN645",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN646",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN647",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN648",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN649",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN650",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN651",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN652",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN653",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN654",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN655",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN656",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN660",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN661",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN662",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN663",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN664",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN665",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN670",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN671",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN672",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN673",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN675",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN676",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN677",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN678",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN679",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN680",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN681",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN682",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN684",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN685",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN686",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN687",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN690",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN700",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN701",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN703",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN704",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN705",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN706",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN707",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN710",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN711",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN712",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN713",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN714",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN715",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN716",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN720",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN721",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN722",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN723",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN724",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN725",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN726",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN750",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN751",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN752",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN753",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN754",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN755",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN756",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN757",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN758",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN759",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN760",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN761",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN762",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN763",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN764",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN765",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN766",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN767",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN768",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN769",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN770",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN771",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN772",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN773",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN774",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN775",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN776",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN777",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN778",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN779",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN780",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN781",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN782",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN783",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN784",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN785",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN786",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN787",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN788",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN789",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN790",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN791",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN792",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN793",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN794",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN795",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN796",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN797",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN798",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN799",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN800",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN801",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN802",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN803",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN804",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN805",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN806",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN807",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN808",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN809",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN810",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN811",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN812",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN813",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN814",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN815",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN816",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN817",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN818",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "SIEMENS_Zusatzfeld_20",
+          "entity_count": 5,
+          "visible": true
+        }
+      ],
+      "full_runtime_model_bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 420,
+        "maxY": 297,
+        "width": 420,
+        "height": 297
+      },
+      "rendered_runtime_bounds": {
+        "minX": 0,
+        "minY": -0.15224947035312653,
+        "maxX": 420,
+        "maxY": 297,
+        "width": 420,
+        "height": 297.1522494703531
+      },
+      "source_full_bounds": {
+        "height": 297,
+        "max_x": 420,
+        "max_y": 297,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 420
+      },
+      "source_visible_bounds": {
+        "height": 297,
+        "max_x": 420,
+        "max_y": 297,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 420
+      },
+      "full_source_to_full_runtime_delta": {
+        "min_x": 0,
+        "min_y": 0,
+        "max_x": 0,
+        "max_y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "visible_source_to_rendered_delta": {
+        "min_x": 0,
+        "min_y": -0.15224947035312653,
+        "max_x": 0,
+        "max_y": 0,
+        "width": 0,
+        "height": 0.15224947035312653
+      },
+      "full_source_to_full_runtime_match": true,
+      "visible_source_to_rendered_match": true,
+      "selection": {
+        "ids": [
+          "1F6"
+        ],
+        "entity": {
+          "id": "1F6",
+          "type": "BlockReference"
+        }
+      },
+      "page_errors": [],
+      "zoom_after": 12.067099567099566
+    },
+    "G120C": {
+      "file": "catalog/siemens-bilddb/sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf",
+      "bytes": 220572,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 546,
+      "rendered_entity_count": 546,
+      "layer_count": 10,
+      "layers": [
+        {
+          "name": "0",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "71_GS_LI",
+          "entity_count": 187,
+          "visible": true
+        },
+        {
+          "name": "75_GS_TXT",
+          "entity_count": 195,
+          "visible": true
+        },
+        {
+          "name": "70_GS",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "76_GS_AP",
+          "entity_count": 53,
+          "visible": true
+        },
+        {
+          "name": "77_GS_BP",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "74_GS_BMK",
+          "entity_count": 23,
+          "visible": true
+        },
+        {
+          "name": "72_GS_AB",
+          "entity_count": 33,
+          "visible": true
+        },
+        {
+          "name": "73_GS_ABS",
+          "entity_count": 54,
+          "visible": true
+        },
+        {
+          "name": "SIEMENS",
+          "entity_count": 0,
+          "visible": true
+        }
+      ],
+      "full_runtime_model_bounds": {
+        "minX": -4.800000000000998,
+        "minY": -1.4627482219166826e-14,
+        "maxX": 525,
+        "maxY": 349.25,
+        "width": 529.800000000001,
+        "height": 349.25
+      },
+      "rendered_runtime_bounds": {
+        "minX": -4.350000381469727,
+        "minY": 0,
+        "maxX": 525,
+        "maxY": 349.25,
+        "width": 529.3500003814697,
+        "height": 349.25
+      },
+      "source_full_bounds": {
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "max_x": 525,
+        "max_y": 349.25,
+        "width": 677.5997271487049,
+        "height": 349.25000000000045
+      },
+      "source_visible_bounds": {
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "max_x": 525,
+        "max_y": 349.25,
+        "width": 677.5997271487049,
+        "height": 349.25000000000045
+      },
+      "full_source_to_full_runtime_delta": {
+        "min_x": 147.79972714870385,
+        "min_y": 4.5040372518028646e-13,
+        "max_x": 0,
+        "max_y": 0,
+        "width": -147.79972714870394,
+        "height": -4.547473508864641e-13
+      },
+      "visible_source_to_rendered_delta": {
+        "min_x": 148.24972676723513,
+        "min_y": 4.650312073994533e-13,
+        "max_x": 0,
+        "max_y": 0,
+        "width": -148.2497267672352,
+        "height": -4.547473508864641e-13
+      },
+      "full_source_to_full_runtime_match": false,
+      "visible_source_to_rendered_match": false,
+      "selection": {
+        "ids": [],
+        "entity": null
+      },
+      "page_errors": []
+    },
+    "SITOP": {
+      "file": "catalog/siemens-bilddb/sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf",
+      "bytes": 210921,
+      "loaded": true,
+      "rendered": true,
+      "entity_count": 38,
+      "rendered_entity_count": 78,
+      "layer_count": 350,
+      "layers": [
+        {
+          "name": "0",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN100",
+          "entity_count": 2,
+          "visible": true
+        },
+        {
+          "name": "EPLAN101",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN102",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN103",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN104",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN105",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN106",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN107",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN108",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN109",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN110",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN200",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN201",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN202",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN203",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN204",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN205",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN206",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN300",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN301",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN302",
+          "entity_count": 7,
+          "visible": true
+        },
+        {
+          "name": "EPLAN303",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN304",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN305",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN306",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN307",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN308",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN309",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN310",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN311",
+          "entity_count": 16,
+          "visible": true
+        },
+        {
+          "name": "EPLAN312",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN314",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN315",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN316",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN317",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN318",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN319",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN320",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN321",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN322",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN323",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN324",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN325",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN326",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN327",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN328",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN400",
+          "entity_count": 8,
+          "visible": true
+        },
+        {
+          "name": "EPLAN401",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN402",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN403",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN404",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN405",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN406",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN407",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN408",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN409",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN410",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN420",
+          "entity_count": 7,
+          "visible": true
+        },
+        {
+          "name": "EPLAN421",
+          "entity_count": 7,
+          "visible": true
+        },
+        {
+          "name": "EPLAN422",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN423",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN424",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN425",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN426",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN427",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN428",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN429",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN430",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN431",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN432",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN433",
+          "entity_count": 7,
+          "visible": true
+        },
+        {
+          "name": "EPLAN434",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN435",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN436",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN440",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN441",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN442",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN443",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN444",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN445",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN450",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN451",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN452",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN453",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN454",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN460",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN480",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN481",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN490",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN491",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN492",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN493",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN500",
+          "entity_count": 1,
+          "visible": true
+        },
+        {
+          "name": "EPLAN501",
+          "entity_count": 7,
+          "visible": true
+        },
+        {
+          "name": "EPLAN502",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN503",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN504",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN505",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN506",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN507",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN508",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN509",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN510",
+          "entity_count": 9,
+          "visible": true
+        },
+        {
+          "name": "EPLAN511",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN512",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN513",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN514",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN515",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN516",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN517",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN518",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN519",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN520",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN521",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN522",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN523",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN524",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN525",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN526",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN527",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN528",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN529",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN531",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN532",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN533",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN540",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN541",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN542",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN543",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN544",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN545",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN546",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN547",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN550",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN551",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN552",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN555",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN560",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN561",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN562",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN563",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN564",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN565",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN566",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN567",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN568",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN571",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN572",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN575",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN576",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN577",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN578",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN579",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN580",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN581",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN582",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN583",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN584",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN585",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN586",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN587",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN588",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN589",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN590",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN591",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN592",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN593",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN594",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN595",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN596",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN597",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN598",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN599",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN620",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN621",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN622",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN623",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN624",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN625",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN626",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN627",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN628",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN629",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN630",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN631",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN632",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN633",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN634",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN635",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN636",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN637",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN638",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN639",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN640",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN641",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN642",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN643",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN644",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN645",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN646",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN647",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN648",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN649",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN650",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN651",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN652",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN653",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN654",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN655",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN656",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN657",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN660",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN661",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN662",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN663",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN664",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN665",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN670",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN671",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN672",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN673",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN675",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN676",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN677",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN678",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN679",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN680",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN681",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN682",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN684",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN685",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN686",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN687",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN690",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN691",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN692",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN693",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN694",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN700",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN701",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN703",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN704",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN705",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN706",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN707",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN710",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN711",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN712",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN713",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN714",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN715",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN716",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN720",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN721",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN722",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN723",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN724",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN725",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN726",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN750",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN751",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN752",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN753",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN754",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN755",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN756",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN757",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN758",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN759",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN760",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN761",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN762",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN763",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN764",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN765",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN766",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN767",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN768",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN769",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN770",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN771",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN772",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN773",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN774",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN775",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN776",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN777",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN778",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN779",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN780",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN781",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN782",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN783",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN784",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN785",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN786",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN787",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN788",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN789",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN790",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN791",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN792",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN793",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN794",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN795",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN796",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN797",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN798",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN799",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN800",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN801",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN802",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN803",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN804",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN805",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN806",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN807",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN808",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN809",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN810",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN811",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN812",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN813",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN814",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN815",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN816",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN817",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN818",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN819",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN820",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN821",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN822",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN823",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN824",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN825",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN826",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN827",
+          "entity_count": 0,
+          "visible": false
+        },
+        {
+          "name": "EPLAN828",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN829",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN830",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN831",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "EPLAN832",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "1",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "2",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "3",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "4",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "200",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "5",
+          "entity_count": 0,
+          "visible": true
+        },
+        {
+          "name": "201",
+          "entity_count": 0,
+          "visible": true
+        }
+      ],
+      "full_runtime_model_bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 279.4,
+        "maxY": 431.8,
+        "width": 279.4,
+        "height": 431.8
+      },
+      "rendered_runtime_bounds": {
+        "minX": 0.0000030517578011313162,
+        "minY": 0.000006103515630684342,
+        "maxX": 279.3999969482422,
+        "maxY": 431.79999389648435,
+        "width": 279.3999938964844,
+        "height": 431.79998779296875
+      },
+      "source_full_bounds": {
+        "height": 431.8,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 279.4
+      },
+      "source_visible_bounds": {
+        "height": 431.8,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "min_x": 0,
+        "min_y": 0,
+        "width": 279.4
+      },
+      "full_source_to_full_runtime_delta": {
+        "min_x": 0,
+        "min_y": 0,
+        "max_x": 0,
+        "max_y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "visible_source_to_rendered_delta": {
+        "min_x": 0.0000030517578011313162,
+        "min_y": 0.000006103515630684342,
+        "max_x": -0.0000030517578011313162,
+        "max_y": -0.000006103515659106051,
+        "width": -0.0000061035156022626325,
+        "height": -0.000012207031261368684
+      },
+      "full_source_to_full_runtime_match": true,
+      "visible_source_to_rendered_match": true,
+      "selection": {
+        "ids": [],
+        "entity": null
+      },
+      "page_errors": []
+    }
+  },
+  "negative_cases": {
+    "invalid_dxf": {
+      "rejected": true,
+      "last_valid_scene_retained": true,
+      "error_visible": true,
+      "accepted_as_empty_document": false,
+      "errors": [
+        "Error: DXF payload is too small (17 bytes)."
+      ]
+    },
+    "valid_after_invalid": {
+      "loaded": true,
+      "rendered": true,
+      "prior_invalid_rejected": true
+    }
+  },
+  "screenshots": {
+    "g120c_runtime_fit": "evidence/r4-3c/mlightcad/01-g120c-runtime-fit.png",
+    "g120c_bounds_overlay": "evidence/r4-3c/mlightcad/02-g120c-bounds-overlay.png",
+    "g120c_left_extent_highlight": "evidence/r4-3c/mlightcad/03-g120c-left-extent-highlight.png",
+    "g120c_deep_zoom_left_side": "evidence/r4-3c/mlightcad/04-g120c-deep-zoom-left-side.png",
+    "invalid_dxf_rejected": "evidence/r4-3c/mlightcad/05-invalid-dxf-rejected.png",
+    "valid_scene_after_invalid": "evidence/r4-3c/mlightcad/06-valid-scene-retained.png"
+  },
+  "errors": [],
+  "outcome": "PASS_EXPLAINED_BOUNDS"
+}

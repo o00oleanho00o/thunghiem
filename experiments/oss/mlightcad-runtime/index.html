@@ -15,10 +15,13 @@
         <button id="selectButton" type="button">Select first entity</button>
         <button id="layersButton" type="button">Refresh layers</button>
         <button id="toggleLayerButton" type="button">Toggle populated layer</button>
+        <button id="boundsButton" type="button" aria-pressed="false">Toggle bounds overlay</button>
+        <button id="leftExtentButton" type="button" aria-pressed="false">Highlight left extent</button>
+        <button id="sourceFitButton" type="button">Fit source bounds</button>
         <span id="status" data-testid="runtime-status">Ready for a real DXF</span>
       </nav>
       <section class="content">
-        <div id="cad-container" data-testid="cad-container"></div>
+        <div id="cad-container" data-testid="cad-container"><svg id="debugOverlay" data-testid="debug-overlay" aria-label="Bounds debug overlay" hidden></svg></div>
         <aside>
           <h2>Runtime bridge</h2>
           <p>Asset: <b id="assetName">none</b></p>
@@ -28,6 +31,9 @@
           <p>Selection: <code id="selectionValue">none</code></p>
           <p>Layers: <b id="layerCount">0</b></p>
           <p>Runtime visible bounds: <code id="boundsValue">none</code></p>
+          <p>Runtime rendered bounds: <code id="renderedBoundsValue">none</code></p>
+          <p>Source bounds: <code id="sourceBoundsValue">none</code></p>
+          <p>Input validation: <code id="inputValidationValue">none</code></p>
           <p>Blocks: <code id="blockValue">none</code></p>
           <ul id="layerList" data-testid="layer-list"></ul>
           <pre id="entityMetadata" data-testid="entity-metadata">none</pre>

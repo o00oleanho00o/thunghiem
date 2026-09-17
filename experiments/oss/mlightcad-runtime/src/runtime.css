@@ -1,14 +1,14 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; width: 100%; height: 100%; font-family: Arial, sans-serif; background: #101820; color: #e8edf1; }
-.shell { min-height: 100vh; display: flex; flex-direction: column; }
+.shell { height: 100vh; min-height: 0; display: flex; flex-direction: column; }
 header { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: baseline; padding: 12px 16px; background: #172c3c; border-bottom: 1px solid #345267; }
 header strong { font-size: 18px; } header span { font-size: 12px; color: #a9c0cf; }
 nav { flex: 0 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding: 8px 12px; background: #1d2a33; }
 button, .file-button { border: 1px solid #587488; border-radius: 4px; background: #233b4a; color: #eef5f8; padding: 6px 9px; cursor: pointer; font-size: 12px; }
 button:hover, .file-button:hover { background: #2c5e7d; } input { display: none; } #status { margin-left: auto; font-size: 12px; color: #a9c0cf; }
-.content { flex: 1 1 auto; min-height: 620px; display: grid; grid-template-columns: minmax(0, 1fr) 285px; }
-#cad-container { min-width: 0; min-height: 620px; position: relative; background: #fff; } #cad-container canvas { display: block; }
-aside { overflow: auto; padding: 12px; background: #17232b; border-left: 1px solid #345267; font-size: 12px; }
+.content { flex: 1 1 0%; height: 0; min-height: 0; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 285px; }
+#cad-container { min-width: 0; min-height: 0; position: relative; background: #fff; } #cad-container canvas { display: block; } #debugOverlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 4; overflow: visible; } #debugOverlay text { paint-order: stroke; stroke: #111; stroke-width: 3px; stroke-linejoin: round; }
+aside { min-height: 0; overflow: auto; padding: 12px; background: #17232b; border-left: 1px solid #345267; font-size: 12px; }
 aside h2 { margin: 0 0 12px; font-size: 14px; } aside p { line-height: 1.35; } code, pre { word-break: break-word; white-space: pre-wrap; }
 ul { padding-left: 16px; } li { margin-bottom: 4px; } pre { color: #b9d9ea; }
 @media (max-width: 760px) { .content { grid-template-columns: 1fr; grid-template-rows: minmax(360px, 1fr) auto; } aside { max-height: 230px; border-left: none; border-top: 1px solid #345267; } #status { margin-left: 0; } }
