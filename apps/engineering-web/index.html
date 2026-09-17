@@ -126,6 +126,8 @@
     <section class="r5-cad-toolbar">
       <div><span class="eyebrow">CAD NGUỒN · DXF-ONLY</span><strong id="cadAssetTitle">Chưa chọn CAD</strong></div>
       <div class="r5-cad-actions">
+        <label class="cad-source-picker"><span class="sr-only">Thiết bị có CAD nguồn</span><select id="cadDeviceSelect" aria-label="Thiết bị có CAD nguồn"></select></label>
+        <button class="button primary compact" id="openSelectedCad" type="button">Mở asset</button>
         <label class="button subtle compact file-button" for="fileInputElement">Mở DXF<input id="fileInputElement" type="file" accept=".dxf" /></label>
         <button class="button subtle compact" id="fitButton" type="button">Fit</button>
         <button class="button subtle compact" id="deepZoomButton" type="button">Zoom 5×</button>
@@ -151,6 +153,7 @@
         <p>Rendered bounds: <code id="renderedBoundsValue">none</code></p>
         <p>Source bounds: <code id="sourceBoundsValue">none</code></p>
         <p>Input guard: <code id="inputValidationValue">none</code></p>
+        <p class="cad-help"><code>Mở asset</code> mở DXF thật từ catalog của project. <code>Mở DXF</code> chỉ dùng để thử một file cục bộ; file lỗi sẽ không ghi đè scene hợp lệ.</p>
         <p>Blocks: <code id="blockValue">none</code></p>
         <ul id="layerList" data-testid="layer-list"></ul>
         <pre id="entityMetadata" data-testid="entity-metadata">none</pre>

@@ -8,6 +8,7 @@
     "api_healthy": true,
     "canonical_frontend_loaded": true,
     "project_loaded": true,
+    "cad_direct_route": true,
     "bom_route": true,
     "panel_route": true,
     "panel_components": true,
@@ -24,16 +25,16 @@
     "no_page_errors": true
   },
   "metrics": {
-    "frontend_navigation_ms": 109,
-    "cad_ktp700_load_ms": 170.9,
-    "cad_g120c_load_ms": 118.8,
+    "frontend_navigation_ms": 104,
+    "cad_ktp700_load_ms": 154,
+    "cad_g120c_load_ms": 141.8,
     "invalid_runtime": {
       "rendered": true,
       "renderedEntityCount": 546,
       "asset": "sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
       "status": "Open failed: invalid.dxf; last valid scene retained"
     },
-    "route_switches": 10
+    "route_switches": 11
   },
   "errors": [],
   "screenshots": {

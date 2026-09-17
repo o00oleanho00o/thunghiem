@@ -39,6 +39,16 @@ function assetFor(device) {
   return { assetId: device?.cad_asset_ref || part.cad_asset_ref || part.source_asset_id, fileName: (part.cad_asset_ref || part.source_asset_id || '').split('/').pop() };
 }
 
+function cadSelectionFor(device) {
+  if (!device) return null;
+  const asset = assetFor(device);
+  return asset.assetId ? { ...asset, device } : null;
+}
+
+function cadDevices() {
+  return (state.eir?.devices || []).filter((device) => cadSelectionFor(device));
+}
+
 function workflowLabel() {
   return state.candidateRevision ? `DRAFT · candidate ${state.candidateRevision}` : `${state.eir?.workflow?.state || 'DRAFT'} · candidate`;
 }
@@ -64,6 +74,8 @@ function navigate(route, replace = false) {
   if (dashboard.hidden === false) renderDashboard();
   if (route === 'panel') { ensurePanelActions(); state.panel?.requireApp(); state.panel?.app?.render(); syncTruthInspector(); }
   if (route === 'cad') {
+    renderCadSourcePicker();
+    if (!state.selectedCadAsset) state.selectedCadAsset = cadSelectionFor(cadDevices()[0]);
     if (state.selectedCadAsset) void openCadAsset(state.selectedCadAsset);
     else renderCadEmpty();
   }
@@ -100,7 +112,10 @@ function renderDevices() {
 function renderValidation() {
   const issues = state.panel ? state.panel.app.validate() : [];
   const list = issues.length ? issues.map((issue) => `<div class="issue ${issue.severity === 'warn' ? 'warn' : ''}"><span class="issue-code">${esc(issue.code)}</span><div><strong>${esc(issue.message)}</strong><small>${esc(issue.hint || 'CNB validation')}</small></div></div>`).join('') : '<div class="all-clear"><span>✓</span><div><strong>Layout is clear</strong><small>No blocking issues</small></div></div>';
-  return `<section class="r5-card span-8"><span class="eyebrow">CNB VALIDATION</span><h1>Kiểm tra engineering</h1><p>Validation chạy trên panel projection nhưng rule ownership vẫn ở CNB.</p><div class="validation-list">${list}</div></section><section class="r5-card span-4"><h2>Review gate</h2><p><span class="r5-status">${esc(workflowLabel())}</span></p><p>Candidate placement chưa được duyệt sản xuất.</p><div class="r5-action-row"><a class="button primary" href="${routePath.panel}" data-route="panel">Sửa bố trí</a></div></section>`;
+  const errors = issues.filter((issue) => issue.severity === 'error').length;
+  const warnings = issues.length - errors;
+  const result = errors ? 'BLOCKED' : warnings ? 'REVIEW REQUIRED' : 'PASS';
+  return `<section class="r5-card span-8"><span class="eyebrow">CNB VALIDATION</span><h1>Kiểm tra engineering</h1><p>Đây là gate kiểm tra projection hiện tại, không tự duyệt placement. Cảnh báo preview-only là đúng vì ba CAD mapping vẫn là candidate.</p><div class="validation-summary"><span class="r5-status ${errors ? '' : 'ok'}">${result}</span><span>${errors} lỗi · ${warnings} cảnh báo</span></div><div class="validation-list">${list}</div><div class="r5-action-row"><button class="button primary compact" id="r5-run-validation" type="button">Chạy lại kiểm tra</button><span class="validation-run" id="r5-validation-run">${state.validationRunAt ? `Lần chạy cuối: ${esc(state.validationRunAt)}` : 'Chưa chạy thủ công'}</span></div></section><section class="r5-card span-4"><h2>Review gate</h2><p><span class="r5-status">${esc(workflowLabel())}</span></p><p>Candidate placement chưa được duyệt sản xuất.</p><div class="r5-action-row"><a class="button primary" href="${routePath.panel}" data-route="panel">Sửa bố trí</a></div></section>`;
 }
 
 function renderExport() {
@@ -113,6 +128,12 @@ function renderDashboard() {
   target.innerHTML = body;
   target.querySelectorAll('[data-route]').forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); navigate(link.dataset.route); }));
   target.querySelectorAll('.r5-view-cad').forEach((button) => button.addEventListener('click', () => { const device = deviceFor(button.dataset.deviceId); if (device) { state.selectedCadAsset = { ...assetFor(device), device }; navigate('cad'); } }));
+  $('#r5-run-validation')?.addEventListener('click', () => {
+    const issues = state.panel ? state.panel.app.validate() : [];
+    state.validationRunAt = new Date().toLocaleTimeString('vi-VN');
+    const output = $('#r5-validation-run');
+    if (output) output.textContent = `Đã chạy: ${state.validationRunAt} · ${issues.length} mục cần review`;
+  });
   $('#r5-export-dxf')?.addEventListener('click', () => void exportArtifact('dxf'));
   $('#r5-export-svg')?.addEventListener('click', () => void exportArtifact('svg'));
   $('#r5-export-audit')?.addEventListener('click', () => void exportArtifact('audit'));
@@ -139,6 +160,29 @@ function renderTruthInspector() {
   const device = deviceFor(component.id); const part = partFor(device); const identity = part.product_identity || {}; const footprint = part.footprint || {};
   section.innerHTML = `<div class="panel-heading"><div><span class="eyebrow">CNB PRODUCT TRUTH</span><h2>${esc(device?.tag || component.tag)}</h2></div><span class="selection-tag">${esc(identity.status || 'candidate')}</span></div><dl class="r5-truth-list"><div><dt>ProductIdentity</dt><dd>${esc(identity.type_designation || part.description)}</dd></div><div><dt>Manufacturer</dt><dd>${esc(part.manufacturer || 'unknown')}</dd></div><div><dt>Order code</dt><dd class="mono">${esc(identity.order_code || part.mpn || 'unknown')}</dd></div><div><dt>Footprint</dt><dd>${esc(footprint.width || component.width)} × ${esc(footprint.height || component.height)} × ${esc(footprint.depth || component.depth)} mm</dd></div><div><dt>Mounting</dt><dd>${esc(footprint.mounting || 'unknown')}</dd></div><div><dt>CAD representation</dt><dd>${esc(device?.cad_asset_ref || part.source_asset_id || 'none')}</dd></div><div><dt>placement-capable</dt><dd>false · candidate only</dd></div><div><dt>Workflow</dt><dd>${esc(workflowLabel())}</dd></div></dl><button class="button primary compact" id="r5-inspect-cad" type="button">Xem CAD nguồn</button>`;
   $('#r5-inspect-cad')?.addEventListener('click', () => { if (device) { state.selectedCadAsset = { ...assetFor(device), device }; navigate('cad'); } });
+}
+
+function renderCadSourcePicker() {
+  const select = $('#cadDeviceSelect');
+  const openButton = $('#openSelectedCad');
+  if (!select || !openButton || !state.eir) return;
+  const devices = cadDevices();
+  select.innerHTML = devices.map((device) => `<option value="${esc(device.id)}">${esc(device.tag)} · ${esc(device.name)}</option>`).join('');
+  const currentId = state.selectedCadAsset?.device?.id;
+  select.value = devices.some((device) => device.id === currentId) ? currentId : devices[0]?.id || '';
+  select.disabled = devices.length === 0;
+  openButton.disabled = devices.length === 0;
+  if (select.dataset.bound === 'true') return;
+  select.dataset.bound = 'true';
+  const openSelection = () => {
+    const device = deviceFor(select.value) || devices[0];
+    const selection = cadSelectionFor(device);
+    if (!selection) return;
+    state.selectedCadAsset = selection;
+    void openCadAsset(selection);
+  };
+  select.addEventListener('change', openSelection);
+  openButton.addEventListener('click', openSelection);
 }
 
 function syncTruthInspector() {
@@ -168,6 +212,7 @@ async function saveCandidate() {
 
 async function openCadAsset(selection) {
   const device = selection.device; const title = $('#cadAssetTitle'); if (title) title.textContent = `${device?.tag || ''} · ${device?.name || 'CAD source'}`;
+  const picker = $('#cadDeviceSelect'); if (picker && device?.id) picker.value = device.id;
   if (state.cadLoadedAssetId === selection.assetId && window.MLIGHTCAD_RUNTIME?.rendered === true) {
     state.cadState = window.MLIGHTCAD_RUNTIME;
     if ($('#status')) $('#status').textContent = `Loaded ${state.cadState.asset} · linked ${device?.tag || 'device'}`;

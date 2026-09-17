@@ -76,6 +76,11 @@ async function run() {
     result.metrics.frontend_navigation_ms = Math.round(await page.evaluate(() => performance.getEntriesByType('navigation')[0]?.duration || 0));
     await shot(page, '01-project-overview.png', { app: 'CNB Engineering Web', route: '/projects/r5-real-cabinet', project: 'r5-real-cabinet', action: 'Open canonical project', expected: 'Project overview with one frontend/one API topology', observed: 'Overview shows CNB Siemens project and Draft candidate state', test: 'scripts/test_r5_unified_workbench.cjs' });
 
+    await page.getByRole('link', { name: 'CAD nguồn', exact: true }).click();
+    await page.waitForURL('**/projects/r5-real-cabinet/cad');
+    await page.waitForFunction(() => window.MLIGHTCAD_RUNTIME?.asset?.toLowerCase().includes('4b10e8dd384b8e7e') && window.MLIGHTCAD_RUNTIME?.rendered === true, null, { timeout: 30000 });
+    result.checks.cad_direct_route = (await page.locator('#cadDeviceSelect option').count()) === 3 && (await page.locator('#renderedCount').textContent()) !== '0';
+
     await page.getByRole('link', { name: 'BOM', exact: true }).click();
     await page.waitForURL('**/projects/r5-real-cabinet/bom');
     await page.getByRole('heading', { name: 'BOM kỹ thuật', exact: true }).waitFor();
@@ -178,7 +183,7 @@ async function run() {
     await page.waitForURL('**/projects/r5-real-cabinet/panel');
     result.checks.selected_device_retained = (await page.locator('#r5-truth-inspector').count()) === 1;
     result.checks.no_page_errors = pageErrors.length === 0;
-    result.metrics.route_switches = 10;
+    result.metrics.route_switches = 11;
   } catch (error) {
     result.errors.push(error.stack || String(error));
   } finally {

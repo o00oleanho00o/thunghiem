@@ -38,10 +38,13 @@ processes. Ports 4178/4179 remain experimental harnesses only.
 ## Runtime findings
 
 The pinned mlightcad DXF bundle renders KTP700 and G120C in the shared CAD tab.
+The tab opens KTP700 by default and exposes a project-device picker for G120C
+and SITOP, so a direct CAD route is useful without first visiting the panel.
 Selection, layer inventory, bounds overlays and source-fit controls are visible
 through the runtime bridge. The adapter obtains the real DXF basename from the
 API `Content-Disposition` header, so the runtime's `.dxf` input gate is honored
-while EIR IDs remain stable link keys.
+while EIR IDs remain stable link keys. The separate local `Mở DXF` control is
+reserved for invalid-input guard testing.
 
 Invalid input is rejected before `openDocument`; a valid last scene is retained.
 The browser test now waits for the target asset before injecting invalid input,
@@ -56,8 +59,8 @@ npm run build:web
 npm run test:r5
 ```
 
-The final result is `PASS_UNIFIED_ENGINEERING_WORKBENCH` with 18 checks, no page
-errors, 10 route switches, KTP700 and G120C load timings, and 13 screenshots.
+The final result is `PASS_UNIFIED_ENGINEERING_WORKBENCH` with 19 checks, no page
+errors, 11 route switches, KTP700 and G120C load timings, and 13 screenshots.
 The machine-readable result is [evidence/r5/runtime-result.json](../../evidence/r5/runtime-result.json).
 
 ## Scope limits

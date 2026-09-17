@@ -29,11 +29,18 @@ The expected response identifies `cnb-engineering-api`.
    source link.
 4. Drag the HMI, lock it, and run `Reflow candidate`. The locked x coordinate
    must remain unchanged.
-5. Open `Xem CAD nguồn` and verify KTP700. Select the G120C and verify its
-   source drawing, bounds, layers and selection metadata.
-6. Open `Kiểm tra`, then `Xuất file` and run `Chạy audit JSON`; the output must
-   contain `"valid": true`.
-7. Return to `CAD nguồn`, open a malformed `.dxf` in the file control, and
+5. Open `CAD nguồn` directly. The first linked asset (KTP700) loads
+   automatically; use the device picker and `Mở asset` to switch to G120C or
+   SITOP. Verify the source drawing, bounds, layers and selection metadata.
+   `Mở DXF` is intentionally a local-file guard test, not the project asset
+   loader.
+6. Open `Kiểm tra`, click `Chạy lại kiểm tra`, and read the result. The three
+   `preview-only` warnings are expected because all R5 physical mappings are
+   candidate-only (`placement_capable: false`); this gate does not auto-approve
+   manufacturing placement.
+7. Open `Xuất file` and run `Chạy audit JSON`; the output must contain
+   `"valid": true`.
+8. Return to `CAD nguồn`, open a malformed `.dxf` in the file control, and
    verify `last valid scene retained` plus a non-zero rendered count.
 
 ## Verification commands
