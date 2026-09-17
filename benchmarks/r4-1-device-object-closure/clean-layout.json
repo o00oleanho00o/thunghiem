@@ -1,0 +1,12 @@
+{
+  "scenario": "r41",
+  "layout_policy": "plate-mount fallback; physical source-mm crop extents; 18 mm gap",
+  "authoritative": false,
+  "components": [
+    {"id":"r41-gold-1","gold_id":"gold-hmi-ktp700","x":68,"y":390,"width":76,"height":220,"mounting":"panel-mount-candidate"},
+    {"id":"r41-gold-2","gold_id":"gold-sinamics-g120c","x":162,"y":505,"width":320,"height":105,"mounting":"panel-mount-candidate"},
+    {"id":"r41-gold-3","gold_id":"gold-sinamics-v20","x":500,"y":546,"width":264,"height":64,"mounting":"panel-mount-candidate"},
+    {"id":"r41-gold-4","gold_id":"gold-top-connect","x":782,"y":530,"width":52,"height":80,"mounting":"unknown"}
+  ],
+  "validation": {"placement_capable": 0, "preview_warnings": 4, "authoritative_clearance_claim": false}
+}

@@ -1,0 +1,13 @@
+{
+  "benchmark": "r4-1-device-object-closure",
+  "source_manifest": "catalog/generated/device-gold-set.json",
+  "policy": "explicit-mm-and-clean-crop-only",
+  "gold_profiles": [
+    "gold-hmi-ktp700",
+    "gold-sinamics-g120c",
+    "gold-sinamics-v20",
+    "gold-top-connect"
+  ],
+  "placement_capable_count": 0,
+  "canonical_geometry_policy": "CadAsset referenced by goldId/footprintRef; raw DXF entities remain outside canonical EIR"
+}

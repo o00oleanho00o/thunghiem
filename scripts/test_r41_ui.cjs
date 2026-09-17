@@ -1,0 +1,44 @@
+const { chromium } = require('playwright');
+const base = process.env.CNB_R41_URL || 'http://127.0.0.1:4177';
+
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto(base, { waitUntil: 'domcontentloaded' });
+  await page.waitForTimeout(800);
+  await page.click('#goldTab');
+  const cardCount = await page.locator('#goldList .gold-card').count();
+  if (cardCount !== 4) throw new Error(`expected 4 gold cards, got ${cardCount}`);
+  const previewImages = await page.locator('#goldList img').count();
+  if (previewImages !== 4) throw new Error(`expected 4 gold previews, got ${previewImages}`);
+  await page.screenshot({ path: 'evidence/r4-1-gold-library.png', fullPage: true });
+  await page.locator('#goldList .gold-card').first().click();
+  const detailText = await page.locator('#assetDetail').innerText();
+  if (!detailText.includes('NOT CAPABLE') || !detailText.includes('source')) throw new Error('gold detail status missing');
+  await page.screenshot({ path: 'evidence/r4-1-gold-detail.png', fullPage: true });
+  await page.selectOption('#scenarioSelect', 'r41');
+  await page.click('#loadScenario');
+  await page.waitForTimeout(250);
+  const before = await page.evaluate(() => window.CNB_APP.state.model.components.length);
+  await page.evaluate(() => {
+    const transfer = new DataTransfer();
+    transfer.setData('text/cnb-gold', 'gold-hmi-ktp700');
+    const target = document.querySelector('#panelSvg');
+    target.dispatchEvent(new DragEvent('dragover', { bubbles: true, dataTransfer: transfer }));
+    target.dispatchEvent(new DragEvent('drop', { bubbles: true, dataTransfer: transfer, clientX: 690, clientY: 420 }));
+  });
+  const after = await page.evaluate(() => ({ count: window.CNB_APP.state.model.components.length, last: window.CNB_APP.state.model.components.at(-1), images: document.querySelectorAll('#panelSvg image').length, bom: document.querySelector('#bomBody').innerText }));
+  if (after.count !== before + 1 || after.last.goldId !== 'gold-hmi-ktp700') throw new Error(`gold drop failed: ${JSON.stringify(after)}`);
+  if (after.images < 5 || after.bom.includes('CANDIDATE-source-')) throw new Error('gold rendering/BOM semantics failed');
+  await page.screenshot({ path: 'evidence/r4-1-gold-panel.png', fullPage: true });
+  await page.click('#autoLayout');
+  const positions = await page.evaluate(() => window.CNB_APP.state.model.components.map((component) => [component.x, component.y]));
+  if (new Set(positions.map((point) => point.join(','))).size !== positions.length) throw new Error('auto layout produced overlapping centers');
+  await page.screenshot({ path: 'evidence/r4-1-gold-auto-layout.png', fullPage: true });
+  await page.evaluate(() => { window.CNB_APP.state.zoom = 8; window.CNB_APP.state.panX = -260; window.CNB_APP.state.panY = -110; window.CNB_APP.render(); });
+  await page.screenshot({ path: 'evidence/r4-1-gold-deep-zoom.png', fullPage: false });
+  await page.evaluate(() => { window.CNB_APP.state.zoom = 1.8; window.CNB_APP.state.panX = 120; window.CNB_APP.state.panY = 70; window.CNB_APP.render(); });
+  await page.screenshot({ path: 'evidence/r4-1-gold-pan.png', fullPage: false });
+  await browser.close();
+  console.log(JSON.stringify({ ok: true, cardCount, before, after: { count: after.count, goldId: after.last.goldId, images: after.images }, layoutComponents: positions.length }, null, 2));
+})().catch((error) => { console.error(error.stack || error); process.exitCode = 1; });

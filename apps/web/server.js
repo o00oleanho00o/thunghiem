@@ -11,6 +11,7 @@ const root = __dirname;
 const projectRoot = path.resolve(__dirname, '../..');
 const catalogRoot = path.resolve(__dirname, '../../catalog');
 const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
+const deviceGoldSetPath = path.join(catalogRoot, 'generated', 'device-gold-set.json');
 const catalogReviewDir = path.join(catalogRoot, 'review');
 const catalogReviewPath = process.env.CNB_CATALOG_REVIEW_PATH
   ? path.resolve(process.env.CNB_CATALOG_REVIEW_PATH)
@@ -105,19 +106,32 @@ function effectiveRecordForAsset(sourceAssetId, catalog) {
   return catalog.records.find((record) => (record.source_asset_id || record.id) === sourceAssetId) || null;
 }
 
+function effectiveGoldProfile(goldId) {
+  if (!goldId || !fs.existsSync(deviceGoldSetPath)) return null;
+  try {
+    const manifest = JSON.parse(fs.readFileSync(deviceGoldSetPath, 'utf8'));
+    return manifest.profiles?.find((profile) => profile.gold_id === goldId) || null;
+  } catch (_) { return null; }
+}
+
 function attachCadGeometry(model, catalog) {
   const cacheRoot = path.resolve(catalogRoot, 'generated', 'vector-cache');
   model.components.forEach((component) => {
     const sourceAssetId = component.assetId || component.source_asset_id || null;
     if (!sourceAssetId) return;
     const record = effectiveRecordForAsset(sourceAssetId, catalog);
-    if (!record) return;
-    const cachePath = path.resolve(catalogRoot, 'generated', 'vector-cache', `${sourceAssetId}.json`);
-    if (!cachePath.startsWith(cacheRoot + path.sep) || !fs.existsSync(cachePath)) return;
+    const gold = effectiveGoldProfile(component.goldId || sourceAssetId);
+    const cachePath = record
+      ? path.resolve(catalogRoot, 'generated', 'vector-cache', `${sourceAssetId}.json`)
+      : gold
+        ? path.resolve(catalogRoot, 'generated', 'device-gold-cache', path.basename(gold.cache_ref))
+        : null;
+    const allowedRoot = record ? cacheRoot : path.resolve(catalogRoot, 'generated', 'device-gold-cache');
+    if (!cachePath || !cachePath.startsWith(allowedRoot + path.sep) || !fs.existsSync(cachePath)) return;
     try {
       const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
       component.cadGeometry = Array.isArray(cache.geometry) ? cache.geometry : [];
-      component.cadGeometryBounds = record.source_bbox || cache.bounds || null;
+      component.cadGeometryBounds = record?.source_bbox || cache.bounds || null;
       component.cadGeometryScale = Number(component.cadGeometryScale || 1);
     } catch (_) {
       // Invalid cache remains an explicit missing-geometry export condition.
@@ -140,6 +154,7 @@ function enforceCadApproval(model, catalog, authoritative = true) {
     }
     // Authoritative export uses persisted physical dimensions, never client dimensions.
     component.assetId = sourceAssetId;
+    if (!record) continue;
     component.footprintRef = record.physical_footprint_id;
     if (record && record.review_state === 'approved-footprint') {
       component.width = Number(record.physical_width_mm);
@@ -219,6 +234,20 @@ const server = http.createServer(async (request, response) => {
     if (requestUrl.pathname === '/api/catalog' && request.method === 'GET') {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing; run scripts/audit_catalog.py catalog' }), mime['.json']);
       return send(response, 200, JSON.stringify(readEffectiveCatalog()), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/catalog/gold' && request.method === 'GET') {
+      if (!fs.existsSync(deviceGoldSetPath)) return send(response, 404, JSON.stringify({ error: 'device gold set missing; run scripts/build_r41_gold_set.py catalog' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(deviceGoldSetPath), mime['.json']);
+    }
+    const goldPreviewMatch = requestUrl.pathname.match(/^\/api\/catalog\/gold-preview\/([A-Za-z0-9-]+)$/);
+    if (goldPreviewMatch && request.method === 'GET') {
+      if (!fs.existsSync(deviceGoldSetPath)) return send(response, 404, 'Device gold set missing');
+      const gold = JSON.parse(fs.readFileSync(deviceGoldSetPath, 'utf8')).profiles?.find((item) => item.gold_id === goldPreviewMatch[1]);
+      if (!gold || !gold.preview_ref) return send(response, 404, 'Gold preview not found');
+      const previewPath = path.resolve(catalogRoot, 'generated', 'device-gold-cache', path.basename(gold.preview_ref));
+      const previewRoot = path.resolve(catalogRoot, 'generated', 'device-gold-cache');
+      if (!previewPath.startsWith(previewRoot + path.sep) || !fs.existsSync(previewPath)) return send(response, 404, 'Gold preview not found');
+      return send(response, 200, fs.readFileSync(previewPath), mime['.svg']);
     }
     if (requestUrl.pathname === '/api/benchmark/r2' && request.method === 'GET') {
       const benchmarkPath = path.resolve(root, '../../benchmarks/r2-real-cabinet/artifacts/r2-reference-cabinet.json');
