@@ -1,0 +1,16 @@
+{
+  "artifacts": {
+    "dxf": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3\\poc1-cabinet-layout\\cnb-plc-panel.dxf",
+    "svg": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3\\poc1-cabinet-layout\\cnb-plc-panel.svg"
+  },
+  "dxf_version": "AC1032",
+  "entity_count": 29,
+  "errors": [],
+  "layers": [
+    "DUCT",
+    "EQUIP",
+    "PLATE",
+    "TEXT"
+  ],
+  "valid": true
+}

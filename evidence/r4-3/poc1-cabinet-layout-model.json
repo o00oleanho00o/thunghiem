@@ -1,0 +1,320 @@
+{
+  "library": {
+    "__rail_rail_5135d0e2abe6": {
+      "confirm": false,
+      "height_mm": 35.0,
+      "lib_key": "__rail_rail_5135d0e2abe6",
+      "name": "DIN rail rail_5135d0e2abe6 (visual proxy)",
+      "source": "rect",
+      "width_mm": 320.0
+    },
+    "__rail_rail_5294e7104596": {
+      "confirm": false,
+      "height_mm": 35.0,
+      "lib_key": "__rail_rail_5294e7104596",
+      "name": "DIN rail rail_5294e7104596 (visual proxy)",
+      "source": "rect",
+      "width_mm": 320.0
+    },
+    "eir_MCCB_MAIN_250A": {
+      "band": 1,
+      "confirm": false,
+      "height_mm": 160.0,
+      "lib_key": "eir_MCCB_MAIN_250A",
+      "name": "Main molded-case circuit breaker 250 A",
+      "source": "rect",
+      "width_mm": 105.0
+    },
+    "eir_PLC_CPU": {
+      "band": 2,
+      "confirm": false,
+      "height_mm": 100.0,
+      "lib_key": "eir_PLC_CPU",
+      "name": "Compact PLC CPU",
+      "source": "rect",
+      "width_mm": 90.0
+    },
+    "eir_PLC_IO_16": {
+      "band": 2,
+      "confirm": false,
+      "height_mm": 100.0,
+      "lib_key": "eir_PLC_IO_16",
+      "name": "16-channel PLC I/O module",
+      "source": "rect",
+      "width_mm": 90.0
+    },
+    "eir_PSU_24V_120W": {
+      "band": 1,
+      "confirm": false,
+      "height_mm": 100.0,
+      "lib_key": "eir_PSU_24V_120W",
+      "name": "24 VDC control power supply 120 W",
+      "source": "rect",
+      "width_mm": 72.0
+    },
+    "eir_RELAY_4CO": {
+      "band": 1,
+      "confirm": false,
+      "height_mm": 80.0,
+      "lib_key": "eir_RELAY_4CO",
+      "name": "Four changeover interface relay",
+      "source": "rect",
+      "width_mm": 18.0
+    }
+  },
+  "model": {
+    "defaults": {
+      "clearance_equipment_to_duct_mm": 3,
+      "gap_between_equipment_mm": 0.1
+    },
+    "display": {
+      "show_row_clearance_dims": true,
+      "snap_enabled": true
+    },
+    "ducts": [
+      {
+        "id": "duct_7c54f57a66b5",
+        "label_h_mm": 1100.0,
+        "length_mm": 1100.0,
+        "rot_deg": 90,
+        "width_mm": 45.0,
+        "x_mm": 0.0,
+        "y_mm": 0.0
+      },
+      {
+        "id": "duct_a4f3cebcfb31",
+        "label_h_mm": 1100.0,
+        "length_mm": 1100.0,
+        "rot_deg": 90,
+        "width_mm": 45.0,
+        "x_mm": 455.0,
+        "y_mm": 0.0
+      },
+      {
+        "id": "duct_26efbcbc195b",
+        "label_h_mm": 500.0,
+        "length_mm": 500.0,
+        "rot_deg": 0,
+        "width_mm": 40.0,
+        "x_mm": 0.0,
+        "y_mm": 825.0
+      }
+    ],
+    "elements": [
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_a6fb254446f7",
+        "lib_key": "eir_MCCB_MAIN_250A",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_a6fb254446f7",
+          "mounting": "backplate",
+          "part_id": "MCCB_MAIN_250A",
+          "rail_id": null
+        },
+        "rot_deg": 0,
+        "tag": "QF1",
+        "x_mm": 85.0,
+        "y_mm": 40.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_a68efeadd3b2",
+        "lib_key": "eir_PSU_24V_120W",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_a68efeadd3b2",
+          "mounting": "din_rail",
+          "part_id": "PSU_24V_120W",
+          "rail_id": "rail_5294e7104596"
+        },
+        "rot_deg": 0,
+        "tag": "G1",
+        "x_mm": 90.0,
+        "y_mm": 885.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_e31f877b1100",
+        "lib_key": "eir_PLC_CPU",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_e31f877b1100",
+          "mounting": "din_rail",
+          "part_id": "PLC_CPU",
+          "rail_id": "rail_5135d0e2abe6"
+        },
+        "rot_deg": 0,
+        "tag": "PLC1",
+        "x_mm": 90.0,
+        "y_mm": 705.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_06aee16f8cbc",
+        "lib_key": "eir_PLC_IO_16",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_06aee16f8cbc",
+          "mounting": "din_rail",
+          "part_id": "PLC_IO_16",
+          "rail_id": "rail_5294e7104596"
+        },
+        "rot_deg": 0,
+        "tag": "IO1",
+        "x_mm": 165.0,
+        "y_mm": 885.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_42a9a7d4040c",
+        "lib_key": "eir_PLC_IO_16",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_42a9a7d4040c",
+          "mounting": "din_rail",
+          "part_id": "PLC_IO_16",
+          "rail_id": "rail_5294e7104596"
+        },
+        "rot_deg": 0,
+        "tag": "IO2",
+        "x_mm": 260.0,
+        "y_mm": 885.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_bf877bf3f2fc",
+        "lib_key": "eir_RELAY_4CO",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_bf877bf3f2fc",
+          "mounting": "din_rail",
+          "part_id": "RELAY_4CO",
+          "rail_id": "rail_5135d0e2abe6"
+        },
+        "rot_deg": 0,
+        "tag": "KA1",
+        "x_mm": 185.0,
+        "y_mm": 725.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_2573819967f2",
+        "lib_key": "eir_RELAY_4CO",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_2573819967f2",
+          "mounting": "din_rail",
+          "part_id": "RELAY_4CO",
+          "rail_id": "rail_5135d0e2abe6"
+        },
+        "rot_deg": 0,
+        "tag": "KA2",
+        "x_mm": 210.0,
+        "y_mm": 725.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_eeb1b7c48762",
+        "lib_key": "eir_RELAY_4CO",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_eeb1b7c48762",
+          "mounting": "din_rail",
+          "part_id": "RELAY_4CO",
+          "rail_id": "rail_5135d0e2abe6"
+        },
+        "rot_deg": 0,
+        "tag": "KA3",
+        "x_mm": 230.0,
+        "y_mm": 725.0
+      },
+      {
+        "clearance_to_duct_mm": 3,
+        "gap_before_mm": 0.1,
+        "group_id": null,
+        "id": "device_3fad345a44b9",
+        "lib_key": "eir_RELAY_4CO",
+        "locked": false,
+        "metadata": {
+          "eir_device_id": "device_3fad345a44b9",
+          "mounting": "din_rail",
+          "part_id": "RELAY_4CO",
+          "rail_id": "rail_5135d0e2abe6"
+        },
+        "rot_deg": 0,
+        "tag": "KA4",
+        "x_mm": 255.0,
+        "y_mm": 725.0
+      },
+      {
+        "clearance_to_duct_mm": 0,
+        "gap_before_mm": 0,
+        "group_id": null,
+        "id": "__rail_rail_5294e7104596",
+        "lib_key": "__rail_rail_5294e7104596",
+        "locked": true,
+        "metadata": {
+          "eir_rail_id": "rail_5294e7104596",
+          "representation": "visual-proxy"
+        },
+        "rot_deg": 0,
+        "tag": "rail_5294e7104596",
+        "x_mm": 90.0,
+        "y_mm": 985.0
+      },
+      {
+        "clearance_to_duct_mm": 0,
+        "gap_before_mm": 0,
+        "group_id": null,
+        "id": "__rail_rail_5135d0e2abe6",
+        "lib_key": "__rail_rail_5135d0e2abe6",
+        "locked": true,
+        "metadata": {
+          "eir_rail_id": "rail_5135d0e2abe6",
+          "representation": "visual-proxy"
+        },
+        "rot_deg": 0,
+        "tag": "rail_5135d0e2abe6",
+        "x_mm": 90.0,
+        "y_mm": 805.0
+      }
+    ],
+    "groups": [],
+    "labels": [],
+    "metadata": {
+      "adapter": "cnb-eir-v1-to-cabinet-layout-generator-poc.v1",
+      "rail_representation": "locked visual rect proxy; OSS has no DIN rail entity",
+      "source_eir": "examples/plc-panel/project.json",
+      "source_units": "mm",
+      "unsupported": []
+    },
+    "plate": {
+      "height_mm": 1100.0,
+      "origin": "top_left",
+      "width_mm": 500.0
+    },
+    "project": {
+      "id": "project_4de34d02badc",
+      "name": "Electrical control panel \u00b7 OSS POC",
+      "panel_tag": "project_4de34d02badc",
+      "rev": "POC"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "adapter": {
+    "connections": 0,
+    "devices": 9,
+    "ducts": 3,
+    "rails": 2,
+    "source_project": "project_4de34d02badc",
+    "unsupported": []
+  },
+  "export": {
+    "artifacts": {
+      "dxf": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3\\poc1-cabinet-layout\\cnb-plc-panel.dxf",
+      "svg": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3\\poc1-cabinet-layout\\cnb-plc-panel.svg"
+    },
+    "dxf_version": "AC1032",
+    "entity_count": 29,
+    "errors": [],
+    "layers": [
+      "DUCT",
+      "EQUIP",
+      "PLATE",
+      "TEXT"
+    ],
+    "valid": true
+  },
+  "model": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\evidence\\r4-3\\poc1-cabinet-layout-model.json"
+}

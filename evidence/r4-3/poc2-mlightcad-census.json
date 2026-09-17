@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "asset": "KTP700",
+      "bounds": {
+        "height": 297.0,
+        "max_x": 420.0,
+        "max_y": 297.0,
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "width": 420.0
+      },
+      "dxf_version": "AC1015",
+      "entity_count": 13,
+      "entity_types": {
+        "INSERT": 7,
+        "LWPOLYLINE": 1,
+        "TEXT": 5
+      },
+      "layers": [
+        "0",
+        "EPLAN308",
+        "EPLAN400"
+      ],
+      "mlightcad_fixture_status": "source-ready; browser render requires pnpm/node >= 24",
+      "parse_ms": 131.269,
+      "path": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\catalog\\siemens-bilddb\\simatic-hmi-ktp700-basic-dp-7-inch-g-st70-xx-01722.dxf",
+      "size_bytes": 151391,
+      "units_header": 4
+    },
+    {
+      "asset": "G120C",
+      "bounds": {
+        "height": 349.25000000000045,
+        "max_x": 525.0,
+        "max_y": 349.25,
+        "min_x": -152.59972714870486,
+        "min_y": -4.650312073994533e-13,
+        "width": 677.5997271487049
+      },
+      "dxf_version": "AC1024",
+      "entity_count": 546,
+      "entity_types": {
+        "CIRCLE": 14,
+        "HATCH": 14,
+        "INSERT": 1,
+        "LINE": 140,
+        "LWPOLYLINE": 72,
+        "MTEXT": 6,
+        "TEXT": 299
+      },
+      "layers": [
+        "0",
+        "71_GS_LI",
+        "72_GS_AB",
+        "73_GS_ABS",
+        "74_GS_BMK",
+        "75_GS_TXT",
+        "76_GS_AP"
+      ],
+      "mlightcad_fixture_status": "source-ready; browser render requires pnpm/node >= 24",
+      "parse_ms": 188.242,
+      "path": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\catalog\\siemens-bilddb\\sinamics-g120c-sinamics-g120c-fsd-g-sd01-xx-00631.dxf",
+      "size_bytes": 220572,
+      "units_header": 4
+    },
+    {
+      "asset": "SITOP",
+      "bounds": {
+        "height": 431.8,
+        "max_x": 279.4,
+        "max_y": 431.8,
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "width": 279.4
+      },
+      "dxf_version": "AC1032",
+      "entity_count": 38,
+      "entity_types": {
+        "CIRCLE": 2,
+        "HATCH": 2,
+        "INSERT": 10,
+        "LINE": 21,
+        "LWPOLYLINE": 2,
+        "TEXT": 1
+      },
+      "layers": [
+        "0",
+        "EPLAN100",
+        "EPLAN108",
+        "EPLAN311",
+        "EPLAN510"
+      ],
+      "mlightcad_fixture_status": "source-ready; browser render requires pnpm/node >= 24",
+      "parse_ms": 113.833,
+      "path": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\catalog\\siemens-bilddb\\sitop-sitop-pm1207-ex-24-v-dc-2-5-a-g-kt01-xx-02221.dxf",
+      "size_bytes": 210921,
+      "units_header": 4
+    }
+  ],
+  "schema_version": "cnb-r4-3-mlightcad-poc.v1",
+  "viewer": {
+    "dwg_path": "optional converter; default libredwg-web portion is GPL-3.0",
+    "dxf_path": "built-in @mlightcad/data-model converter",
+    "package": "@mlightcad/cad-simple-viewer",
+    "repo": "https://github.com/mlightcad/cad-viewer"
+  }
+}
