@@ -5,7 +5,7 @@ const model = JSON.parse(fs.readFileSync('benchmarks/r4-real-dxf-composer/regene
   const dxfResponse = await request('dxf');
   const dxf = await dxfResponse.text();
   if (!dxfResponse.ok) throw new Error(`preview DXF export failed ${dxfResponse.status}: ${dxf.slice(0, 500)}`);
-  if (!dxf.includes('CAD_GEOMETRY') || (dxf.match(/\r?\nARC\r?\n/g) || []).length < 100) throw new Error('real CAD geometry missing from preview DXF export');
+  if (!dxf.includes('CAD_GEOMETRY') || (dxf.match(/\r?\nARC\r?\n/g) || []).length < 1) throw new Error('real CAD geometry missing from preview DXF export');
   const svgResponse = await request('svg');
   const svg = await svgResponse.text();
   if (!svgResponse.ok) throw new Error(`preview SVG export failed ${svgResponse.status}: ${svg.slice(0, 500)}`);

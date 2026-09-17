@@ -5,7 +5,7 @@
 **R4 PASS WITH DATA LIMITATION — GO TO R5 CABINET FIT WITH CONDITIONS**
 
 The composer proves the CAD interaction and geometry-preservation path. It does
-not claim a verified Siemens physical catalog. All eight selected Siemens assets
+not claim a verified Siemens physical catalog. All five selected Siemens assets
 remain preview-only because exact product identity and physical mapping are not
 supported by the supplied DXF evidence.
 
@@ -13,22 +13,26 @@ supported by the supplied DXF evidence.
 
 The current generated catalog contains 58 parsed assets: 36 from `radica-dxf`,
 16 from `siemens-batch-w33` and 6 from `siemens-bilddb`. The vector-cache
-manifest contains eight reusable cache records used by the R4 benchmark. Each
+manifest contains five reusable cache records used by the R4 benchmark. Each
 record retains source path, source SHA256, representation ID, bounds and entity
-count. The selected set covers S7-1200, S7-1500, SIRIUS, SITOP/drawing-sheet
-and SINAMICS candidate families.
+count. The selected set is restricted to DXFs with an explicit millimetre unit
+declaration: HMI, Top Connect, SINAMICS and SITOP. Drawing-sheet flags remain
+visible and do not imply a usable physical footprint.
 
 | Status | Count | Meaning |
 |---|---:|---|
-| Source geometry verified | 8 | DXF parsed and vector cache available |
+| Source geometry verified | 5 | DXF parsed and vector cache available |
 | Identity exact verified | 0 | Filename/family is not enough for exact MPN |
 | Physical mapping approved | 0 | No defensible exact-product mm mapping |
-| Preview-only | 8 | Safe to inspect/render, excluded from authoritative fit |
+| Preview-only | 5 | Safe to inspect/render, excluded from authoritative fit |
 
-The source DXFs are not mutated. Several files declare no units, and some
-declared-mm files are drawing sheets or contain annotation/title-block content.
-The R4 benchmark therefore uses source-unit geometry only in an explicitly
-non-authoritative preview model. No source bbox is silently relabeled as mm.
+The source DXFs are not mutated. The R4 benchmark uses only source files that
+explicitly declare millimetres, but remains an explicitly non-authoritative
+preview model because product identity and physical mapping are unresolved.
+No source bbox is silently relabeled as a confirmed product footprint.
+The web UI exposes the same rule as `Đơn vị mm đã xác nhận`; unknown-unit and
+unitless assets remain auditable in the catalog but cannot be dropped into this
+scenario.
 
 ## Component model and transform
 
@@ -58,9 +62,10 @@ cabinet coordinates. Raw CAD entities do not enter canonical EIR persistence.
 - preview DXF and SVG export containing transformed `CAD_GEOMETRY` primitives;
 - independent ezdxf reopen.
 
-The generated R4 export contains 12,911 entities: 5,797 LINE, 7,051 ARC,
-43 CIRCLE and 20 TEXT, with `AC1009` header and sensible 1600 × 1100 bounds.
-The real geometry layer is substantially larger than an envelope-only export.
+The generated R4 export contains 813 entities: 735 LINE, 10 ARC, 54 CIRCLE
+and 14 TEXT, with `AC1009` header. The preview includes known-mm source
+geometry only; several drawing-sheet assets intentionally extend beyond the
+generic 1600 × 1100 preview envelope and are not authoritative fit data.
 
 ## Explicit limitation
 
