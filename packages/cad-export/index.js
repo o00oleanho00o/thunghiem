@@ -264,6 +264,40 @@ function svgRect(x, y, width, height, attrs = '') {
   return `<rect x="${fixed(x)}" y="${fixed(y)}" width="${fixed(width)}" height="${fixed(height)}" ${attrs}/>`;
 }
 
+function cadGeometrySvg(component, yTop) {
+  if (!Array.isArray(component.cadGeometry) || !component.cadGeometry.length) return '';
+  const bounds = component.cadGeometryBounds || {};
+  const scale = safeNumber(component.cadGeometryScale, 1);
+  const point = (x, y) => transformCadPoint({ x, y }, component, bounds, scale);
+  const attr = 'class="cad-geometry" fill="none" stroke="#f8fafc" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"';
+  const output = [];
+  component.cadGeometry.forEach((geometry) => {
+    if (geometry.type === 'line') {
+      const a = point(geometry.x1, geometry.y1);
+      const b = point(geometry.x2, geometry.y2);
+      output.push(`<line ${attr} x1="${fixed(a.x)}" y1="${fixed(yTop(a.y))}" x2="${fixed(b.x)}" y2="${fixed(yTop(b.y))}"/>`);
+    } else if (geometry.type === 'circle') {
+      const center = point(geometry.cx, geometry.cy);
+      output.push(`<circle ${attr} cx="${fixed(center.x)}" cy="${fixed(yTop(center.y))}" r="${fixed(Math.abs(safeNumber(geometry.r, 1) * scale))}"/>`);
+    } else if (geometry.type === 'arc') {
+      const radius = Math.abs(safeNumber(geometry.r, 1) * scale);
+      const start = safeNumber(geometry.start);
+      const end = safeNumber(geometry.end);
+      const delta = ((end - start) % 360 + 360) % 360;
+      const center = point(geometry.cx, geometry.cy);
+      // A full-circle ARC has coincident endpoints, so emit a circle instead.
+      if (delta === 0) {
+        output.push(`<circle ${attr} cx="${fixed(center.x)}" cy="${fixed(yTop(center.y))}" r="${fixed(radius)}"/>`);
+        return;
+      }
+      const startPoint = point(geometry.cx + safeNumber(geometry.r, 1) * Math.cos(start * Math.PI / 180), geometry.cy + safeNumber(geometry.r, 1) * Math.sin(start * Math.PI / 180));
+      const endPoint = point(geometry.cx + safeNumber(geometry.r, 1) * Math.cos(end * Math.PI / 180), geometry.cy + safeNumber(geometry.r, 1) * Math.sin(end * Math.PI / 180));
+      output.push(`<path ${attr} d="M ${fixed(startPoint.x)} ${fixed(yTop(startPoint.y))} A ${fixed(radius)} ${fixed(radius)} 0 ${delta > 180 ? 1 : 0} 0 ${fixed(endPoint.x)} ${fixed(yTop(endPoint.y))}"/>`);
+    }
+  });
+  return output.join('');
+}
+
 function exportSvg(input, options = {}) {
   const model = normalizeModel(input);
   const { width: outputWidth = 1200 } = options;
@@ -287,9 +321,11 @@ function exportSvg(input, options = {}) {
       parts.push(`<line class="wire" x1="${fixed(from.x)}" y1="${fixed(yTop(from.y))}" x2="${fixed(to.x)}" y2="${fixed(yTop(to.y))}"/>`);
     }
   });
-    model.components.forEach((component) => {
+  model.components.forEach((component) => {
     const rect = componentRect(component);
-    parts.push(svgRect(rect.x, yTop(rect.y, rect.height), rect.width, rect.height, `class="component" fill="${escXml(component.color)}" fill-opacity="0.82" rx="2"`));
+    const hasCadGeometry = Array.isArray(component.cadGeometry) && component.cadGeometry.length > 0;
+    parts.push(svgRect(rect.x, yTop(rect.y, rect.height), rect.width, rect.height, `class="component" fill="${escXml(component.color)}" fill-opacity="${hasCadGeometry ? '0.10' : '0.82'}" rx="2"`));
+    if (hasCadGeometry) parts.push(cadGeometrySvg(component, yTop));
     parts.push(`<text class="label" x="${fixed(rect.x + 3)}" y="${fixed(yTop(rect.y + rect.height / 2) + 4)}">${escXml(component.tag)}</text>`);
     parts.push(`<text class="tiny" x="${fixed(rect.x + 3)}" y="${fixed(yTop(rect.y + 8))}">${escXml(component.name)}</text>`);
   });

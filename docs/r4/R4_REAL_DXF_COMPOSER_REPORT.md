@@ -55,7 +55,7 @@ cabinet coordinates. Raw CAD entities do not enter canonical EIR persistence.
 - auto-layout over the current preview envelope;
 - lock, manual move and regenerate preserving the locked component;
 - red validation outline without replacing the CAD image with a fake rectangle;
-- preview DXF export containing `CAD_GEOMETRY` primitives;
+- preview DXF and SVG export containing transformed `CAD_GEOMETRY` primitives;
 - independent ezdxf reopen.
 
 The generated R4 export contains 12,911 entities: 5,797 LINE, 7,051 ARC,
