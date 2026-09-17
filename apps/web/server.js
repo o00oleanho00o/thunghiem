@@ -10,6 +10,7 @@ const { canonicalStringify, canonicalHash } = require('./canonical-json.js');
 const root = __dirname;
 const projectRoot = path.resolve(__dirname, '../..');
 const catalogRoot = path.resolve(__dirname, '../../catalog');
+const examplesRoot = path.resolve(__dirname, '../../examples');
 const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
 const deviceGoldSetPath = path.join(catalogRoot, 'generated', 'device-gold-set.json');
 const verifiedDeviceSetPath = path.join(catalogRoot, 'generated', 'verified-device-set.json');
@@ -28,8 +29,8 @@ const mime = {
   '.md': 'text/markdown; charset=utf-8',
 };
 
-function send(response, status, body, type = 'text/plain; charset=utf-8') {
-  response.writeHead(status, { 'Content-Type': type, 'Cache-Control': 'no-store' });
+function send(response, status, body, type = 'text/plain; charset=utf-8', headers = {}) {
+  response.writeHead(status, { 'Content-Type': type, 'Cache-Control': 'no-store', ...headers });
   response.end(body);
 }
 
@@ -231,7 +232,42 @@ const eirRevisions = new Map();
 const server = http.createServer(async (request, response) => {
   try {
     const requestUrl = new URL(request.url, `http://${request.headers.host || 'localhost'}`);
-    if (requestUrl.pathname === '/api/health') return send(response, 200, JSON.stringify({ ok: true, service: 'cnb-electrical-lab-web' }), mime['.json']);
+    if (requestUrl.pathname === '/api/health') return send(response, 200, JSON.stringify({ ok: true, service: process.env.CNB_ENGINEERING_API === 'true' ? 'cnb-engineering-api' : 'cnb-electrical-lab-web' }), mime['.json']);
+    const projectMatch = requestUrl.pathname.match(/^\/api\/projects\/([A-Za-z0-9-]+)$/);
+    if (projectMatch && request.method === 'GET') {
+      const projectPath = path.resolve(examplesRoot, projectMatch[1], 'project.json');
+      if (!projectPath.startsWith(examplesRoot + path.sep) || !fs.existsSync(projectPath)) return send(response, 404, JSON.stringify({ error: 'project not found' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(projectPath), mime['.json']);
+    }
+    const cadAssetMatch = requestUrl.pathname.match(/^\/api\/cad-assets\/([A-Za-z0-9-]+)$/);
+    if (cadAssetMatch && request.method === 'GET') {
+      const catalog = readEffectiveCatalog();
+      const record = catalog.records.find((item) => (item.source_asset_id || item.id) === cadAssetMatch[1]);
+      if (!record?.relative_path || !/\.dxf$/i.test(record.relative_path)) return send(response, 404, JSON.stringify({ error: 'DXF asset not found' }), mime['.json']);
+      const assetPath = path.resolve(catalogRoot, record.relative_path);
+      if (!assetPath.startsWith(catalogRoot + path.sep) || !fs.existsSync(assetPath)) return send(response, 404, JSON.stringify({ error: 'DXF asset file not found' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(assetPath), mime['.dxf'], {
+        'Content-Disposition': `inline; filename*=UTF-8''${encodeURIComponent(path.basename(record.relative_path))}`,
+      });
+    }
+    const placementMatch = requestUrl.pathname.match(/^\/api\/projects\/([A-Za-z0-9-]+)\/placements$/);
+    if (placementMatch && request.method === 'POST') {
+      const payload = JSON.parse(await bodyFrom(request));
+      const eir = payload.eir;
+      if (!eir || typeof eir !== 'object' || !Array.isArray(eir.placements)) return send(response, 400, JSON.stringify({ error: 'eir with placements is required' }), mime['.json']);
+      const next = JSON.parse(JSON.stringify(eir));
+      const incoming = Array.isArray(payload.placements) ? payload.placements : [];
+      const byDevice = new Map(incoming.map((item) => [item.deviceId || item.device_id, item]));
+      next.placements = next.placements.map((placement) => {
+        const update = byDevice.get(placement.device_id);
+        if (!update || placement.locked) return placement;
+        return { ...placement, x: Number(update.x), y: Number(update.y), rotation: Number(update.rotation || 0), status: 'candidate' };
+      });
+      const revision = `r5-${canonicalHash(next).slice(0, 12)}`;
+      const record = { revision, saved_at: new Date().toISOString(), eir: next, command: { type: 'candidate-placements' }, canonical_hash: canonicalHash(next), canonical_json: canonicalStringify(next) };
+      eirRevisions.set(revision, record);
+      return send(response, 200, JSON.stringify(record), mime['.json']);
+    }
     if (requestUrl.pathname === '/api/catalog' && request.method === 'GET') {
       if (!fs.existsSync(catalogManifestPath)) return send(response, 404, JSON.stringify({ error: 'catalog manifest missing; run scripts/audit_catalog.py catalog' }), mime['.json']);
       return send(response, 200, JSON.stringify(readEffectiveCatalog()), mime['.json']);

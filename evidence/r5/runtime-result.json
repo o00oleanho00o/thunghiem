@@ -1,0 +1,56 @@
+{
+  "schema_version": "cnb-r5-unified-workbench.v1",
+  "project": "r5-real-cabinet",
+  "web_url": "http://127.0.0.1:4200/",
+  "api_url": "http://127.0.0.1:8200",
+  "production_like_processes": 2,
+  "checks": {
+    "api_healthy": true,
+    "canonical_frontend_loaded": true,
+    "project_loaded": true,
+    "bom_route": true,
+    "panel_route": true,
+    "panel_components": true,
+    "product_truth_inspector": true,
+    "panel_drag": true,
+    "locked_reflow_anchor": true,
+    "cad_ktp700": true,
+    "cad_g120c": true,
+    "cad_selection_layers": true,
+    "validation_route": true,
+    "export_audit": true,
+    "invalid_dxf_retained": true,
+    "selected_device_retained": true,
+    "no_page_errors": true
+  },
+  "metrics": {
+    "frontend_navigation_ms": 109,
+    "cad_ktp700_load_ms": 170.9,
+    "cad_g120c_load_ms": 118.8,
+    "invalid_runtime": {
+      "rendered": true,
+      "renderedEntityCount": 546,
+      "asset": "sinamics-g120c-vfd-cad-asset-siemens-bilddb-e2ea283cb57674d6.dxf",
+      "status": "Open failed: invalid.dxf; last valid scene retained"
+    },
+    "route_switches": 10
+  },
+  "errors": [],
+  "screenshots": {
+    "01-project-overview": "evidence/r5/01-project-overview.png",
+    "02-bom": "evidence/r5/02-bom.png",
+    "03-panel-loaded": "evidence/r5/03-panel-loaded.png",
+    "04-panel-selected-device": "evidence/r5/04-panel-selected-device.png",
+    "05-panel-after-drag": "evidence/r5/05-panel-after-drag.png",
+    "06-panel-locked-reflow": "evidence/r5/06-panel-locked-reflow.png",
+    "07-cad-ktp700": "evidence/r5/07-cad-ktp700.png",
+    "08-cad-g120c": "evidence/r5/08-cad-g120c.png",
+    "09-cad-selection-layer": "evidence/r5/09-cad-selection-layer.png",
+    "10-panel-to-cad-navigation": "evidence/r5/10-panel-to-cad-navigation.png",
+    "11-validation": "evidence/r5/11-validation.png",
+    "12-export-result": "evidence/r5/12-export-result.png",
+    "13-invalid-dxf-retained": "evidence/r5/13-invalid-dxf-retained.png"
+  },
+  "visual_evidence": true,
+  "outcome": "PASS_UNIFIED_ENGINEERING_WORKBENCH"
+}

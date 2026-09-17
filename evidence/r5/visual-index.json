@@ -1,0 +1,136 @@
+{
+  "schema_version": "cnb-r5-visual-index.v1",
+  "branch": "cnb-electrical-lab-r5-unified-engineering-workbench",
+  "entries": [
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet",
+      "project": "r5-real-cabinet",
+      "action": "Open canonical project",
+      "expected": "Project overview with one frontend/one API topology",
+      "observed": "Overview shows CNB Siemens project and Draft candidate state",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/01-project-overview.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/bom",
+      "project": "r5-real-cabinet",
+      "action": "Open BOM tab",
+      "expected": "Three Siemens parts from EIR are listed",
+      "observed": "KTP700, G120C and SITOP rows show candidate mapping",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/02-bom.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/panel",
+      "project": "r5-real-cabinet",
+      "action": "Load panel projection through PanelLayoutAdapter",
+      "expected": "Plate, rails, ducts and three candidate devices are visible",
+      "observed": "Panel SVG is rendered with three device projections",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/03-panel-loaded.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/panel",
+      "project": "r5-real-cabinet",
+      "action": "Select -HMI1 on panel",
+      "expected": "CNB inspector shows identity, footprint, provenance and CAD link",
+      "observed": "ProductIdentity and order code are shown from EIR part truth",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/04-panel-selected-device.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/panel",
+      "project": "r5-real-cabinet",
+      "action": "Drag selected candidate placement",
+      "expected": "Candidate x changes while workflow remains Draft",
+      "observed": "x changed 120 -> 195; status remains Draft candidate",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/05-panel-after-drag.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/panel",
+      "project": "r5-real-cabinet",
+      "action": "Lock HMI and run candidate reflow",
+      "expected": "Locked anchor stays fixed and movable devices reflow around it",
+      "observed": "locked x remains 195; Draft candidate status visible",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/06-panel-locked-reflow.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/cad",
+      "project": "r5-real-cabinet",
+      "action": "Navigate from selected HMI to linked CAD asset",
+      "expected": "mlightcad renders KTP700 in the same shell",
+      "observed": "KTP700 loaded with non-zero rendered geometry and linked tag",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/07-cad-ktp700.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/cad",
+      "project": "r5-real-cabinet",
+      "action": "Navigate from VFD1 to linked G120C CAD asset",
+      "expected": "G120C renders without a separate runtime host",
+      "observed": "G120C loaded in embedded CAD tab with linked VFD1 title",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/08-cad-g120c.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/cad",
+      "project": "r5-real-cabinet",
+      "action": "Inspect G120C bounds, left extent, selection and layers",
+      "expected": "Bounds overlay, selected entity and populated layer list are visible",
+      "observed": "mlightcad bridge exposes selection and layer inventory in shared inspector",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/09-cad-selection-layer.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/cad",
+      "project": "r5-real-cabinet",
+      "action": "Retain selected VFD1 link in CAD route",
+      "expected": "CAD tab title retains selected CNB device context",
+      "observed": "VFD1 context retained",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/10-panel-to-cad-navigation.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/validation",
+      "project": "r5-real-cabinet",
+      "action": "Run CNB validation view",
+      "expected": "Validation is visible with candidate workflow state",
+      "observed": "Validation panel lists issues/status without changing EIR approval state",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/11-validation.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/export",
+      "project": "r5-real-cabinet",
+      "action": "Export audit through Engineering API",
+      "expected": "Audit JSON reports valid deterministic DXF contract",
+      "observed": "API audit result contains valid true",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/12-export-result.png"
+    },
+    {
+      "app": "CNB Engineering Web",
+      "route": "/projects/r5-real-cabinet/cad",
+      "project": "r5-real-cabinet",
+      "action": "Open malformed DXF after valid G120C",
+      "expected": "Input rejected and previous valid scene remains rendered",
+      "observed": "Error status says last valid scene retained; rendered count stays non-zero",
+      "test": "scripts/test_r5_unified_workbench.cjs",
+      "file": "evidence/r5/13-invalid-dxf-retained.png"
+    }
+  ]
+}

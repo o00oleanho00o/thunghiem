@@ -1,0 +1,6 @@
+{
+  "name": "@cnb/adapters-cabinet-layout",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0"
+}

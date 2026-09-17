@@ -1,0 +1,89 @@
+{
+  "schema_version": "eir.v1",
+  "project": {
+    "id": "r5-real-cabinet",
+    "name": "CNB Siemens starter cabinet",
+    "revision": "R5-DRAFT"
+  },
+  "workflow": {
+    "state": "Draft",
+    "approved": false,
+    "note": "Browser edits are candidate placements until engineering review."
+  },
+  "enclosure": {
+    "id": "r5-enclosure",
+    "name": "CNB control cabinet 800",
+    "width": 800,
+    "height": 1000,
+    "depth": 300,
+    "plate": {
+      "id": "r5-plate",
+      "x": 50,
+      "y": 50,
+      "width": 700,
+      "height": 900
+    },
+    "rails": [
+      { "id": "r5-rail-top", "type": "DIN-rail-35", "x": 90, "y": 760, "length": 620, "height": 7.5 },
+      { "id": "r5-rail-low", "type": "DIN-rail-35", "x": 90, "y": 220, "length": 620, "height": 7.5 }
+    ],
+    "ducts": [
+      { "id": "r5-duct-left", "x": 58, "y": 90, "width": 28, "height": 820, "orientation": "vertical" },
+      { "id": "r5-duct-right", "x": 714, "y": 90, "width": 28, "height": 820, "orientation": "vertical" },
+      { "id": "r5-duct-mid", "x": 90, "y": 690, "width": 620, "height": 28, "orientation": "horizontal" }
+    ]
+  },
+  "parts": [
+    {
+      "id": "part-ktp700",
+      "manufacturer": "Siemens",
+      "description": "SIMATIC HMI KTP700 Basic color DP",
+      "mpn": "6AV2123-2GA03-0AX0",
+      "source_asset_id": "source-d2e35ab9238f5738",
+      "cad_asset_ref": "source-d2e35ab9238f5738",
+      "footprint": { "width": 214, "height": 158, "depth": 39, "mounting": "panel_mount" },
+      "product_identity": { "status": "document_verified", "type_designation": "KTP700 Basic color DP", "order_code": "6AV2123-2GA03-0AX0" },
+      "provenance": { "width_mm": { "status": "document_verified", "source": "Siemens datasheet page 7" }, "height_mm": { "status": "document_verified", "source": "Siemens datasheet page 7" }, "depth_mm": { "status": "document_verified", "source": "Siemens datasheet page 7" }, "mounting": { "status": "document_verified", "source": "Siemens datasheet page 7" } }
+    },
+    {
+      "id": "part-g120c",
+      "manufacturer": "Siemens",
+      "description": "SINAMICS G120C drive CAD candidate",
+      "mpn": "G120C-CANDIDATE",
+      "source_asset_id": "source-a0a9f79675c3f78e",
+      "cad_asset_ref": "source-a0a9f79675c3f78e",
+      "footprint": { "width": 677.6, "height": 349.25, "depth": 1, "mounting": "plate_mount" },
+      "product_identity": { "status": "candidate_needs_review", "type_designation": "SINAMICS G120C", "order_code": "candidate from Siemens BildDB DXF" },
+      "provenance": { "width_mm": { "status": "source_verified", "source": "DXF model-space bounds" }, "height_mm": { "status": "source_verified", "source": "DXF model-space bounds" }, "depth_mm": { "status": "unknown" }, "mounting": { "status": "unknown" } }
+    },
+    {
+      "id": "part-sitop",
+      "manufacturer": "Siemens",
+      "description": "SITOP PM1207 power supply CAD candidate",
+      "mpn": "SITOP-PM1207-CANDIDATE",
+      "source_asset_id": "source-7ab1640d1d97df20",
+      "cad_asset_ref": "source-7ab1640d1d97df20",
+      "footprint": { "width": 279.4, "height": 431.8, "depth": 1, "mounting": "plate_mount" },
+      "product_identity": { "status": "candidate_needs_review", "type_designation": "SITOP PM1207", "order_code": "candidate from Siemens BildDB DXF" },
+      "provenance": { "width_mm": { "status": "source_verified", "source": "DXF model-space bounds" }, "height_mm": { "status": "source_verified", "source": "DXF model-space bounds" }, "depth_mm": { "status": "unknown" }, "mounting": { "status": "unknown" } }
+    }
+  ],
+  "devices": [
+    { "id": "device-ktp700", "tag": "-HMI1", "name": "SIMATIC HMI KTP700", "description": "Operator panel", "function": "HMI", "part_id": "part-ktp700", "cad_asset_ref": "source-d2e35ab9238f5738", "placement_capable": false, "terminals": [] },
+    { "id": "device-g120c", "tag": "-VFD1", "name": "SINAMICS G120C", "description": "Variable frequency drive", "function": "Drive", "part_id": "part-g120c", "cad_asset_ref": "source-a0a9f79675c3f78e", "placement_capable": false, "terminals": [] },
+    { "id": "device-sitop", "tag": "-PS1", "name": "SITOP PM1207", "description": "24 V DC power supply", "function": "Power", "part_id": "part-sitop", "cad_asset_ref": "source-7ab1640d1d97df20", "placement_capable": false, "terminals": [] }
+  ],
+  "placements": [
+    { "device_id": "device-ktp700", "x": 120, "y": 760, "width": 214, "height": 158, "rotation": 0, "locked": false, "status": "candidate" },
+    { "device_id": "device-g120c", "x": 120, "y": 360, "width": 500, "height": 258, "rotation": 0, "locked": false, "status": "candidate" },
+    { "device_id": "device-sitop", "x": 480, "y": 120, "width": 167, "height": 258, "rotation": 0, "locked": false, "status": "candidate" }
+  ],
+  "connections": [],
+  "metadata": {
+    "authoritative": false,
+    "source": "R5 unified engineering workbench demo",
+    "truth_owner": "CNB EIR",
+    "cad_policy": "DXF-only; source assets are preview/mapping candidates",
+    "placement_policy": "candidate until Reviewed or Approved"
+  }
+}

@@ -1,0 +1,43 @@
+.engineering-nav {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 22px;
+  border-bottom: 1px solid var(--line);
+  background: #0d1727;
+}
+.engineering-nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: none;
+}
+.engineering-nav a:hover, .engineering-nav a.active { border-color: #345172; background: #12233a; color: #d7eaff; }
+.engineering-nav-status { margin-left: auto; color: var(--amber); font: 700 10px ui-monospace, monospace; letter-spacing: .08em; }
+.workspace { height: calc(100vh - 114px); }
+.r5-view { height: calc(100vh - 114px); overflow: auto; background: var(--canvas); }
+.r5-dashboard-grid { max-width: 1180px; margin: 0 auto; padding: 28px; display: grid; gap: 16px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.r5-hero { grid-column: 1 / -1; padding: 22px 24px; border: 1px solid var(--line); background: #0c1728; }
+.r5-hero h1 { margin: 5px 0 8px; font-size: 24px; letter-spacing: 0; }
+.r5-hero p { max-width: 760px; margin: 0; color: var(--muted); line-height: 1.5; }
+.r5-card { min-width: 0; padding: 17px; border: 1px solid var(--line); background: #0d1727; }
+.r5-card.span-4 { grid-column: span 4; }.r5-card.span-6 { grid-column: span 6; }.r5-card.span-8 { grid-column: span 8; }.r5-card.span-12 { grid-column: 1 / -1; }
+.r5-card h2 { margin: 0 0 9px; font-size: 14px; }.r5-card h3 { margin: 0 0 6px; font-size: 12px; }
+.r5-card p { margin: 6px 0; color: var(--muted); line-height: 1.4; }.r5-card strong { color: var(--text); }
+.r5-kpi { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line-soft); }.r5-kpi:first-of-type { border-top: 0; }
+.r5-kpi b { color: #cce6ff; font-size: 18px; }.r5-kpi span { color: var(--muted); font-size: 11px; text-align: right; }
+.r5-table { width: 100%; border-collapse: collapse; font-size: 11px; }.r5-table th { color: var(--faint); font-size: 9px; text-align: left; text-transform: uppercase; letter-spacing: .08em; }.r5-table th, .r5-table td { padding: 9px 7px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }.r5-table td { color: #cbd7e9; }.r5-table td code { color: #9fcaff; }
+.r5-status { display: inline-flex; align-items: center; min-height: 22px; padding: 0 7px; border: 1px solid #6f4b2a; color: var(--amber); font-size: 9px; font-weight: 700; letter-spacing: .08em; }.r5-status.ok { border-color: #286849; color: var(--green); }
+.r5-action-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }.r5-action-row .button { text-decoration: none; }
+.r5-cad-view { overflow: hidden; background: #111820; }
+.r5-cad-toolbar { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 18px; border-bottom: 1px solid #345267; background: #172c3c; }
+.r5-cad-toolbar strong { display: block; margin-top: 3px; font-size: 13px; }.r5-cad-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }.r5-cad-actions #status { color: #b8ccd8; font-size: 10px; }
+.r5-cad-content { height: calc(100% - 58px); min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 300px; }
+#cad-container { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #fff; }.r5-cad-content #cad-container canvas { display: block; }.r5-cad-content #debugOverlay { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; pointer-events: none; overflow: visible; }.r5-cad-content #debugOverlay text { paint-order: stroke; stroke: #111; stroke-width: 3px; stroke-linejoin: round; }
+.r5-cad-inspector { min-height: 0; overflow: auto; padding: 15px; border-left: 1px solid #345267; background: #17232b; color: #e8edf1; font-size: 11px; }.r5-cad-inspector p { line-height: 1.35; }.r5-cad-inspector code, .r5-cad-inspector pre { color: #b9d9ea; word-break: break-word; white-space: pre-wrap; }.r5-cad-inspector ul { padding-left: 15px; }.r5-cad-inspector li { margin-bottom: 3px; }
+@media (max-width: 850px) { .engineering-nav { overflow-x: auto; padding: 0 10px; }.engineering-nav-status { display: none; }.workspace, .r5-view { height: calc(100vh - 114px); }.r5-dashboard-grid { padding: 14px; }.r5-card.span-4, .r5-card.span-6, .r5-card.span-8 { grid-column: 1 / -1; }.r5-cad-toolbar { align-items: flex-start; flex-direction: column; }.r5-cad-actions { justify-content: flex-start; }.r5-cad-content { grid-template-columns: 1fr; grid-template-rows: minmax(360px, 1fr) 250px; }.r5-cad-inspector { border-left: 0; border-top: 1px solid #345267; } }

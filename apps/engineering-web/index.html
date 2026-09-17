@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CNB Electrical Lab panel layout editor">
+  <title>CNB Engineering · Unified Workbench</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/engineering-shell.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="CNB Electrical Lab">
+      <span class="brand-mark">CNB</span>
+      <span class="brand-copy"><strong>Electrical Lab</strong><small>Panel composer</small></span>
+    </div>
+    <div class="project-state">
+      <span id="projectName">MCC 6 motor</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span id="projectRevision">REV A</span>
+      <span class="unit-chip">MM</span>
+    </div>
+    <div class="top-actions">
+      <a class="button subtle docs-link" href="/docs.html">Docs</a>
+      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option><option value="r2">R2 reference cabinet</option><option value="r2b">R2B Siemens geometry (unresolved)</option><option value="r3">R3 engineering truth cabinet</option><option value="r4">R4 real DXF composer (preview)</option><option value="r41">R4.1 gold device closure</option><option value="r42">R4.2 verification review</option></select></label>
+      <button class="button subtle" id="loadScenario" type="button">Load</button>
+      <label class="button subtle file-button" for="jsonInput">Import JSON<input id="jsonInput" type="file" accept="application/json,.json"></label>
+      <button class="button primary" id="autoLayout" type="button"><span class="button-icon">✦</span>Auto layout</button>
+      <div class="export-menu">
+        <button class="button export" id="exportMenu" type="button" aria-expanded="false">Export <span aria-hidden="true">⌄</span></button>
+        <div class="menu" id="exportMenuItems" hidden>
+          <button type="button" data-export="dxf">Download DXF</button>
+          <button type="button" data-export="svg">Download SVG</button>
+          <button type="button" data-export="json">Download JSON</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="engineering-nav" id="engineering-nav" aria-label="Điều hướng kỹ thuật">
+    <a href="/projects/r5-real-cabinet" data-route="overview">Tổng quan</a>
+    <a href="/projects/r5-real-cabinet/bom" data-route="bom">BOM</a>
+    <a href="/projects/r5-real-cabinet/devices" data-route="devices">Thiết bị</a>
+    <a href="/projects/r5-real-cabinet/panel" data-route="panel">Bố trí tủ</a>
+    <a href="/projects/r5-real-cabinet/cad" data-route="cad">CAD nguồn</a>
+    <a href="/projects/r5-real-cabinet/validation" data-route="validation">Kiểm tra</a>
+    <a href="/projects/r5-real-cabinet/export" data-route="export">Xuất file</a>
+    <span class="engineering-nav-status" id="workflowStatus">DRAFT · candidate</span>
+  </nav>
+
+  <main class="workspace">
+    <aside class="left-panel">
+      <div class="panel-heading"><div><span class="eyebrow">THƯ VIỆN THIẾT BỊ</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
+      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">Real DXF</button><button class="library-tab" id="goldTab" type="button" aria-selected="false">Gold devices</button><button class="library-tab" id="verifiedTab" type="button" aria-selected="false">R4.2 review</button><button class="library-tab" id="productTab" type="button" aria-selected="false">R3 products</button></div>
+      <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Filter components</span><input id="librarySearch" type="search" placeholder="Filter components"></label>
+      <label class="asset-filter"><span>Lọc CAD</span><select id="assetFilter"><option value="all">Tất cả</option><option value="units">Đơn vị mm đã xác nhận</option><option value="ready">Sẵn sàng bố trí</option><option value="preview">Chỉ xem trước</option><option value="review">Cần xác minh</option></select></label>
+      <div class="library-list" id="libraryList" aria-label="Component library"></div>
+      <div class="asset-list" id="assetList" aria-label="Imported CAD asset library" hidden></div>
+      <div class="asset-list" id="goldList" aria-label="R4.1 gold device library" hidden></div>
+      <div class="asset-list" id="verifiedList" aria-label="R4.2 verified device review" hidden></div>
+      <div class="asset-list" id="productList" aria-label="R3 verified product library" hidden></div>
+      <section class="asset-detail" id="assetDetail" hidden aria-live="polite"></section>
+      <div class="library-foot"><span class="status-dot green"></span><span>Catalog synced</span><span class="foot-meta">v0.1</span></div>
+    </aside>
+
+    <section class="canvas-section" aria-label="Panel canvas">
+      <div class="canvas-toolbar">
+        <div class="canvas-title"><span class="eyebrow">PHYSICAL VIEW</span><strong id="canvasTitle">MCC 6 motor</strong></div>
+        <div class="canvas-tools">
+          <button class="icon-button" id="zoomOut" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+          <span class="zoom-value" id="zoomValue">100%</span>
+          <button class="icon-button" id="zoomIn" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+          <span class="toolbar-divider"></span>
+          <button class="button subtle compact" id="fitCanvas" type="button">Fit</button>
+          <button class="button subtle compact" id="toggleGrid" type="button" aria-pressed="true">Grid</button>
+        </div>
+      </div>
+      <div class="canvas-frame" id="canvasFrame">
+        <div class="canvas-ruler ruler-top" id="rulerTop"></div>
+        <div class="canvas-ruler ruler-left" id="rulerLeft"></div>
+        <div class="canvas-viewport" id="canvasViewport">
+          <svg id="panelSvg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panel layout" tabindex="0"></svg>
+          <div class="drop-hint" id="dropHint">Drag a component from the library onto the plate</div>
+        </div>
+      </div>
+      <div class="canvas-footer">
+        <div class="legend"><span><i class="legend-swatch blue"></i>Device</span><span><i class="legend-swatch rail"></i>DIN rail</span><span><i class="legend-swatch duct"></i>Wire duct</span><span><i class="legend-swatch wire"></i>Connection</span></div>
+        <div class="cursor-readout" id="cursorReadout">X 0 · Y 0</div>
+      </div>
+    </section>
+
+    <aside class="right-panel">
+      <section class="inspector-section">
+        <div class="panel-heading"><div><span class="eyebrow">INSPECTOR</span><h2 id="selectionTitle">No selection</h2></div><span class="selection-tag" id="selectionTag">—</span></div>
+        <div id="inspectorEmpty" class="empty-state"><span class="empty-glyph">⌖</span><p>Select a device on the plate</p></div>
+        <form id="inspectorForm" class="inspector-form" hidden>
+          <label>Tag<input name="tag" type="text"></label>
+          <label>Name<input name="name" type="text"></label>
+          <div class="form-grid"><label>X <span class="input-unit">mm</span><input name="x" type="number" step="1"></label><label>Y <span class="input-unit">mm</span><input name="y" type="number" step="1"></label></div>
+          <div class="form-grid"><label>Width <span class="input-unit">mm</span><input name="width" type="number" min="1" step="1"></label><label>Height <span class="input-unit">mm</span><input name="height" type="number" min="1" step="1"></label></div>
+          <label>Rotation<select name="rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
+          <div class="inspector-meta"><span id="selectionKind">device</span><span id="selectionGroup">General</span></div>
+          <div class="inspector-meta"><span id="selectionCadStatus">CAD source: —</span><span id="selectionMappingStatus">Mapping: —</span></div>
+          <div class="inspector-actions"><button class="button subtle compact" id="toggleLock" type="button">Lock position</button><button class="button subtle compact" id="duplicateComponent" type="button">Duplicate</button><button class="button subtle compact" id="rotateComponent" type="button">Rotate</button></div>
+          <button class="button danger outline" id="deleteComponent" type="button">Remove component</button>
+        </form>
+      </section>
+
+      <section class="validation-section">
+        <div class="section-title-row"><div><span class="eyebrow">RULE CHECK</span><h2>Validation</h2></div><span class="issue-count" id="issueCount">0</span></div>
+        <div class="validation-list" id="validationList"><div class="all-clear"><span>✓</span><div><strong>Layout is clear</strong><small>No blocking issues</small></div></div></div>
+      </section>
+
+      <section class="bom-section">
+        <div class="section-title-row"><div><span class="eyebrow">MATERIALS</span><h2>BOM</h2></div><span class="count-pill" id="bomCount">0</span></div>
+        <div class="bom-table-wrap"><table class="bom-table"><thead><tr><th>Tag</th><th>Part</th><th>Qty</th></tr></thead><tbody id="bomBody"></tbody></table></div>
+      </section>
+    </aside>
+  </main>
+
+  <main id="r5-dashboard" class="r5-view" hidden>
+    <section class="r5-dashboard-grid" id="r5-dashboard-content"></section>
+  </main>
+
+  <main id="cad-view" class="r5-view r5-cad-view" hidden>
+    <section class="r5-cad-toolbar">
+      <div><span class="eyebrow">CAD NGUỒN · DXF-ONLY</span><strong id="cadAssetTitle">Chưa chọn CAD</strong></div>
+      <div class="r5-cad-actions">
+        <label class="button subtle compact file-button" for="fileInputElement">Mở DXF<input id="fileInputElement" type="file" accept=".dxf" /></label>
+        <button class="button subtle compact" id="fitButton" type="button">Fit</button>
+        <button class="button subtle compact" id="deepZoomButton" type="button">Zoom 5×</button>
+        <button class="button subtle compact" id="selectButton" type="button">Chọn entity</button>
+        <button class="button subtle compact" id="layersButton" type="button">Lớp</button>
+        <button class="button subtle compact" id="toggleLayerButton" type="button" hidden aria-hidden="true">Ẩn/hiện lớp</button>
+        <button class="button subtle compact" id="boundsButton" type="button" aria-pressed="false">Bounds</button>
+        <button class="button subtle compact" id="leftExtentButton" type="button" aria-pressed="false">Left extent</button>
+        <button class="button subtle compact" id="sourceFitButton" type="button">Fit source</button>
+        <span id="status" data-testid="runtime-status">Sẵn sàng mở DXF</span>
+      </div>
+    </section>
+    <section class="r5-cad-content">
+      <div id="cad-container" data-testid="cad-container"><svg id="debugOverlay" data-testid="debug-overlay" aria-label="Bounds debug overlay" hidden></svg></div>
+      <aside class="r5-cad-inspector">
+        <div class="panel-heading"><div><span class="eyebrow">CAD INSPECTOR</span><h2>Projection detail</h2></div></div>
+        <p>Asset: <b id="assetName">none</b></p>
+        <p>Entities: <b id="entityCount">0</b> · rendered <b id="renderedCount">0</b></p>
+        <p>Zoom: <b id="zoomValue">0</b></p>
+        <p>Selection: <code id="selectionValue">none</code></p>
+        <p>Layers: <b id="layerCount">0</b></p>
+        <p>Runtime bounds: <code id="boundsValue">none</code></p>
+        <p>Rendered bounds: <code id="renderedBoundsValue">none</code></p>
+        <p>Source bounds: <code id="sourceBoundsValue">none</code></p>
+        <p>Input guard: <code id="inputValidationValue">none</code></p>
+        <p>Blocks: <code id="blockValue">none</code></p>
+        <ul id="layerList" data-testid="layer-list"></ul>
+        <pre id="entityMetadata" data-testid="entity-metadata">none</pre>
+      </aside>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/cad-browser.js"></script>
+  <script src="/eir-adapter.js"></script>
+  <script src="/app.js"></script>
+  <script type="module" src="/engineering-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "@cnb/adapters-mlightcad",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0"
+}
