@@ -1,0 +1,170 @@
+{
+  "candidates": [
+    {
+      "aspect_ratio_check": {
+        "official_cutout": 1.3943661971830985,
+        "official_front": 1.3544303797468353,
+        "relative_error_cutout": 0.7522497704315886,
+        "relative_error_front": 0.7449447748513169,
+        "source": 0.34545454545454546,
+        "tolerance": 0.05,
+        "within_tolerance": false
+      },
+      "blocking_reasons": [
+        "DXF crop aspect ratio does not match official front or cutout dimensions; source representation role remains unknown."
+      ],
+      "device_visual_bounds": {
+        "height_mm": 220.0,
+        "width_mm": 76.0
+      },
+      "field_provenance": {
+        "depth_mm": {
+          "notes": "Datasheet spelling preserved.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, mounting depth",
+          "value": 39,
+          "verification_status": "document_verified"
+        },
+        "front_view_dimensions": {
+          "notes": "Official physical front envelope.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, housing front",
+          "value": {
+            "height_mm": 158,
+            "width_mm": 214
+          },
+          "verification_status": "document_verified"
+        },
+        "height_mm": {
+          "notes": "Housing front, not mounting cutout.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, Height of housing front",
+          "value": 158,
+          "verification_status": "document_verified"
+        },
+        "manufacturer_order_code": {
+          "notes": "Exact code, hyphenated form normalized from Siemens PDF.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 1 title; page 7 footer",
+          "value": "6AV2123-2GA03-0AX0",
+          "verification_status": "document_verified"
+        },
+        "mounting_orientation": {
+          "notes": "Orientation is sufficient for engineering panel/door placement; upright/rotated installation details are not asserted.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7 dimensions plus product class",
+          "value": "front_panel",
+          "verification_status": "human_reviewed"
+        },
+        "mounting_type": {
+          "notes": "A mounting cutout is documented; this is not DIN mounting.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, Mounting cutout",
+          "value": "panel_mount",
+          "verification_status": "document_verified"
+        },
+        "panel_cutout_height_mm": {
+          "notes": "Door/panel cutout.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, Mounting cutout, height",
+          "value": 142,
+          "verification_status": "document_verified"
+        },
+        "panel_cutout_width_mm": {
+          "notes": "Door/panel cutout.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, Mounting cutout, width",
+          "value": 198,
+          "verification_status": "document_verified"
+        },
+        "type_designation": {
+          "notes": "Official type designation.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 1, Product type designation",
+          "value": "KTP700 Basic color DP",
+          "verification_status": "document_verified"
+        },
+        "width_mm": {
+          "notes": "Housing front, not mounting cutout.",
+          "source_artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+          "source_locator": "page 7, Width of the housing front",
+          "value": 214,
+          "verification_status": "document_verified"
+        }
+      },
+      "id": "r42-siemens-ktp700-6av2123-2ga03-0ax0",
+      "identity_status": "document_verified",
+      "manufacturer": "Siemens",
+      "manufacturer_order_code": "6AV2123-2GA03-0AX0",
+      "manufacturing_ready": false,
+      "mounting_orientation": "front_panel",
+      "mounting_surface": "enclosure_door_or_panel_cutout",
+      "mounting_type": "panel_mount",
+      "physical_footprint": {
+        "depth_mm": 39,
+        "height_mm": 158,
+        "panel_cutout_height_mm": 142,
+        "panel_cutout_width_mm": 198,
+        "width_mm": 214
+      },
+      "placement_capable": false,
+      "placement_level": null,
+      "product_family": "SIMATIC HMI Basic Panel",
+      "representation_confidence": 0.0,
+      "representation_evidence": {
+        "notes": "The clean crop is a 76 x 220 mm vertical drawing fragment; it does not match the official KTP700 front/cutout aspect ratio.",
+        "source_crop": [
+          32.0,
+          40.0,
+          108.0,
+          260.0
+        ],
+        "status": "rejected_aspect_ratio"
+      },
+      "representation_role": "unknown",
+      "source_artifact": {
+        "artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+        "local_path": "catalog/r4_2/source-artifacts/siemens-ktp700-datasheet.pdf",
+        "sha256": "4bfb17150a130fc3e462b87250c5c76c7560a0b4e585e58a43c586731a3986db"
+      },
+      "source_asset_id": "source-d2e35ab9238f5738",
+      "source_crop_bounds": {
+        "height": 220.0,
+        "min_x": 0.0,
+        "min_y": 0.0,
+        "width": 76.0
+      },
+      "source_dxf_sha256": "4b10e8dd384b8e7ed430101dc2f8a4f6c003ff5d095ed0570a8338fa7c3b7afe",
+      "source_relative_path": "siemens-batch-w33/simatic-hmi-hmi-panel-cad-asset-siemens-bilddb-4b10e8dd384b8e7e.dxf",
+      "source_text_evidence": {
+        "entity_types": [
+          "TEXT",
+          "MTEXT",
+          "ATTRIB"
+        ],
+        "expected": "6AV2123-2GA03-0AX0",
+        "locator": "DXF modelspace/layout text entities",
+        "matched": true
+      },
+      "source_to_physical_transform": {
+        "scale_x": 2.8157894736842106,
+        "scale_y": 0.7181818181818181,
+        "status": "rejected_non_uniform_mapping",
+        "translate_x_mm": 0.0,
+        "translate_y_mm": 0.0
+      },
+      "type_designation": "KTP700 Basic color DP",
+      "verification_status": "partial_mapping_blocked"
+    }
+  ],
+  "decision": "R4.2 PARTIAL \u2014 IDENTITY VERIFIED, MAPPING BLOCKED",
+  "devices": [],
+  "schema_version": "verified-device-set.v1",
+  "verification_chain": {
+    "gold_id": "gold-hmi-ktp700",
+    "product_evidence_sha256": "4bfb17150a130fc3e462b87250c5c76c7560a0b4e585e58a43c586731a3986db",
+    "source_dxf_sha256": "4b10e8dd384b8e7ed430101dc2f8a4f6c003ff5d095ed0570a8338fa7c3b7afe"
+  },
+  "verification_policy": "identity-and-physical-mapping-must-both-pass",
+  "verified_device_count": 0
+}

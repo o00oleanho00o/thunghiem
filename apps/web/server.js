@@ -12,6 +12,7 @@ const projectRoot = path.resolve(__dirname, '../..');
 const catalogRoot = path.resolve(__dirname, '../../catalog');
 const catalogManifestPath = path.join(catalogRoot, 'generated', 'catalog-assets.json');
 const deviceGoldSetPath = path.join(catalogRoot, 'generated', 'device-gold-set.json');
+const verifiedDeviceSetPath = path.join(catalogRoot, 'generated', 'verified-device-set.json');
 const catalogReviewDir = path.join(catalogRoot, 'review');
 const catalogReviewPath = process.env.CNB_CATALOG_REVIEW_PATH
   ? path.resolve(process.env.CNB_CATALOG_REVIEW_PATH)
@@ -238,6 +239,10 @@ const server = http.createServer(async (request, response) => {
     if (requestUrl.pathname === '/api/catalog/gold' && request.method === 'GET') {
       if (!fs.existsSync(deviceGoldSetPath)) return send(response, 404, JSON.stringify({ error: 'device gold set missing; run scripts/build_r41_gold_set.py catalog' }), mime['.json']);
       return send(response, 200, fs.readFileSync(deviceGoldSetPath), mime['.json']);
+    }
+    if (requestUrl.pathname === '/api/catalog/verified' && request.method === 'GET') {
+      if (!fs.existsSync(verifiedDeviceSetPath)) return send(response, 404, JSON.stringify({ error: 'verified device set missing; run scripts/build_r42_verified_device.py catalog' }), mime['.json']);
+      return send(response, 200, fs.readFileSync(verifiedDeviceSetPath), mime['.json']);
     }
     const goldPreviewMatch = requestUrl.pathname.match(/^\/api\/catalog\/gold-preview\/([A-Za-z0-9-]+)$/);
     if (goldPreviewMatch && request.method === 'GET') {

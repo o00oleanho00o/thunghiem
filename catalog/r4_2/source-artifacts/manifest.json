@@ -1,0 +1,16 @@
+{
+  "schema_version": "r4.2-source-artifacts.v1",
+  "artifacts": [
+    {
+      "artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+      "source_url": "https://apim.industry.siemens.cloud/ted/datasheet?format=pdf&mlfbs=6AV2123-2GA03-0AX0&language=en&caller=SIOS",
+      "local_path": "catalog/r4_2/source-artifacts/siemens-ktp700-datasheet.pdf",
+      "sha256": "4bfb17150a130fc3e462b87250c5c76c7560a0b4e585e58a43c586731a3986db",
+      "retrieval_status": "retrieved_http_200",
+      "document_title": "Data sheet 6AV2123-2GA03-0AX0",
+      "document_revision": "last modified 2025-06-17",
+      "retrieved_at": "2026-09-17",
+      "notes": "Official Siemens Industry Mall technical data PDF; dimensions are on page 7 of 7."
+    }
+  ]
+}

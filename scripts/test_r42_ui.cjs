@@ -1,0 +1,35 @@
+const { chromium } = require('playwright');
+const base = process.env.CNB_R42_URL || 'http://127.0.0.1:4177';
+
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto(base, { waitUntil: 'domcontentloaded' });
+  await page.waitForTimeout(900);
+  await page.click('#verifiedTab');
+  const reviewText = await page.locator('#verifiedList').innerText();
+  if (!reviewText.includes('MAPPING BLOCKED') || !reviewText.includes('6AV2123-2GA03-0AX0')) throw new Error(`R4.2 review card missing: ${reviewText}`);
+  await page.screenshot({ path: 'evidence/r4-2/01-verification-review.png', fullPage: true });
+  await page.selectOption('#scenarioSelect', 'r42');
+  await page.click('#loadScenario');
+  await page.waitForTimeout(250);
+  const state = await page.evaluate(() => ({ model: window.CNB_APP.state.model, issues: window.CNB_APP.state.issues, images: document.querySelectorAll('#panelSvg image').length }));
+  const component = state.model.components[0];
+  if (component.metadata.placementCapable !== false || component.mounting !== 'panel_mount') throw new Error(`R4.2 review scenario lost mounting/gate semantics: ${JSON.stringify(component)}`);
+  if (!state.issues.some((issue) => issue.code === 'E012')) throw new Error('mapping-blocked candidate did not produce explicit warning');
+  if (state.images !== 1) throw new Error('R4.2 scenario did not render source vector');
+  await page.evaluate(() => { window.CNB_APP.state.model.metadata.engineeringLayout = true; });
+  const beforeDrop = await page.evaluate(() => window.CNB_APP.state.model.components.length);
+  await page.evaluate(() => { const transfer = new DataTransfer(); transfer.setData('text/cnb-gold', 'gold-hmi-ktp700'); const target = document.querySelector('#panelSvg'); target.dispatchEvent(new DragEvent('drop', { bubbles: true, dataTransfer: transfer, clientX: 680, clientY: 420 })); });
+  const afterDrop = await page.evaluate(() => window.CNB_APP.state.model.components.length);
+  if (afterDrop !== beforeDrop) throw new Error('preview gold device was accepted into engineering layout');
+  await page.screenshot({ path: 'evidence/r4-2/02-ktp700-mapping-review.png', fullPage: true });
+  await page.evaluate(() => { window.CNB_APP.state.selectedId = 'r42-ktp700-review'; window.CNB_APP.render(); });
+  const inspector = await page.locator('#inspectorForm').innerText();
+  if (!inspector.includes('document_verified') || !inspector.includes('panel_mount')) throw new Error(`R4.2 inspector evidence missing: ${inspector}`);
+  await page.screenshot({ path: 'evidence/r4-2/04-ktp700-inspector-evidence.png', fullPage: true });
+  await page.click('#autoLayout');
+  await page.screenshot({ path: 'evidence/r4-2/03-physical-envelope-review.png', fullPage: true });
+  await browser.close();
+  console.log(JSON.stringify({ ok: true, reviewCards: 1, placementCapable: component.metadata.placementCapable, mounting: component.mounting, images: state.images }, null, 2));
+})().catch((error) => { console.error(error.stack || error); process.exitCode = 1; });

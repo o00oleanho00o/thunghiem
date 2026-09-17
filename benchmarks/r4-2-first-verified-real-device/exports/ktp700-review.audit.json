@@ -1,0 +1,29 @@
+{
+  "valid": true,
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\benchmarks\\r4-2-first-verified-real-device\\exports\\ktp700-review.dxf",
+  "version": "AC1009",
+  "entityCount": 60,
+  "counts": {
+    "LINE": 46,
+    "TEXT": 3,
+    "CIRCLE": 7,
+    "ARC": 4
+  },
+  "layers": [
+    "CAD_GEOMETRY",
+    "COMPONENT",
+    "COMPONENT_DETAIL",
+    "COMPONENT_OUTLINE",
+    "ENCLOSURE",
+    "MOUNTING_PLATE",
+    "TAG",
+    "TERMINAL",
+    "TEXT"
+  ],
+  "bounds": {
+    "minX": 0.0,
+    "minY": 0.0,
+    "maxX": 600.0,
+    "maxY": 500.0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "artifact_id": "siemens-ktp700-datasheet-2025-06-17",
+  "document_title": "Data sheet 6AV2123-2GA03-0AX0",
+  "locators": {
+    "identity": "page 1, Data sheet title and product type designation",
+    "dimensions": "page 7, Dimensions",
+    "mounting": "page 7, Mounting cutout"
+  },
+  "fields": {
+    "manufacturer_order_code": {"value":"6AV2123-2GA03-0AX0","verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 1 title; page 7 footer","notes":"Exact code, hyphenated form normalized from Siemens PDF."},
+    "type_designation": {"value":"KTP700 Basic color DP","verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 1, Product type designation","notes":"Official type designation."},
+    "width_mm": {"value":214,"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, Width of the housing front","notes":"Housing front, not mounting cutout."},
+    "height_mm": {"value":158,"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, Height of housing front","notes":"Housing front, not mounting cutout."},
+    "depth_mm": {"value":39,"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, mounting depth","notes":"Datasheet spelling preserved."},
+    "panel_cutout_width_mm": {"value":198,"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, Mounting cutout, width","notes":"Door/panel cutout."},
+    "panel_cutout_height_mm": {"value":142,"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, Mounting cutout, height","notes":"Door/panel cutout."},
+    "mounting_type": {"value":"panel_mount","verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, Mounting cutout","notes":"A mounting cutout is documented; this is not DIN mounting."},
+    "mounting_orientation": {"value":"front_panel","verification_status":"human_reviewed","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7 dimensions plus product class","notes":"Orientation is sufficient for engineering panel/door placement; upright/rotated installation details are not asserted."},
+    "front_view_dimensions": {"value":{"width_mm":214,"height_mm":158},"verification_status":"document_verified","source_artifact_id":"siemens-ktp700-datasheet-2025-06-17","source_locator":"page 7, housing front","notes":"Official physical front envelope."}
+  }
+}
