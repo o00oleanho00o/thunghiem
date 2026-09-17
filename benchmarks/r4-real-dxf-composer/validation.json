@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "mode": "preview",
+  "authoritative": false,
+  "warnings": [
+    {
+      "code": "R4_PHYSICAL_MAPPING_BLOCKED",
+      "message": "All selected components remain preview-only because physical mapping is unknown."
+    }
+  ],
+  "component_count": 8
+}

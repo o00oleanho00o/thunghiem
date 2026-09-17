@@ -1,0 +1,295 @@
+{
+  "schemaVersion": "eir-0.1",
+  "units": "source-units-preview",
+  "project": {
+    "id": "r4-real-dxf-composer",
+    "name": "R4 initial real CAD preview",
+    "revision": "AUTO"
+  },
+  "enclosure": {
+    "id": "generic-engineering-enclosure",
+    "name": "Generic engineering enclosure · preview only",
+    "width": 1600,
+    "height": 1100,
+    "depth": 300
+  },
+  "mountingPlate": {
+    "id": "plate-main",
+    "x": 50,
+    "y": 50,
+    "width": 1500,
+    "height": 1000
+  },
+  "rails": [
+    {
+      "id": "rail-top",
+      "x": 90,
+      "y": 850,
+      "length": 1420,
+      "height": 7.5
+    },
+    {
+      "id": "rail-mid",
+      "x": 90,
+      "y": 600,
+      "length": 1420,
+      "height": 7.5
+    },
+    {
+      "id": "rail-low",
+      "x": 90,
+      "y": 350,
+      "length": 1420,
+      "height": 7.5
+    }
+  ],
+  "ducts": [
+    {
+      "id": "duct-left",
+      "x": 55,
+      "y": 100,
+      "width": 28,
+      "height": 800
+    },
+    {
+      "id": "duct-right",
+      "x": 1517,
+      "y": 100,
+      "width": 28,
+      "height": 800
+    }
+  ],
+  "components": [
+    {
+      "id": "r4-1",
+      "tag": "-CAD1",
+      "name": "siemens simatic s7 1200 plc 1211c cpu dc rly 6i 4o 2ai",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-a0a9c0419df569bb",
+      "group": "SIMATIC S7-1200",
+      "width": 23.812505208171405,
+      "height": 95.25000540828933,
+      "depth": 1,
+      "x": 110,
+      "y": 800,
+      "rotation": 0,
+      "railId": "rail-top",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-a0a9c0419df569bb",
+      "source_asset_id": "source-a0a9c0419df569bb",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-a0a9c0419df569bb.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "a8120cb4d1fef92658ae634b666dfdf7f471668a0a45b27b6c3df1da78b0b60f",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-2",
+      "tag": "-CAD2",
+      "name": "siemens simatic s7 1200 pm1207 1p ac 24v 25a",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-67d0e317f239396c",
+      "group": "SIMATIC S7-1200",
+      "width": 23.812505208171405,
+      "height": 47.62500540828933,
+      "depth": 1,
+      "x": 460,
+      "y": 800,
+      "rotation": 0,
+      "railId": "rail-top",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-67d0e317f239396c",
+      "source_asset_id": "source-67d0e317f239396c",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-67d0e317f239396c.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "6689d7bfa34a7c447dcad2e2f5a91f5a82786dca9387343463c4df11c440e3f9",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-3",
+      "tag": "-CAD3",
+      "name": "siemens simatic s7 1200 sm 1221 dio 24vdc 105ma 8i",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-33c324f4df97c631",
+      "group": "SIMATIC S7-1200",
+      "width": 23.812505208171405,
+      "height": 95.25000540828933,
+      "depth": 1,
+      "x": 810,
+      "y": 800,
+      "rotation": 0,
+      "railId": "rail-top",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-33c324f4df97c631",
+      "source_asset_id": "source-33c324f4df97c631",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-33c324f4df97c631.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "ee9f654c57605ea109f4fb626aa6120dc57b2bbc14da190c2f7cb05c3127098f",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-4",
+      "tag": "-CAD4",
+      "name": "siemens simatic s7 1500 sm531 16l ba analog i o module 16i",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-fe6d18f6b8ce400b",
+      "group": "SIMATIC S7-1500",
+      "width": 23.812505208171405,
+      "height": 142.87500540828933,
+      "depth": 1,
+      "x": 1160,
+      "y": 800,
+      "rotation": 0,
+      "railId": "rail-top",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-fe6d18f6b8ce400b",
+      "source_asset_id": "source-fe6d18f6b8ce400b",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-fe6d18f6b8ce400b.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "f9f9d015c5f1ac10baf58a21d237ff6836bd2597725e5212bc5f4f5dc2d814bb",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-5",
+      "tag": "-CAD5",
+      "name": "siemens simatic s7 1500 cpu 1511 1 pn",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-e2454df537a9505c",
+      "group": "SIMATIC S7-1500",
+      "width": 23.812505208171405,
+      "height": 39.68750540828933,
+      "depth": 1,
+      "x": 110,
+      "y": 540,
+      "rotation": 0,
+      "railId": "rail-mid",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-e2454df537a9505c",
+      "source_asset_id": "source-e2454df537a9505c",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-e2454df537a9505c.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "b236f9e82d6a6f2e1afae96b6a3f960a8a9dba61e63471a6a0de9906c88868e9",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-6",
+      "tag": "-CAD6",
+      "name": "sirius contactor cad asset siemens bilddb",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-66748a98dbbdcf49",
+      "group": "SIRIUS",
+      "width": 297,
+      "height": 210,
+      "depth": 1,
+      "x": 460,
+      "y": 540,
+      "rotation": 0,
+      "railId": "rail-mid",
+      "mounting": "DIN",
+      "locked": false,
+      "assetId": "source-66748a98dbbdcf49",
+      "source_asset_id": "source-66748a98dbbdcf49",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-66748a98dbbdcf49.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "7b0bf205ff36ab88464f50eaf121e48c67c8d2ac35d2361b847ca156a46795eb",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-7",
+      "tag": "-CAD7",
+      "name": "sitop psu cad asset siemens bilddb",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-7ab1640d1d97df20",
+      "group": "SITOP",
+      "width": 279.4,
+      "height": 431.8,
+      "depth": 1,
+      "x": 810,
+      "y": 540,
+      "rotation": 0,
+      "railId": null,
+      "mounting": "Plate",
+      "locked": false,
+      "assetId": "source-7ab1640d1d97df20",
+      "source_asset_id": "source-7ab1640d1d97df20",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-7ab1640d1d97df20.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "7836a4a9372aeb88ae795398bc9f6340ef67f74e1b56c787c7450354e519566f",
+        "placementCapable": false
+      }
+    },
+    {
+      "id": "r4-8",
+      "tag": "-CAD8",
+      "name": "sinamics g120c vfd cad asset siemens bilddb",
+      "kind": "cad_asset",
+      "manufacturer": "Siemens",
+      "partNumber": "CANDIDATE-source-a0a9f79675c3f78e",
+      "group": "SINAMICS",
+      "width": 677.5997271487049,
+      "height": 349.25000000000045,
+      "depth": 1,
+      "x": 1160,
+      "y": 540,
+      "rotation": 0,
+      "railId": null,
+      "mounting": "Plate",
+      "locked": false,
+      "assetId": "source-a0a9f79675c3f78e",
+      "source_asset_id": "source-a0a9f79675c3f78e",
+      "cadGeometryRef": "catalog/generated/vector-cache/source-a0a9f79675c3f78e.json",
+      "metadata": {
+        "geometryStatus": "source_verified",
+        "identityStatus": "candidate_needs_review",
+        "physicalMappingStatus": "unknown",
+        "sourceHash": "e2ea283cb57674d65ac3ac101730c88307804bb94e6f78693ea797fdf6d5d15d",
+        "placementCapable": false
+      }
+    }
+  ],
+  "connections": [],
+  "metadata": {
+    "r4PreviewMode": true,
+    "previewCadAssets": true,
+    "authoritative": false,
+    "truthNote": "Real source geometry; identity and physical mapping are unresolved."
+  }
+}

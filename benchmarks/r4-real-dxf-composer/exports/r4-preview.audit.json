@@ -1,0 +1,31 @@
+{
+  "valid": true,
+  "file": "F:\\BUL_Research\\AICAD\\cnb-electrical-lab\\benchmarks\\r4-real-dxf-composer\\exports\\r4-preview.dxf",
+  "version": "AC1009",
+  "entityCount": 12911,
+  "counts": {
+    "LINE": 5797,
+    "TEXT": 20,
+    "ARC": 7051,
+    "CIRCLE": 43
+  },
+  "layers": [
+    "CAD_GEOMETRY",
+    "COMPONENT",
+    "COMPONENT_DETAIL",
+    "COMPONENT_OUTLINE",
+    "DIN_RAIL",
+    "ENCLOSURE",
+    "MOUNTING_PLATE",
+    "TAG",
+    "TERMINAL",
+    "TEXT",
+    "WIRE_DUCT"
+  ],
+  "bounds": {
+    "minX": 0.0,
+    "minY": 0.0,
+    "maxX": 1600.0,
+    "maxY": 1100.0
+  }
+}

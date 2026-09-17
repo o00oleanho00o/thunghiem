@@ -93,6 +93,11 @@ function normalizeModel(input = {}) {
       footprintRef: component.footprintRef || component.footprint_ref || null,
       footprint_ref: component.footprint_ref || component.footprintRef || null,
       metadata: component.metadata || {},
+      // Transient imported geometry is attached by the export boundary from
+      // the vector cache. It is never part of canonical EIR persistence.
+      cadGeometry: Array.isArray(component.cadGeometry) ? component.cadGeometry : null,
+      cadGeometryBounds: component.cadGeometryBounds || null,
+      cadGeometryScale: safeNumber(component.cadGeometryScale, 1),
     };
   });
   const connections = (Array.isArray(source.connections) ? source.connections : []).map((connection, index) => ({
@@ -163,6 +168,45 @@ function circleEntity(x, y, radius, layer = 'TERMINAL') {
   return ['0', 'CIRCLE', '8', layer, '10', fixed(x), '20', fixed(y), '30', '0', '40', fixed(radius)];
 }
 
+function arcEntity(cx, cy, radius, start, end, layer = 'CAD_GEOMETRY') {
+  return ['0', 'ARC', '8', layer, '10', fixed(cx), '20', fixed(cy), '30', '0', '40', fixed(radius), '50', fixed(start), '51', fixed(end)];
+}
+
+function transformCadPoint(point, component, bounds, scale) {
+  const minX = safeNumber(bounds && (bounds.min_x ?? bounds.minX), 0);
+  const minY = safeNumber(bounds && (bounds.min_y ?? bounds.minY), 0);
+  const px = (safeNumber(point.x) - minX) * scale;
+  const py = (safeNumber(point.y) - minY) * scale;
+  const angle = ((Number(component.rotation) % 360) + 360) % 360;
+  const width = safeNumber(bounds && (bounds.width ?? (bounds.max_x - bounds.min_x)), component.width) * scale;
+  const height = safeNumber(bounds && (bounds.height ?? (bounds.max_y - bounds.min_y)), component.height) * scale;
+  if (angle === 90) return { x: component.x + height - py, y: component.y + px };
+  if (angle === 180) return { x: component.x + width - px, y: component.y + height - py };
+  if (angle === 270) return { x: component.x + py, y: component.y + width - px };
+  return { x: component.x + px, y: component.y + py };
+}
+
+function cadGeometryEntities(component) {
+  if (!Array.isArray(component.cadGeometry) || !component.cadGeometry.length) return [];
+  const bounds = component.cadGeometryBounds || {};
+  const scale = safeNumber(component.cadGeometryScale, 1);
+  const entities = [];
+  component.cadGeometry.forEach((geometry) => {
+    if (geometry.type === 'line') {
+      const a = transformCadPoint({ x: geometry.x1, y: geometry.y1 }, component, bounds, scale);
+      const b = transformCadPoint({ x: geometry.x2, y: geometry.y2 }, component, bounds, scale);
+      entities.push(...lineEntity(a.x, a.y, b.x, b.y, 'CAD_GEOMETRY'));
+    } else if (geometry.type === 'circle') {
+      const center = transformCadPoint({ x: geometry.cx, y: geometry.cy }, component, bounds, scale);
+      entities.push(...circleEntity(center.x, center.y, safeNumber(geometry.r, 1) * scale, 'CAD_GEOMETRY'));
+    } else if (geometry.type === 'arc') {
+      const center = transformCadPoint({ x: geometry.cx, y: geometry.cy }, component, bounds, scale);
+      entities.push(...arcEntity(center.x, center.y, safeNumber(geometry.r, 1) * scale, safeNumber(geometry.start), safeNumber(geometry.end), 'CAD_GEOMETRY'));
+    }
+  });
+  return entities;
+}
+
 function connectionPoint(model, id) {
   const component = model.components.find((item) => item.id === id || item.tag === id);
   if (!component) return null;
@@ -191,6 +235,8 @@ function exportDxf(input) {
   });
   model.components.forEach((component) => {
     const rect = componentRect(component);
+    const cad = cadGeometryEntities(component);
+    if (cad.length) lines.push(...cad);
     lines.push(...rectEntities(rect.x, rect.y, rect.width, rect.height, 'COMPONENT'));
     lines.push(...rectEntities(rect.x, rect.y, rect.width, rect.height, 'COMPONENT_OUTLINE'));
     lines.push(...lineEntity(rect.x + rect.width / 2 - Math.min(4, rect.width / 4), rect.y + rect.height / 2, rect.x + rect.width / 2 + Math.min(4, rect.width / 4), rect.y + rect.height / 2, 'COMPONENT_DETAIL'));
@@ -241,7 +287,7 @@ function exportSvg(input, options = {}) {
       parts.push(`<line class="wire" x1="${fixed(from.x)}" y1="${fixed(yTop(from.y))}" x2="${fixed(to.x)}" y2="${fixed(yTop(to.y))}"/>`);
     }
   });
-  model.components.forEach((component) => {
+    model.components.forEach((component) => {
     const rect = componentRect(component);
     parts.push(svgRect(rect.x, yTop(rect.y, rect.height), rect.width, rect.height, `class="component" fill="${escXml(component.color)}" fill-opacity="0.82" rx="2"`));
     parts.push(`<text class="label" x="${fixed(rect.x + 3)}" y="${fixed(yTop(rect.y + rect.height / 2) + 4)}">${escXml(component.tag)}</text>`);

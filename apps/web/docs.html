@@ -29,6 +29,7 @@
       <a href="/docs/product/PRODUCT_OVERVIEW_VI.md" target="_blank" rel="noreferrer">Source overview ↗</a>
       <a href="/docs/product/DH_ENGINEERING_OPPORTUNITY.md" target="_blank" rel="noreferrer">DH opportunity ↗</a>
       <a href="/docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md" target="_blank" rel="noreferrer">R3.1 report ↗</a>
+      <a href="/docs/r4/R4_REAL_DXF_COMPOSER_REPORT.md" target="_blank" rel="noreferrer">R4 report ↗</a>
       <a href="/docs/r3/R3_BENCHMARK_RESULTS.md" target="_blank" rel="noreferrer">Benchmark ↗</a>
       <a href="/docs/research/SIEMENS_DXF_CATALOG_AUDIT.md" target="_blank" rel="noreferrer">DXF audit ↗</a>
     </aside>
@@ -71,14 +72,14 @@
         <h2>Một semantic object, nhiều representation</h2>
         <div class="component-diagram"><div class="product-root"><span>PART / PRODUCT</span><strong>semantic component</strong></div><div class="tree-lines"></div><div class="component-branches"><div><b>Product Identity</b><small>ABB · S200 U<br>S201U-C16 · order code</small></div><div><b>Engineering Footprint</b><small>width · height · DIN rail<br>envelope · clearance</small></div><div><b>DXF Representation</b><small>SVG/vector cache<br>real mm origin mapping</small></div><div><b>Provenance</b><small>source artifact<br>field status · review</small></div><div><b>Rules</b><small>mounting · rotation<br>validation policy</small></div></div></div>
         <p>Canonical EIR giữ semantic data và reference (`footprint_ref` / asset ID), không nhúng hàng trăm raw DXF entities vào Device. Solver dùng envelope để tính; renderer dùng vector cache để nhìn đúng thiết bị.</p>
-        <div class="r4-strip"><strong>R4 — Real DXF Cabinet Composer</strong><span>Component Library → drag real device → snap rail → DXF render → manual/auto layout → validation → export</span></div>
+        <div class="r4-strip"><strong>R4 — Real DXF Cabinet Composer</strong><span>Đã chứng minh preview/render/drag/snap/lock/export geometry thật; physical mapping Siemens vẫn bị chặn, chưa authoritative placement.</span></div>
       </section>
 
       <section id="research" class="doc-section">
         <div class="section-kicker">05 · RESEARCH JOURNEY</div>
         <h2>Đã chứng minh gì, chưa chứng minh gì?</h2>
         <div class="research-table"><div class="research-row head"><span>Giai đoạn</span><span>Đã chứng minh</span><span>Chưa chứng minh</span></div><div class="research-row"><b>R2 / R2A</b><span>BOM/EIR → layout → validation → DXF deterministic; solver và reopen.</span><span>Engineering data truth.</span></div><div class="research-row"><b>R2B</b><span>Vendor verification thử được trên Siemens catalog.</span><span>CAD file không tự là verified component; không suy đoán MPN/dimensions.</span></div><div class="research-row"><b>R3</b><span>Identity, provenance, E004/E005, export gate, canonical revisions.</span><span>Review-verified chưa đủ mạnh cho manufacturing.</span></div><div class="research-row"><b>R3.1b</b><span>ABB official cached artifact, SHA256 chain, field-level status, unknown giữ nguyên, manufacturing blockers.</span><span>Clearance, service access, terminal model và exact CAD của ABB chưa verified.</span></div></div>
-        <div class="evidence-grid"><a href="/docs/r2/R2_REAL_CABINET_REPORT.md" target="_blank">R2 real cabinet report ↗</a><a href="/docs/r2/R2B_VERIFIED_SIEMENS_REPORT.md" target="_blank">R2B Siemens report ↗</a><a href="/docs/r3/R3_ENGINEERING_TRUTH_REPORT.md" target="_blank">R3 truth report ↗</a><a href="/docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md" target="_blank">R3.1 closure ↗</a><a href="/docs/r3/R3_BENCHMARK_RESULTS.md" target="_blank">Benchmark ↗</a><a href="/evidence/r3/SCREENSHOT_REPORT.md" target="_blank">Screenshots ↗</a></div>
+        <div class="evidence-grid"><a href="/docs/r2/R2_REAL_CABINET_REPORT.md" target="_blank">R2 real cabinet report ↗</a><a href="/docs/r2/R2B_VERIFIED_SIEMENS_REPORT.md" target="_blank">R2B Siemens report ↗</a><a href="/docs/r3/R3_ENGINEERING_TRUTH_REPORT.md" target="_blank">R3 truth report ↗</a><a href="/docs/r3/R3_1_TRUTH_CLOSURE_REPORT.md" target="_blank">R3.1 closure ↗</a><a href="/docs/r4/R4_REAL_DXF_COMPOSER_REPORT.md" target="_blank">R4 report ↗</a><a href="/docs/r3/R3_BENCHMARK_RESULTS.md" target="_blank">Benchmark ↗</a><a href="/evidence/r3/SCREENSHOT_REPORT.md" target="_blank">Screenshots ↗</a><a href="/evidence/r4/SCREENSHOT_REPORT.md" target="_blank">R4 screenshots ↗</a></div>
       </section>
 
       <section id="roadmap" class="doc-section alt-section">

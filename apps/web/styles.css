@@ -127,3 +127,8 @@ button { cursor: pointer; }
   .canvas-footer { min-height: 42px; height: auto; gap: 12px; padding: 7px 10px; overflow-x: auto; }
   .legend { gap: 9px; white-space: nowrap; }
 }
+.status-stack { display: grid; gap: 3px; margin: 6px 0; }
+.asset-filter { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 7px; margin: 0 0 10px; color: var(--faint); font-size: 9px; }
+.asset-filter select { min-width: 0; height: 26px; padding: 0 5px; border: 1px solid var(--line); background: #0a1321; color: var(--muted); font-size: 10px; }
+.inspector-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.inspector-actions .button { min-width: 0; padding: 0 4px; font-size: 9px; }

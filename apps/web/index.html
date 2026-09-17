@@ -21,7 +21,7 @@
     </div>
     <div class="top-actions">
       <a class="button subtle docs-link" href="/docs.html">Docs</a>
-      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option><option value="r2">R2 reference cabinet</option><option value="r2b">R2B Siemens geometry (unresolved)</option><option value="r3">R3 engineering truth cabinet</option></select></label>
+      <label class="select-wrap" for="scenarioSelect"><span class="sr-only">Scenario</span><select id="scenarioSelect"><option value="starter">Starter panel</option><option value="mcc" selected>MCC 6 motor</option><option value="plc">PLC control cabinet</option><option value="r2">R2 reference cabinet</option><option value="r2b">R2B Siemens geometry (unresolved)</option><option value="r3">R3 engineering truth cabinet</option><option value="r4">R4 real DXF composer (preview)</option></select></label>
       <button class="button subtle" id="loadScenario" type="button">Load</button>
       <label class="button subtle file-button" for="jsonInput">Import JSON<input id="jsonInput" type="file" accept="application/json,.json"></label>
       <button class="button primary" id="autoLayout" type="button"><span class="button-icon">✦</span>Auto layout</button>
@@ -38,9 +38,10 @@
 
   <main class="workspace">
     <aside class="left-panel">
-      <div class="panel-heading"><div><span class="eyebrow">LIBRARY</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
-      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">CAD assets</button><button class="library-tab" id="productTab" type="button" aria-selected="false">R3 products</button></div>
+      <div class="panel-heading"><div><span class="eyebrow">THƯ VIỆN THIẾT BỊ</span><h2>Components</h2></div><span class="count-pill" id="libraryCount">6</span></div>
+      <div class="library-tabs" role="tablist" aria-label="Library source"><button class="library-tab active" id="componentTab" type="button" aria-selected="true">Components</button><button class="library-tab" id="assetTab" type="button" aria-selected="false">Real DXF</button><button class="library-tab" id="productTab" type="button" aria-selected="false">R3 products</button></div>
       <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Filter components</span><input id="librarySearch" type="search" placeholder="Filter components"></label>
+      <label class="asset-filter"><span>Lọc CAD</span><select id="assetFilter"><option value="all">Tất cả</option><option value="ready">Sẵn sàng bố trí</option><option value="preview">Chỉ xem trước</option><option value="review">Cần xác minh</option></select></label>
       <div class="library-list" id="libraryList" aria-label="Component library"></div>
       <div class="asset-list" id="assetList" aria-label="Imported CAD asset library" hidden></div>
       <div class="asset-list" id="productList" aria-label="R3 verified product library" hidden></div>
@@ -85,6 +86,8 @@
           <div class="form-grid"><label>Width <span class="input-unit">mm</span><input name="width" type="number" min="1" step="1"></label><label>Height <span class="input-unit">mm</span><input name="height" type="number" min="1" step="1"></label></div>
           <label>Rotation<select name="rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
           <div class="inspector-meta"><span id="selectionKind">device</span><span id="selectionGroup">General</span></div>
+          <div class="inspector-meta"><span id="selectionCadStatus">CAD source: —</span><span id="selectionMappingStatus">Mapping: —</span></div>
+          <div class="inspector-actions"><button class="button subtle compact" id="toggleLock" type="button">Lock position</button><button class="button subtle compact" id="duplicateComponent" type="button">Duplicate</button><button class="button subtle compact" id="rotateComponent" type="button">Rotate</button></div>
           <button class="button danger outline" id="deleteComponent" type="button">Remove component</button>
         </form>
       </section>

@@ -105,7 +105,28 @@ function effectiveRecordForAsset(sourceAssetId, catalog) {
   return catalog.records.find((record) => (record.source_asset_id || record.id) === sourceAssetId) || null;
 }
 
-function enforceCadApproval(model, catalog) {
+function attachCadGeometry(model, catalog) {
+  const cacheRoot = path.resolve(catalogRoot, 'generated', 'vector-cache');
+  model.components.forEach((component) => {
+    const sourceAssetId = component.assetId || component.source_asset_id || null;
+    if (!sourceAssetId) return;
+    const record = effectiveRecordForAsset(sourceAssetId, catalog);
+    if (!record) return;
+    const cachePath = path.resolve(catalogRoot, 'generated', 'vector-cache', `${sourceAssetId}.json`);
+    if (!cachePath.startsWith(cacheRoot + path.sep) || !fs.existsSync(cachePath)) return;
+    try {
+      const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+      component.cadGeometry = Array.isArray(cache.geometry) ? cache.geometry : [];
+      component.cadGeometryBounds = record.source_bbox || cache.bounds || null;
+      component.cadGeometryScale = Number(component.cadGeometryScale || 1);
+    } catch (_) {
+      // Invalid cache remains an explicit missing-geometry export condition.
+    }
+  });
+  return model;
+}
+
+function enforceCadApproval(model, catalog, authoritative = true) {
   for (const component of model.components) {
     const sourceAssetId = component.assetId || component.source_asset_id || null;
     const footprintRef = component.footprintRef || component.footprint_ref || null;
@@ -114,14 +135,16 @@ function enforceCadApproval(model, catalog) {
     // source asset ID so the server can verify both sides of the reference.
     if (!sourceAssetId && (!footprintRef || !String(footprintRef).startsWith('footprint-'))) continue;
     const record = effectiveRecordForAsset(sourceAssetId, catalog);
-    if (!record || record.review_state !== 'approved-footprint' || !record.physical_footprint_id || footprintRef !== record.physical_footprint_id) {
+    if (authoritative && (!record || record.review_state !== 'approved-footprint' || !record.physical_footprint_id || footprintRef !== record.physical_footprint_id)) {
       return { error: 'unapproved CAD asset in authoritative export', component_id: component.id, source_asset_id: sourceAssetId, footprint_ref: footprintRef };
     }
     // Authoritative export uses persisted physical dimensions, never client dimensions.
     component.assetId = sourceAssetId;
     component.footprintRef = record.physical_footprint_id;
-    component.width = Number(record.physical_width_mm);
-    component.height = Number(record.physical_height_mm);
+    if (record && record.review_state === 'approved-footprint') {
+      component.width = Number(record.physical_width_mm);
+      component.height = Number(record.physical_height_mm);
+    }
   }
   return null;
 }
@@ -160,7 +183,7 @@ function authoritativeValidation(model) {
       if (!component.railId || !rails.has(component.railId)) errors.push({ code: 'E003', entity_id: component.id, message: 'DIN component is not attached to a rail' });
       else { const rail = rails.get(component.railId); if (rect.x < rail.x || rect.x + rect.width > rail.x + rail.length) errors.push({ code: 'E003', entity_id: component.id, message: 'component extends beyond DIN rail' }); }
     }
-    if (component.assetId && (!component.footprintRef || !String(component.footprintRef).startsWith('footprint-'))) errors.push({ code: 'E010', entity_id: component.id, message: 'CAD asset has no approved physical footprint' });
+    if (model.metadata && model.metadata.authoritative && component.assetId && (!component.footprintRef || !String(component.footprintRef).startsWith('footprint-'))) errors.push({ code: 'E010', entity_id: component.id, message: 'CAD asset has no approved physical footprint' });
   });
   const entries = [...rects.entries()];
   for (let i = 0; i < entries.length; i += 1) for (let j = i + 1; j < entries.length; j += 1) {
@@ -274,12 +297,13 @@ const server = http.createServer(async (request, response) => {
       const payload = JSON.parse(await bodyFrom(request));
       const candidate = payload.model || payload;
       const model = normalizeModel(candidate && (candidate.devices || candidate.schema_version || candidate.schemaVersion === 'eir.v1') ? adaptEir(candidate) : candidate);
+      attachCadGeometry(model, readEffectiveCatalog());
       const format = payload.format || 'dxf';
       if (format === 'dxf' || format === 'svg' || format === 'audit') {
-        const gate = enforceCadApproval(model, readEffectiveCatalog());
+        const gate = enforceCadApproval(model, readEffectiveCatalog(), Boolean(model.metadata?.authoritative));
         if (gate) return send(response, 400, JSON.stringify(gate), mime['.json']);
         const validation = authoritativeValidation(model);
-        if (!validation.valid) return send(response, 422, JSON.stringify({ error: 'authoritative export blocked by engineering validation', validation }), mime['.json']);
+        if (model.metadata?.authoritative && !validation.valid) return send(response, 422, JSON.stringify({ error: 'authoritative export blocked by engineering validation', validation }), mime['.json']);
       }
       if (format === 'dxf') return send(response, 200, exportDxf(model), mime['.dxf']);
       if (format === 'svg') return send(response, 200, exportSvg(model), mime['.svg']);
