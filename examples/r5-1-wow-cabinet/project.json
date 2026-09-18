@@ -1,0 +1,1181 @@
+{
+  "schema_version": "eir.v1",
+  "project": {
+    "id": "r5-1-wow-cabinet",
+    "name": "Tủ điều khiển động cơ — Demo tự động",
+    "revision": "R5.1-DEMO"
+  },
+  "workflow": {
+    "state": "Draft",
+    "approved": false
+  },
+  "enclosure": {
+    "id": "wow-enclosure",
+    "name": "Tủ điều khiển động cơ · 800 × 1000",
+    "width": 800,
+    "height": 1000,
+    "depth": 300,
+    "mountingPlate": {
+      "id": "wow-plate",
+      "x": 50,
+      "y": 50,
+      "width": 700,
+      "height": 900
+    }
+  },
+  "parts": [
+    {
+      "id": "wow-part-01",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "MCB incoming",
+      "mpn": "DEMO-001",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "MCB incoming",
+        "order_code": "DEMO-001"
+      }
+    },
+    {
+      "id": "wow-part-02",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "MCB incoming",
+      "mpn": "DEMO-002",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "MCB incoming",
+        "order_code": "DEMO-002"
+      }
+    },
+    {
+      "id": "wow-part-03",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "MCB incoming",
+      "mpn": "DEMO-003",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "MCB incoming",
+        "order_code": "DEMO-003"
+      }
+    },
+    {
+      "id": "wow-part-04",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Motor starter",
+      "mpn": "DEMO-004",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Motor starter",
+        "order_code": "DEMO-004"
+      }
+    },
+    {
+      "id": "wow-part-05",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Motor starter",
+      "mpn": "DEMO-005",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Motor starter",
+        "order_code": "DEMO-005"
+      }
+    },
+    {
+      "id": "wow-part-06",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Motor starter",
+      "mpn": "DEMO-006",
+      "category": "power",
+      "footprint": {
+        "width": 48,
+        "height": 85,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Motor starter",
+        "order_code": "DEMO-006"
+      }
+    },
+    {
+      "id": "wow-part-07",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "24V control",
+      "mpn": "DEMO-007",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "24V control",
+        "order_code": "DEMO-007"
+      }
+    },
+    {
+      "id": "wow-part-08",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "24V control",
+      "mpn": "DEMO-008",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "24V control",
+        "order_code": "DEMO-008"
+      }
+    },
+    {
+      "id": "wow-part-09",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "24V control",
+      "mpn": "DEMO-009",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "24V control",
+        "order_code": "DEMO-009"
+      }
+    },
+    {
+      "id": "wow-part-10",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "PLC/IO candidate",
+      "mpn": "DEMO-010",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "PLC/IO candidate",
+        "order_code": "DEMO-010"
+      }
+    },
+    {
+      "id": "wow-part-11",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "PLC/IO candidate",
+      "mpn": "DEMO-011",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "PLC/IO candidate",
+        "order_code": "DEMO-011"
+      }
+    },
+    {
+      "id": "wow-part-12",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "PLC/IO candidate",
+      "mpn": "DEMO-012",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "PLC/IO candidate",
+        "order_code": "DEMO-012"
+      }
+    },
+    {
+      "id": "wow-part-13",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "PLC/IO candidate",
+      "mpn": "DEMO-013",
+      "category": "control",
+      "footprint": {
+        "width": 42,
+        "height": 70,
+        "depth": 55,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "PLC/IO candidate",
+        "order_code": "DEMO-013"
+      }
+    },
+    {
+      "id": "wow-part-14",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Terminal group",
+      "mpn": "DEMO-014",
+      "category": "terminal",
+      "footprint": {
+        "width": 34,
+        "height": 48,
+        "depth": 55,
+        "mounting": "terminal_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Terminal group",
+        "order_code": "DEMO-014"
+      }
+    },
+    {
+      "id": "wow-part-15",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Terminal group",
+      "mpn": "DEMO-015",
+      "category": "terminal",
+      "footprint": {
+        "width": 34,
+        "height": 48,
+        "depth": 55,
+        "mounting": "terminal_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Terminal group",
+        "order_code": "DEMO-015"
+      }
+    },
+    {
+      "id": "wow-part-16",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Terminal group",
+      "mpn": "DEMO-016",
+      "category": "terminal",
+      "footprint": {
+        "width": 34,
+        "height": 48,
+        "depth": 55,
+        "mounting": "terminal_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Terminal group",
+        "order_code": "DEMO-016"
+      }
+    },
+    {
+      "id": "wow-part-17",
+      "manufacturer": "CNB Demo Fixture",
+      "description": "Terminal group",
+      "mpn": "DEMO-017",
+      "category": "terminal",
+      "footprint": {
+        "width": 34,
+        "height": 48,
+        "depth": 55,
+        "mounting": "terminal_rail"
+      },
+      "product_identity": {
+        "status": "engineering_demo_fixture",
+        "type_designation": "Terminal group",
+        "order_code": "DEMO-017"
+      }
+    },
+    {
+      "id": "wow-part-18",
+      "manufacturer": "Siemens",
+      "description": "HMI/CAD-linked candidate",
+      "mpn": "6AV2123-2GA03-0AX0",
+      "category": "auxiliary",
+      "footprint": {
+        "width": 214,
+        "height": 158,
+        "depth": 39,
+        "mounting": "din_rail"
+      },
+      "product_identity": {
+        "status": "document_verified",
+        "type_designation": "HMI/CAD-linked candidate",
+        "order_code": "6AV2123-2GA03-0AX0"
+      }
+    }
+  ],
+  "devices": [
+    {
+      "id": "wow-device-01",
+      "tag": "-Q1",
+      "name": "MCB incoming",
+      "part_id": "wow-part-01",
+      "function": "power",
+      "description": "MCB incoming",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-02",
+      "tag": "-Q2",
+      "name": "MCB incoming",
+      "part_id": "wow-part-02",
+      "function": "power",
+      "description": "MCB incoming",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-03",
+      "tag": "-Q3",
+      "name": "MCB incoming",
+      "part_id": "wow-part-03",
+      "function": "power",
+      "description": "MCB incoming",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-04",
+      "tag": "-Q4",
+      "name": "Motor starter",
+      "part_id": "wow-part-04",
+      "function": "power",
+      "description": "Motor starter",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-05",
+      "tag": "-Q5",
+      "name": "Motor starter",
+      "part_id": "wow-part-05",
+      "function": "power",
+      "description": "Motor starter",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-06",
+      "tag": "-Q6",
+      "name": "Motor starter",
+      "part_id": "wow-part-06",
+      "function": "power",
+      "description": "Motor starter",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-07",
+      "tag": "-K7",
+      "name": "24V control",
+      "part_id": "wow-part-07",
+      "function": "control",
+      "description": "24V control",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-08",
+      "tag": "-K8",
+      "name": "24V control",
+      "part_id": "wow-part-08",
+      "function": "control",
+      "description": "24V control",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-09",
+      "tag": "-K9",
+      "name": "24V control",
+      "part_id": "wow-part-09",
+      "function": "control",
+      "description": "24V control",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-10",
+      "tag": "-K10",
+      "name": "PLC/IO candidate",
+      "part_id": "wow-part-10",
+      "function": "control",
+      "description": "PLC/IO candidate",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-11",
+      "tag": "-K11",
+      "name": "PLC/IO candidate",
+      "part_id": "wow-part-11",
+      "function": "control",
+      "description": "PLC/IO candidate",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-12",
+      "tag": "-K12",
+      "name": "PLC/IO candidate",
+      "part_id": "wow-part-12",
+      "function": "control",
+      "description": "PLC/IO candidate",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-13",
+      "tag": "-K13",
+      "name": "PLC/IO candidate",
+      "part_id": "wow-part-13",
+      "function": "control",
+      "description": "PLC/IO candidate",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-14",
+      "tag": "-X14",
+      "name": "Terminal group",
+      "part_id": "wow-part-14",
+      "function": "terminal",
+      "description": "Terminal group",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-15",
+      "tag": "-X15",
+      "name": "Terminal group",
+      "part_id": "wow-part-15",
+      "function": "terminal",
+      "description": "Terminal group",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-16",
+      "tag": "-X16",
+      "name": "Terminal group",
+      "part_id": "wow-part-16",
+      "function": "terminal",
+      "description": "Terminal group",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-17",
+      "tag": "-X17",
+      "name": "Terminal group",
+      "part_id": "wow-part-17",
+      "function": "terminal",
+      "description": "Terminal group",
+      "cad_asset_ref": null,
+      "placement_capable": false
+    },
+    {
+      "id": "wow-device-18",
+      "tag": "-H18",
+      "name": "HMI/CAD-linked candidate",
+      "part_id": "wow-part-18",
+      "function": "auxiliary",
+      "description": "HMI/CAD-linked candidate",
+      "cad_asset_ref": "source-d2e35ab9238f5738",
+      "placement_capable": false
+    }
+  ],
+  "components": [
+    {
+      "id": "wow-device-01",
+      "tag": "-Q1",
+      "name": "MCB incoming",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-001",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-02",
+      "tag": "-Q2",
+      "name": "MCB incoming",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-002",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-03",
+      "tag": "-Q3",
+      "name": "MCB incoming",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-003",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-04",
+      "tag": "-Q4",
+      "name": "Motor starter",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-004",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-05",
+      "tag": "-Q5",
+      "name": "Motor starter",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-005",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-06",
+      "tag": "-Q6",
+      "name": "Motor starter",
+      "group": "power",
+      "width": 48,
+      "height": 85,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-006",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#ef4444",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-07",
+      "tag": "-K7",
+      "name": "24V control",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-007",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-08",
+      "tag": "-K8",
+      "name": "24V control",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-008",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-09",
+      "tag": "-K9",
+      "name": "24V control",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-009",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-10",
+      "tag": "-K10",
+      "name": "PLC/IO candidate",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-010",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-11",
+      "tag": "-K11",
+      "name": "PLC/IO candidate",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-011",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-12",
+      "tag": "-K12",
+      "name": "PLC/IO candidate",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-012",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-13",
+      "tag": "-K13",
+      "name": "PLC/IO candidate",
+      "group": "control",
+      "width": 42,
+      "height": 70,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-013",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#3b82f6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-14",
+      "tag": "-X14",
+      "name": "Terminal group",
+      "group": "terminal",
+      "width": 34,
+      "height": 48,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-014",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#f59e0b",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-15",
+      "tag": "-X15",
+      "name": "Terminal group",
+      "group": "terminal",
+      "width": 34,
+      "height": 48,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-015",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#f59e0b",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-16",
+      "tag": "-X16",
+      "name": "Terminal group",
+      "group": "terminal",
+      "width": 34,
+      "height": 48,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-016",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#f59e0b",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-17",
+      "tag": "-X17",
+      "name": "Terminal group",
+      "group": "terminal",
+      "width": 34,
+      "height": 48,
+      "depth": 55,
+      "mounting": "DIN",
+      "manufacturer": "CNB Demo Fixture",
+      "partNumber": "DEMO-017",
+      "assetId": null,
+      "source_asset_id": null,
+      "status": "engineering demo fixture",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#f59e0b",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "fixture"
+      }
+    },
+    {
+      "id": "wow-device-18",
+      "tag": "-H18",
+      "name": "HMI/CAD-linked candidate",
+      "group": "auxiliary",
+      "width": 214,
+      "height": 158,
+      "depth": 39,
+      "mounting": "DIN",
+      "manufacturer": "Siemens",
+      "partNumber": "6AV2123-2GA03-0AX0",
+      "assetId": "source-d2e35ab9238f5738",
+      "source_asset_id": "source-d2e35ab9238f5738",
+      "status": "candidate",
+      "x": -120,
+      "y": -120,
+      "locked": false,
+      "color": "#14b8a6",
+      "terminals": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ],
+      "metadata": {
+        "placement_capable": false,
+        "truth_owner": "CNB EIR",
+        "mapping_status": "candidate"
+      }
+    }
+  ],
+  "placements": [],
+  "rails": [
+    {
+      "id": "wow-rail-power",
+      "type": "DIN-rail-35",
+      "x": 110,
+      "y": 760,
+      "length": 580,
+      "height": 7.5
+    },
+    {
+      "id": "wow-rail-control",
+      "type": "DIN-rail-35",
+      "x": 110,
+      "y": 510,
+      "length": 580,
+      "height": 7.5
+    },
+    {
+      "id": "wow-rail-terminal",
+      "type": "DIN-rail-35",
+      "x": 110,
+      "y": 260,
+      "length": 580,
+      "height": 7.5
+    }
+  ],
+  "ducts": [
+    {
+      "id": "wow-duct-left",
+      "x": 58,
+      "y": 90,
+      "width": 32,
+      "height": 820,
+      "orientation": "vertical"
+    },
+    {
+      "id": "wow-duct-right",
+      "x": 710,
+      "y": 90,
+      "width": 32,
+      "height": 820,
+      "orientation": "vertical"
+    },
+    {
+      "id": "wow-duct-top",
+      "x": 90,
+      "y": 850,
+      "width": 620,
+      "height": 28,
+      "orientation": "horizontal"
+    },
+    {
+      "id": "wow-duct-mid",
+      "x": 90,
+      "y": 430,
+      "width": 620,
+      "height": 28,
+      "orientation": "horizontal"
+    }
+  ],
+  "connections": [],
+  "metadata": {
+    "authoritative": false,
+    "truth_owner": "CNB EIR",
+    "fixture": "R5.1 engineering demo fixture",
+    "cad_policy": "DXF-only; mappings remain candidate/preview",
+    "placement_policy": "candidate until review"
+  }
+}

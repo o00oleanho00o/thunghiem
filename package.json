@@ -14,6 +14,8 @@
     "dev:web": "node apps/engineering-web/node_modules/vite/bin/vite.js --config apps/engineering-web/vite.config.ts --host 127.0.0.1 --port 4200",
     "dev:api": "node services/engineering-api/server.js",
     "build:web": "node apps/engineering-web/node_modules/vite/bin/vite.js --config apps/engineering-web/vite.config.ts build",
-    "test:r5": "node scripts/test_r5_unified_workbench.cjs"
+    "test:r5": "node scripts/test_r5_unified_workbench.cjs",
+    "demo": "node scripts/r51_demo_server.cjs",
+    "test:r51": "node scripts/test_r51_wow_demo.cjs"
   }
 }

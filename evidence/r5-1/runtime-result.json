@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "health": 200,
+  "home": 200,
+  "unplaced": 18,
+  "placements": 18,
+  "duration_ms": 1.14,
+  "locked_device": "wow-device-18",
+  "cad_bytes": 151391,
+  "audit": {
+    "valid": true,
+    "entityCount": 274,
+    "sections": [
+      "HEADER",
+      "ENTITIES"
+    ]
+  }
+}
